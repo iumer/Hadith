@@ -224,11 +224,84 @@ def expand_query_terms(query_lower: str) -> tuple[list[str], list[str]]:
 
 
 def arabic_topic_expansions(norm_ar_query: str) -> tuple[list[str], list[str]]:
-    """Reverse lookup: Arabic query -> English synonyms (for bilingual search)."""
+    """Reverse lookup: Arabic/Urdu query -> English synonyms (for bilingual search)."""
     en_out, ar_out = [], []
     toks = set(norm_ar_query.split())
+    urdu_topics = {URDU_TERMS[w] for w in toks if w in URDU_TERMS}
     for t in TOPICS:
-        if any(a in toks or (" " in a and a in norm_ar_query) for a in t["ar"]):
+        if t["en"][0] in urdu_topics or any(a in toks or (" " in a and a in norm_ar_query) for a in t["ar"]):
             en_out.extend(t["en"][:4])
             ar_out.extend(t["ar"])
     return list(dict.fromkeys(en_out)), list(dict.fromkeys(ar_out))
+
+
+# Common Urdu words (already passed through normalize_arabic) -> TOPICS key.
+_URDU_RAW = {
+    "نماز": "prayer", "نمازیں": "prayer", "روزہ": "fasting", "روزے": "fasting", "روزه": "fasting",
+    "زکوٰۃ": "zakat", "زکات": "zakat", "خیرات": "charity", "صدقہ": "charity", "حج": "hajj", "عمرہ": "umrah",
+    "وضو": "ablution", "غسل": "ghusl", "مسجد": "mosque", "اذان": "adhan", "جمعہ": "friday", "عید": "eid",
+    "تہجد": "night prayer", "دعا": "supplication", "ذکر": "remembrance", "توبہ": "repentance", "صبر": "patience",
+    "شکر": "gratitude", "نیت": "intention", "ایمان": "faith", "علم": "knowledge", "قرآن": "quran",
+    "والدین": "parents", "ماں": "parents", "باپ": "parents", "رشتہ": "kinship", "پڑوسی": "neighbor",
+    "یتیم": "orphan", "نکاح": "marriage", "شادی": "marriage", "طلاق": "divorce", "عورت": "women",
+    "عورتیں": "women", "بچے": "children", "تجارت": "trade", "سود": "usury", "قرض": "debt", "وراثت": "inheritance",
+    "وصیت": "will", "کھانا": "food", "پانی": "drink", "شراب": "alcohol", "لباس": "clothing", "سونا": "gold",
+    "جہاد": "jihad", "جنت": "paradise", "جہنم": "hell", "دوزخ": "hell", "قیامت": "day of judgement",
+    "قبر": "grave", "موت": "death", "فرشتے": "angel", "فرشتہ": "angel", "شیطان": "satan", "غصہ": "anger",
+    "سچ": "honesty", "سچائی": "honesty", "جھوٹ": "lying", "غیبت": "backbiting", "حسد": "envy",
+    "تکبر": "arrogance", "غرور": "arrogance", "عاجزی": "humility", "حیا": "shyness", "اخلاق": "good character",
+    "نرمی": "kindness", "انصاف": "justice", "عدل": "justice", "امانت": "trust", "وعدہ": "promise",
+    "سلام": "greeting", "مسکراہٹ": "smile", "نیند": "sleep", "بیماری": "sickness", "بیمار": "sickness",
+    "خواب": "dream", "مال": "wealth", "دولت": "wealth", "غربت": "poverty", "دنیا": "world", "دل": "heart",
+    "زبان": "tongue", "بھائی": "brotherhood", "محبت": "love", "تقویٰ": "fear of allah", "منافق": "hypocrisy",
+    "منافقت": "hypocrisy", "شرک": "shirk", "بدعت": "innovation", "سنت": "sunnah", "تقدیر": "divine decree",
+    "توحید": "tawhid", "فتنہ": "trials", "حکمران": "leader", "گواہی": "witness", "چوری": "theft", "زنا": "adultery",
+    "قتل": "murder", "جانور": "animal", "سفر": "travel", "مہمان": "guest", "غلام": "slave", "محنت": "work",
+    "صفائی": "cleanliness", "پاکیزگی": "cleanliness", "مسواک": "miswak", "حیض": "menstruation",
+    "عیسیٰ": "jesus", "صحابہ": "companions", "قربانی": "sacrifice", "موسیقی": "music", "تصویر": "pictures",
+    "داڑھی": "beard", "چھینک": "sneezing", "بارش": "rain", "گناہ": "sins", "سجدہ": "prostration", "قبلہ": "qiblah",
+    "مدینہ": "madinah", "ہنسی": "laughter", "سخاوت": "generosity", "بخل": "miserliness", "قناعت": "contentment",
+    "توکل": "reliance", "امید": "hope", "نیکی": "good deeds", "نیک": "good deeds",
+}
+URDU_TERMS = {normalize_arabic(k): v for k, v in _URDU_RAW.items()}
+
+
+# English synonym groups used to widen each required (AND) query term.
+_EN_SYNONYM_GROUPS = [
+    ["action", "actions", "deed", "deeds", "work", "works"],
+    ["intention", "intentions", "intend", "niyyah"],
+    ["reward", "rewards", "recompense"],
+    ["sin", "sins", "evil deeds", "wrongdoing"],
+    ["parent", "parents", "mother", "father"],
+    ["child", "children", "son", "daughter", "offspring"],
+    ["wife", "wives", "spouse", "husband"],
+    ["prayer", "prayers", "salat", "salah"],
+    ["fast", "fasting", "fasts", "fasted", "sawm"],
+    ["charity", "sadaqa", "sadaqah", "alms"],
+    ["neighbor", "neighbors", "neighbour", "neighbours"],
+    ["honor", "honour", "respect"],
+    ["lie", "lies", "lying", "falsehood", "liar"],
+    ["truth", "truthful", "truthfulness", "honesty", "honest"],
+    ["kind", "kindness", "gentle", "gentleness"],
+    ["paradise", "jannah", "garden"],
+    ["hell", "hellfire", "fire", "jahannam"],
+    ["rights", "right", "due"],
+    ["patience", "patient", "sabr", "steadfast"],
+    ["merciful", "mercy", "compassion", "compassionate"],
+    ["knowledge", "learning", "scholar", "scholars"],
+    ["dua", "duas", "supplication", "supplications", "invocation", "invoke", "supplicate"],
+    ["toilet", "privy", "lavatory", "latrine", "call of nature", "relieving himself", "relieve himself"],
+    ["entering", "enter", "enters", "entered"],
+    ["leaving", "leave", "exit", "exiting", "coming out"],
+    ["virtue", "virtues", "merit", "merits", "superiority", "excellence"],
+    ["hardship", "hardships", "difficulty", "difficulties", "calamity", "affliction", "adversity"],
+    ["anger", "angry", "rage", "wrath"],
+    ["strong", "strength", "mighty"],
+    ["consistent", "consistently", "regular", "regularly", "constant", "constantly", "continuous",
+     "continuously", "persistent", "persistently"],
+    ["beloved", "loved", "dearest", "dear", "liked"],
+]
+EN_SYNONYMS: dict[str, list[str]] = {}
+for _g in _EN_SYNONYM_GROUPS:
+    for _w in _g:
+        EN_SYNONYMS[_w] = [x for x in _g if x != _w]

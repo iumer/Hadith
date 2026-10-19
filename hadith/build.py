@@ -163,12 +163,17 @@ def split_grade_note(note: str, default: str) -> list[dict]:
 
 # --------------------------------------------------------------------------- builders
 
+def _in_section(sd: dict | None, hn) -> bool:
+    return bool(sd) and sd.get("hadithnumber_first", 0) > 0 and sd["hadithnumber_first"] <= hn <= sd["hadithnumber_last"]
+
+
 def build_fawaz(c: Collection) -> list[dict]:
     eds = {}
     for lang in c.fawaz_languages:
         eds[lang] = json.loads(sources.fawaz_path(f"{lang}-{c.fawaz}").read_text(encoding="utf-8"))
     meta = eds["eng"]["metadata"] if "eng" in eds else eds["ara"]["metadata"]
     sections = meta.get("sections", {})
+    section_details = meta.get("section_details", {})
     by_lang = {lang: {h["hadithnumber"]: h for h in e["hadiths"]} for lang, e in eds.items()}
     order = [h["hadithnumber"] for h in eds["ara"]["hadiths"]]
 
@@ -194,6 +199,15 @@ def build_fawaz(c: Collection) -> list[dict]:
             continue
         ref = (en or ar).get("reference") or {}
         bn = ref.get("book")
+        if bn == 0 and not ref.get("hadith") and not _in_section(section_details.get("0"), hn):
+            # {"book": 0, "hadith": 0} means "unknown"; recover the book from section ranges.
+            bn = next((int(k) for k, sd in section_details.items() if k != "0" and _in_section(sd, hn)), None)
+            if bn is None:
+                # Gaps between ranges are the opening hadith of the following book.
+                later = [(sd["hadithnumber_first"], int(k)) for k, sd in section_details.items()
+                         if k != "0" and sd.get("hadithnumber_first", 0) > hn]
+                bn = min(later)[1] if later else 0
+            ref = {}
         arabic_number = ar.get("arabicnumber", en.get("arabicnumber"))
         if c.slug == "muslim":
             if arabic_number:

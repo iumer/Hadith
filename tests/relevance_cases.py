@@ -1,0 +1,23 @@
+"""Queries with hadith that a scholar would expect on the first page (any one suffices)."""
+CASES = [
+    ("actions are by intentions", {"bukhari:1", "muslim:1907a", "nawawi40:1", "riyadussalihin:1"}),
+    ("إنما الأعمال بالنيات", {"bukhari:1", "muslim:1907a", "nawawi40:1"}),
+    ("patience in hardship", {"bukhari:1302", "muslim:926a", "tirmidhi:987", "tirmidhi:988", "muslim:2999", "riyadussalihin:27"}),
+    ("dua when entering the toilet", {"bukhari:142", "muslim:375a", "muslim:375b", "tirmidhi:5", "tirmidhi:6", "abudawud:4", "abudawud:5", "ibnmajah:296", "ibnmajah:298"}),
+    ("backbiting", {"muslim:2589", "abudawud:4874", "tirmidhi:1934"}),
+    ("the strong man controls anger", {"bukhari:6114", "muslim:2609a", "muslim:2609b"}),
+    ("smiling is charity", {"tirmidhi:1956", "tirmidhi:1970"}),
+    ("kindness to neighbours", {"bukhari:6014", "bukhari:6015", "muslim:2624a", "muslim:2625a"}),
+    ("seeking knowledge", {"tirmidhi:2646", "ibnmajah:224", "abudawud:3641"}),
+    ("the best of you are those who learn the quran and teach it", {"bukhari:5027", "bukhari:5028"}),
+    ("virtues of friday", {"muslim:854a", "muslim:854b", "tirmidhi:488", "abudawud:1047"}),
+    ("الصبر", {"bukhari:1302", "muslim:926a", "riyadussalihin:25", "ibnmajah:1596", "tirmidhi:987"}),
+    ("نماز", None),
+    ("who is a true muslim", {"bukhari:10", "bukhari:11", "muslim:40", "muslim:41", "abudawud:2481", "nasai:4996"}),
+    ("paradise lies at the feet of mothers", {"nasai:3104", "ibnmajah:2781"}),
+    ("rights of parents", {"tirmidhi:1906", "bukhari:5971", "muslim:2548a", "adab:1", "adab:2"}),
+    ("cleanliness is half of faith", {"muslim:223", "tirmidhi:3517"}),
+    ("seven people under the shade of allah", {"bukhari:660", "bukhari:1423", "muslim:1031"}),
+    ("whoever believes in allah and the last day should speak good or remain silent", {"bukhari:6018", "bukhari:6136", "muslim:47a", "nawawi40:15"}),
+    ("the most beloved deeds to allah are those done consistently", {"bukhari:43", "bukhari:6464", "bukhari:6465", "muslim:783a", "muslim:782a"}),
+]

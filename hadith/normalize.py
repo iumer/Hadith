@@ -15,8 +15,9 @@ _AR_MAP = str.maketrans({
     "أ": "ا", "إ": "ا", "آ": "ا", "ٱ": "ا", "ٲ": "ا", "ٳ": "ا",
     "ى": "ي", "ئ": "ي", "ی": "ي",
     "ؤ": "و",
-    "ة": "ه",
-    "ك": "ك", "ک": "ك",
+    "ة": "ه", "ۃ": "ه", "ہ": "ه", "ھ": "ه",
+    "ے": "ي", "ں": "ن",
+    "ك": "ك", "ک": "ك", "گ": "ك",
     "ء": "",
     "٠": "0", "١": "1", "٢": "2", "٣": "3", "٤": "4",
     "٥": "5", "٦": "6", "٧": "7", "٨": "8", "٩": "9",
@@ -66,8 +67,8 @@ def fold_latin(text: str) -> str:
 def normalize_english(text: str) -> str:
     if not text:
         return ""
-    text = fold_latin(text)
     text = text.replace("(ﷺ)", " ").replace("ﷺ", " ")
+    text = fold_latin(text)
     text = re.sub(r"\(\s*(pbuh|saw|sas|p\.b\.u\.h\.?)\s*\)", " ", text)
     text = _NON_WORD.sub(" ", text)
     return _SPACES.sub(" ", text).strip()
@@ -92,6 +93,28 @@ def is_arabic(text: str) -> bool:
         return False
     ar = sum(1 for c in letters if "\u0600" <= c <= "\u06FF" or "\u0750" <= c <= "\u077F")
     return ar / len(letters) > 0.5
+
+
+_AR_PREFIXES = ("وال", "فال", "بال", "كال", "لل", "ال")
+_AR_SUFFIXES = ("ها", "ان", "ات", "ون", "ين", "يه", "ه", "ي")
+
+
+def stem_arabic_word(w: str) -> str:
+    """Light stemmer (Larkey's light10) on a normalised Arabic word."""
+    if len(w) > 3 and w[0] == "و":
+        w = w[1:]
+    for p in _AR_PREFIXES:
+        if w.startswith(p) and len(w) - len(p) >= 2:
+            w = w[len(p):]
+            break
+    for s in _AR_SUFFIXES:
+        if len(w) - len(s) >= 2 and w.endswith(s):
+            w = w[: -len(s)]
+    return w
+
+
+def stem_arabic(text_normalized: str) -> str:
+    return " ".join(stem_arabic_word(w) for w in text_normalized.split())
 
 
 def char_ngrams(text: str, n: int = 4) -> set[str]:
