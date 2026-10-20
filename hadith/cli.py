@@ -15,7 +15,7 @@ from . import cite
 
 def _ix(args):
     from .search import HadithIndex
-    return HadithIndex(args.db)
+    return HadithIndex(args.db, semantic=False if getattr(args, "no_semantic", False) else None)
 
 
 def _dump(obj) -> None:
@@ -47,6 +47,14 @@ def cmd_build(args):
 def cmd_index(args):
     from .index import DEFAULT_DB, build_index
     build_index(Path(args.db or DEFAULT_DB))
+
+
+def cmd_embed(args):
+    from .index import DEFAULT_DB
+    from .semantic import MODEL, available, build_embeddings
+    if not available():
+        sys.exit("pip install -r requirements-semantic.txt first")
+    build_embeddings(Path(args.db or DEFAULT_DB), args.model or MODEL)
 
 
 def cmd_setup(args):
@@ -157,7 +165,7 @@ def cmd_stats(args):
 
 def cmd_serve(args):
     from .server import serve
-    serve(args.db, args.host, args.port)
+    serve(args.db, args.host, args.port, semantic=False if args.no_semantic else None)
 
 
 def main(argv=None):
@@ -178,6 +186,9 @@ def main(argv=None):
     sp.add_argument("--no-download", action="store_true")
     sp.set_defaults(fn=cmd_build)
     sub.add_parser("index", help="build the SQLite search index").set_defaults(fn=cmd_index)
+    sp = sub.add_parser("embed", help="compute embeddings for semantic search (optional)")
+    sp.add_argument("--model", help="sentence-transformers model (default multilingual-e5-small)")
+    sp.set_defaults(fn=cmd_embed)
     sp = sub.add_parser("setup", help="create the index if missing")
     sp.add_argument("--force", action="store_true")
     sp.set_defaults(fn=cmd_setup)
@@ -193,6 +204,7 @@ def main(argv=None):
     sp.add_argument("--english-only", action="store_true", help="only hadith that have an English translation")
     sp.add_argument("--no-group", action="store_true", help="do not fold parallel narrations")
     sp.add_argument("--explain", action="store_true")
+    sp.add_argument("--no-semantic", action="store_true", help="lexical search only (faster start-up)")
     out_opts(sp)
     sp.set_defaults(fn=cmd_search)
 
@@ -232,6 +244,7 @@ def main(argv=None):
     sp = sub.add_parser("serve", help="JSON HTTP API")
     sp.add_argument("--host", default="127.0.0.1")
     sp.add_argument("--port", type=int, default=8765)
+    sp.add_argument("--no-semantic", action="store_true")
     sp.set_defaults(fn=cmd_serve)
 
     args = p.parse_args(argv)

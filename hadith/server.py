@@ -1,6 +1,6 @@
 """Minimal JSON HTTP API (stdlib only) - a backend for a web/mobile/desktop front-end.
 
-GET /api/search?q=...&collection=bukhari&collection=muslim&authentic=1&grade=sahih&limit=10&offset=0&lang=auto&group=1
+GET /api/search?q=...&collection=bukhari&collection=muslim&authentic=1&grade=sahih&limit=10&offset=0&lang=auto&group=1&semantic=1
 GET /api/hadith/<collection>/<number>
 GET /api/uid/<collection:number>
 GET /api/page/<collection>/<volume>/<page>
@@ -62,7 +62,8 @@ def make_handler(ix: HadithIndex):
                                   limit=min(int(one("limit", 10)), 100), offset=int(one("offset", 0)),
                                   group=one("group", "1") not in ("0", "false"),
                                   require_english=one("english") in ("1", "true"),
-                                  explain=one("explain") in ("1", "true"))
+                                  explain=one("explain") in ("1", "true"),
+                                  semantic=False if one("semantic") in ("0", "false") else None)
                     d = r.to_dict()
                     for h in d["hits"]:
                         h["citation"] = short_citation(h)
@@ -98,8 +99,8 @@ def make_handler(ix: HadithIndex):
     return Handler
 
 
-def serve(db=None, host: str = "127.0.0.1", port: int = 8765) -> None:
-    ix = HadithIndex(db)
+def serve(db=None, host: str = "127.0.0.1", port: int = 8765, semantic: bool | None = None) -> None:
+    ix = HadithIndex(db, semantic=semantic)
     srv = ThreadingHTTPServer((host, port), make_handler(ix))
     print(f"hadith API on http://{host}:{port}/api/search?q=patience", file=sys.stderr)
     srv.serve_forever()

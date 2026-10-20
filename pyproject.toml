@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hadith-index"
+version = "1.0.0"
+description = "Indexed corpus of the major hadith collections with book/chapter/volume/page references and a bilingual search engine"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+semantic = ["numpy>=1.24", "sentence-transformers>=3.0"]
+
+[project.scripts]
+hadith = "hadith.cli:main"
+
+[tool.setuptools]
+packages = ["hadith"]

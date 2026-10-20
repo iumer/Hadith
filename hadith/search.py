@@ -99,7 +99,9 @@ def _fts_quote(term: str) -> str:
 
 
 class HadithIndex:
-    def __init__(self, db_path: str | Path | None = None):
+    def __init__(self, db_path: str | Path | None = None, semantic: bool | None = None):
+        """``semantic``: None = use embeddings when installed/built, False = lexical only,
+        True = require them."""
         path = Path(db_path or DEFAULT_DB)
         if not path.exists():
             raise FileNotFoundError(
@@ -117,6 +119,13 @@ class HadithIndex:
         self._alias.sort(key=lambda x: -len(x[0]))
         self._idf_cache: dict[tuple, float] = {}
         self._n_docs: dict[str, int] = {}
+        self.semantic = None
+        if semantic is not False:
+            from .semantic import SemanticIndex
+            self.semantic = SemanticIndex.try_open(path, self.con)
+            if semantic and self.semantic is None:
+                raise RuntimeError("semantic search requested but embeddings/sentence-transformers are missing "
+                                   "(pip install -r requirements-semantic.txt; python -m hadith embed)")
 
     # ------------------------------------------------------------------ metadata
     @staticmethod
@@ -221,7 +230,8 @@ class HadithIndex:
     # ------------------------------------------------------------------ search
     def search(self, query: str, *, collections: list[str] | None = None, authentic_only: bool = False,
                grades: list[str] | None = None, language: str = "auto", limit: int = 10, offset: int = 0,
-               group: bool = True, require_english: bool = False, explain: bool = False) -> SearchResponse:
+               group: bool = True, require_english: bool = False, explain: bool = False,
+               semantic: bool | None = None) -> SearchResponse:
         ref = self.parse_reference(query)
         if ref:
             if ref[0] == "ref":
@@ -308,6 +318,12 @@ class HadithIndex:
             if exp_en:
                 lists.append(("en_expansion", 0.6, self._fts("fts_en", " OR ".join(_fts_quote(normalize_english(t)) for t in exp_en), (1.0, 3.0, 1.0, 0.3))))
 
+        sem_rank: dict[int, int] = {}
+        if self.semantic is not None and semantic is not False and query.strip():
+            sem = self.semantic.query(query.strip(), top=300)
+            lists.append(("semantic", 1.4, [i for i, _ in sem]))
+            sem_rank = {i: k for k, (i, _) in enumerate(sem)}
+
         # Reciprocal rank fusion.
         fused: dict[int, float] = {}
         sig: dict[int, dict] = {}
@@ -350,6 +366,8 @@ class HadithIndex:
                 cov = sum(wt for alts, wt in zip(en_stems, en_idf) if alts & hay_stems)
                 if not r["text_en"]:
                     cov = max(cov, 0.5)
+                if sem_rank.get(hid, 999) < 40:
+                    cov = max(cov, 0.75)   # a close paraphrase need not share the query words
                 s *= 0.5 + 0.5 * cov
                 head = {_en_stem(w) for w in normalize_english(r["chapter_en"] or "").split()}
                 if head:
@@ -362,6 +380,8 @@ class HadithIndex:
                 hay_stems = {stem_arabic_word(w) for w in hay_words}
                 cov = sum(1 for t in ar_stems if t in hay_stems) / len(ar_stems)
                 exact = sum(1 for t in ar_terms if hay_words & set(_ar_forms(t))) / len(ar_terms)
+                if sem_rank.get(hid, 999) < 40:
+                    cov, exact = max(cov, 0.75), max(exact, 0.75)
                 s *= (0.55 + 0.45 * cov) * (0.8 + 0.2 * exact)
                 if phrase_ar and phrase_ar in hay:
                     s *= 1.25
