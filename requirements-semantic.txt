@@ -1,0 +1,6 @@
+# Optional: semantic (embedding) search. The core package needs only the Python 3.10+ standard library.
+# CPU-only torch keeps the install small:
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch
+#   pip install -r requirements-semantic.txt
+numpy>=1.24
+sentence-transformers>=3.0
