@@ -1,0 +1,5785 @@
+{
+ "mushaf": {
+  "name_en": "Madani Mushaf (Hafs 'an 'Asim)",
+  "pages": 604,
+  "juz": 30,
+  "surahs": 114,
+  "ayahs": 6236
+ },
+ "editions": {
+  "ar": {
+   "slug": "ara-quranuthmanihaf",
+   "name": "Uthmani (Hafs)",
+   "author": "King Fahd Complex / Quran Complex"
+  },
+  "en": {
+   "slug": "eng-ummmuhammad",
+   "name": "Saheeh International",
+   "author": "Umm Muhammad (Saheeh International)"
+  },
+  "ur": {
+   "slug": "urd-muhammadjunagar",
+   "name": "Muhammad Junagarhi",
+   "author": "Muhammad Junagarhi"
+  }
+ },
+ "sources": {
+  "fawaz_commit": "93e6f64925ae76273520d636fcaaf061129f2316",
+  "alquran_meta": "https://api.alquran.cloud/v1/meta"
+ },
+ "surah_count": 114,
+ "ayah_count": 6236,
+ "page_count": 604,
+ "surahs": [
+  {
+   "number": 1,
+   "name_ar": "سُورَةُ ٱلْفَاتِحَةِ",
+   "name_en": "Al-Faatiha",
+   "name_en_translation": "The Opening",
+   "revelation": "Meccan",
+   "ayah_count": 7,
+   "page_start": 1,
+   "page_end": 1,
+   "juz_start": 1,
+   "juz_end": 1
+  },
+  {
+   "number": 2,
+   "name_ar": "سُورَةُ البَقَرَةِ",
+   "name_en": "Al-Baqara",
+   "name_en_translation": "The Cow",
+   "revelation": "Medinan",
+   "ayah_count": 286,
+   "page_start": 2,
+   "page_end": 49,
+   "juz_start": 1,
+   "juz_end": 3
+  },
+  {
+   "number": 3,
+   "name_ar": "سُورَةُ آلِ عِمۡرَانَ",
+   "name_en": "Aal-i-Imraan",
+   "name_en_translation": "The Family of Imraan",
+   "revelation": "Medinan",
+   "ayah_count": 200,
+   "page_start": 50,
+   "page_end": 76,
+   "juz_start": 3,
+   "juz_end": 4
+  },
+  {
+   "number": 4,
+   "name_ar": "سُورَةُ النِّسَاءِ",
+   "name_en": "An-Nisaa",
+   "name_en_translation": "The Women",
+   "revelation": "Medinan",
+   "ayah_count": 176,
+   "page_start": 77,
+   "page_end": 106,
+   "juz_start": 4,
+   "juz_end": 6
+  },
+  {
+   "number": 5,
+   "name_ar": "سُورَةُ المَائـِدَةِ",
+   "name_en": "Al-Maaida",
+   "name_en_translation": "The Table",
+   "revelation": "Medinan",
+   "ayah_count": 120,
+   "page_start": 106,
+   "page_end": 127,
+   "juz_start": 6,
+   "juz_end": 7
+  },
+  {
+   "number": 6,
+   "name_ar": "سُورَةُ الأَنۡعَامِ",
+   "name_en": "Al-An'aam",
+   "name_en_translation": "The Cattle",
+   "revelation": "Meccan",
+   "ayah_count": 165,
+   "page_start": 128,
+   "page_end": 150,
+   "juz_start": 7,
+   "juz_end": 8
+  },
+  {
+   "number": 7,
+   "name_ar": "سُورَةُ الأَعۡرَافِ",
+   "name_en": "Al-A'raaf",
+   "name_en_translation": "The Heights",
+   "revelation": "Meccan",
+   "ayah_count": 206,
+   "page_start": 151,
+   "page_end": 176,
+   "juz_start": 8,
+   "juz_end": 9
+  },
+  {
+   "number": 8,
+   "name_ar": "سُورَةُ الأَنفَالِ",
+   "name_en": "Al-Anfaal",
+   "name_en_translation": "The Spoils of War",
+   "revelation": "Medinan",
+   "ayah_count": 75,
+   "page_start": 177,
+   "page_end": 186,
+   "juz_start": 9,
+   "juz_end": 10
+  },
+  {
+   "number": 9,
+   "name_ar": "سُورَةُ التَّوۡبَةِ",
+   "name_en": "At-Tawba",
+   "name_en_translation": "The Repentance",
+   "revelation": "Medinan",
+   "ayah_count": 129,
+   "page_start": 187,
+   "page_end": 207,
+   "juz_start": 10,
+   "juz_end": 11
+  },
+  {
+   "number": 10,
+   "name_ar": "سُورَةُ يُونُسَ",
+   "name_en": "Yunus",
+   "name_en_translation": "Jonas",
+   "revelation": "Meccan",
+   "ayah_count": 109,
+   "page_start": 208,
+   "page_end": 221,
+   "juz_start": 11,
+   "juz_end": 11
+  },
+  {
+   "number": 11,
+   "name_ar": "سُورَةُ هُودٍ",
+   "name_en": "Hud",
+   "name_en_translation": "Hud",
+   "revelation": "Meccan",
+   "ayah_count": 123,
+   "page_start": 221,
+   "page_end": 235,
+   "juz_start": 11,
+   "juz_end": 12
+  },
+  {
+   "number": 12,
+   "name_ar": "سُورَةُ يُوسُفَ",
+   "name_en": "Yusuf",
+   "name_en_translation": "Joseph",
+   "revelation": "Meccan",
+   "ayah_count": 111,
+   "page_start": 235,
+   "page_end": 248,
+   "juz_start": 12,
+   "juz_end": 13
+  },
+  {
+   "number": 13,
+   "name_ar": "سُورَةُ الرَّعۡدِ",
+   "name_en": "Ar-Ra'd",
+   "name_en_translation": "The Thunder",
+   "revelation": "Medinan",
+   "ayah_count": 43,
+   "page_start": 249,
+   "page_end": 255,
+   "juz_start": 13,
+   "juz_end": 13
+  },
+  {
+   "number": 14,
+   "name_ar": "سُورَةُ إِبۡرَاهِيمَ",
+   "name_en": "Ibrahim",
+   "name_en_translation": "Abraham",
+   "revelation": "Meccan",
+   "ayah_count": 52,
+   "page_start": 255,
+   "page_end": 261,
+   "juz_start": 13,
+   "juz_end": 13
+  },
+  {
+   "number": 15,
+   "name_ar": "سُورَةُ الحِجۡرِ",
+   "name_en": "Al-Hijr",
+   "name_en_translation": "The Rock",
+   "revelation": "Meccan",
+   "ayah_count": 99,
+   "page_start": 262,
+   "page_end": 267,
+   "juz_start": 14,
+   "juz_end": 14
+  },
+  {
+   "number": 16,
+   "name_ar": "سُورَةُ النَّحۡلِ",
+   "name_en": "An-Nahl",
+   "name_en_translation": "The Bee",
+   "revelation": "Meccan",
+   "ayah_count": 128,
+   "page_start": 267,
+   "page_end": 281,
+   "juz_start": 14,
+   "juz_end": 14
+  },
+  {
+   "number": 17,
+   "name_ar": "سُورَةُ الإِسۡرَاءِ",
+   "name_en": "Al-Israa",
+   "name_en_translation": "The Night Journey",
+   "revelation": "Meccan",
+   "ayah_count": 111,
+   "page_start": 282,
+   "page_end": 293,
+   "juz_start": 15,
+   "juz_end": 15
+  },
+  {
+   "number": 18,
+   "name_ar": "سُورَةُ الكَهۡفِ",
+   "name_en": "Al-Kahf",
+   "name_en_translation": "The Cave",
+   "revelation": "Meccan",
+   "ayah_count": 110,
+   "page_start": 293,
+   "page_end": 304,
+   "juz_start": 15,
+   "juz_end": 16
+  },
+  {
+   "number": 19,
+   "name_ar": "سُورَةُ مَرۡيَمَ",
+   "name_en": "Maryam",
+   "name_en_translation": "Mary",
+   "revelation": "Meccan",
+   "ayah_count": 98,
+   "page_start": 305,
+   "page_end": 312,
+   "juz_start": 16,
+   "juz_end": 16
+  },
+  {
+   "number": 20,
+   "name_ar": "سُورَةُ طه",
+   "name_en": "Taa-Haa",
+   "name_en_translation": "Taa-Haa",
+   "revelation": "Meccan",
+   "ayah_count": 135,
+   "page_start": 312,
+   "page_end": 321,
+   "juz_start": 16,
+   "juz_end": 16
+  },
+  {
+   "number": 21,
+   "name_ar": "سُورَةُ الأَنبِيَاءِ",
+   "name_en": "Al-Anbiyaa",
+   "name_en_translation": "The Prophets",
+   "revelation": "Meccan",
+   "ayah_count": 112,
+   "page_start": 322,
+   "page_end": 331,
+   "juz_start": 17,
+   "juz_end": 17
+  },
+  {
+   "number": 22,
+   "name_ar": "سُورَةُ الحَجِّ",
+   "name_en": "Al-Hajj",
+   "name_en_translation": "The Pilgrimage",
+   "revelation": "Medinan",
+   "ayah_count": 78,
+   "page_start": 332,
+   "page_end": 341,
+   "juz_start": 17,
+   "juz_end": 17
+  },
+  {
+   "number": 23,
+   "name_ar": "سُورَةُ المُؤۡمِنُونَ",
+   "name_en": "Al-Muminoon",
+   "name_en_translation": "The Believers",
+   "revelation": "Meccan",
+   "ayah_count": 118,
+   "page_start": 342,
+   "page_end": 349,
+   "juz_start": 18,
+   "juz_end": 18
+  },
+  {
+   "number": 24,
+   "name_ar": "سُورَةُ النُّورِ",
+   "name_en": "An-Noor",
+   "name_en_translation": "The Light",
+   "revelation": "Medinan",
+   "ayah_count": 64,
+   "page_start": 350,
+   "page_end": 359,
+   "juz_start": 18,
+   "juz_end": 18
+  },
+  {
+   "number": 25,
+   "name_ar": "سُورَةُ الفُرۡقَانِ",
+   "name_en": "Al-Furqaan",
+   "name_en_translation": "The Criterion",
+   "revelation": "Meccan",
+   "ayah_count": 77,
+   "page_start": 359,
+   "page_end": 366,
+   "juz_start": 18,
+   "juz_end": 19
+  },
+  {
+   "number": 26,
+   "name_ar": "سُورَةُ الشُّعَرَاءِ",
+   "name_en": "Ash-Shu'araa",
+   "name_en_translation": "The Poets",
+   "revelation": "Meccan",
+   "ayah_count": 227,
+   "page_start": 367,
+   "page_end": 376,
+   "juz_start": 19,
+   "juz_end": 19
+  },
+  {
+   "number": 27,
+   "name_ar": "سُورَةُ النَّمۡلِ",
+   "name_en": "An-Naml",
+   "name_en_translation": "The Ant",
+   "revelation": "Meccan",
+   "ayah_count": 93,
+   "page_start": 377,
+   "page_end": 385,
+   "juz_start": 19,
+   "juz_end": 20
+  },
+  {
+   "number": 28,
+   "name_ar": "سُورَةُ القَصَصِ",
+   "name_en": "Al-Qasas",
+   "name_en_translation": "The Stories",
+   "revelation": "Meccan",
+   "ayah_count": 88,
+   "page_start": 385,
+   "page_end": 396,
+   "juz_start": 20,
+   "juz_end": 20
+  },
+  {
+   "number": 29,
+   "name_ar": "سُورَةُ العَنكَبُوتِ",
+   "name_en": "Al-Ankaboot",
+   "name_en_translation": "The Spider",
+   "revelation": "Meccan",
+   "ayah_count": 69,
+   "page_start": 396,
+   "page_end": 404,
+   "juz_start": 20,
+   "juz_end": 21
+  },
+  {
+   "number": 30,
+   "name_ar": "سُورَةُ الرُّومِ",
+   "name_en": "Ar-Room",
+   "name_en_translation": "The Romans",
+   "revelation": "Meccan",
+   "ayah_count": 60,
+   "page_start": 404,
+   "page_end": 410,
+   "juz_start": 21,
+   "juz_end": 21
+  },
+  {
+   "number": 31,
+   "name_ar": "سُورَةُ لُقۡمَانَ",
+   "name_en": "Luqman",
+   "name_en_translation": "Luqman",
+   "revelation": "Meccan",
+   "ayah_count": 34,
+   "page_start": 411,
+   "page_end": 414,
+   "juz_start": 21,
+   "juz_end": 21
+  },
+  {
+   "number": 32,
+   "name_ar": "سُورَةُ السَّجۡدَةِ",
+   "name_en": "As-Sajda",
+   "name_en_translation": "The Prostration",
+   "revelation": "Meccan",
+   "ayah_count": 30,
+   "page_start": 415,
+   "page_end": 417,
+   "juz_start": 21,
+   "juz_end": 21
+  },
+  {
+   "number": 33,
+   "name_ar": "سُورَةُ الأَحۡزَابِ",
+   "name_en": "Al-Ahzaab",
+   "name_en_translation": "The Clans",
+   "revelation": "Medinan",
+   "ayah_count": 73,
+   "page_start": 418,
+   "page_end": 427,
+   "juz_start": 21,
+   "juz_end": 22
+  },
+  {
+   "number": 34,
+   "name_ar": "سُورَةُ سَبَإٍ",
+   "name_en": "Saba",
+   "name_en_translation": "Sheba",
+   "revelation": "Meccan",
+   "ayah_count": 54,
+   "page_start": 428,
+   "page_end": 434,
+   "juz_start": 22,
+   "juz_end": 22
+  },
+  {
+   "number": 35,
+   "name_ar": "سُورَةُ فَاطِرٍ",
+   "name_en": "Faatir",
+   "name_en_translation": "The Originator",
+   "revelation": "Meccan",
+   "ayah_count": 45,
+   "page_start": 434,
+   "page_end": 440,
+   "juz_start": 22,
+   "juz_end": 22
+  },
+  {
+   "number": 36,
+   "name_ar": "سُورَةُ يسٓ",
+   "name_en": "Yaseen",
+   "name_en_translation": "Yaseen",
+   "revelation": "Meccan",
+   "ayah_count": 83,
+   "page_start": 440,
+   "page_end": 445,
+   "juz_start": 22,
+   "juz_end": 23
+  },
+  {
+   "number": 37,
+   "name_ar": "سُورَةُ الصَّافَّاتِ",
+   "name_en": "As-Saaffaat",
+   "name_en_translation": "Those drawn up in Ranks",
+   "revelation": "Meccan",
+   "ayah_count": 182,
+   "page_start": 446,
+   "page_end": 452,
+   "juz_start": 23,
+   "juz_end": 23
+  },
+  {
+   "number": 38,
+   "name_ar": "سُورَةُ صٓ",
+   "name_en": "Saad",
+   "name_en_translation": "The letter Saad",
+   "revelation": "Meccan",
+   "ayah_count": 88,
+   "page_start": 453,
+   "page_end": 458,
+   "juz_start": 23,
+   "juz_end": 23
+  },
+  {
+   "number": 39,
+   "name_ar": "سُورَةُ الزُّمَرِ",
+   "name_en": "Az-Zumar",
+   "name_en_translation": "The Groups",
+   "revelation": "Meccan",
+   "ayah_count": 75,
+   "page_start": 458,
+   "page_end": 467,
+   "juz_start": 23,
+   "juz_end": 24
+  },
+  {
+   "number": 40,
+   "name_ar": "سُورَةُ غَافِرٍ",
+   "name_en": "Ghafir",
+   "name_en_translation": "The Forgiver",
+   "revelation": "Meccan",
+   "ayah_count": 85,
+   "page_start": 467,
+   "page_end": 476,
+   "juz_start": 24,
+   "juz_end": 24
+  },
+  {
+   "number": 41,
+   "name_ar": "سُورَةُ فُصِّلَتۡ",
+   "name_en": "Fussilat",
+   "name_en_translation": "Explained in detail",
+   "revelation": "Meccan",
+   "ayah_count": 54,
+   "page_start": 477,
+   "page_end": 482,
+   "juz_start": 24,
+   "juz_end": 25
+  },
+  {
+   "number": 42,
+   "name_ar": "سُورَةُ الشُّورَىٰ",
+   "name_en": "Ash-Shura",
+   "name_en_translation": "Consultation",
+   "revelation": "Meccan",
+   "ayah_count": 53,
+   "page_start": 483,
+   "page_end": 489,
+   "juz_start": 25,
+   "juz_end": 25
+  },
+  {
+   "number": 43,
+   "name_ar": "سُورَةُ الزُّخۡرُفِ",
+   "name_en": "Az-Zukhruf",
+   "name_en_translation": "Ornaments of gold",
+   "revelation": "Meccan",
+   "ayah_count": 89,
+   "page_start": 489,
+   "page_end": 495,
+   "juz_start": 25,
+   "juz_end": 25
+  },
+  {
+   "number": 44,
+   "name_ar": "سُورَةُ الدُّخَانِ",
+   "name_en": "Ad-Dukhaan",
+   "name_en_translation": "The Smoke",
+   "revelation": "Meccan",
+   "ayah_count": 59,
+   "page_start": 496,
+   "page_end": 498,
+   "juz_start": 25,
+   "juz_end": 25
+  },
+  {
+   "number": 45,
+   "name_ar": "سُورَةُ الجَاثِيَةِ",
+   "name_en": "Al-Jaathiya",
+   "name_en_translation": "Crouching",
+   "revelation": "Meccan",
+   "ayah_count": 37,
+   "page_start": 499,
+   "page_end": 502,
+   "juz_start": 25,
+   "juz_end": 25
+  },
+  {
+   "number": 46,
+   "name_ar": "سُورَةُ الأَحۡقَافِ",
+   "name_en": "Al-Ahqaf",
+   "name_en_translation": "The Dunes",
+   "revelation": "Meccan",
+   "ayah_count": 35,
+   "page_start": 502,
+   "page_end": 506,
+   "juz_start": 26,
+   "juz_end": 26
+  },
+  {
+   "number": 47,
+   "name_ar": "سُورَةُ مُحَمَّدٍ",
+   "name_en": "Muhammad",
+   "name_en_translation": "Muhammad",
+   "revelation": "Medinan",
+   "ayah_count": 38,
+   "page_start": 507,
+   "page_end": 510,
+   "juz_start": 26,
+   "juz_end": 26
+  },
+  {
+   "number": 48,
+   "name_ar": "سُورَةُ الفَتۡحِ",
+   "name_en": "Al-Fath",
+   "name_en_translation": "The Victory",
+   "revelation": "Medinan",
+   "ayah_count": 29,
+   "page_start": 511,
+   "page_end": 515,
+   "juz_start": 26,
+   "juz_end": 26
+  },
+  {
+   "number": 49,
+   "name_ar": "سُورَةُ الحُجُرَاتِ",
+   "name_en": "Al-Hujuraat",
+   "name_en_translation": "The Inner Apartments",
+   "revelation": "Medinan",
+   "ayah_count": 18,
+   "page_start": 515,
+   "page_end": 517,
+   "juz_start": 26,
+   "juz_end": 26
+  },
+  {
+   "number": 50,
+   "name_ar": "سُورَةُ قٓ",
+   "name_en": "Qaaf",
+   "name_en_translation": "The letter Qaaf",
+   "revelation": "Meccan",
+   "ayah_count": 45,
+   "page_start": 518,
+   "page_end": 520,
+   "juz_start": 26,
+   "juz_end": 26
+  },
+  {
+   "number": 51,
+   "name_ar": "سُورَةُ الذَّارِيَاتِ",
+   "name_en": "Adh-Dhaariyat",
+   "name_en_translation": "The Winnowing Winds",
+   "revelation": "Meccan",
+   "ayah_count": 60,
+   "page_start": 520,
+   "page_end": 523,
+   "juz_start": 26,
+   "juz_end": 27
+  },
+  {
+   "number": 52,
+   "name_ar": "سُورَةُ الطُّورِ",
+   "name_en": "At-Tur",
+   "name_en_translation": "The Mount",
+   "revelation": "Meccan",
+   "ayah_count": 49,
+   "page_start": 523,
+   "page_end": 525,
+   "juz_start": 27,
+   "juz_end": 27
+  },
+  {
+   "number": 53,
+   "name_ar": "سُورَةُ النَّجۡمِ",
+   "name_en": "An-Najm",
+   "name_en_translation": "The Star",
+   "revelation": "Meccan",
+   "ayah_count": 62,
+   "page_start": 526,
+   "page_end": 528,
+   "juz_start": 27,
+   "juz_end": 27
+  },
+  {
+   "number": 54,
+   "name_ar": "سُورَةُ القَمَرِ",
+   "name_en": "Al-Qamar",
+   "name_en_translation": "The Moon",
+   "revelation": "Meccan",
+   "ayah_count": 55,
+   "page_start": 528,
+   "page_end": 531,
+   "juz_start": 27,
+   "juz_end": 27
+  },
+  {
+   "number": 55,
+   "name_ar": "سُورَةُ الرَّحۡمَٰن",
+   "name_en": "Ar-Rahmaan",
+   "name_en_translation": "The Beneficent",
+   "revelation": "Medinan",
+   "ayah_count": 78,
+   "page_start": 531,
+   "page_end": 534,
+   "juz_start": 27,
+   "juz_end": 27
+  },
+  {
+   "number": 56,
+   "name_ar": "سُورَةُ الوَاقِعَةِ",
+   "name_en": "Al-Waaqia",
+   "name_en_translation": "The Inevitable",
+   "revelation": "Meccan",
+   "ayah_count": 96,
+   "page_start": 534,
+   "page_end": 537,
+   "juz_start": 27,
+   "juz_end": 27
+  },
+  {
+   "number": 57,
+   "name_ar": "سُورَةُ الحَدِيدِ",
+   "name_en": "Al-Hadid",
+   "name_en_translation": "The Iron",
+   "revelation": "Medinan",
+   "ayah_count": 29,
+   "page_start": 537,
+   "page_end": 541,
+   "juz_start": 27,
+   "juz_end": 27
+  },
+  {
+   "number": 58,
+   "name_ar": "سُورَةُ المُجَادلَةِ",
+   "name_en": "Al-Mujaadila",
+   "name_en_translation": "The Pleading Woman",
+   "revelation": "Medinan",
+   "ayah_count": 22,
+   "page_start": 542,
+   "page_end": 545,
+   "juz_start": 28,
+   "juz_end": 28
+  },
+  {
+   "number": 59,
+   "name_ar": "سُورَةُ الحَشۡرِ",
+   "name_en": "Al-Hashr",
+   "name_en_translation": "The Exile",
+   "revelation": "Medinan",
+   "ayah_count": 24,
+   "page_start": 545,
+   "page_end": 548,
+   "juz_start": 28,
+   "juz_end": 28
+  },
+  {
+   "number": 60,
+   "name_ar": "سُورَةُ المُمۡتَحنَةِ",
+   "name_en": "Al-Mumtahana",
+   "name_en_translation": "She that is to be examined",
+   "revelation": "Medinan",
+   "ayah_count": 13,
+   "page_start": 549,
+   "page_end": 551,
+   "juz_start": 28,
+   "juz_end": 28
+  },
+  {
+   "number": 61,
+   "name_ar": "سُورَةُ الصَّفِّ",
+   "name_en": "As-Saff",
+   "name_en_translation": "The Ranks",
+   "revelation": "Medinan",
+   "ayah_count": 14,
+   "page_start": 551,
+   "page_end": 552,
+   "juz_start": 28,
+   "juz_end": 28
+  },
+  {
+   "number": 62,
+   "name_ar": "سُورَةُ الجُمُعَةِ",
+   "name_en": "Al-Jumu'a",
+   "name_en_translation": "Friday",
+   "revelation": "Medinan",
+   "ayah_count": 11,
+   "page_start": 553,
+   "page_end": 554,
+   "juz_start": 28,
+   "juz_end": 28
+  },
+  {
+   "number": 63,
+   "name_ar": "سُورَةُ المُنَافِقُونَ",
+   "name_en": "Al-Munaafiqoon",
+   "name_en_translation": "The Hypocrites",
+   "revelation": "Medinan",
+   "ayah_count": 11,
+   "page_start": 554,
+   "page_end": 555,
+   "juz_start": 28,
+   "juz_end": 28
+  },
+  {
+   "number": 64,
+   "name_ar": "سُورَةُ التَّغَابُنِ",
+   "name_en": "At-Taghaabun",
+   "name_en_translation": "Mutual Disillusion",
+   "revelation": "Medinan",
+   "ayah_count": 18,
+   "page_start": 556,
+   "page_end": 557,
+   "juz_start": 28,
+   "juz_end": 28
+  },
+  {
+   "number": 65,
+   "name_ar": "سُورَةُ الطَّلَاقِ",
+   "name_en": "At-Talaaq",
+   "name_en_translation": "Divorce",
+   "revelation": "Medinan",
+   "ayah_count": 12,
+   "page_start": 558,
+   "page_end": 559,
+   "juz_start": 28,
+   "juz_end": 28
+  },
+  {
+   "number": 66,
+   "name_ar": "سُورَةُ التَّحۡرِيمِ",
+   "name_en": "At-Tahrim",
+   "name_en_translation": "The Prohibition",
+   "revelation": "Medinan",
+   "ayah_count": 12,
+   "page_start": 560,
+   "page_end": 561,
+   "juz_start": 28,
+   "juz_end": 28
+  },
+  {
+   "number": 67,
+   "name_ar": "سُورَةُ المُلۡكِ",
+   "name_en": "Al-Mulk",
+   "name_en_translation": "The Sovereignty",
+   "revelation": "Meccan",
+   "ayah_count": 30,
+   "page_start": 562,
+   "page_end": 564,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 68,
+   "name_ar": "سُورَةُ القَلَمِ",
+   "name_en": "Al-Qalam",
+   "name_en_translation": "The Pen",
+   "revelation": "Meccan",
+   "ayah_count": 52,
+   "page_start": 564,
+   "page_end": 566,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 69,
+   "name_ar": "سُورَةُ الحَاقَّةِ",
+   "name_en": "Al-Haaqqa",
+   "name_en_translation": "The Reality",
+   "revelation": "Meccan",
+   "ayah_count": 52,
+   "page_start": 566,
+   "page_end": 568,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 70,
+   "name_ar": "سُورَةُ المَعَارِجِ",
+   "name_en": "Al-Ma'aarij",
+   "name_en_translation": "The Ascending Stairways",
+   "revelation": "Meccan",
+   "ayah_count": 44,
+   "page_start": 568,
+   "page_end": 570,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 71,
+   "name_ar": "سُورَةُ نُوحٍ",
+   "name_en": "Nooh",
+   "name_en_translation": "Noah",
+   "revelation": "Meccan",
+   "ayah_count": 28,
+   "page_start": 570,
+   "page_end": 571,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 72,
+   "name_ar": "سُورَةُ الجِنِّ",
+   "name_en": "Al-Jinn",
+   "name_en_translation": "The Jinn",
+   "revelation": "Meccan",
+   "ayah_count": 28,
+   "page_start": 572,
+   "page_end": 573,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 73,
+   "name_ar": "سُورَةُ المُزَّمِّلِ",
+   "name_en": "Al-Muzzammil",
+   "name_en_translation": "The Enshrouded One",
+   "revelation": "Meccan",
+   "ayah_count": 20,
+   "page_start": 574,
+   "page_end": 575,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 74,
+   "name_ar": "سُورَةُ المُدَّثِّرِ",
+   "name_en": "Al-Muddaththir",
+   "name_en_translation": "The Cloaked One",
+   "revelation": "Meccan",
+   "ayah_count": 56,
+   "page_start": 575,
+   "page_end": 577,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 75,
+   "name_ar": "سُورَةُ القِيَامَةِ",
+   "name_en": "Al-Qiyaama",
+   "name_en_translation": "The Resurrection",
+   "revelation": "Meccan",
+   "ayah_count": 40,
+   "page_start": 577,
+   "page_end": 578,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 76,
+   "name_ar": "سُورَةُ الإِنسَانِ",
+   "name_en": "Al-Insaan",
+   "name_en_translation": "Man",
+   "revelation": "Medinan",
+   "ayah_count": 31,
+   "page_start": 578,
+   "page_end": 580,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 77,
+   "name_ar": "سُورَةُ المُرۡسَلَاتِ",
+   "name_en": "Al-Mursalaat",
+   "name_en_translation": "The Emissaries",
+   "revelation": "Meccan",
+   "ayah_count": 50,
+   "page_start": 580,
+   "page_end": 581,
+   "juz_start": 29,
+   "juz_end": 29
+  },
+  {
+   "number": 78,
+   "name_ar": "سُورَةُ النَّبَإِ",
+   "name_en": "An-Naba",
+   "name_en_translation": "The Announcement",
+   "revelation": "Meccan",
+   "ayah_count": 40,
+   "page_start": 582,
+   "page_end": 583,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 79,
+   "name_ar": "سُورَةُ النَّازِعَاتِ",
+   "name_en": "An-Naazi'aat",
+   "name_en_translation": "Those who drag forth",
+   "revelation": "Meccan",
+   "ayah_count": 46,
+   "page_start": 583,
+   "page_end": 584,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 80,
+   "name_ar": "سُورَةُ عَبَسَ",
+   "name_en": "Abasa",
+   "name_en_translation": "He frowned",
+   "revelation": "Meccan",
+   "ayah_count": 42,
+   "page_start": 585,
+   "page_end": 585,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 81,
+   "name_ar": "سُورَةُ التَّكۡوِيرِ",
+   "name_en": "At-Takwir",
+   "name_en_translation": "The Overthrowing",
+   "revelation": "Meccan",
+   "ayah_count": 29,
+   "page_start": 586,
+   "page_end": 586,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 82,
+   "name_ar": "سُورَةُ الانفِطَارِ",
+   "name_en": "Al-Infitaar",
+   "name_en_translation": "The Cleaving",
+   "revelation": "Meccan",
+   "ayah_count": 19,
+   "page_start": 587,
+   "page_end": 587,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 83,
+   "name_ar": "سُورَةُ المُطَفِّفِينَ",
+   "name_en": "Al-Mutaffifin",
+   "name_en_translation": "Defrauding",
+   "revelation": "Meccan",
+   "ayah_count": 36,
+   "page_start": 587,
+   "page_end": 589,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 84,
+   "name_ar": "سُورَةُ الانشِقَاقِ",
+   "name_en": "Al-Inshiqaaq",
+   "name_en_translation": "The Splitting Open",
+   "revelation": "Meccan",
+   "ayah_count": 25,
+   "page_start": 589,
+   "page_end": 589,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 85,
+   "name_ar": "سُورَةُ البُرُوجِ",
+   "name_en": "Al-Burooj",
+   "name_en_translation": "The Constellations",
+   "revelation": "Meccan",
+   "ayah_count": 22,
+   "page_start": 590,
+   "page_end": 590,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 86,
+   "name_ar": "سُورَةُ الطَّارِقِ",
+   "name_en": "At-Taariq",
+   "name_en_translation": "The Morning Star",
+   "revelation": "Meccan",
+   "ayah_count": 17,
+   "page_start": 591,
+   "page_end": 591,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 87,
+   "name_ar": "سُورَةُ الأَعۡلَىٰ",
+   "name_en": "Al-A'laa",
+   "name_en_translation": "The Most High",
+   "revelation": "Meccan",
+   "ayah_count": 19,
+   "page_start": 591,
+   "page_end": 592,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 88,
+   "name_ar": "سُورَةُ الغَاشِيَةِ",
+   "name_en": "Al-Ghaashiya",
+   "name_en_translation": "The Overwhelming",
+   "revelation": "Meccan",
+   "ayah_count": 26,
+   "page_start": 592,
+   "page_end": 592,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 89,
+   "name_ar": "سُورَةُ الفَجۡرِ",
+   "name_en": "Al-Fajr",
+   "name_en_translation": "The Dawn",
+   "revelation": "Meccan",
+   "ayah_count": 30,
+   "page_start": 593,
+   "page_end": 594,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 90,
+   "name_ar": "سُورَةُ البَلَدِ",
+   "name_en": "Al-Balad",
+   "name_en_translation": "The City",
+   "revelation": "Meccan",
+   "ayah_count": 20,
+   "page_start": 594,
+   "page_end": 594,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 91,
+   "name_ar": "سُورَةُ الشَّمۡسِ",
+   "name_en": "Ash-Shams",
+   "name_en_translation": "The Sun",
+   "revelation": "Meccan",
+   "ayah_count": 15,
+   "page_start": 595,
+   "page_end": 595,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 92,
+   "name_ar": "سُورَةُ اللَّيۡلِ",
+   "name_en": "Al-Lail",
+   "name_en_translation": "The Night",
+   "revelation": "Meccan",
+   "ayah_count": 21,
+   "page_start": 595,
+   "page_end": 596,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 93,
+   "name_ar": "سُورَةُ الضُّحَىٰ",
+   "name_en": "Ad-Dhuhaa",
+   "name_en_translation": "The Morning Hours",
+   "revelation": "Meccan",
+   "ayah_count": 11,
+   "page_start": 596,
+   "page_end": 596,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 94,
+   "name_ar": "سُورَةُ الشَّرۡحِ",
+   "name_en": "Ash-Sharh",
+   "name_en_translation": "The Consolation",
+   "revelation": "Meccan",
+   "ayah_count": 8,
+   "page_start": 596,
+   "page_end": 596,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 95,
+   "name_ar": "سُورَةُ التِّينِ",
+   "name_en": "At-Tin",
+   "name_en_translation": "The Fig",
+   "revelation": "Meccan",
+   "ayah_count": 8,
+   "page_start": 597,
+   "page_end": 597,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 96,
+   "name_ar": "سُورَةُ العَلَقِ",
+   "name_en": "Al-Alaq",
+   "name_en_translation": "The Clot",
+   "revelation": "Meccan",
+   "ayah_count": 19,
+   "page_start": 597,
+   "page_end": 597,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 97,
+   "name_ar": "سُورَةُ القَدۡرِ",
+   "name_en": "Al-Qadr",
+   "name_en_translation": "The Power, Fate",
+   "revelation": "Meccan",
+   "ayah_count": 5,
+   "page_start": 598,
+   "page_end": 598,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 98,
+   "name_ar": "سُورَةُ البَيِّنَةِ",
+   "name_en": "Al-Bayyina",
+   "name_en_translation": "The Evidence",
+   "revelation": "Medinan",
+   "ayah_count": 8,
+   "page_start": 598,
+   "page_end": 599,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 99,
+   "name_ar": "سُورَةُ الزَّلۡزَلَةِ",
+   "name_en": "Az-Zalzala",
+   "name_en_translation": "The Earthquake",
+   "revelation": "Medinan",
+   "ayah_count": 8,
+   "page_start": 599,
+   "page_end": 599,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 100,
+   "name_ar": "سُورَةُ العَادِيَاتِ",
+   "name_en": "Al-Aadiyaat",
+   "name_en_translation": "The Chargers",
+   "revelation": "Meccan",
+   "ayah_count": 11,
+   "page_start": 599,
+   "page_end": 600,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 101,
+   "name_ar": "سُورَةُ القَارِعَةِ",
+   "name_en": "Al-Qaari'a",
+   "name_en_translation": "The Calamity",
+   "revelation": "Meccan",
+   "ayah_count": 11,
+   "page_start": 600,
+   "page_end": 600,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 102,
+   "name_ar": "سُورَةُ التَّكَاثُرِ",
+   "name_en": "At-Takaathur",
+   "name_en_translation": "Competition",
+   "revelation": "Meccan",
+   "ayah_count": 8,
+   "page_start": 600,
+   "page_end": 600,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 103,
+   "name_ar": "سُورَةُ العَصۡرِ",
+   "name_en": "Al-Asr",
+   "name_en_translation": "The Declining Day, Epoch",
+   "revelation": "Meccan",
+   "ayah_count": 3,
+   "page_start": 601,
+   "page_end": 601,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 104,
+   "name_ar": "سُورَةُ الهُمَزَةِ",
+   "name_en": "Al-Humaza",
+   "name_en_translation": "The Traducer",
+   "revelation": "Meccan",
+   "ayah_count": 9,
+   "page_start": 601,
+   "page_end": 601,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 105,
+   "name_ar": "سُورَةُ الفِيلِ",
+   "name_en": "Al-Fil",
+   "name_en_translation": "The Elephant",
+   "revelation": "Meccan",
+   "ayah_count": 5,
+   "page_start": 601,
+   "page_end": 601,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 106,
+   "name_ar": "سُورَةُ قُرَيۡشٍ",
+   "name_en": "Quraish",
+   "name_en_translation": "Quraysh",
+   "revelation": "Meccan",
+   "ayah_count": 4,
+   "page_start": 602,
+   "page_end": 602,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 107,
+   "name_ar": "سُورَةُ المَاعُونِ",
+   "name_en": "Al-Maa'un",
+   "name_en_translation": "Almsgiving",
+   "revelation": "Meccan",
+   "ayah_count": 7,
+   "page_start": 602,
+   "page_end": 602,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 108,
+   "name_ar": "سُورَةُ الكَوۡثَرِ",
+   "name_en": "Al-Kawthar",
+   "name_en_translation": "Abundance",
+   "revelation": "Meccan",
+   "ayah_count": 3,
+   "page_start": 602,
+   "page_end": 602,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 109,
+   "name_ar": "سُورَةُ الكَافِرُونَ",
+   "name_en": "Al-Kaafiroon",
+   "name_en_translation": "The Disbelievers",
+   "revelation": "Meccan",
+   "ayah_count": 6,
+   "page_start": 603,
+   "page_end": 603,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 110,
+   "name_ar": "سُورَةُ النَّصۡرِ",
+   "name_en": "An-Nasr",
+   "name_en_translation": "Divine Support",
+   "revelation": "Medinan",
+   "ayah_count": 3,
+   "page_start": 603,
+   "page_end": 603,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 111,
+   "name_ar": "سُورَةُ المَسَدِ",
+   "name_en": "Al-Masad",
+   "name_en_translation": "The Palm Fibre",
+   "revelation": "Meccan",
+   "ayah_count": 5,
+   "page_start": 603,
+   "page_end": 603,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 112,
+   "name_ar": "سُورَةُ الإِخۡلَاصِ",
+   "name_en": "Al-Ikhlaas",
+   "name_en_translation": "Sincerity",
+   "revelation": "Meccan",
+   "ayah_count": 4,
+   "page_start": 604,
+   "page_end": 604,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 113,
+   "name_ar": "سُورَةُ الفَلَقِ",
+   "name_en": "Al-Falaq",
+   "name_en_translation": "The Dawn",
+   "revelation": "Meccan",
+   "ayah_count": 5,
+   "page_start": 604,
+   "page_end": 604,
+   "juz_start": 30,
+   "juz_end": 30
+  },
+  {
+   "number": 114,
+   "name_ar": "سُورَةُ النَّاسِ",
+   "name_en": "An-Naas",
+   "name_en_translation": "Mankind",
+   "revelation": "Meccan",
+   "ayah_count": 6,
+   "page_start": 604,
+   "page_end": 604,
+   "juz_start": 30,
+   "juz_end": 30
+  }
+ ],
+ "pages": [
+  {
+   "number": 1,
+   "surah_start": 1,
+   "ayah_start": 1,
+   "ayah_count": 7,
+   "juz": 1
+  },
+  {
+   "number": 2,
+   "surah_start": 2,
+   "ayah_start": 1,
+   "ayah_count": 5,
+   "juz": 1
+  },
+  {
+   "number": 3,
+   "surah_start": 2,
+   "ayah_start": 6,
+   "ayah_count": 11,
+   "juz": 1
+  },
+  {
+   "number": 4,
+   "surah_start": 2,
+   "ayah_start": 17,
+   "ayah_count": 8,
+   "juz": 1
+  },
+  {
+   "number": 5,
+   "surah_start": 2,
+   "ayah_start": 25,
+   "ayah_count": 5,
+   "juz": 1
+  },
+  {
+   "number": 6,
+   "surah_start": 2,
+   "ayah_start": 30,
+   "ayah_count": 8,
+   "juz": 1
+  },
+  {
+   "number": 7,
+   "surah_start": 2,
+   "ayah_start": 38,
+   "ayah_count": 11,
+   "juz": 1
+  },
+  {
+   "number": 8,
+   "surah_start": 2,
+   "ayah_start": 49,
+   "ayah_count": 9,
+   "juz": 1
+  },
+  {
+   "number": 9,
+   "surah_start": 2,
+   "ayah_start": 58,
+   "ayah_count": 4,
+   "juz": 1
+  },
+  {
+   "number": 10,
+   "surah_start": 2,
+   "ayah_start": 62,
+   "ayah_count": 8,
+   "juz": 1
+  },
+  {
+   "number": 11,
+   "surah_start": 2,
+   "ayah_start": 70,
+   "ayah_count": 7,
+   "juz": 1
+  },
+  {
+   "number": 12,
+   "surah_start": 2,
+   "ayah_start": 77,
+   "ayah_count": 7,
+   "juz": 1
+  },
+  {
+   "number": 13,
+   "surah_start": 2,
+   "ayah_start": 84,
+   "ayah_count": 5,
+   "juz": 1
+  },
+  {
+   "number": 14,
+   "surah_start": 2,
+   "ayah_start": 89,
+   "ayah_count": 5,
+   "juz": 1
+  },
+  {
+   "number": 15,
+   "surah_start": 2,
+   "ayah_start": 94,
+   "ayah_count": 8,
+   "juz": 1
+  },
+  {
+   "number": 16,
+   "surah_start": 2,
+   "ayah_start": 102,
+   "ayah_count": 4,
+   "juz": 1
+  },
+  {
+   "number": 17,
+   "surah_start": 2,
+   "ayah_start": 106,
+   "ayah_count": 7,
+   "juz": 1
+  },
+  {
+   "number": 18,
+   "surah_start": 2,
+   "ayah_start": 113,
+   "ayah_count": 7,
+   "juz": 1
+  },
+  {
+   "number": 19,
+   "surah_start": 2,
+   "ayah_start": 120,
+   "ayah_count": 7,
+   "juz": 1
+  },
+  {
+   "number": 20,
+   "surah_start": 2,
+   "ayah_start": 127,
+   "ayah_count": 8,
+   "juz": 1
+  },
+  {
+   "number": 21,
+   "surah_start": 2,
+   "ayah_start": 135,
+   "ayah_count": 7,
+   "juz": 1
+  },
+  {
+   "number": 22,
+   "surah_start": 2,
+   "ayah_start": 142,
+   "ayah_count": 4,
+   "juz": 2
+  },
+  {
+   "number": 23,
+   "surah_start": 2,
+   "ayah_start": 146,
+   "ayah_count": 8,
+   "juz": 2
+  },
+  {
+   "number": 24,
+   "surah_start": 2,
+   "ayah_start": 154,
+   "ayah_count": 10,
+   "juz": 2
+  },
+  {
+   "number": 25,
+   "surah_start": 2,
+   "ayah_start": 164,
+   "ayah_count": 6,
+   "juz": 2
+  },
+  {
+   "number": 26,
+   "surah_start": 2,
+   "ayah_start": 170,
+   "ayah_count": 7,
+   "juz": 2
+  },
+  {
+   "number": 27,
+   "surah_start": 2,
+   "ayah_start": 177,
+   "ayah_count": 5,
+   "juz": 2
+  },
+  {
+   "number": 28,
+   "surah_start": 2,
+   "ayah_start": 182,
+   "ayah_count": 5,
+   "juz": 2
+  },
+  {
+   "number": 29,
+   "surah_start": 2,
+   "ayah_start": 187,
+   "ayah_count": 4,
+   "juz": 2
+  },
+  {
+   "number": 30,
+   "surah_start": 2,
+   "ayah_start": 191,
+   "ayah_count": 6,
+   "juz": 2
+  },
+  {
+   "number": 31,
+   "surah_start": 2,
+   "ayah_start": 197,
+   "ayah_count": 6,
+   "juz": 2
+  },
+  {
+   "number": 32,
+   "surah_start": 2,
+   "ayah_start": 203,
+   "ayah_count": 8,
+   "juz": 2
+  },
+  {
+   "number": 33,
+   "surah_start": 2,
+   "ayah_start": 211,
+   "ayah_count": 5,
+   "juz": 2
+  },
+  {
+   "number": 34,
+   "surah_start": 2,
+   "ayah_start": 216,
+   "ayah_count": 4,
+   "juz": 2
+  },
+  {
+   "number": 35,
+   "surah_start": 2,
+   "ayah_start": 220,
+   "ayah_count": 5,
+   "juz": 2
+  },
+  {
+   "number": 36,
+   "surah_start": 2,
+   "ayah_start": 225,
+   "ayah_count": 6,
+   "juz": 2
+  },
+  {
+   "number": 37,
+   "surah_start": 2,
+   "ayah_start": 231,
+   "ayah_count": 3,
+   "juz": 2
+  },
+  {
+   "number": 38,
+   "surah_start": 2,
+   "ayah_start": 234,
+   "ayah_count": 4,
+   "juz": 2
+  },
+  {
+   "number": 39,
+   "surah_start": 2,
+   "ayah_start": 238,
+   "ayah_count": 8,
+   "juz": 2
+  },
+  {
+   "number": 40,
+   "surah_start": 2,
+   "ayah_start": 246,
+   "ayah_count": 3,
+   "juz": 2
+  },
+  {
+   "number": 41,
+   "surah_start": 2,
+   "ayah_start": 249,
+   "ayah_count": 4,
+   "juz": 2
+  },
+  {
+   "number": 42,
+   "surah_start": 2,
+   "ayah_start": 253,
+   "ayah_count": 4,
+   "juz": 3
+  },
+  {
+   "number": 43,
+   "surah_start": 2,
+   "ayah_start": 257,
+   "ayah_count": 3,
+   "juz": 3
+  },
+  {
+   "number": 44,
+   "surah_start": 2,
+   "ayah_start": 260,
+   "ayah_count": 5,
+   "juz": 3
+  },
+  {
+   "number": 45,
+   "surah_start": 2,
+   "ayah_start": 265,
+   "ayah_count": 5,
+   "juz": 3
+  },
+  {
+   "number": 46,
+   "surah_start": 2,
+   "ayah_start": 270,
+   "ayah_count": 5,
+   "juz": 3
+  },
+  {
+   "number": 47,
+   "surah_start": 2,
+   "ayah_start": 275,
+   "ayah_count": 7,
+   "juz": 3
+  },
+  {
+   "number": 48,
+   "surah_start": 2,
+   "ayah_start": 282,
+   "ayah_count": 1,
+   "juz": 3
+  },
+  {
+   "number": 49,
+   "surah_start": 2,
+   "ayah_start": 283,
+   "ayah_count": 4,
+   "juz": 3
+  },
+  {
+   "number": 50,
+   "surah_start": 3,
+   "ayah_start": 1,
+   "ayah_count": 9,
+   "juz": 3
+  },
+  {
+   "number": 51,
+   "surah_start": 3,
+   "ayah_start": 10,
+   "ayah_count": 6,
+   "juz": 3
+  },
+  {
+   "number": 52,
+   "surah_start": 3,
+   "ayah_start": 16,
+   "ayah_count": 7,
+   "juz": 3
+  },
+  {
+   "number": 53,
+   "surah_start": 3,
+   "ayah_start": 23,
+   "ayah_count": 7,
+   "juz": 3
+  },
+  {
+   "number": 54,
+   "surah_start": 3,
+   "ayah_start": 30,
+   "ayah_count": 8,
+   "juz": 3
+  },
+  {
+   "number": 55,
+   "surah_start": 3,
+   "ayah_start": 38,
+   "ayah_count": 8,
+   "juz": 3
+  },
+  {
+   "number": 56,
+   "surah_start": 3,
+   "ayah_start": 46,
+   "ayah_count": 7,
+   "juz": 3
+  },
+  {
+   "number": 57,
+   "surah_start": 3,
+   "ayah_start": 53,
+   "ayah_count": 9,
+   "juz": 3
+  },
+  {
+   "number": 58,
+   "surah_start": 3,
+   "ayah_start": 62,
+   "ayah_count": 9,
+   "juz": 3
+  },
+  {
+   "number": 59,
+   "surah_start": 3,
+   "ayah_start": 71,
+   "ayah_count": 7,
+   "juz": 3
+  },
+  {
+   "number": 60,
+   "surah_start": 3,
+   "ayah_start": 78,
+   "ayah_count": 6,
+   "juz": 3
+  },
+  {
+   "number": 61,
+   "surah_start": 3,
+   "ayah_start": 84,
+   "ayah_count": 8,
+   "juz": 3
+  },
+  {
+   "number": 62,
+   "surah_start": 3,
+   "ayah_start": 92,
+   "ayah_count": 9,
+   "juz": 3
+  },
+  {
+   "number": 63,
+   "surah_start": 3,
+   "ayah_start": 101,
+   "ayah_count": 8,
+   "juz": 4
+  },
+  {
+   "number": 64,
+   "surah_start": 3,
+   "ayah_start": 109,
+   "ayah_count": 7,
+   "juz": 4
+  },
+  {
+   "number": 65,
+   "surah_start": 3,
+   "ayah_start": 116,
+   "ayah_count": 6,
+   "juz": 4
+  },
+  {
+   "number": 66,
+   "surah_start": 3,
+   "ayah_start": 122,
+   "ayah_count": 11,
+   "juz": 4
+  },
+  {
+   "number": 67,
+   "surah_start": 3,
+   "ayah_start": 133,
+   "ayah_count": 8,
+   "juz": 4
+  },
+  {
+   "number": 68,
+   "surah_start": 3,
+   "ayah_start": 141,
+   "ayah_count": 8,
+   "juz": 4
+  },
+  {
+   "number": 69,
+   "surah_start": 3,
+   "ayah_start": 149,
+   "ayah_count": 5,
+   "juz": 4
+  },
+  {
+   "number": 70,
+   "surah_start": 3,
+   "ayah_start": 154,
+   "ayah_count": 4,
+   "juz": 4
+  },
+  {
+   "number": 71,
+   "surah_start": 3,
+   "ayah_start": 158,
+   "ayah_count": 8,
+   "juz": 4
+  },
+  {
+   "number": 72,
+   "surah_start": 3,
+   "ayah_start": 166,
+   "ayah_count": 8,
+   "juz": 4
+  },
+  {
+   "number": 73,
+   "surah_start": 3,
+   "ayah_start": 174,
+   "ayah_count": 7,
+   "juz": 4
+  },
+  {
+   "number": 74,
+   "surah_start": 3,
+   "ayah_start": 181,
+   "ayah_count": 6,
+   "juz": 4
+  },
+  {
+   "number": 75,
+   "surah_start": 3,
+   "ayah_start": 187,
+   "ayah_count": 8,
+   "juz": 4
+  },
+  {
+   "number": 76,
+   "surah_start": 3,
+   "ayah_start": 195,
+   "ayah_count": 6,
+   "juz": 4
+  },
+  {
+   "number": 77,
+   "surah_start": 4,
+   "ayah_start": 1,
+   "ayah_count": 6,
+   "juz": 4
+  },
+  {
+   "number": 78,
+   "surah_start": 4,
+   "ayah_start": 7,
+   "ayah_count": 5,
+   "juz": 4
+  },
+  {
+   "number": 79,
+   "surah_start": 4,
+   "ayah_start": 12,
+   "ayah_count": 3,
+   "juz": 4
+  },
+  {
+   "number": 80,
+   "surah_start": 4,
+   "ayah_start": 15,
+   "ayah_count": 5,
+   "juz": 4
+  },
+  {
+   "number": 81,
+   "surah_start": 4,
+   "ayah_start": 20,
+   "ayah_count": 4,
+   "juz": 4
+  },
+  {
+   "number": 82,
+   "surah_start": 4,
+   "ayah_start": 24,
+   "ayah_count": 3,
+   "juz": 5
+  },
+  {
+   "number": 83,
+   "surah_start": 4,
+   "ayah_start": 27,
+   "ayah_count": 7,
+   "juz": 5
+  },
+  {
+   "number": 84,
+   "surah_start": 4,
+   "ayah_start": 34,
+   "ayah_count": 4,
+   "juz": 5
+  },
+  {
+   "number": 85,
+   "surah_start": 4,
+   "ayah_start": 38,
+   "ayah_count": 7,
+   "juz": 5
+  },
+  {
+   "number": 86,
+   "surah_start": 4,
+   "ayah_start": 45,
+   "ayah_count": 7,
+   "juz": 5
+  },
+  {
+   "number": 87,
+   "surah_start": 4,
+   "ayah_start": 52,
+   "ayah_count": 8,
+   "juz": 5
+  },
+  {
+   "number": 88,
+   "surah_start": 4,
+   "ayah_start": 60,
+   "ayah_count": 6,
+   "juz": 5
+  },
+  {
+   "number": 89,
+   "surah_start": 4,
+   "ayah_start": 66,
+   "ayah_count": 9,
+   "juz": 5
+  },
+  {
+   "number": 90,
+   "surah_start": 4,
+   "ayah_start": 75,
+   "ayah_count": 5,
+   "juz": 5
+  },
+  {
+   "number": 91,
+   "surah_start": 4,
+   "ayah_start": 80,
+   "ayah_count": 7,
+   "juz": 5
+  },
+  {
+   "number": 92,
+   "surah_start": 4,
+   "ayah_start": 87,
+   "ayah_count": 5,
+   "juz": 5
+  },
+  {
+   "number": 93,
+   "surah_start": 4,
+   "ayah_start": 92,
+   "ayah_count": 3,
+   "juz": 5
+  },
+  {
+   "number": 94,
+   "surah_start": 4,
+   "ayah_start": 95,
+   "ayah_count": 7,
+   "juz": 5
+  },
+  {
+   "number": 95,
+   "surah_start": 4,
+   "ayah_start": 102,
+   "ayah_count": 4,
+   "juz": 5
+  },
+  {
+   "number": 96,
+   "surah_start": 4,
+   "ayah_start": 106,
+   "ayah_count": 8,
+   "juz": 5
+  },
+  {
+   "number": 97,
+   "surah_start": 4,
+   "ayah_start": 114,
+   "ayah_count": 8,
+   "juz": 5
+  },
+  {
+   "number": 98,
+   "surah_start": 4,
+   "ayah_start": 122,
+   "ayah_count": 6,
+   "juz": 5
+  },
+  {
+   "number": 99,
+   "surah_start": 4,
+   "ayah_start": 128,
+   "ayah_count": 7,
+   "juz": 5
+  },
+  {
+   "number": 100,
+   "surah_start": 4,
+   "ayah_start": 135,
+   "ayah_count": 6,
+   "juz": 5
+  },
+  {
+   "number": 101,
+   "surah_start": 4,
+   "ayah_start": 141,
+   "ayah_count": 7,
+   "juz": 5
+  },
+  {
+   "number": 102,
+   "surah_start": 4,
+   "ayah_start": 148,
+   "ayah_count": 7,
+   "juz": 6
+  },
+  {
+   "number": 103,
+   "surah_start": 4,
+   "ayah_start": 155,
+   "ayah_count": 8,
+   "juz": 6
+  },
+  {
+   "number": 104,
+   "surah_start": 4,
+   "ayah_start": 163,
+   "ayah_count": 8,
+   "juz": 6
+  },
+  {
+   "number": 105,
+   "surah_start": 4,
+   "ayah_start": 171,
+   "ayah_count": 5,
+   "juz": 6
+  },
+  {
+   "number": 106,
+   "surah_start": 4,
+   "ayah_start": 176,
+   "ayah_count": 3,
+   "juz": 6
+  },
+  {
+   "number": 107,
+   "surah_start": 5,
+   "ayah_start": 3,
+   "ayah_count": 3,
+   "juz": 6
+  },
+  {
+   "number": 108,
+   "surah_start": 5,
+   "ayah_start": 6,
+   "ayah_count": 4,
+   "juz": 6
+  },
+  {
+   "number": 109,
+   "surah_start": 5,
+   "ayah_start": 10,
+   "ayah_count": 4,
+   "juz": 6
+  },
+  {
+   "number": 110,
+   "surah_start": 5,
+   "ayah_start": 14,
+   "ayah_count": 4,
+   "juz": 6
+  },
+  {
+   "number": 111,
+   "surah_start": 5,
+   "ayah_start": 18,
+   "ayah_count": 6,
+   "juz": 6
+  },
+  {
+   "number": 112,
+   "surah_start": 5,
+   "ayah_start": 24,
+   "ayah_count": 8,
+   "juz": 6
+  },
+  {
+   "number": 113,
+   "surah_start": 5,
+   "ayah_start": 32,
+   "ayah_count": 5,
+   "juz": 6
+  },
+  {
+   "number": 114,
+   "surah_start": 5,
+   "ayah_start": 37,
+   "ayah_count": 5,
+   "juz": 6
+  },
+  {
+   "number": 115,
+   "surah_start": 5,
+   "ayah_start": 42,
+   "ayah_count": 4,
+   "juz": 6
+  },
+  {
+   "number": 116,
+   "surah_start": 5,
+   "ayah_start": 46,
+   "ayah_count": 5,
+   "juz": 6
+  },
+  {
+   "number": 117,
+   "surah_start": 5,
+   "ayah_start": 51,
+   "ayah_count": 7,
+   "juz": 6
+  },
+  {
+   "number": 118,
+   "surah_start": 5,
+   "ayah_start": 58,
+   "ayah_count": 7,
+   "juz": 6
+  },
+  {
+   "number": 119,
+   "surah_start": 5,
+   "ayah_start": 65,
+   "ayah_count": 6,
+   "juz": 6
+  },
+  {
+   "number": 120,
+   "surah_start": 5,
+   "ayah_start": 71,
+   "ayah_count": 6,
+   "juz": 6
+  },
+  {
+   "number": 121,
+   "surah_start": 5,
+   "ayah_start": 77,
+   "ayah_count": 6,
+   "juz": 6
+  },
+  {
+   "number": 122,
+   "surah_start": 5,
+   "ayah_start": 83,
+   "ayah_count": 7,
+   "juz": 7
+  },
+  {
+   "number": 123,
+   "surah_start": 5,
+   "ayah_start": 90,
+   "ayah_count": 6,
+   "juz": 7
+  },
+  {
+   "number": 124,
+   "surah_start": 5,
+   "ayah_start": 96,
+   "ayah_count": 8,
+   "juz": 7
+  },
+  {
+   "number": 125,
+   "surah_start": 5,
+   "ayah_start": 104,
+   "ayah_count": 5,
+   "juz": 7
+  },
+  {
+   "number": 126,
+   "surah_start": 5,
+   "ayah_start": 109,
+   "ayah_count": 5,
+   "juz": 7
+  },
+  {
+   "number": 127,
+   "surah_start": 5,
+   "ayah_start": 114,
+   "ayah_count": 7,
+   "juz": 7
+  },
+  {
+   "number": 128,
+   "surah_start": 6,
+   "ayah_start": 1,
+   "ayah_count": 8,
+   "juz": 7
+  },
+  {
+   "number": 129,
+   "surah_start": 6,
+   "ayah_start": 9,
+   "ayah_count": 10,
+   "juz": 7
+  },
+  {
+   "number": 130,
+   "surah_start": 6,
+   "ayah_start": 19,
+   "ayah_count": 9,
+   "juz": 7
+  },
+  {
+   "number": 131,
+   "surah_start": 6,
+   "ayah_start": 28,
+   "ayah_count": 8,
+   "juz": 7
+  },
+  {
+   "number": 132,
+   "surah_start": 6,
+   "ayah_start": 36,
+   "ayah_count": 9,
+   "juz": 7
+  },
+  {
+   "number": 133,
+   "surah_start": 6,
+   "ayah_start": 45,
+   "ayah_count": 8,
+   "juz": 7
+  },
+  {
+   "number": 134,
+   "surah_start": 6,
+   "ayah_start": 53,
+   "ayah_count": 7,
+   "juz": 7
+  },
+  {
+   "number": 135,
+   "surah_start": 6,
+   "ayah_start": 60,
+   "ayah_count": 9,
+   "juz": 7
+  },
+  {
+   "number": 136,
+   "surah_start": 6,
+   "ayah_start": 69,
+   "ayah_count": 5,
+   "juz": 7
+  },
+  {
+   "number": 137,
+   "surah_start": 6,
+   "ayah_start": 74,
+   "ayah_count": 8,
+   "juz": 7
+  },
+  {
+   "number": 138,
+   "surah_start": 6,
+   "ayah_start": 82,
+   "ayah_count": 9,
+   "juz": 7
+  },
+  {
+   "number": 139,
+   "surah_start": 6,
+   "ayah_start": 91,
+   "ayah_count": 4,
+   "juz": 7
+  },
+  {
+   "number": 140,
+   "surah_start": 6,
+   "ayah_start": 95,
+   "ayah_count": 7,
+   "juz": 7
+  },
+  {
+   "number": 141,
+   "surah_start": 6,
+   "ayah_start": 102,
+   "ayah_count": 9,
+   "juz": 7
+  },
+  {
+   "number": 142,
+   "surah_start": 6,
+   "ayah_start": 111,
+   "ayah_count": 8,
+   "juz": 8
+  },
+  {
+   "number": 143,
+   "surah_start": 6,
+   "ayah_start": 119,
+   "ayah_count": 6,
+   "juz": 8
+  },
+  {
+   "number": 144,
+   "surah_start": 6,
+   "ayah_start": 125,
+   "ayah_count": 7,
+   "juz": 8
+  },
+  {
+   "number": 145,
+   "surah_start": 6,
+   "ayah_start": 132,
+   "ayah_count": 6,
+   "juz": 8
+  },
+  {
+   "number": 146,
+   "surah_start": 6,
+   "ayah_start": 138,
+   "ayah_count": 5,
+   "juz": 8
+  },
+  {
+   "number": 147,
+   "surah_start": 6,
+   "ayah_start": 143,
+   "ayah_count": 4,
+   "juz": 8
+  },
+  {
+   "number": 148,
+   "surah_start": 6,
+   "ayah_start": 147,
+   "ayah_count": 5,
+   "juz": 8
+  },
+  {
+   "number": 149,
+   "surah_start": 6,
+   "ayah_start": 152,
+   "ayah_count": 6,
+   "juz": 8
+  },
+  {
+   "number": 150,
+   "surah_start": 6,
+   "ayah_start": 158,
+   "ayah_count": 8,
+   "juz": 8
+  },
+  {
+   "number": 151,
+   "surah_start": 7,
+   "ayah_start": 1,
+   "ayah_count": 11,
+   "juz": 8
+  },
+  {
+   "number": 152,
+   "surah_start": 7,
+   "ayah_start": 12,
+   "ayah_count": 11,
+   "juz": 8
+  },
+  {
+   "number": 153,
+   "surah_start": 7,
+   "ayah_start": 23,
+   "ayah_count": 8,
+   "juz": 8
+  },
+  {
+   "number": 154,
+   "surah_start": 7,
+   "ayah_start": 31,
+   "ayah_count": 7,
+   "juz": 8
+  },
+  {
+   "number": 155,
+   "surah_start": 7,
+   "ayah_start": 38,
+   "ayah_count": 6,
+   "juz": 8
+  },
+  {
+   "number": 156,
+   "surah_start": 7,
+   "ayah_start": 44,
+   "ayah_count": 8,
+   "juz": 8
+  },
+  {
+   "number": 157,
+   "surah_start": 7,
+   "ayah_start": 52,
+   "ayah_count": 6,
+   "juz": 8
+  },
+  {
+   "number": 158,
+   "surah_start": 7,
+   "ayah_start": 58,
+   "ayah_count": 10,
+   "juz": 8
+  },
+  {
+   "number": 159,
+   "surah_start": 7,
+   "ayah_start": 68,
+   "ayah_count": 6,
+   "juz": 8
+  },
+  {
+   "number": 160,
+   "surah_start": 7,
+   "ayah_start": 74,
+   "ayah_count": 8,
+   "juz": 8
+  },
+  {
+   "number": 161,
+   "surah_start": 7,
+   "ayah_start": 82,
+   "ayah_count": 6,
+   "juz": 8
+  },
+  {
+   "number": 162,
+   "surah_start": 7,
+   "ayah_start": 88,
+   "ayah_count": 8,
+   "juz": 9
+  },
+  {
+   "number": 163,
+   "surah_start": 7,
+   "ayah_start": 96,
+   "ayah_count": 9,
+   "juz": 9
+  },
+  {
+   "number": 164,
+   "surah_start": 7,
+   "ayah_start": 105,
+   "ayah_count": 16,
+   "juz": 9
+  },
+  {
+   "number": 165,
+   "surah_start": 7,
+   "ayah_start": 121,
+   "ayah_count": 10,
+   "juz": 9
+  },
+  {
+   "number": 166,
+   "surah_start": 7,
+   "ayah_start": 131,
+   "ayah_count": 7,
+   "juz": 9
+  },
+  {
+   "number": 167,
+   "surah_start": 7,
+   "ayah_start": 138,
+   "ayah_count": 6,
+   "juz": 9
+  },
+  {
+   "number": 168,
+   "surah_start": 7,
+   "ayah_start": 144,
+   "ayah_count": 6,
+   "juz": 9
+  },
+  {
+   "number": 169,
+   "surah_start": 7,
+   "ayah_start": 150,
+   "ayah_count": 6,
+   "juz": 9
+  },
+  {
+   "number": 170,
+   "surah_start": 7,
+   "ayah_start": 156,
+   "ayah_count": 4,
+   "juz": 9
+  },
+  {
+   "number": 171,
+   "surah_start": 7,
+   "ayah_start": 160,
+   "ayah_count": 4,
+   "juz": 9
+  },
+  {
+   "number": 172,
+   "surah_start": 7,
+   "ayah_start": 164,
+   "ayah_count": 7,
+   "juz": 9
+  },
+  {
+   "number": 173,
+   "surah_start": 7,
+   "ayah_start": 171,
+   "ayah_count": 8,
+   "juz": 9
+  },
+  {
+   "number": 174,
+   "surah_start": 7,
+   "ayah_start": 179,
+   "ayah_count": 9,
+   "juz": 9
+  },
+  {
+   "number": 175,
+   "surah_start": 7,
+   "ayah_start": 188,
+   "ayah_count": 8,
+   "juz": 9
+  },
+  {
+   "number": 176,
+   "surah_start": 7,
+   "ayah_start": 196,
+   "ayah_count": 11,
+   "juz": 9
+  },
+  {
+   "number": 177,
+   "surah_start": 8,
+   "ayah_start": 1,
+   "ayah_count": 8,
+   "juz": 9
+  },
+  {
+   "number": 178,
+   "surah_start": 8,
+   "ayah_start": 9,
+   "ayah_count": 8,
+   "juz": 9
+  },
+  {
+   "number": 179,
+   "surah_start": 8,
+   "ayah_start": 17,
+   "ayah_count": 9,
+   "juz": 9
+  },
+  {
+   "number": 180,
+   "surah_start": 8,
+   "ayah_start": 26,
+   "ayah_count": 8,
+   "juz": 9
+  },
+  {
+   "number": 181,
+   "surah_start": 8,
+   "ayah_start": 34,
+   "ayah_count": 7,
+   "juz": 9
+  },
+  {
+   "number": 182,
+   "surah_start": 8,
+   "ayah_start": 41,
+   "ayah_count": 5,
+   "juz": 10
+  },
+  {
+   "number": 183,
+   "surah_start": 8,
+   "ayah_start": 46,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 184,
+   "surah_start": 8,
+   "ayah_start": 53,
+   "ayah_count": 9,
+   "juz": 10
+  },
+  {
+   "number": 185,
+   "surah_start": 8,
+   "ayah_start": 62,
+   "ayah_count": 8,
+   "juz": 10
+  },
+  {
+   "number": 186,
+   "surah_start": 8,
+   "ayah_start": 70,
+   "ayah_count": 6,
+   "juz": 10
+  },
+  {
+   "number": 187,
+   "surah_start": 9,
+   "ayah_start": 1,
+   "ayah_count": 6,
+   "juz": 10
+  },
+  {
+   "number": 188,
+   "surah_start": 9,
+   "ayah_start": 7,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 189,
+   "surah_start": 9,
+   "ayah_start": 14,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 190,
+   "surah_start": 9,
+   "ayah_start": 21,
+   "ayah_count": 6,
+   "juz": 10
+  },
+  {
+   "number": 191,
+   "surah_start": 9,
+   "ayah_start": 27,
+   "ayah_count": 5,
+   "juz": 10
+  },
+  {
+   "number": 192,
+   "surah_start": 9,
+   "ayah_start": 32,
+   "ayah_count": 5,
+   "juz": 10
+  },
+  {
+   "number": 193,
+   "surah_start": 9,
+   "ayah_start": 37,
+   "ayah_count": 4,
+   "juz": 10
+  },
+  {
+   "number": 194,
+   "surah_start": 9,
+   "ayah_start": 41,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 195,
+   "surah_start": 9,
+   "ayah_start": 48,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 196,
+   "surah_start": 9,
+   "ayah_start": 55,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 197,
+   "surah_start": 9,
+   "ayah_start": 62,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 198,
+   "surah_start": 9,
+   "ayah_start": 69,
+   "ayah_count": 4,
+   "juz": 10
+  },
+  {
+   "number": 199,
+   "surah_start": 9,
+   "ayah_start": 73,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 200,
+   "surah_start": 9,
+   "ayah_start": 80,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 201,
+   "surah_start": 9,
+   "ayah_start": 87,
+   "ayah_count": 7,
+   "juz": 10
+  },
+  {
+   "number": 202,
+   "surah_start": 9,
+   "ayah_start": 94,
+   "ayah_count": 6,
+   "juz": 11
+  },
+  {
+   "number": 203,
+   "surah_start": 9,
+   "ayah_start": 100,
+   "ayah_count": 7,
+   "juz": 11
+  },
+  {
+   "number": 204,
+   "surah_start": 9,
+   "ayah_start": 107,
+   "ayah_count": 5,
+   "juz": 11
+  },
+  {
+   "number": 205,
+   "surah_start": 9,
+   "ayah_start": 112,
+   "ayah_count": 6,
+   "juz": 11
+  },
+  {
+   "number": 206,
+   "surah_start": 9,
+   "ayah_start": 118,
+   "ayah_count": 5,
+   "juz": 11
+  },
+  {
+   "number": 207,
+   "surah_start": 9,
+   "ayah_start": 123,
+   "ayah_count": 7,
+   "juz": 11
+  },
+  {
+   "number": 208,
+   "surah_start": 10,
+   "ayah_start": 1,
+   "ayah_count": 6,
+   "juz": 11
+  },
+  {
+   "number": 209,
+   "surah_start": 10,
+   "ayah_start": 7,
+   "ayah_count": 8,
+   "juz": 11
+  },
+  {
+   "number": 210,
+   "surah_start": 10,
+   "ayah_start": 15,
+   "ayah_count": 6,
+   "juz": 11
+  },
+  {
+   "number": 211,
+   "surah_start": 10,
+   "ayah_start": 21,
+   "ayah_count": 5,
+   "juz": 11
+  },
+  {
+   "number": 212,
+   "surah_start": 10,
+   "ayah_start": 26,
+   "ayah_count": 8,
+   "juz": 11
+  },
+  {
+   "number": 213,
+   "surah_start": 10,
+   "ayah_start": 34,
+   "ayah_count": 9,
+   "juz": 11
+  },
+  {
+   "number": 214,
+   "surah_start": 10,
+   "ayah_start": 43,
+   "ayah_count": 11,
+   "juz": 11
+  },
+  {
+   "number": 215,
+   "surah_start": 10,
+   "ayah_start": 54,
+   "ayah_count": 8,
+   "juz": 11
+  },
+  {
+   "number": 216,
+   "surah_start": 10,
+   "ayah_start": 62,
+   "ayah_count": 9,
+   "juz": 11
+  },
+  {
+   "number": 217,
+   "surah_start": 10,
+   "ayah_start": 71,
+   "ayah_count": 8,
+   "juz": 11
+  },
+  {
+   "number": 218,
+   "surah_start": 10,
+   "ayah_start": 79,
+   "ayah_count": 10,
+   "juz": 11
+  },
+  {
+   "number": 219,
+   "surah_start": 10,
+   "ayah_start": 89,
+   "ayah_count": 9,
+   "juz": 11
+  },
+  {
+   "number": 220,
+   "surah_start": 10,
+   "ayah_start": 98,
+   "ayah_count": 9,
+   "juz": 11
+  },
+  {
+   "number": 221,
+   "surah_start": 10,
+   "ayah_start": 107,
+   "ayah_count": 8,
+   "juz": 11
+  },
+  {
+   "number": 222,
+   "surah_start": 11,
+   "ayah_start": 6,
+   "ayah_count": 7,
+   "juz": 12
+  },
+  {
+   "number": 223,
+   "surah_start": 11,
+   "ayah_start": 13,
+   "ayah_count": 7,
+   "juz": 12
+  },
+  {
+   "number": 224,
+   "surah_start": 11,
+   "ayah_start": 20,
+   "ayah_count": 9,
+   "juz": 12
+  },
+  {
+   "number": 225,
+   "surah_start": 11,
+   "ayah_start": 29,
+   "ayah_count": 9,
+   "juz": 12
+  },
+  {
+   "number": 226,
+   "surah_start": 11,
+   "ayah_start": 38,
+   "ayah_count": 8,
+   "juz": 12
+  },
+  {
+   "number": 227,
+   "surah_start": 11,
+   "ayah_start": 46,
+   "ayah_count": 8,
+   "juz": 12
+  },
+  {
+   "number": 228,
+   "surah_start": 11,
+   "ayah_start": 54,
+   "ayah_count": 9,
+   "juz": 12
+  },
+  {
+   "number": 229,
+   "surah_start": 11,
+   "ayah_start": 63,
+   "ayah_count": 9,
+   "juz": 12
+  },
+  {
+   "number": 230,
+   "surah_start": 11,
+   "ayah_start": 72,
+   "ayah_count": 10,
+   "juz": 12
+  },
+  {
+   "number": 231,
+   "surah_start": 11,
+   "ayah_start": 82,
+   "ayah_count": 7,
+   "juz": 12
+  },
+  {
+   "number": 232,
+   "surah_start": 11,
+   "ayah_start": 89,
+   "ayah_count": 9,
+   "juz": 12
+  },
+  {
+   "number": 233,
+   "surah_start": 11,
+   "ayah_start": 98,
+   "ayah_count": 11,
+   "juz": 12
+  },
+  {
+   "number": 234,
+   "surah_start": 11,
+   "ayah_start": 109,
+   "ayah_count": 9,
+   "juz": 12
+  },
+  {
+   "number": 235,
+   "surah_start": 11,
+   "ayah_start": 118,
+   "ayah_count": 10,
+   "juz": 12
+  },
+  {
+   "number": 236,
+   "surah_start": 12,
+   "ayah_start": 5,
+   "ayah_count": 10,
+   "juz": 12
+  },
+  {
+   "number": 237,
+   "surah_start": 12,
+   "ayah_start": 15,
+   "ayah_count": 8,
+   "juz": 12
+  },
+  {
+   "number": 238,
+   "surah_start": 12,
+   "ayah_start": 23,
+   "ayah_count": 8,
+   "juz": 12
+  },
+  {
+   "number": 239,
+   "surah_start": 12,
+   "ayah_start": 31,
+   "ayah_count": 7,
+   "juz": 12
+  },
+  {
+   "number": 240,
+   "surah_start": 12,
+   "ayah_start": 38,
+   "ayah_count": 6,
+   "juz": 12
+  },
+  {
+   "number": 241,
+   "surah_start": 12,
+   "ayah_start": 44,
+   "ayah_count": 9,
+   "juz": 12
+  },
+  {
+   "number": 242,
+   "surah_start": 12,
+   "ayah_start": 53,
+   "ayah_count": 11,
+   "juz": 13
+  },
+  {
+   "number": 243,
+   "surah_start": 12,
+   "ayah_start": 64,
+   "ayah_count": 6,
+   "juz": 13
+  },
+  {
+   "number": 244,
+   "surah_start": 12,
+   "ayah_start": 70,
+   "ayah_count": 9,
+   "juz": 13
+  },
+  {
+   "number": 245,
+   "surah_start": 12,
+   "ayah_start": 79,
+   "ayah_count": 8,
+   "juz": 13
+  },
+  {
+   "number": 246,
+   "surah_start": 12,
+   "ayah_start": 87,
+   "ayah_count": 9,
+   "juz": 13
+  },
+  {
+   "number": 247,
+   "surah_start": 12,
+   "ayah_start": 96,
+   "ayah_count": 8,
+   "juz": 13
+  },
+  {
+   "number": 248,
+   "surah_start": 12,
+   "ayah_start": 104,
+   "ayah_count": 8,
+   "juz": 13
+  },
+  {
+   "number": 249,
+   "surah_start": 13,
+   "ayah_start": 1,
+   "ayah_count": 5,
+   "juz": 13
+  },
+  {
+   "number": 250,
+   "surah_start": 13,
+   "ayah_start": 6,
+   "ayah_count": 8,
+   "juz": 13
+  },
+  {
+   "number": 251,
+   "surah_start": 13,
+   "ayah_start": 14,
+   "ayah_count": 5,
+   "juz": 13
+  },
+  {
+   "number": 252,
+   "surah_start": 13,
+   "ayah_start": 19,
+   "ayah_count": 10,
+   "juz": 13
+  },
+  {
+   "number": 253,
+   "surah_start": 13,
+   "ayah_start": 29,
+   "ayah_count": 6,
+   "juz": 13
+  },
+  {
+   "number": 254,
+   "surah_start": 13,
+   "ayah_start": 35,
+   "ayah_count": 8,
+   "juz": 13
+  },
+  {
+   "number": 255,
+   "surah_start": 13,
+   "ayah_start": 43,
+   "ayah_count": 6,
+   "juz": 13
+  },
+  {
+   "number": 256,
+   "surah_start": 14,
+   "ayah_start": 6,
+   "ayah_count": 5,
+   "juz": 13
+  },
+  {
+   "number": 257,
+   "surah_start": 14,
+   "ayah_start": 11,
+   "ayah_count": 8,
+   "juz": 13
+  },
+  {
+   "number": 258,
+   "surah_start": 14,
+   "ayah_start": 19,
+   "ayah_count": 6,
+   "juz": 13
+  },
+  {
+   "number": 259,
+   "surah_start": 14,
+   "ayah_start": 25,
+   "ayah_count": 9,
+   "juz": 13
+  },
+  {
+   "number": 260,
+   "surah_start": 14,
+   "ayah_start": 34,
+   "ayah_count": 9,
+   "juz": 13
+  },
+  {
+   "number": 261,
+   "surah_start": 14,
+   "ayah_start": 43,
+   "ayah_count": 10,
+   "juz": 13
+  },
+  {
+   "number": 262,
+   "surah_start": 15,
+   "ayah_start": 1,
+   "ayah_count": 15,
+   "juz": 14
+  },
+  {
+   "number": 263,
+   "surah_start": 15,
+   "ayah_start": 16,
+   "ayah_count": 16,
+   "juz": 14
+  },
+  {
+   "number": 264,
+   "surah_start": 15,
+   "ayah_start": 32,
+   "ayah_count": 20,
+   "juz": 14
+  },
+  {
+   "number": 265,
+   "surah_start": 15,
+   "ayah_start": 52,
+   "ayah_count": 19,
+   "juz": 14
+  },
+  {
+   "number": 266,
+   "surah_start": 15,
+   "ayah_start": 71,
+   "ayah_count": 20,
+   "juz": 14
+  },
+  {
+   "number": 267,
+   "surah_start": 15,
+   "ayah_start": 91,
+   "ayah_count": 15,
+   "juz": 14
+  },
+  {
+   "number": 268,
+   "surah_start": 16,
+   "ayah_start": 7,
+   "ayah_count": 8,
+   "juz": 14
+  },
+  {
+   "number": 269,
+   "surah_start": 16,
+   "ayah_start": 15,
+   "ayah_count": 12,
+   "juz": 14
+  },
+  {
+   "number": 270,
+   "surah_start": 16,
+   "ayah_start": 27,
+   "ayah_count": 8,
+   "juz": 14
+  },
+  {
+   "number": 271,
+   "surah_start": 16,
+   "ayah_start": 35,
+   "ayah_count": 8,
+   "juz": 14
+  },
+  {
+   "number": 272,
+   "surah_start": 16,
+   "ayah_start": 43,
+   "ayah_count": 12,
+   "juz": 14
+  },
+  {
+   "number": 273,
+   "surah_start": 16,
+   "ayah_start": 55,
+   "ayah_count": 10,
+   "juz": 14
+  },
+  {
+   "number": 274,
+   "surah_start": 16,
+   "ayah_start": 65,
+   "ayah_count": 8,
+   "juz": 14
+  },
+  {
+   "number": 275,
+   "surah_start": 16,
+   "ayah_start": 73,
+   "ayah_count": 7,
+   "juz": 14
+  },
+  {
+   "number": 276,
+   "surah_start": 16,
+   "ayah_start": 80,
+   "ayah_count": 8,
+   "juz": 14
+  },
+  {
+   "number": 277,
+   "surah_start": 16,
+   "ayah_start": 88,
+   "ayah_count": 6,
+   "juz": 14
+  },
+  {
+   "number": 278,
+   "surah_start": 16,
+   "ayah_start": 94,
+   "ayah_count": 9,
+   "juz": 14
+  },
+  {
+   "number": 279,
+   "surah_start": 16,
+   "ayah_start": 103,
+   "ayah_count": 8,
+   "juz": 14
+  },
+  {
+   "number": 280,
+   "surah_start": 16,
+   "ayah_start": 111,
+   "ayah_count": 8,
+   "juz": 14
+  },
+  {
+   "number": 281,
+   "surah_start": 16,
+   "ayah_start": 119,
+   "ayah_count": 10,
+   "juz": 14
+  },
+  {
+   "number": 282,
+   "surah_start": 17,
+   "ayah_start": 1,
+   "ayah_count": 7,
+   "juz": 15
+  },
+  {
+   "number": 283,
+   "surah_start": 17,
+   "ayah_start": 8,
+   "ayah_count": 10,
+   "juz": 15
+  },
+  {
+   "number": 284,
+   "surah_start": 17,
+   "ayah_start": 18,
+   "ayah_count": 10,
+   "juz": 15
+  },
+  {
+   "number": 285,
+   "surah_start": 17,
+   "ayah_start": 28,
+   "ayah_count": 11,
+   "juz": 15
+  },
+  {
+   "number": 286,
+   "surah_start": 17,
+   "ayah_start": 39,
+   "ayah_count": 11,
+   "juz": 15
+  },
+  {
+   "number": 287,
+   "surah_start": 17,
+   "ayah_start": 50,
+   "ayah_count": 9,
+   "juz": 15
+  },
+  {
+   "number": 288,
+   "surah_start": 17,
+   "ayah_start": 59,
+   "ayah_count": 8,
+   "juz": 15
+  },
+  {
+   "number": 289,
+   "surah_start": 17,
+   "ayah_start": 67,
+   "ayah_count": 9,
+   "juz": 15
+  },
+  {
+   "number": 290,
+   "surah_start": 17,
+   "ayah_start": 76,
+   "ayah_count": 11,
+   "juz": 15
+  },
+  {
+   "number": 291,
+   "surah_start": 17,
+   "ayah_start": 87,
+   "ayah_count": 10,
+   "juz": 15
+  },
+  {
+   "number": 292,
+   "surah_start": 17,
+   "ayah_start": 97,
+   "ayah_count": 8,
+   "juz": 15
+  },
+  {
+   "number": 293,
+   "surah_start": 17,
+   "ayah_start": 105,
+   "ayah_count": 11,
+   "juz": 15
+  },
+  {
+   "number": 294,
+   "surah_start": 18,
+   "ayah_start": 5,
+   "ayah_count": 11,
+   "juz": 15
+  },
+  {
+   "number": 295,
+   "surah_start": 18,
+   "ayah_start": 16,
+   "ayah_count": 5,
+   "juz": 15
+  },
+  {
+   "number": 296,
+   "surah_start": 18,
+   "ayah_start": 21,
+   "ayah_count": 7,
+   "juz": 15
+  },
+  {
+   "number": 297,
+   "surah_start": 18,
+   "ayah_start": 28,
+   "ayah_count": 7,
+   "juz": 15
+  },
+  {
+   "number": 298,
+   "surah_start": 18,
+   "ayah_start": 35,
+   "ayah_count": 11,
+   "juz": 15
+  },
+  {
+   "number": 299,
+   "surah_start": 18,
+   "ayah_start": 46,
+   "ayah_count": 8,
+   "juz": 15
+  },
+  {
+   "number": 300,
+   "surah_start": 18,
+   "ayah_start": 54,
+   "ayah_count": 8,
+   "juz": 15
+  },
+  {
+   "number": 301,
+   "surah_start": 18,
+   "ayah_start": 62,
+   "ayah_count": 13,
+   "juz": 15
+  },
+  {
+   "number": 302,
+   "surah_start": 18,
+   "ayah_start": 75,
+   "ayah_count": 9,
+   "juz": 16
+  },
+  {
+   "number": 303,
+   "surah_start": 18,
+   "ayah_start": 84,
+   "ayah_count": 14,
+   "juz": 16
+  },
+  {
+   "number": 304,
+   "surah_start": 18,
+   "ayah_start": 98,
+   "ayah_count": 13,
+   "juz": 16
+  },
+  {
+   "number": 305,
+   "surah_start": 19,
+   "ayah_start": 1,
+   "ayah_count": 11,
+   "juz": 16
+  },
+  {
+   "number": 306,
+   "surah_start": 19,
+   "ayah_start": 12,
+   "ayah_count": 14,
+   "juz": 16
+  },
+  {
+   "number": 307,
+   "surah_start": 19,
+   "ayah_start": 26,
+   "ayah_count": 13,
+   "juz": 16
+  },
+  {
+   "number": 308,
+   "surah_start": 19,
+   "ayah_start": 39,
+   "ayah_count": 13,
+   "juz": 16
+  },
+  {
+   "number": 309,
+   "surah_start": 19,
+   "ayah_start": 52,
+   "ayah_count": 13,
+   "juz": 16
+  },
+  {
+   "number": 310,
+   "surah_start": 19,
+   "ayah_start": 65,
+   "ayah_count": 12,
+   "juz": 16
+  },
+  {
+   "number": 311,
+   "surah_start": 19,
+   "ayah_start": 77,
+   "ayah_count": 19,
+   "juz": 16
+  },
+  {
+   "number": 312,
+   "surah_start": 19,
+   "ayah_start": 96,
+   "ayah_count": 15,
+   "juz": 16
+  },
+  {
+   "number": 313,
+   "surah_start": 20,
+   "ayah_start": 13,
+   "ayah_count": 25,
+   "juz": 16
+  },
+  {
+   "number": 314,
+   "surah_start": 20,
+   "ayah_start": 38,
+   "ayah_count": 14,
+   "juz": 16
+  },
+  {
+   "number": 315,
+   "surah_start": 20,
+   "ayah_start": 52,
+   "ayah_count": 13,
+   "juz": 16
+  },
+  {
+   "number": 316,
+   "surah_start": 20,
+   "ayah_start": 65,
+   "ayah_count": 12,
+   "juz": 16
+  },
+  {
+   "number": 317,
+   "surah_start": 20,
+   "ayah_start": 77,
+   "ayah_count": 11,
+   "juz": 16
+  },
+  {
+   "number": 318,
+   "surah_start": 20,
+   "ayah_start": 88,
+   "ayah_count": 11,
+   "juz": 16
+  },
+  {
+   "number": 319,
+   "surah_start": 20,
+   "ayah_start": 99,
+   "ayah_count": 15,
+   "juz": 16
+  },
+  {
+   "number": 320,
+   "surah_start": 20,
+   "ayah_start": 114,
+   "ayah_count": 12,
+   "juz": 16
+  },
+  {
+   "number": 321,
+   "surah_start": 20,
+   "ayah_start": 126,
+   "ayah_count": 10,
+   "juz": 16
+  },
+  {
+   "number": 322,
+   "surah_start": 21,
+   "ayah_start": 1,
+   "ayah_count": 10,
+   "juz": 17
+  },
+  {
+   "number": 323,
+   "surah_start": 21,
+   "ayah_start": 11,
+   "ayah_count": 14,
+   "juz": 17
+  },
+  {
+   "number": 324,
+   "surah_start": 21,
+   "ayah_start": 25,
+   "ayah_count": 11,
+   "juz": 17
+  },
+  {
+   "number": 325,
+   "surah_start": 21,
+   "ayah_start": 36,
+   "ayah_count": 9,
+   "juz": 17
+  },
+  {
+   "number": 326,
+   "surah_start": 21,
+   "ayah_start": 45,
+   "ayah_count": 13,
+   "juz": 17
+  },
+  {
+   "number": 327,
+   "surah_start": 21,
+   "ayah_start": 58,
+   "ayah_count": 15,
+   "juz": 17
+  },
+  {
+   "number": 328,
+   "surah_start": 21,
+   "ayah_start": 73,
+   "ayah_count": 9,
+   "juz": 17
+  },
+  {
+   "number": 329,
+   "surah_start": 21,
+   "ayah_start": 82,
+   "ayah_count": 9,
+   "juz": 17
+  },
+  {
+   "number": 330,
+   "surah_start": 21,
+   "ayah_start": 91,
+   "ayah_count": 11,
+   "juz": 17
+  },
+  {
+   "number": 331,
+   "surah_start": 21,
+   "ayah_start": 102,
+   "ayah_count": 11,
+   "juz": 17
+  },
+  {
+   "number": 332,
+   "surah_start": 22,
+   "ayah_start": 1,
+   "ayah_count": 5,
+   "juz": 17
+  },
+  {
+   "number": 333,
+   "surah_start": 22,
+   "ayah_start": 6,
+   "ayah_count": 10,
+   "juz": 17
+  },
+  {
+   "number": 334,
+   "surah_start": 22,
+   "ayah_start": 16,
+   "ayah_count": 8,
+   "juz": 17
+  },
+  {
+   "number": 335,
+   "surah_start": 22,
+   "ayah_start": 24,
+   "ayah_count": 7,
+   "juz": 17
+  },
+  {
+   "number": 336,
+   "surah_start": 22,
+   "ayah_start": 31,
+   "ayah_count": 8,
+   "juz": 17
+  },
+  {
+   "number": 337,
+   "surah_start": 22,
+   "ayah_start": 39,
+   "ayah_count": 8,
+   "juz": 17
+  },
+  {
+   "number": 338,
+   "surah_start": 22,
+   "ayah_start": 47,
+   "ayah_count": 9,
+   "juz": 17
+  },
+  {
+   "number": 339,
+   "surah_start": 22,
+   "ayah_start": 56,
+   "ayah_count": 9,
+   "juz": 17
+  },
+  {
+   "number": 340,
+   "surah_start": 22,
+   "ayah_start": 65,
+   "ayah_count": 8,
+   "juz": 17
+  },
+  {
+   "number": 341,
+   "surah_start": 22,
+   "ayah_start": 73,
+   "ayah_count": 6,
+   "juz": 17
+  },
+  {
+   "number": 342,
+   "surah_start": 23,
+   "ayah_start": 1,
+   "ayah_count": 17,
+   "juz": 18
+  },
+  {
+   "number": 343,
+   "surah_start": 23,
+   "ayah_start": 18,
+   "ayah_count": 10,
+   "juz": 18
+  },
+  {
+   "number": 344,
+   "surah_start": 23,
+   "ayah_start": 28,
+   "ayah_count": 15,
+   "juz": 18
+  },
+  {
+   "number": 345,
+   "surah_start": 23,
+   "ayah_start": 43,
+   "ayah_count": 17,
+   "juz": 18
+  },
+  {
+   "number": 346,
+   "surah_start": 23,
+   "ayah_start": 60,
+   "ayah_count": 15,
+   "juz": 18
+  },
+  {
+   "number": 347,
+   "surah_start": 23,
+   "ayah_start": 75,
+   "ayah_count": 15,
+   "juz": 18
+  },
+  {
+   "number": 348,
+   "surah_start": 23,
+   "ayah_start": 90,
+   "ayah_count": 15,
+   "juz": 18
+  },
+  {
+   "number": 349,
+   "surah_start": 23,
+   "ayah_start": 105,
+   "ayah_count": 14,
+   "juz": 18
+  },
+  {
+   "number": 350,
+   "surah_start": 24,
+   "ayah_start": 1,
+   "ayah_count": 10,
+   "juz": 18
+  },
+  {
+   "number": 351,
+   "surah_start": 24,
+   "ayah_start": 11,
+   "ayah_count": 10,
+   "juz": 18
+  },
+  {
+   "number": 352,
+   "surah_start": 24,
+   "ayah_start": 21,
+   "ayah_count": 7,
+   "juz": 18
+  },
+  {
+   "number": 353,
+   "surah_start": 24,
+   "ayah_start": 28,
+   "ayah_count": 4,
+   "juz": 18
+  },
+  {
+   "number": 354,
+   "surah_start": 24,
+   "ayah_start": 32,
+   "ayah_count": 5,
+   "juz": 18
+  },
+  {
+   "number": 355,
+   "surah_start": 24,
+   "ayah_start": 37,
+   "ayah_count": 7,
+   "juz": 18
+  },
+  {
+   "number": 356,
+   "surah_start": 24,
+   "ayah_start": 44,
+   "ayah_count": 10,
+   "juz": 18
+  },
+  {
+   "number": 357,
+   "surah_start": 24,
+   "ayah_start": 54,
+   "ayah_count": 5,
+   "juz": 18
+  },
+  {
+   "number": 358,
+   "surah_start": 24,
+   "ayah_start": 59,
+   "ayah_count": 3,
+   "juz": 18
+  },
+  {
+   "number": 359,
+   "surah_start": 24,
+   "ayah_start": 62,
+   "ayah_count": 5,
+   "juz": 18
+  },
+  {
+   "number": 360,
+   "surah_start": 25,
+   "ayah_start": 3,
+   "ayah_count": 9,
+   "juz": 18
+  },
+  {
+   "number": 361,
+   "surah_start": 25,
+   "ayah_start": 12,
+   "ayah_count": 9,
+   "juz": 18
+  },
+  {
+   "number": 362,
+   "surah_start": 25,
+   "ayah_start": 21,
+   "ayah_count": 12,
+   "juz": 19
+  },
+  {
+   "number": 363,
+   "surah_start": 25,
+   "ayah_start": 33,
+   "ayah_count": 11,
+   "juz": 19
+  },
+  {
+   "number": 364,
+   "surah_start": 25,
+   "ayah_start": 44,
+   "ayah_count": 12,
+   "juz": 19
+  },
+  {
+   "number": 365,
+   "surah_start": 25,
+   "ayah_start": 56,
+   "ayah_count": 12,
+   "juz": 19
+  },
+  {
+   "number": 366,
+   "surah_start": 25,
+   "ayah_start": 68,
+   "ayah_count": 10,
+   "juz": 19
+  },
+  {
+   "number": 367,
+   "surah_start": 26,
+   "ayah_start": 1,
+   "ayah_count": 19,
+   "juz": 19
+  },
+  {
+   "number": 368,
+   "surah_start": 26,
+   "ayah_start": 20,
+   "ayah_count": 20,
+   "juz": 19
+  },
+  {
+   "number": 369,
+   "surah_start": 26,
+   "ayah_start": 40,
+   "ayah_count": 21,
+   "juz": 19
+  },
+  {
+   "number": 370,
+   "surah_start": 26,
+   "ayah_start": 61,
+   "ayah_count": 23,
+   "juz": 19
+  },
+  {
+   "number": 371,
+   "surah_start": 26,
+   "ayah_start": 84,
+   "ayah_count": 28,
+   "juz": 19
+  },
+  {
+   "number": 372,
+   "surah_start": 26,
+   "ayah_start": 112,
+   "ayah_count": 25,
+   "juz": 19
+  },
+  {
+   "number": 373,
+   "surah_start": 26,
+   "ayah_start": 137,
+   "ayah_count": 23,
+   "juz": 19
+  },
+  {
+   "number": 374,
+   "surah_start": 26,
+   "ayah_start": 160,
+   "ayah_count": 24,
+   "juz": 19
+  },
+  {
+   "number": 375,
+   "surah_start": 26,
+   "ayah_start": 184,
+   "ayah_count": 23,
+   "juz": 19
+  },
+  {
+   "number": 376,
+   "surah_start": 26,
+   "ayah_start": 207,
+   "ayah_count": 21,
+   "juz": 19
+  },
+  {
+   "number": 377,
+   "surah_start": 27,
+   "ayah_start": 1,
+   "ayah_count": 13,
+   "juz": 19
+  },
+  {
+   "number": 378,
+   "surah_start": 27,
+   "ayah_start": 14,
+   "ayah_count": 9,
+   "juz": 19
+  },
+  {
+   "number": 379,
+   "surah_start": 27,
+   "ayah_start": 23,
+   "ayah_count": 13,
+   "juz": 19
+  },
+  {
+   "number": 380,
+   "surah_start": 27,
+   "ayah_start": 36,
+   "ayah_count": 9,
+   "juz": 19
+  },
+  {
+   "number": 381,
+   "surah_start": 27,
+   "ayah_start": 45,
+   "ayah_count": 11,
+   "juz": 19
+  },
+  {
+   "number": 382,
+   "surah_start": 27,
+   "ayah_start": 56,
+   "ayah_count": 8,
+   "juz": 20
+  },
+  {
+   "number": 383,
+   "surah_start": 27,
+   "ayah_start": 64,
+   "ayah_count": 13,
+   "juz": 20
+  },
+  {
+   "number": 384,
+   "surah_start": 27,
+   "ayah_start": 77,
+   "ayah_count": 12,
+   "juz": 20
+  },
+  {
+   "number": 385,
+   "surah_start": 27,
+   "ayah_start": 89,
+   "ayah_count": 10,
+   "juz": 20
+  },
+  {
+   "number": 386,
+   "surah_start": 28,
+   "ayah_start": 6,
+   "ayah_count": 8,
+   "juz": 20
+  },
+  {
+   "number": 387,
+   "surah_start": 28,
+   "ayah_start": 14,
+   "ayah_count": 8,
+   "juz": 20
+  },
+  {
+   "number": 388,
+   "surah_start": 28,
+   "ayah_start": 22,
+   "ayah_count": 7,
+   "juz": 20
+  },
+  {
+   "number": 389,
+   "surah_start": 28,
+   "ayah_start": 29,
+   "ayah_count": 7,
+   "juz": 20
+  },
+  {
+   "number": 390,
+   "surah_start": 28,
+   "ayah_start": 36,
+   "ayah_count": 8,
+   "juz": 20
+  },
+  {
+   "number": 391,
+   "surah_start": 28,
+   "ayah_start": 44,
+   "ayah_count": 7,
+   "juz": 20
+  },
+  {
+   "number": 392,
+   "surah_start": 28,
+   "ayah_start": 51,
+   "ayah_count": 9,
+   "juz": 20
+  },
+  {
+   "number": 393,
+   "surah_start": 28,
+   "ayah_start": 60,
+   "ayah_count": 11,
+   "juz": 20
+  },
+  {
+   "number": 394,
+   "surah_start": 28,
+   "ayah_start": 71,
+   "ayah_count": 7,
+   "juz": 20
+  },
+  {
+   "number": 395,
+   "surah_start": 28,
+   "ayah_start": 78,
+   "ayah_count": 7,
+   "juz": 20
+  },
+  {
+   "number": 396,
+   "surah_start": 28,
+   "ayah_start": 85,
+   "ayah_count": 10,
+   "juz": 20
+  },
+  {
+   "number": 397,
+   "surah_start": 29,
+   "ayah_start": 7,
+   "ayah_count": 8,
+   "juz": 20
+  },
+  {
+   "number": 398,
+   "surah_start": 29,
+   "ayah_start": 15,
+   "ayah_count": 9,
+   "juz": 20
+  },
+  {
+   "number": 399,
+   "surah_start": 29,
+   "ayah_start": 24,
+   "ayah_count": 7,
+   "juz": 20
+  },
+  {
+   "number": 400,
+   "surah_start": 29,
+   "ayah_start": 31,
+   "ayah_count": 8,
+   "juz": 20
+  },
+  {
+   "number": 401,
+   "surah_start": 29,
+   "ayah_start": 39,
+   "ayah_count": 7,
+   "juz": 20
+  },
+  {
+   "number": 402,
+   "surah_start": 29,
+   "ayah_start": 46,
+   "ayah_count": 7,
+   "juz": 21
+  },
+  {
+   "number": 403,
+   "surah_start": 29,
+   "ayah_start": 53,
+   "ayah_count": 11,
+   "juz": 21
+  },
+  {
+   "number": 404,
+   "surah_start": 29,
+   "ayah_start": 64,
+   "ayah_count": 11,
+   "juz": 21
+  },
+  {
+   "number": 405,
+   "surah_start": 30,
+   "ayah_start": 6,
+   "ayah_count": 10,
+   "juz": 21
+  },
+  {
+   "number": 406,
+   "surah_start": 30,
+   "ayah_start": 16,
+   "ayah_count": 9,
+   "juz": 21
+  },
+  {
+   "number": 407,
+   "surah_start": 30,
+   "ayah_start": 25,
+   "ayah_count": 8,
+   "juz": 21
+  },
+  {
+   "number": 408,
+   "surah_start": 30,
+   "ayah_start": 33,
+   "ayah_count": 9,
+   "juz": 21
+  },
+  {
+   "number": 409,
+   "surah_start": 30,
+   "ayah_start": 42,
+   "ayah_count": 9,
+   "juz": 21
+  },
+  {
+   "number": 410,
+   "surah_start": 30,
+   "ayah_start": 51,
+   "ayah_count": 10,
+   "juz": 21
+  },
+  {
+   "number": 411,
+   "surah_start": 31,
+   "ayah_start": 1,
+   "ayah_count": 11,
+   "juz": 21
+  },
+  {
+   "number": 412,
+   "surah_start": 31,
+   "ayah_start": 12,
+   "ayah_count": 8,
+   "juz": 21
+  },
+  {
+   "number": 413,
+   "surah_start": 31,
+   "ayah_start": 20,
+   "ayah_count": 9,
+   "juz": 21
+  },
+  {
+   "number": 414,
+   "surah_start": 31,
+   "ayah_start": 29,
+   "ayah_count": 6,
+   "juz": 21
+  },
+  {
+   "number": 415,
+   "surah_start": 32,
+   "ayah_start": 1,
+   "ayah_count": 11,
+   "juz": 21
+  },
+  {
+   "number": 416,
+   "surah_start": 32,
+   "ayah_start": 12,
+   "ayah_count": 9,
+   "juz": 21
+  },
+  {
+   "number": 417,
+   "surah_start": 32,
+   "ayah_start": 21,
+   "ayah_count": 10,
+   "juz": 21
+  },
+  {
+   "number": 418,
+   "surah_start": 33,
+   "ayah_start": 1,
+   "ayah_count": 6,
+   "juz": 21
+  },
+  {
+   "number": 419,
+   "surah_start": 33,
+   "ayah_start": 7,
+   "ayah_count": 9,
+   "juz": 21
+  },
+  {
+   "number": 420,
+   "surah_start": 33,
+   "ayah_start": 16,
+   "ayah_count": 7,
+   "juz": 21
+  },
+  {
+   "number": 421,
+   "surah_start": 33,
+   "ayah_start": 23,
+   "ayah_count": 8,
+   "juz": 21
+  },
+  {
+   "number": 422,
+   "surah_start": 33,
+   "ayah_start": 31,
+   "ayah_count": 5,
+   "juz": 22
+  },
+  {
+   "number": 423,
+   "surah_start": 33,
+   "ayah_start": 36,
+   "ayah_count": 8,
+   "juz": 22
+  },
+  {
+   "number": 424,
+   "surah_start": 33,
+   "ayah_start": 44,
+   "ayah_count": 7,
+   "juz": 22
+  },
+  {
+   "number": 425,
+   "surah_start": 33,
+   "ayah_start": 51,
+   "ayah_count": 4,
+   "juz": 22
+  },
+  {
+   "number": 426,
+   "surah_start": 33,
+   "ayah_start": 55,
+   "ayah_count": 8,
+   "juz": 22
+  },
+  {
+   "number": 427,
+   "surah_start": 33,
+   "ayah_start": 63,
+   "ayah_count": 11,
+   "juz": 22
+  },
+  {
+   "number": 428,
+   "surah_start": 34,
+   "ayah_start": 1,
+   "ayah_count": 7,
+   "juz": 22
+  },
+  {
+   "number": 429,
+   "surah_start": 34,
+   "ayah_start": 8,
+   "ayah_count": 7,
+   "juz": 22
+  },
+  {
+   "number": 430,
+   "surah_start": 34,
+   "ayah_start": 15,
+   "ayah_count": 8,
+   "juz": 22
+  },
+  {
+   "number": 431,
+   "surah_start": 34,
+   "ayah_start": 23,
+   "ayah_count": 9,
+   "juz": 22
+  },
+  {
+   "number": 432,
+   "surah_start": 34,
+   "ayah_start": 32,
+   "ayah_count": 8,
+   "juz": 22
+  },
+  {
+   "number": 433,
+   "surah_start": 34,
+   "ayah_start": 40,
+   "ayah_count": 9,
+   "juz": 22
+  },
+  {
+   "number": 434,
+   "surah_start": 34,
+   "ayah_start": 49,
+   "ayah_count": 9,
+   "juz": 22
+  },
+  {
+   "number": 435,
+   "surah_start": 35,
+   "ayah_start": 4,
+   "ayah_count": 8,
+   "juz": 22
+  },
+  {
+   "number": 436,
+   "surah_start": 35,
+   "ayah_start": 12,
+   "ayah_count": 7,
+   "juz": 22
+  },
+  {
+   "number": 437,
+   "surah_start": 35,
+   "ayah_start": 19,
+   "ayah_count": 12,
+   "juz": 22
+  },
+  {
+   "number": 438,
+   "surah_start": 35,
+   "ayah_start": 31,
+   "ayah_count": 8,
+   "juz": 22
+  },
+  {
+   "number": 439,
+   "surah_start": 35,
+   "ayah_start": 39,
+   "ayah_count": 6,
+   "juz": 22
+  },
+  {
+   "number": 440,
+   "surah_start": 35,
+   "ayah_start": 45,
+   "ayah_count": 13,
+   "juz": 22
+  },
+  {
+   "number": 441,
+   "surah_start": 36,
+   "ayah_start": 13,
+   "ayah_count": 15,
+   "juz": 22
+  },
+  {
+   "number": 442,
+   "surah_start": 36,
+   "ayah_start": 28,
+   "ayah_count": 13,
+   "juz": 23
+  },
+  {
+   "number": 443,
+   "surah_start": 36,
+   "ayah_start": 41,
+   "ayah_count": 14,
+   "juz": 23
+  },
+  {
+   "number": 444,
+   "surah_start": 36,
+   "ayah_start": 55,
+   "ayah_count": 16,
+   "juz": 23
+  },
+  {
+   "number": 445,
+   "surah_start": 36,
+   "ayah_start": 71,
+   "ayah_count": 13,
+   "juz": 23
+  },
+  {
+   "number": 446,
+   "surah_start": 37,
+   "ayah_start": 1,
+   "ayah_count": 24,
+   "juz": 23
+  },
+  {
+   "number": 447,
+   "surah_start": 37,
+   "ayah_start": 25,
+   "ayah_count": 27,
+   "juz": 23
+  },
+  {
+   "number": 448,
+   "surah_start": 37,
+   "ayah_start": 52,
+   "ayah_count": 25,
+   "juz": 23
+  },
+  {
+   "number": 449,
+   "surah_start": 37,
+   "ayah_start": 77,
+   "ayah_count": 26,
+   "juz": 23
+  },
+  {
+   "number": 450,
+   "surah_start": 37,
+   "ayah_start": 103,
+   "ayah_count": 24,
+   "juz": 23
+  },
+  {
+   "number": 451,
+   "surah_start": 37,
+   "ayah_start": 127,
+   "ayah_count": 27,
+   "juz": 23
+  },
+  {
+   "number": 452,
+   "surah_start": 37,
+   "ayah_start": 154,
+   "ayah_count": 29,
+   "juz": 23
+  },
+  {
+   "number": 453,
+   "surah_start": 38,
+   "ayah_start": 1,
+   "ayah_count": 16,
+   "juz": 23
+  },
+  {
+   "number": 454,
+   "surah_start": 38,
+   "ayah_start": 17,
+   "ayah_count": 10,
+   "juz": 23
+  },
+  {
+   "number": 455,
+   "surah_start": 38,
+   "ayah_start": 27,
+   "ayah_count": 16,
+   "juz": 23
+  },
+  {
+   "number": 456,
+   "surah_start": 38,
+   "ayah_start": 43,
+   "ayah_count": 19,
+   "juz": 23
+  },
+  {
+   "number": 457,
+   "surah_start": 38,
+   "ayah_start": 62,
+   "ayah_count": 22,
+   "juz": 23
+  },
+  {
+   "number": 458,
+   "surah_start": 38,
+   "ayah_start": 84,
+   "ayah_count": 10,
+   "juz": 23
+  },
+  {
+   "number": 459,
+   "surah_start": 39,
+   "ayah_start": 6,
+   "ayah_count": 5,
+   "juz": 23
+  },
+  {
+   "number": 460,
+   "surah_start": 39,
+   "ayah_start": 11,
+   "ayah_count": 11,
+   "juz": 23
+  },
+  {
+   "number": 461,
+   "surah_start": 39,
+   "ayah_start": 22,
+   "ayah_count": 10,
+   "juz": 23
+  },
+  {
+   "number": 462,
+   "surah_start": 39,
+   "ayah_start": 32,
+   "ayah_count": 9,
+   "juz": 24
+  },
+  {
+   "number": 463,
+   "surah_start": 39,
+   "ayah_start": 41,
+   "ayah_count": 7,
+   "juz": 24
+  },
+  {
+   "number": 464,
+   "surah_start": 39,
+   "ayah_start": 48,
+   "ayah_count": 9,
+   "juz": 24
+  },
+  {
+   "number": 465,
+   "surah_start": 39,
+   "ayah_start": 57,
+   "ayah_count": 11,
+   "juz": 24
+  },
+  {
+   "number": 466,
+   "surah_start": 39,
+   "ayah_start": 68,
+   "ayah_count": 7,
+   "juz": 24
+  },
+  {
+   "number": 467,
+   "surah_start": 39,
+   "ayah_start": 75,
+   "ayah_count": 8,
+   "juz": 24
+  },
+  {
+   "number": 468,
+   "surah_start": 40,
+   "ayah_start": 8,
+   "ayah_count": 9,
+   "juz": 24
+  },
+  {
+   "number": 469,
+   "surah_start": 40,
+   "ayah_start": 17,
+   "ayah_count": 9,
+   "juz": 24
+  },
+  {
+   "number": 470,
+   "surah_start": 40,
+   "ayah_start": 26,
+   "ayah_count": 8,
+   "juz": 24
+  },
+  {
+   "number": 471,
+   "surah_start": 40,
+   "ayah_start": 34,
+   "ayah_count": 7,
+   "juz": 24
+  },
+  {
+   "number": 472,
+   "surah_start": 40,
+   "ayah_start": 41,
+   "ayah_count": 9,
+   "juz": 24
+  },
+  {
+   "number": 473,
+   "surah_start": 40,
+   "ayah_start": 50,
+   "ayah_count": 9,
+   "juz": 24
+  },
+  {
+   "number": 474,
+   "surah_start": 40,
+   "ayah_start": 59,
+   "ayah_count": 8,
+   "juz": 24
+  },
+  {
+   "number": 475,
+   "surah_start": 40,
+   "ayah_start": 67,
+   "ayah_count": 11,
+   "juz": 24
+  },
+  {
+   "number": 476,
+   "surah_start": 40,
+   "ayah_start": 78,
+   "ayah_count": 8,
+   "juz": 24
+  },
+  {
+   "number": 477,
+   "surah_start": 41,
+   "ayah_start": 1,
+   "ayah_count": 11,
+   "juz": 24
+  },
+  {
+   "number": 478,
+   "surah_start": 41,
+   "ayah_start": 12,
+   "ayah_count": 9,
+   "juz": 24
+  },
+  {
+   "number": 479,
+   "surah_start": 41,
+   "ayah_start": 21,
+   "ayah_count": 9,
+   "juz": 24
+  },
+  {
+   "number": 480,
+   "surah_start": 41,
+   "ayah_start": 30,
+   "ayah_count": 9,
+   "juz": 24
+  },
+  {
+   "number": 481,
+   "surah_start": 41,
+   "ayah_start": 39,
+   "ayah_count": 8,
+   "juz": 24
+  },
+  {
+   "number": 482,
+   "surah_start": 41,
+   "ayah_start": 47,
+   "ayah_count": 8,
+   "juz": 25
+  },
+  {
+   "number": 483,
+   "surah_start": 42,
+   "ayah_start": 1,
+   "ayah_count": 10,
+   "juz": 25
+  },
+  {
+   "number": 484,
+   "surah_start": 42,
+   "ayah_start": 11,
+   "ayah_count": 5,
+   "juz": 25
+  },
+  {
+   "number": 485,
+   "surah_start": 42,
+   "ayah_start": 16,
+   "ayah_count": 7,
+   "juz": 25
+  },
+  {
+   "number": 486,
+   "surah_start": 42,
+   "ayah_start": 23,
+   "ayah_count": 9,
+   "juz": 25
+  },
+  {
+   "number": 487,
+   "surah_start": 42,
+   "ayah_start": 32,
+   "ayah_count": 13,
+   "juz": 25
+  },
+  {
+   "number": 488,
+   "surah_start": 42,
+   "ayah_start": 45,
+   "ayah_count": 7,
+   "juz": 25
+  },
+  {
+   "number": 489,
+   "surah_start": 42,
+   "ayah_start": 52,
+   "ayah_count": 12,
+   "juz": 25
+  },
+  {
+   "number": 490,
+   "surah_start": 43,
+   "ayah_start": 11,
+   "ayah_count": 12,
+   "juz": 25
+  },
+  {
+   "number": 491,
+   "surah_start": 43,
+   "ayah_start": 23,
+   "ayah_count": 11,
+   "juz": 25
+  },
+  {
+   "number": 492,
+   "surah_start": 43,
+   "ayah_start": 34,
+   "ayah_count": 14,
+   "juz": 25
+  },
+  {
+   "number": 493,
+   "surah_start": 43,
+   "ayah_start": 48,
+   "ayah_count": 13,
+   "juz": 25
+  },
+  {
+   "number": 494,
+   "surah_start": 43,
+   "ayah_start": 61,
+   "ayah_count": 13,
+   "juz": 25
+  },
+  {
+   "number": 495,
+   "surah_start": 43,
+   "ayah_start": 74,
+   "ayah_count": 16,
+   "juz": 25
+  },
+  {
+   "number": 496,
+   "surah_start": 44,
+   "ayah_start": 1,
+   "ayah_count": 18,
+   "juz": 25
+  },
+  {
+   "number": 497,
+   "surah_start": 44,
+   "ayah_start": 19,
+   "ayah_count": 21,
+   "juz": 25
+  },
+  {
+   "number": 498,
+   "surah_start": 44,
+   "ayah_start": 40,
+   "ayah_count": 20,
+   "juz": 25
+  },
+  {
+   "number": 499,
+   "surah_start": 45,
+   "ayah_start": 1,
+   "ayah_count": 13,
+   "juz": 25
+  },
+  {
+   "number": 500,
+   "surah_start": 45,
+   "ayah_start": 14,
+   "ayah_count": 9,
+   "juz": 25
+  },
+  {
+   "number": 501,
+   "surah_start": 45,
+   "ayah_start": 23,
+   "ayah_count": 10,
+   "juz": 25
+  },
+  {
+   "number": 502,
+   "surah_start": 45,
+   "ayah_start": 33,
+   "ayah_count": 10,
+   "juz": 25
+  },
+  {
+   "number": 503,
+   "surah_start": 46,
+   "ayah_start": 6,
+   "ayah_count": 9,
+   "juz": 26
+  },
+  {
+   "number": 504,
+   "surah_start": 46,
+   "ayah_start": 15,
+   "ayah_count": 6,
+   "juz": 26
+  },
+  {
+   "number": 505,
+   "surah_start": 46,
+   "ayah_start": 21,
+   "ayah_count": 8,
+   "juz": 26
+  },
+  {
+   "number": 506,
+   "surah_start": 46,
+   "ayah_start": 29,
+   "ayah_count": 7,
+   "juz": 26
+  },
+  {
+   "number": 507,
+   "surah_start": 47,
+   "ayah_start": 1,
+   "ayah_count": 11,
+   "juz": 26
+  },
+  {
+   "number": 508,
+   "surah_start": 47,
+   "ayah_start": 12,
+   "ayah_count": 8,
+   "juz": 26
+  },
+  {
+   "number": 509,
+   "surah_start": 47,
+   "ayah_start": 20,
+   "ayah_count": 10,
+   "juz": 26
+  },
+  {
+   "number": 510,
+   "surah_start": 47,
+   "ayah_start": 30,
+   "ayah_count": 9,
+   "juz": 26
+  },
+  {
+   "number": 511,
+   "surah_start": 48,
+   "ayah_start": 1,
+   "ayah_count": 9,
+   "juz": 26
+  },
+  {
+   "number": 512,
+   "surah_start": 48,
+   "ayah_start": 10,
+   "ayah_count": 6,
+   "juz": 26
+  },
+  {
+   "number": 513,
+   "surah_start": 48,
+   "ayah_start": 16,
+   "ayah_count": 8,
+   "juz": 26
+  },
+  {
+   "number": 514,
+   "surah_start": 48,
+   "ayah_start": 24,
+   "ayah_count": 5,
+   "juz": 26
+  },
+  {
+   "number": 515,
+   "surah_start": 48,
+   "ayah_start": 29,
+   "ayah_count": 5,
+   "juz": 26
+  },
+  {
+   "number": 516,
+   "surah_start": 49,
+   "ayah_start": 5,
+   "ayah_count": 7,
+   "juz": 26
+  },
+  {
+   "number": 517,
+   "surah_start": 49,
+   "ayah_start": 12,
+   "ayah_count": 7,
+   "juz": 26
+  },
+  {
+   "number": 518,
+   "surah_start": 50,
+   "ayah_start": 1,
+   "ayah_count": 15,
+   "juz": 26
+  },
+  {
+   "number": 519,
+   "surah_start": 50,
+   "ayah_start": 16,
+   "ayah_count": 20,
+   "juz": 26
+  },
+  {
+   "number": 520,
+   "surah_start": 50,
+   "ayah_start": 36,
+   "ayah_count": 16,
+   "juz": 26
+  },
+  {
+   "number": 521,
+   "surah_start": 51,
+   "ayah_start": 7,
+   "ayah_count": 24,
+   "juz": 26
+  },
+  {
+   "number": 522,
+   "surah_start": 51,
+   "ayah_start": 31,
+   "ayah_count": 21,
+   "juz": 27
+  },
+  {
+   "number": 523,
+   "surah_start": 51,
+   "ayah_start": 52,
+   "ayah_count": 23,
+   "juz": 27
+  },
+  {
+   "number": 524,
+   "surah_start": 52,
+   "ayah_start": 15,
+   "ayah_count": 17,
+   "juz": 27
+  },
+  {
+   "number": 525,
+   "surah_start": 52,
+   "ayah_start": 32,
+   "ayah_count": 18,
+   "juz": 27
+  },
+  {
+   "number": 526,
+   "surah_start": 53,
+   "ayah_start": 1,
+   "ayah_count": 26,
+   "juz": 27
+  },
+  {
+   "number": 527,
+   "surah_start": 53,
+   "ayah_start": 27,
+   "ayah_count": 18,
+   "juz": 27
+  },
+  {
+   "number": 528,
+   "surah_start": 53,
+   "ayah_start": 45,
+   "ayah_count": 24,
+   "juz": 27
+  },
+  {
+   "number": 529,
+   "surah_start": 54,
+   "ayah_start": 7,
+   "ayah_count": 21,
+   "juz": 27
+  },
+  {
+   "number": 530,
+   "surah_start": 54,
+   "ayah_start": 28,
+   "ayah_count": 22,
+   "juz": 27
+  },
+  {
+   "number": 531,
+   "surah_start": 54,
+   "ayah_start": 50,
+   "ayah_count": 22,
+   "juz": 27
+  },
+  {
+   "number": 532,
+   "surah_start": 55,
+   "ayah_start": 17,
+   "ayah_count": 24,
+   "juz": 27
+  },
+  {
+   "number": 533,
+   "surah_start": 55,
+   "ayah_start": 41,
+   "ayah_count": 27,
+   "juz": 27
+  },
+  {
+   "number": 534,
+   "surah_start": 55,
+   "ayah_start": 68,
+   "ayah_count": 27,
+   "juz": 27
+  },
+  {
+   "number": 535,
+   "surah_start": 56,
+   "ayah_start": 17,
+   "ayah_count": 34,
+   "juz": 27
+  },
+  {
+   "number": 536,
+   "surah_start": 56,
+   "ayah_start": 51,
+   "ayah_count": 26,
+   "juz": 27
+  },
+  {
+   "number": 537,
+   "surah_start": 56,
+   "ayah_start": 77,
+   "ayah_count": 23,
+   "juz": 27
+  },
+  {
+   "number": 538,
+   "surah_start": 57,
+   "ayah_start": 4,
+   "ayah_count": 8,
+   "juz": 27
+  },
+  {
+   "number": 539,
+   "surah_start": 57,
+   "ayah_start": 12,
+   "ayah_count": 7,
+   "juz": 27
+  },
+  {
+   "number": 540,
+   "surah_start": 57,
+   "ayah_start": 19,
+   "ayah_count": 6,
+   "juz": 27
+  },
+  {
+   "number": 541,
+   "surah_start": 57,
+   "ayah_start": 25,
+   "ayah_count": 5,
+   "juz": 27
+  },
+  {
+   "number": 542,
+   "surah_start": 58,
+   "ayah_start": 1,
+   "ayah_count": 6,
+   "juz": 28
+  },
+  {
+   "number": 543,
+   "surah_start": 58,
+   "ayah_start": 7,
+   "ayah_count": 5,
+   "juz": 28
+  },
+  {
+   "number": 544,
+   "surah_start": 58,
+   "ayah_start": 12,
+   "ayah_count": 10,
+   "juz": 28
+  },
+  {
+   "number": 545,
+   "surah_start": 58,
+   "ayah_start": 22,
+   "ayah_count": 4,
+   "juz": 28
+  },
+  {
+   "number": 546,
+   "surah_start": 59,
+   "ayah_start": 4,
+   "ayah_count": 6,
+   "juz": 28
+  },
+  {
+   "number": 547,
+   "surah_start": 59,
+   "ayah_start": 10,
+   "ayah_count": 7,
+   "juz": 28
+  },
+  {
+   "number": 548,
+   "surah_start": 59,
+   "ayah_start": 17,
+   "ayah_count": 8,
+   "juz": 28
+  },
+  {
+   "number": 549,
+   "surah_start": 60,
+   "ayah_start": 1,
+   "ayah_count": 5,
+   "juz": 28
+  },
+  {
+   "number": 550,
+   "surah_start": 60,
+   "ayah_start": 6,
+   "ayah_count": 6,
+   "juz": 28
+  },
+  {
+   "number": 551,
+   "surah_start": 60,
+   "ayah_start": 12,
+   "ayah_count": 7,
+   "juz": 28
+  },
+  {
+   "number": 552,
+   "surah_start": 61,
+   "ayah_start": 6,
+   "ayah_count": 9,
+   "juz": 28
+  },
+  {
+   "number": 553,
+   "surah_start": 62,
+   "ayah_start": 1,
+   "ayah_count": 8,
+   "juz": 28
+  },
+  {
+   "number": 554,
+   "surah_start": 62,
+   "ayah_start": 9,
+   "ayah_count": 7,
+   "juz": 28
+  },
+  {
+   "number": 555,
+   "surah_start": 63,
+   "ayah_start": 5,
+   "ayah_count": 7,
+   "juz": 28
+  },
+  {
+   "number": 556,
+   "surah_start": 64,
+   "ayah_start": 1,
+   "ayah_count": 9,
+   "juz": 28
+  },
+  {
+   "number": 557,
+   "surah_start": 64,
+   "ayah_start": 10,
+   "ayah_count": 9,
+   "juz": 28
+  },
+  {
+   "number": 558,
+   "surah_start": 65,
+   "ayah_start": 1,
+   "ayah_count": 5,
+   "juz": 28
+  },
+  {
+   "number": 559,
+   "surah_start": 65,
+   "ayah_start": 6,
+   "ayah_count": 7,
+   "juz": 28
+  },
+  {
+   "number": 560,
+   "surah_start": 66,
+   "ayah_start": 1,
+   "ayah_count": 7,
+   "juz": 28
+  },
+  {
+   "number": 561,
+   "surah_start": 66,
+   "ayah_start": 8,
+   "ayah_count": 5,
+   "juz": 28
+  },
+  {
+   "number": 562,
+   "surah_start": 67,
+   "ayah_start": 1,
+   "ayah_count": 12,
+   "juz": 29
+  },
+  {
+   "number": 563,
+   "surah_start": 67,
+   "ayah_start": 13,
+   "ayah_count": 14,
+   "juz": 29
+  },
+  {
+   "number": 564,
+   "surah_start": 67,
+   "ayah_start": 27,
+   "ayah_count": 19,
+   "juz": 29
+  },
+  {
+   "number": 565,
+   "surah_start": 68,
+   "ayah_start": 16,
+   "ayah_count": 27,
+   "juz": 29
+  },
+  {
+   "number": 566,
+   "surah_start": 68,
+   "ayah_start": 43,
+   "ayah_count": 18,
+   "juz": 29
+  },
+  {
+   "number": 567,
+   "surah_start": 69,
+   "ayah_start": 9,
+   "ayah_count": 26,
+   "juz": 29
+  },
+  {
+   "number": 568,
+   "surah_start": 69,
+   "ayah_start": 35,
+   "ayah_count": 28,
+   "juz": 29
+  },
+  {
+   "number": 569,
+   "surah_start": 70,
+   "ayah_start": 11,
+   "ayah_count": 29,
+   "juz": 29
+  },
+  {
+   "number": 570,
+   "surah_start": 70,
+   "ayah_start": 40,
+   "ayah_count": 15,
+   "juz": 29
+  },
+  {
+   "number": 571,
+   "surah_start": 71,
+   "ayah_start": 11,
+   "ayah_count": 18,
+   "juz": 29
+  },
+  {
+   "number": 572,
+   "surah_start": 72,
+   "ayah_start": 1,
+   "ayah_count": 13,
+   "juz": 29
+  },
+  {
+   "number": 573,
+   "surah_start": 72,
+   "ayah_start": 14,
+   "ayah_count": 15,
+   "juz": 29
+  },
+  {
+   "number": 574,
+   "surah_start": 73,
+   "ayah_start": 1,
+   "ayah_count": 19,
+   "juz": 29
+  },
+  {
+   "number": 575,
+   "surah_start": 73,
+   "ayah_start": 20,
+   "ayah_count": 18,
+   "juz": 29
+  },
+  {
+   "number": 576,
+   "surah_start": 74,
+   "ayah_start": 18,
+   "ayah_count": 30,
+   "juz": 29
+  },
+  {
+   "number": 577,
+   "surah_start": 74,
+   "ayah_start": 48,
+   "ayah_count": 28,
+   "juz": 29
+  },
+  {
+   "number": 578,
+   "surah_start": 75,
+   "ayah_start": 20,
+   "ayah_count": 26,
+   "juz": 29
+  },
+  {
+   "number": 579,
+   "surah_start": 76,
+   "ayah_start": 6,
+   "ayah_count": 20,
+   "juz": 29
+  },
+  {
+   "number": 580,
+   "surah_start": 76,
+   "ayah_start": 26,
+   "ayah_count": 25,
+   "juz": 29
+  },
+  {
+   "number": 581,
+   "surah_start": 77,
+   "ayah_start": 20,
+   "ayah_count": 31,
+   "juz": 29
+  },
+  {
+   "number": 582,
+   "surah_start": 78,
+   "ayah_start": 1,
+   "ayah_count": 30,
+   "juz": 30
+  },
+  {
+   "number": 583,
+   "surah_start": 78,
+   "ayah_start": 31,
+   "ayah_count": 25,
+   "juz": 30
+  },
+  {
+   "number": 584,
+   "surah_start": 79,
+   "ayah_start": 16,
+   "ayah_count": 31,
+   "juz": 30
+  },
+  {
+   "number": 585,
+   "surah_start": 80,
+   "ayah_start": 1,
+   "ayah_count": 42,
+   "juz": 30
+  },
+  {
+   "number": 586,
+   "surah_start": 81,
+   "ayah_start": 1,
+   "ayah_count": 29,
+   "juz": 30
+  },
+  {
+   "number": 587,
+   "surah_start": 82,
+   "ayah_start": 1,
+   "ayah_count": 25,
+   "juz": 30
+  },
+  {
+   "number": 588,
+   "surah_start": 83,
+   "ayah_start": 7,
+   "ayah_count": 28,
+   "juz": 30
+  },
+  {
+   "number": 589,
+   "surah_start": 83,
+   "ayah_start": 35,
+   "ayah_count": 27,
+   "juz": 30
+  },
+  {
+   "number": 590,
+   "surah_start": 85,
+   "ayah_start": 1,
+   "ayah_count": 22,
+   "juz": 30
+  },
+  {
+   "number": 591,
+   "surah_start": 86,
+   "ayah_start": 1,
+   "ayah_count": 32,
+   "juz": 30
+  },
+  {
+   "number": 592,
+   "surah_start": 87,
+   "ayah_start": 16,
+   "ayah_count": 30,
+   "juz": 30
+  },
+  {
+   "number": 593,
+   "surah_start": 89,
+   "ayah_start": 1,
+   "ayah_count": 23,
+   "juz": 30
+  },
+  {
+   "number": 594,
+   "surah_start": 89,
+   "ayah_start": 24,
+   "ayah_count": 27,
+   "juz": 30
+  },
+  {
+   "number": 595,
+   "surah_start": 91,
+   "ayah_start": 1,
+   "ayah_count": 29,
+   "juz": 30
+  },
+  {
+   "number": 596,
+   "surah_start": 92,
+   "ayah_start": 15,
+   "ayah_count": 26,
+   "juz": 30
+  },
+  {
+   "number": 597,
+   "surah_start": 95,
+   "ayah_start": 1,
+   "ayah_count": 27,
+   "juz": 30
+  },
+  {
+   "number": 598,
+   "surah_start": 97,
+   "ayah_start": 1,
+   "ayah_count": 12,
+   "juz": 30
+  },
+  {
+   "number": 599,
+   "surah_start": 98,
+   "ayah_start": 8,
+   "ayah_count": 18,
+   "juz": 30
+  },
+  {
+   "number": 600,
+   "surah_start": 100,
+   "ayah_start": 10,
+   "ayah_count": 21,
+   "juz": 30
+  },
+  {
+   "number": 601,
+   "surah_start": 103,
+   "ayah_start": 1,
+   "ayah_count": 17,
+   "juz": 30
+  },
+  {
+   "number": 602,
+   "surah_start": 106,
+   "ayah_start": 1,
+   "ayah_count": 14,
+   "juz": 30
+  },
+  {
+   "number": 603,
+   "surah_start": 109,
+   "ayah_start": 1,
+   "ayah_count": 14,
+   "juz": 30
+  },
+  {
+   "number": 604,
+   "surah_start": 112,
+   "ayah_start": 1,
+   "ayah_count": 15,
+   "juz": 30
+  }
+ ],
+ "juzs": [
+  {
+   "number": 1,
+   "surah_start": 1,
+   "ayah_start": 1
+  },
+  {
+   "number": 2,
+   "surah_start": 2,
+   "ayah_start": 142
+  },
+  {
+   "number": 3,
+   "surah_start": 2,
+   "ayah_start": 253
+  },
+  {
+   "number": 4,
+   "surah_start": 3,
+   "ayah_start": 93
+  },
+  {
+   "number": 5,
+   "surah_start": 4,
+   "ayah_start": 24
+  },
+  {
+   "number": 6,
+   "surah_start": 4,
+   "ayah_start": 148
+  },
+  {
+   "number": 7,
+   "surah_start": 5,
+   "ayah_start": 82
+  },
+  {
+   "number": 8,
+   "surah_start": 6,
+   "ayah_start": 111
+  },
+  {
+   "number": 9,
+   "surah_start": 7,
+   "ayah_start": 88
+  },
+  {
+   "number": 10,
+   "surah_start": 8,
+   "ayah_start": 41
+  },
+  {
+   "number": 11,
+   "surah_start": 9,
+   "ayah_start": 93
+  },
+  {
+   "number": 12,
+   "surah_start": 11,
+   "ayah_start": 6
+  },
+  {
+   "number": 13,
+   "surah_start": 12,
+   "ayah_start": 53
+  },
+  {
+   "number": 14,
+   "surah_start": 15,
+   "ayah_start": 1
+  },
+  {
+   "number": 15,
+   "surah_start": 17,
+   "ayah_start": 1
+  },
+  {
+   "number": 16,
+   "surah_start": 18,
+   "ayah_start": 75
+  },
+  {
+   "number": 17,
+   "surah_start": 21,
+   "ayah_start": 1
+  },
+  {
+   "number": 18,
+   "surah_start": 23,
+   "ayah_start": 1
+  },
+  {
+   "number": 19,
+   "surah_start": 25,
+   "ayah_start": 21
+  },
+  {
+   "number": 20,
+   "surah_start": 27,
+   "ayah_start": 56
+  },
+  {
+   "number": 21,
+   "surah_start": 29,
+   "ayah_start": 46
+  },
+  {
+   "number": 22,
+   "surah_start": 33,
+   "ayah_start": 31
+  },
+  {
+   "number": 23,
+   "surah_start": 36,
+   "ayah_start": 28
+  },
+  {
+   "number": 24,
+   "surah_start": 39,
+   "ayah_start": 32
+  },
+  {
+   "number": 25,
+   "surah_start": 41,
+   "ayah_start": 47
+  },
+  {
+   "number": 26,
+   "surah_start": 46,
+   "ayah_start": 1
+  },
+  {
+   "number": 27,
+   "surah_start": 51,
+   "ayah_start": 31
+  },
+  {
+   "number": 28,
+   "surah_start": 58,
+   "ayah_start": 1
+  },
+  {
+   "number": 29,
+   "surah_start": 67,
+   "ayah_start": 1
+  },
+  {
+   "number": 30,
+   "surah_start": 78,
+   "ayah_start": 1
+  }
+ ]
+}

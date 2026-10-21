@@ -1,9 +1,11 @@
-# Hadith index and search
+# Hadith & Quran index and search
 
-An indexed, searchable corpus of the major hadith collections. Every hadith carries a
-complete reference: collection, hadith number, book (kitab), chapter (bab), and, where a
-printed edition is available, the volume and page in a named edition. It also carries the
-grading, plus the Arabic text, English translation and Urdu translation where those exist.
+An indexed, searchable corpus of the major hadith collections **and** the Quran (Madani
+mushaf). Every hadith carries a complete reference: collection, hadith number, book
+(kitab), chapter (bab), and, where a printed edition is available, the volume and page in
+a named edition. It also carries the grading, plus the Arabic text, English translation
+and Urdu translation where those exist. Every ayah carries surah/ayah numbers, Madani
+page, juz, ruku, and Arabic + Saheeh International English + Junagarhi Urdu.
 
 * **98,239 hadith in 20 collections**, with 646 books and 26,569 chapters.
 * **Search** in English, Arabic or Urdu by topic, keyword, phrase or reference. Searches
@@ -214,6 +216,49 @@ Sources, each pinned to a commit in `hadith/catalog.py`:
 
 Check each project's licence before redistributing the data in a published app.
 
+## Quran
+
+* **6,236 ayahs**, 114 surahs, 604 Madani mushaf pages, 30 juz.
+* Arabic (Uthmani Hafs), English (Saheeh International), Urdu (Muhammad Junagarhi).
+* Structural metadata from [alquran.cloud](https://alquran.cloud): page, juz, ruku,
+  hizb quarter, manzil, sajda.
+* One portable SQLite file (`data/build/quran.db`, ~7 MB, FTS5). Same normalisation as
+  the hadith package.
+
+```bash
+python -m quran setup                                    # download + build + index
+python -m quran search patience -n 5
+python -m quran search "الله لا اله الا هو"
+python -m quran search "صبر" --urdu
+python -m quran get 2:255                                # Ayat al-Kursi
+python -m quran get baqarah 255
+python -m quran page 1                                   # Madani mushaf page
+python -m quran surah fatiha
+python -m quran surahs                                   # page/juz ranges
+python -m quran juz 30 -n 10
+```
+
+```python
+from quran.search import QuranIndex
+
+ix = QuranIndex()                        # data/build/quran.db or $QURAN_DB
+ix.get(2, 255)
+ix.search("throne", limit=5)
+ix.by_page(42)                           # Madani page containing 2:255
+ix.surah_ayahs("ikhlas")
+```
+
+Rebuild:
+
+```bash
+python -m quran download     # pinned fawazahmed0/quran-api commit + alquran.cloud meta
+python -m quran build        # -> data/corpus/quran/ (committed)
+python -m quran index        # -> data/build/quran.db
+```
+
+Editions are pinned in `quran/catalog.py` (fawazahmed0/quran-api commit
+`93e6f649…`). Check upstream licences before redistributing in a published app.
+
 ## Limitations
 
 * Translations are those of the sources (mostly the sunnah.com translations). Arabic-only
@@ -224,3 +269,5 @@ Check each project's licence before redistributing the data in a published app.
   are paginated continuously across volumes, as in the print.
 * Chapter numbers follow the sources and are not always sequential. Chapter names are
   authoritative.
+* Quran page numbers follow the standard Madani (King Fahd Complex) mushaf. Other printed
+  layouts (Indo-Pak 15-line, etc.) differ.
