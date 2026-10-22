@@ -17,12 +17,15 @@ How we develop and how **you** get installs on iPhone and Android.
 1. Install **Xcode** (already have) and open once to accept license.
 2. Install **Node 20+** (nvm or official installer).
 3. Install CocoaPods if prompted: `sudo gem install cocoapods` (or via Homebrew).
-4. Clone the repo and use the Expo app folder (after Milestone 1):
+4. Clone the repo (or pull the mockup branch), then enter the Expo folder:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/iumer/Hadith.git
+   cd Hadith
+   git checkout cursor/app-interactive-mockup-db55
    cd app
    npm install
    ```
+   If you already cloned somewhere else: `cd ~/path/to/Hadith/app` — there is no `app` folder in your home directory by itself.
 5. Connect iPhone via cable, trust the computer, enable Developer Mode (iOS 16+).
 6. In Xcode → Settings → Accounts: add your **Apple ID** (free is OK for personal device).
 
@@ -31,7 +34,7 @@ How we develop and how **you** get installs on iPhone and Android.
 Free provisioning expires ~7 days — rebuild weekly:
 
 ```bash
-cd app
+cd ~/Hadith/app   # or wherever you cloned the repo
 npm install
 npx expo start          # Expo Go / tunnel for quick checks
 npx expo run:ios --device   # native build on your iPhone
