@@ -6,6 +6,10 @@ Arabic:
 
 وَلَنَبۡلُوَنَّكُم بِشَيۡءࣲ مِّنَ ٱلۡخَوۡفِ وَٱلۡجُوعِ وَنَقۡصࣲ مِّنَ ٱلۡأَمۡوَٰلِ وَٱلۡأَنفُسِ وَٱلثَّمَرَٰتِۗ وَبَشِّرِ ٱلصَّٰبِرِينَ
 
+Urdu Translation:
+
+اور ہم کسی نہ کسی طرح تمہاری آزمائش ضرور کریں گے، دشمن کے ڈر سے، بھوک پیاس سے، مال وجان اور پھلوں کی کمی سے اور ان صبر کرنے والوں کو خوشخبری دے دیجیئے
+
 English Translation:
 
 “And We will surely test you with something of fear and hunger and a loss of wealth and lives and fruits, but give good tidings to the patient”
@@ -35,6 +39,10 @@ Surah Aal-i-Imraan (سُورَةُ آلِ عِمۡرَانَ)
 Arabic:
 
 إِنَّمَا ذَٰلِكُمُ ٱلشَّيۡطَٰنُ يُخَوِّفُ أَوۡلِيَآءَهُۥ فَلَا تَخَافُوهُمۡ وَخَافُونِ إِن كُنتُم مُّؤۡمِنِينَ
+
+Urdu Translation:
+
+یہ خبر دینے واﻻ صرف شیطان ہی ہے جو اپنے دوستوں سے ڈراتا ہے تم ان کافروں سے نہ ڈرو اور میرا خوف رکھو، اگر تم مومن ہو
 
 English Translation:
 
@@ -66,6 +74,10 @@ Arabic:
 
 إِنَّمَا ٱلۡمُؤۡمِنُونَ ٱلَّذِينَ إِذَا ذُكِرَ ٱللَّهُ وَجِلَتۡ قُلُوبُهُمۡ وَإِذَا تُلِيَتۡ عَلَيۡهِمۡ ءَايَٰتُهُۥ زَادَتۡهُمۡ إِيمَٰنࣰ ا وَعَلَىٰ رَبِّهِمۡ يَتَوَكَّلُونَ
 
+Urdu Translation:
+
+بس ایمان والے تو ایسے ہوتے ہیں کہ جب اللہ تعالیٰ کا ذکر آتا ہے تو ان کے قلوب ڈر جاتے ہیں اور جب اللہ کی آیتیں ان کو پڑھ کر سنائی جاتیں ہیں تو وه آیتیں ان کے ایمان کو اور زیاده کردیتی ہیں اور وه لوگ اپنے رب پر توکل کرتے ہیں
+
 English Translation:
 
 “The believers are only those who, when Allah is mentioned, their hearts become fearful, and when His verses are recited to them, it increases them in faith; and upon their Lord they rely”
@@ -96,6 +108,10 @@ Arabic:
 
 أَلَآ إِنَّ أَوۡلِيَآءَ ٱللَّهِ لَا خَوۡفٌ عَلَيۡهِمۡ وَلَا هُمۡ يَحۡزَنُونَ
 
+Urdu Translation:
+
+یاد رکھو اللہ کے دوستوں پر نہ کوئی اندیشہ ہے اور نہ وه غمگین ہوتے ہیں
+
 English Translation:
 
 “Unquestionably, [for] the allies of Allah there will be no fear concerning them, nor will they grieve”
@@ -125,6 +141,10 @@ Surah Taa-Haa (سُورَةُ طه)
 Arabic:
 
 قَالَ لَا تَخَافَآۖ إِنَّنِي مَعَكُمَآ أَسۡمَعُ وَأَرَىٰ
+
+Urdu Translation:
+
+جواب ملا کہ تم مطلقاً خوف نہ کرو میں تمہارے ساتھ ہوں اور سنتا دیکھتا رہوں گا
 
 English Translation:
 
@@ -160,9 +180,13 @@ Arabic:
 
 يَا غُلاَمُ إِنِّي أُعَلِّمُكَ كَلِمَاتٍ احْفَظِ اللَّهَ يَحْفَظْكَ احْفَظِ اللَّهَ تَجِدْهُ تُجَاهَكَ إِذَا سَأَلْتَ فَاسْأَلِ اللَّهَ وَإِذَا اسْتَعَنْتَ فَاسْتَعِنْ بِاللَّهِ وَاعْلَمْ أَنَّ الأُمَّةَ لَوِ اجْتَمَعَتْ عَلَى أَنْ يَنْفَعُوكَ بِشَيْءٍ لَمْ يَنْفَعُوكَ إِلاَّ بِشَيْءٍ قَدْ كَتَبَهُ اللَّهُ لَكَ وَلَوِ اجْتَمَعُوا عَلَى أَنْ يَضُرُّوكَ بِشَيْءٍ لَمْ يَضُرُّوكَ إِلاَّ بِشَيْءٍ قَدْ كَتَبَهُ اللَّهُ عَلَيْكَ رُفِعَتِ الأَقْلاَمُ وَجَفَّتِ الصُّحُفُ
 
+Urdu Translation:
+
+اے لڑکے! بیشک میں تمہیں چند اہم باتیں بتلا رہا ہوں: تم اللہ کے احکام کی حفاظت کرو، وہ تمہاری حفاظت فرمائے گا، تو اللہ کے حقوق کا خیال رکھو اسے تم اپنے سامنے پاؤ گے، جب تم کوئی چیز مانگو تو صرف اللہ سے مانگو، جب تو مدد چاہو تو صرف اللہ سے مدد طلب کرو، اور یہ بات جان لو کہ اگر ساری امت بھی جمع ہو کر تمہیں کچھ نفع پہنچانا چاہے تو وہ تمہیں اس سے زیادہ کچھ بھی نفع نہیں پہنچا سکتی جو اللہ نے تمہارے لیے لکھ دیا ہے، اور اگر وہ تمہیں کچھ نقصان پہنچانے کے لیے جمع ہو جائے تو اس سے زیادہ کچھ نقصان نہیں پہنچا سکتی جو اللہ نے تمہارے لیے لکھ دیا ہے، قلم اٹھا لیے گئے اور ( تقدیر کے ) صحیفے خشک ہو گئے ہیں
+
 English Translation:
 
-“'O boy! I will teach you a statement: Be mindful of Allah and He will protect you. Be mindful of Allah and you will find Him before you. When you ask, ask Allah, and when you seek aid, seek Allah's aid. Know that if the entire creation were to gather together to do something to benefit you- you would never get any benefit except that Allah had written for you. And if they were to gather to do something to harm you- you would never be harmed except that Allah had written for you. The pens are lifted and the pages are dried.”
+“O boy! I will teach you a statement: Be mindful of Allah and He will protect you. Be mindful of Allah and you will find Him before you. When you ask, ask Allah, and when you seek aid, seek Allah's aid. Know that if the entire creation were to gather together to do something to benefit you- you would never get any benefit except that Allah had written for you. And if they were to gather to do something to harm you- you would never be harmed except that Allah had written for you. The pens are lifted and the pages are dried.”
 
 Meaning ❤️
 

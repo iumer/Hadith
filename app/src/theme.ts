@@ -26,4 +26,5 @@ export const fonts = {
   bodyExtra: 'Nunito_800ExtraBold',
   quran: 'AmiriQuran_400Regular',
   arabic: 'Amiri_400Regular',
+  urdu: 'NotoNastaliqUrdu_400Regular',
 } as const

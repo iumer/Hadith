@@ -6,6 +6,10 @@ Arabic:
 
 ٱلَّذِينَ قَالَ لَهُمُ ٱلنَّاسُ إِنَّ ٱلنَّاسَ قَدۡ جَمَعُواْ لَكُمۡ فَٱخۡشَوۡهُمۡ فَزَادَهُمۡ إِيمَٰنࣰ ا وَقَالُواْ حَسۡبُنَا ٱللَّهُ وَنِعۡمَ ٱلۡوَكِيلُ
 
+Urdu Translation:
+
+وه لوگ کہ جب ان سے لوگوں نے کہا کہ کافروں نے تمہارے مقابلے پر لشکر جمع کر لئے ہیں، تم ان سے خوف کھاؤ تو اس بات نے انہیں ایمان میں اور بڑھا دیا اور کہنے لگے ہمیں اللہ کافی ہے اور وه بہت اچھا کارساز ہے
+
 English Translation:
 
 “Those to whom hypocrites said, "Indeed, the people have gathered against you, so fear them." But it [merely] increased them in faith, and they said, "Sufficient for us is Allah, and [He is] the best Disposer of affairs”
@@ -36,6 +40,10 @@ Arabic:
 
 قُل لَّن يُصِيبَنَآ إِلَّا مَا كَتَبَ ٱللَّهُ لَنَا هُوَ مَوۡلَىٰنَاۚ وَعَلَى ٱللَّهِ فَلۡيَتَوَكَّلِ ٱلۡمُؤۡمِنُونَ
 
+Urdu Translation:
+
+آپ کہہ دیجئے کہ ہمیں سوائے اللہ کے ہمارے حق میں لکھے ہوئے کہ کوئی چیز پہنچ ہی نہیں سکتی وه ہمارا کار ساز اور مولیٰ ہے۔ مومنوں کو تو اللہ کی ذات پاک پر ہی بھروسہ کرنا چاہئے۔
+
 English Translation:
 
 “Say, "Never will we be struck except by what Allah has decreed for us; He is our protector." And upon Allah let the believers rely”
@@ -65,6 +73,10 @@ Surah At-Talaaq (سُورَةُ الطَّلَاقِ)
 Arabic:
 
 وَيَرۡزُقۡهُ مِنۡ حَيۡثُ لَا يَحۡتَسِبُۚ وَمَن يَتَوَكَّلۡ عَلَى ٱللَّهِ فَهُوَ حَسۡبُهُۥٓۚ إِنَّ ٱللَّهَ بَٰلِغُ أَمۡرِهِۦۚ قَدۡ جَعَلَ ٱللَّهُ لِكُلِّ شَيۡءࣲ قَدۡرࣰ ا
+
+Urdu Translation:
+
+اور اسے ایسی جگہ سے روزی دیتا ہے جس کا اسے گمان بھی نہ ہو اور جو شخص اللہ پر توکل کرے گا اللہ اسے کافی ہوگا۔ اللہ تعالیٰ اپنا کام پورا کرکے ہی رہے گا۔ اللہ تعالیٰ نے ہر چیز کا ایک اندازه مقرر کر رکھا ہے
 
 English Translation:
 
@@ -100,6 +112,10 @@ Arabic:
 
 لَوْ أَنَّكُمْ كُنْتُمْ تَوَكَّلُونَ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرُزِقْتُمْ كَمَا تُرْزَقُ الطَّيْرُ تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا
 
+Urdu Translation:
+
+اگر تم لوگ اللہ پر توکل ( بھروسہ ) کرو جیسا کہ اس پر توکل ( بھروسہ ) کرنے کا حق ہے تو تمہیں اسی طرح رزق ملے گا جیسا کہ پرندوں کو ملتا ہے کہ صبح کو وہ بھوکے نکلتے ہیں اور شام کو آسودہ واپس آتے ہیں
+
 English Translation:
 
 “If you were to rely upon Allah with the required reliance, then He would provide for you just as a bird is provided for, it goes out in the morning empty, and returns full.”
@@ -134,9 +150,13 @@ Arabic:
 
 يَا غُلاَمُ إِنِّي أُعَلِّمُكَ كَلِمَاتٍ احْفَظِ اللَّهَ يَحْفَظْكَ احْفَظِ اللَّهَ تَجِدْهُ تُجَاهَكَ إِذَا سَأَلْتَ فَاسْأَلِ اللَّهَ وَإِذَا اسْتَعَنْتَ فَاسْتَعِنْ بِاللَّهِ وَاعْلَمْ أَنَّ الأُمَّةَ لَوِ اجْتَمَعَتْ عَلَى أَنْ يَنْفَعُوكَ بِشَيْءٍ لَمْ يَنْفَعُوكَ إِلاَّ بِشَيْءٍ قَدْ كَتَبَهُ اللَّهُ لَكَ وَلَوِ اجْتَمَعُوا عَلَى أَنْ يَضُرُّوكَ بِشَيْءٍ لَمْ يَضُرُّوكَ إِلاَّ بِشَيْءٍ قَدْ كَتَبَهُ اللَّهُ عَلَيْكَ رُفِعَتِ الأَقْلاَمُ وَجَفَّتِ الصُّحُفُ
 
+Urdu Translation:
+
+اے لڑکے! بیشک میں تمہیں چند اہم باتیں بتلا رہا ہوں: تم اللہ کے احکام کی حفاظت کرو، وہ تمہاری حفاظت فرمائے گا، تو اللہ کے حقوق کا خیال رکھو اسے تم اپنے سامنے پاؤ گے، جب تم کوئی چیز مانگو تو صرف اللہ سے مانگو، جب تو مدد چاہو تو صرف اللہ سے مدد طلب کرو، اور یہ بات جان لو کہ اگر ساری امت بھی جمع ہو کر تمہیں کچھ نفع پہنچانا چاہے تو وہ تمہیں اس سے زیادہ کچھ بھی نفع نہیں پہنچا سکتی جو اللہ نے تمہارے لیے لکھ دیا ہے، اور اگر وہ تمہیں کچھ نقصان پہنچانے کے لیے جمع ہو جائے تو اس سے زیادہ کچھ نقصان نہیں پہنچا سکتی جو اللہ نے تمہارے لیے لکھ دیا ہے، قلم اٹھا لیے گئے اور ( تقدیر کے ) صحیفے خشک ہو گئے ہیں
+
 English Translation:
 
-“'O boy! I will teach you a statement: Be mindful of Allah and He will protect you. Be mindful of Allah and you will find Him before you. When you ask, ask Allah, and when you seek aid, seek Allah's aid. Know that if the entire creation were to gather together to do something to benefit you- you would never get any benefit except that Allah had written for you. And if they were to gather to do something to harm you- you would never be harmed except that Allah had written for you. The pens are lifted and the pages are dried.”
+“O boy! I will teach you a statement: Be mindful of Allah and He will protect you. Be mindful of Allah and you will find Him before you. When you ask, ask Allah, and when you seek aid, seek Allah's aid. Know that if the entire creation were to gather together to do something to benefit you- you would never get any benefit except that Allah had written for you. And if they were to gather to do something to harm you- you would never be harmed except that Allah had written for you. The pens are lifted and the pages are dried.”
 
 Meaning ❤️
 
@@ -168,9 +188,13 @@ Arabic:
 
 اعْقِلْهَا وَتَوَكَّلْ
 
+Urdu Translation:
+
+اسے باندھ دو، پھر توکل کرو
+
 English Translation:
 
-“Tie it, and rely upon Allah.”
+“Tie it and rely(upon Allah)”
 
 Meaning ❤️
 

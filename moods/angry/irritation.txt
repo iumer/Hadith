@@ -6,6 +6,10 @@ Arabic:
 
 خُذِ ٱلۡعَفۡوَ وَأۡمُرۡ بِٱلۡعُرۡفِ وَأَعۡرِضۡ عَنِ ٱلۡجَٰهِلِينَ
 
+Urdu Translation:
+
+آپ درگزر کو اختیار کریں نیک کام کی تعلیم دیں اور جاہلوں سے ایک کناره ہو جائیں
+
 English Translation:
 
 “Take what is given freely, enjoin what is good, and turn away from the ignorant”
@@ -35,6 +39,10 @@ Surah Al-Furqaan (سُورَةُ الفُرۡقَانِ)
 Arabic:
 
 وَعِبَادُ ٱلرَّحۡمَٰنِ ٱلَّذِينَ يَمۡشُونَ عَلَى ٱلۡأَرۡضِ هَوۡنࣰ ا وَإِذَا خَاطَبَهُمُ ٱلۡجَٰهِلُونَ قَالُواْ سَلَٰمࣰ ا
+
+Urdu Translation:
+
+رحمٰن کے (سچے) بندے وه ہیں جو زمین پر فروتنی کے ساتھ چلتے ہیں اور جب بے علم لوگ ان سے باتیں کرنے لگتے ہیں تو وه کہہ دیتے ہیں کہ سلام ہے
 
 English Translation:
 
@@ -66,6 +74,10 @@ Arabic:
 
 وَٱصۡبِرۡ عَلَىٰ مَا يَقُولُونَ وَٱهۡجُرۡهُمۡ هَجۡرࣰ ا جَمِيلࣰ ا
 
+Urdu Translation:
+
+اور جو کچھ وه کہیں تو سہتا ره اور وضعداری کے ساتھ ان سے الگ تھلگ ره
+
 English Translation:
 
 “And be patient over what they say and avoid them with gracious avoidance”
@@ -88,37 +100,39 @@ Reference: Quran 73:10, Surah Al-Muzzammil.
 
 ────────────────────────────────────────
 
-Al-Adab Al-Mufrad 245
+Sahih Muslim 2593
 
-Al-Adab Al-Mufrad (الأدب المفرد)
+Book 45: The Book of Virtue, Enjoining Good Manners, and Joining of the Ties of Kinship (كتاب البر والصلة والآداب)
 
-Ibn 'Abbas reported (رضي الله عنه/عنهم):
+It is narrated:
 
 The Prophet Muhammad ﷺ said:
 
 Arabic:
 
-علموا ويسروا ولا تعسروا، وإذا غضب أحدكم فليسكت
+يَا عَائِشَةُ إِنَّ اللَّهَ رَفِيقٌ يُحِبُّ الرِّفْقَ وَيُعْطِي عَلَى الرِّفْقِ مَا لاَ يُعْطِي عَلَى الْعُنْفِ وَمَا لاَ يُعْطِي عَلَى مَا سِوَاهُ
+
+Urdu Translation:
+
+عائشہ! اللہ تعالیٰ نرمی کرنے والا اور نرمی کو پسند فرماتا ہے اور نرمی کی بنا پر وہ کچھ عطا فرماتا ہے جو درشت مزاجی کی بنا پر عطا نہیں فرماتا ، وہ اس کے علاوہ کسی بھی اور بات پر اتنا عطا نہیں فرماتا
 
 English Translation:
 
-“Teach and make things easy and not difficult. When one of you is angry, he should be silent.”
+“A'isha, verily Allah is kind and He loves kindness and confers upon kindness which he does not confer upon severity and does not confer upon anything else besides it (kindness)”
 
 Meaning ❤️
 
-The Prophet ﷺ teaches us to make learning and guidance easy, not harsh or overwhelming.
+The Prophet ﷺ told 'A'isha that Allah is gentle and loves gentleness, and gives through gentleness what He does not give through harshness.
 
-He also teaches that when anger comes, silence is a form of protection. Words spoken in rage are often words we regret.
-
-Gentleness in teaching and restraint in anger both reflect a heart seeking Allah’s pleasure.
+Irritation pushes us toward sharp words; this hadith shows that softness is the stronger path.
 
 Reflection
 
-Ease is part of prophetic character.
+Before you snap, choose the gentler word.
 
-If anger floods you, choose silence until your heart softens again.
+Allah loves gentleness — and puts blessing in it.
 
-Reference: Al-Adab Al-Mufrad 245, Book of Al-Adab Al-Mufrad.
+Reference: Sahih Muslim 2593, Book of The Book of Virtue, Enjoining Good Manners, and Joining of the Ties of Kinship.
 
 ────────────────────────────────────────
 
@@ -134,9 +148,13 @@ Arabic:
 
 إِذَا غَضِبَ أَحَدُكُمْ وَهُوَ قَائِمٌ فَلْيَجْلِسْ فَإِنْ ذَهَبَ عَنْهُ الْغَضَبُ وَإِلاَّ فَلْيَضْطَجِعْ
 
+Urdu Translation:
+
+جب تم میں سے کسی کو غصہ آئے اور وہ کھڑا ہو تو چاہیئے کہ بیٹھ جائے، اب اگر اس کا غصہ رفع ہو جائے ( تو بہتر ہے ) ورنہ پھر لیٹ جائے
+
 English Translation:
 
-“When one of you becomes angry while standing, let him sit down. If the anger leaves him, well and good; otherwise let him lie down.”
+“When one of you becomes angry while standing, he should sit down. If the anger leaves him, well and good; otherwise he should lie down”
 
 Meaning ❤️
 

@@ -6,6 +6,10 @@ Arabic:
 
 ٱلَّذِينَ ءَامَنُواْ وَتَطۡمَئِنُّ قُلُوبُهُم بِذِكۡرِ ٱللَّهِۗ أَلَا بِذِكۡرِ ٱللَّهِ تَطۡمَئِنُّ ٱلۡقُلُوبُ
 
+Urdu Translation:
+
+جو لوگ ایمان ﻻئے ان کے دل اللہ کے ذکر سے اطمینان حاصل کرتے ہیں۔ یاد رکھو اللہ کے ذکر سے ہی دلوں کو تسلی حاصل ہوتی ہے
+
 English Translation:
 
 “Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured”
@@ -35,6 +39,10 @@ Surah Al-Fath (سُورَةُ الفَتۡحِ)
 Arabic:
 
 هُوَ ٱلَّذِيٓ أَنزَلَ ٱلسَّكِينَةَ فِي قُلُوبِ ٱلۡمُؤۡمِنِينَ لِيَزۡدَادُوٓاْ إِيمَٰنࣰ ا مَّعَ إِيمَٰنِهِمۡۗ وَلِلَّهِ جُنُودُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِۚ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمࣰ ا
+
+Urdu Translation:
+
+وہی ہے جس نے مسلمانوں کے دلوں میں سکون (اور اطیمنان) ڈال دیا تاکہ اپنے ایمان کے ساتھ ہی ساتھ اور بھی ایمان میں بڑھ جائیں، اور آسمانوں اور زمین کے ﴿کل﴾ لشکر اللہ ہی کے ہیں۔ اور اللہ تعالیٰ دانا باحکمت ہے
 
 English Translation:
 
@@ -66,6 +74,10 @@ Arabic:
 
 يَٰٓأَيَّتُهَا ٱلنَّفۡسُ ٱلۡمُطۡمَئِنَّةُ
 
+Urdu Translation:
+
+اے اطمینان والی روح
+
 English Translation:
 
 “[To the righteous it will be said], "O reassured soul”
@@ -95,6 +107,10 @@ Surah Al-Fajr (سُورَةُ الفَجۡرِ)
 Arabic:
 
 ٱرۡجِعِيٓ إِلَىٰ رَبِّكِ رَاضِيَةࣰ مَّرۡضِيَّةࣰ‏
+
+Urdu Translation:
+
+تو اپنے رب کی طرف لوٹ چل اس طرح کہ تو اس سے راضی وه تجھ سے خوش
 
 English Translation:
 
@@ -126,6 +142,10 @@ Arabic:
 
 فَٱدۡخُلِي فِي عِبَٰدِي
 
+Urdu Translation:
+
+پس میرے خاص بندوں میں داخل ہو جا
+
 English Translation:
 
 “And enter among My [righteous] servants”
@@ -155,6 +175,10 @@ Surah Al-Fajr (سُورَةُ الفَجۡرِ)
 Arabic:
 
 وَٱدۡخُلِي جَنَّتِي
+
+Urdu Translation:
+
+اور میری جنت میں چلی جا
 
 English Translation:
 

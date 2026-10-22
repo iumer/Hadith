@@ -1,8 +1,17 @@
+import { useEffect } from 'react'
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
+import Animated, {
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withDelay,
+  withTiming,
+} from 'react-native-reanimated'
 import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Ambient } from '../components/Ambient'
 import { BackButton } from '../components/BackButton'
+import { WASH } from '../components/CardFan'
 import { getMood } from '../content'
 import type { RootStackParamList } from '../types'
 import { colors, fonts } from '../theme'
@@ -12,10 +21,22 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Subs'>
 export function SubsScreen({ navigation, route }: Props) {
   const insets = useSafeAreaInsets()
   const mood = getMood(route.params.moodId)
+  // Starts as the expanded mood card, then clears to reveal the list
+  const veil = useSharedValue(1)
+
+  useEffect(() => {
+    veil.value = withDelay(140, withTiming(0, { duration: 520, easing: Easing.bezier(0.32, 0.72, 0, 1) }))
+  }, [veil])
+
+  const veilStyle = useAnimatedStyle(() => ({ opacity: veil.value }))
+  const contentStyle = useAnimatedStyle(() => ({
+    transform: [{ translateY: veil.value * 18 }],
+  }))
 
   return (
     <View style={[styles.root, { paddingTop: insets.top + 8 }]}>
       <Ambient />
+      <Animated.View style={[styles.content, contentStyle]}>
       <View style={styles.top}>
         <BackButton onPress={() => navigation.goBack()} />
         <Text style={styles.eyebrow}>How you feel</Text>
@@ -46,11 +67,21 @@ export function SubsScreen({ navigation, route }: Props) {
           </Pressable>
         ))}
       </ScrollView>
+      </Animated.View>
+      <Animated.View
+        pointerEvents="none"
+        style={[StyleSheet.absoluteFill, { backgroundColor: mood.color }, veilStyle]}
+      >
+        <View style={[StyleSheet.absoluteFill, { backgroundColor: `rgba(255,255,255,${WASH})` }]} />
+      </Animated.View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
+  content: {
+    flex: 1,
+  },
   root: {
     flex: 1,
     backgroundColor: colors.cream,

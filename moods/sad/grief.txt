@@ -6,6 +6,10 @@ Arabic:
 
 وَلَنَبۡلُوَنَّكُم بِشَيۡءࣲ مِّنَ ٱلۡخَوۡفِ وَٱلۡجُوعِ وَنَقۡصࣲ مِّنَ ٱلۡأَمۡوَٰلِ وَٱلۡأَنفُسِ وَٱلثَّمَرَٰتِۗ وَبَشِّرِ ٱلصَّٰبِرِينَ
 
+Urdu Translation:
+
+اور ہم کسی نہ کسی طرح تمہاری آزمائش ضرور کریں گے، دشمن کے ڈر سے، بھوک پیاس سے، مال وجان اور پھلوں کی کمی سے اور ان صبر کرنے والوں کو خوشخبری دے دیجیئے
+
 English Translation:
 
 “And We will surely test you with something of fear and hunger and a loss of wealth and lives and fruits, but give good tidings to the patient”
@@ -35,6 +39,10 @@ Surah Al-Baqara (سُورَةُ البَقَرَةِ)
 Arabic:
 
 ٱلَّذِينَ إِذَآ أَصَٰبَتۡهُم مُّصِيبَةࣱ قَالُوٓاْ إِنَّا لِلَّهِ وَإِنَّآ إِلَيۡهِ رَٰجِعُونَ
+
+Urdu Translation:
+
+جنہیں، جب کبھی کوئی مصیبت آتی ہے تو کہہ دیا کرتے ہیں کہ ہم تو خود اللہ تعالیٰ کی ملکیت ہیں اور ہم اسی کی طرف لوٹنے والے ہیں
 
 English Translation:
 
@@ -66,6 +74,10 @@ Arabic:
 
 أُوْلَٰٓئِكَ عَلَيۡهِمۡ صَلَوَٰتࣱ مِّن رَّبِّهِمۡ وَرَحۡمَةࣱۖ وَأُوْلَٰٓئِكَ هُمُ ٱلۡمُهۡتَدُونَ
 
+Urdu Translation:
+
+ان پر ان کے رب کی نوازشیں اور رحمتیں ہیں اور یہی لوگ ہدایت یافتہ ہیں
+
 English Translation:
 
 “Those are the ones upon whom are blessings from their Lord and mercy. And it is those who are the [rightly] guided”
@@ -95,6 +107,10 @@ Surah Aal-i-Imraan (سُورَةُ آلِ عِمۡرَانَ)
 Arabic:
 
 وَلَا تَهِنُواْ وَلَا تَحۡزَنُواْ وَأَنتُمُ ٱلۡأَعۡلَوۡنَ إِن كُنتُم مُّؤۡمِنِينَ
+
+Urdu Translation:
+
+تم نہ سستی کرو اور غمگین ہو، تم ہی غالب رہو گے، اگر تم ایماندار ہو
 
 English Translation:
 
@@ -126,6 +142,10 @@ Arabic:
 
 وَتَوَلَّىٰ عَنۡهُمۡ وَقَالَ يَٰٓأَسَفَىٰ عَلَىٰ يُوسُفَ وَٱبۡيَضَّتۡ عَيۡنَاهُ مِنَ ٱلۡحُزۡنِ فَهُوَ كَظِيمࣱ‏
 
+Urdu Translation:
+
+پھر ان سے منھ پھیر لیا اور کہا ہائے یوسف! ان کی آنکھیں بوجہ رنج وغم کے سفید ہو چکی تھیں اور وه غم کو دبائے ہوئے تھے
+
 English Translation:
 
 “And he turned away from them and said, "Oh, my sorrow over Joseph," and his eyes became white from grief, for he was [of that] a suppressor”
@@ -155,6 +175,10 @@ Surah Yusuf (سُورَةُ يُوسُفَ)
 Arabic:
 
 قَالَ إِنَّمَآ أَشۡكُواْ بَثِّي وَحُزۡنِيٓ إِلَى ٱللَّهِ وَأَعۡلَمُ مِنَ ٱللَّهِ مَا لَا تَعۡلَمُونَ
+
+Urdu Translation:
+
+انہوں نے کہا کہ میں تو اپنی پریشانیوں اور رنج کی فریاد اللہ ہی سے کر رہا ہوں، مجھے اللہ کی طرف سے وه باتیں معلوم ہیں جو تم نہیں جانتے
 
 English Translation:
 
@@ -190,9 +214,13 @@ Arabic:
 
 إِنَّمَا الصَّبْرُ عِنْدَ الصَّدْمَةِ الأُولَى
 
+Urdu Translation:
+
+صبر تو جب صدمہ شروع ہو اس وقت کرنا چاہیے
+
 English Translation:
 
-“Indeed, patience is at the first stroke of a calamity.”
+“Verily, the patience is at the first stroke of a calamity”
 
 Meaning ❤️
 
@@ -224,9 +252,13 @@ Arabic:
 
 إِنَّ الْعَيْنَ تَدْمَعُ، وَالْقَلْبَ يَحْزَنُ، وَلاَ نَقُولُ إِلاَّ مَا يَرْضَى رَبُّنَا، وَإِنَّا بِفِرَاقِكَ يَا إِبْرَاهِيمُ لَمَحْزُونُونَ
 
+Urdu Translation:
+
+آنکھوں سے آنسو جاری ہیں اور دل غم سے نڈھال ہے پر زبان سے ہم کہیں گے وہی جو ہمارے پروردگار کو پسند ہے اور اے ابراہیم! ہم تمہاری جدائی سے غمگین ہیں
+
 English Translation:
 
-“The eyes shed tears and the heart grieves, and we say nothing except what pleases our Lord. O Ibrahim, we are truly saddened by your parting.”
+“The eyes are shedding tears and the heart is grieved, and we will not say except what pleases our Lord, O Ibrahim ! Indeed we are grieved by your separation”
 
 Meaning ❤️
 
@@ -246,21 +278,25 @@ Reference: Sahih al-Bukhari 1303, Book of Funerals (Al-Janaa'iz).
 
 ────────────────────────────────────────
 
-Sahih al-Bukhari 5641
+Sahih Muslim 2573
 
-Book 75: Patients (كتاب المرضى)
+Book 45: The Book of Virtue, Enjoining Good Manners, and Joining of the Ties of Kinship (كتاب البر والصلة والآداب)
 
-Narrated Abu Sa`id Al-Khudri and Abu Huraira (رضي الله عنه/عنهم):
+Abu Sa'id and abu Huraira reported that they heard Allah's Messenger (ﷺ) as saying (رضي الله عنه/عنهم):
 
 The Prophet Muhammad ﷺ said:
 
 Arabic:
 
-مَا يُصِيبُ الْمُسْلِمَ مِنْ نَصَبٍ وَلاَ وَصَبٍ وَلاَ هَمٍّ وَلاَ حُزْنٍ وَلاَ أَذًى وَلاَ غَمٍّ حَتَّى الشَّوْكَةِ يُشَاكُهَا، إِلاَّ كَفَّرَ اللَّهُ بِهَا مِنْ خَطَايَاهُ
+مَا يُصِيبُ الْمُؤْمِنَ مِنْ وَصَبٍ وَلاَ نَصَبٍ وَلاَ سَقَمٍ وَلاَ حَزَنٍ حَتَّى الْهَمِّ يُهَمُّهُ إِلاَّ كُفِّرَ بِهِ مِنْ سَيِّئَاتِهِ
+
+Urdu Translation:
+
+مومن کو کوئی تکلیف نہیں پہنچتی ، نہ تھکاوٹ ، نہ بیماری ، نہ غم حتی کہ کوئی فکر بھی جو اسے فکرمند کر دے مگر اس کے بدلے اس کے گناہوں کو مٹا دیا جاتا ہے
 
 English Translation:
 
-“No fatigue, nor disease, nor sorrow, nor sadness, nor hurt, nor distress befalls a Muslim, even if it were the prick he receives from a thorn, but that Allah expiates some of his sins for that.”
+“Never a believer is stricken with discomfort, hardship or illness, grief or even with mental worry that his sins are not expiated for him”
 
 Meaning ❤️
 
@@ -276,7 +312,7 @@ Your suffering is never meaningless in the sight of Allah.
 
 Sometimes, the difficulties we experience become a means through which Allah purifies us of our sins.
 
-Reference: Sahih al-Bukhari 5641, Book of Patients.
+Reference: Sahih Muslim 2573, Book of The Book of Virtue, Enjoining Good Manners, and Joining of the Ties of Kinship.
 
 ────────────────────────────────────────
 
@@ -292,9 +328,13 @@ Arabic:
 
 ارْجِعْ إِلَيْهَا فَأَخْبِرْهَا إِنَّ لِلَّهِ مَا أَخَذَ وَلَهُ مَا أَعْطَى وَكُلُّ شَىْءٍ عِنْدَهُ بِأَجَلٍ مُسَمًّى فَمُرْهَا فَلْتَصْبِرْ وَلْتَحْتَسِبْ
 
+Urdu Translation:
+
+اللہ ہی کا ہے جو اس نے لے لیا اوراسی کا ہے ۔ جو اس نے دیا تھا اور اس کے ہاں ہر چیز کا وقت مقرر ہے ، اور ان کو بتادو کہ وہ صبر کریں اور اجر وثواب کی طلب گار ہوں
+
 English Translation:
 
-“To Allah belongs what He took and to Him belongs what He gave, and everything with Him has an appointed term. So tell her to be patient and to seek her reward from Allah.”
+“What Allah had taken belonged to Him, and to him belonged what He granted; and He has an appointed time for everything. So you (the messenger) order her to show endurance and seek reward from Allah”
 
 Meaning ❤️
 

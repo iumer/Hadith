@@ -6,6 +6,10 @@ Arabic:
 
 ٱلَّذِينَ يُنفِقُونَ فِي ٱلسَّرَّآءِ وَٱلضَّرَّآءِ وَٱلۡكَٰظِمِينَ ٱلۡغَيۡظَ وَٱلۡعَافِينَ عَنِ ٱلنَّاسِۗ وَٱللَّهُ يُحِبُّ ٱلۡمُحۡسِنِينَ
 
+Urdu Translation:
+
+جو لوگ آسانی میں سختی کے موقع پر بھی اللہ کے راستے میں خرچ کرتے ہیں، غصہ پینے والے اور لوگوں سے درگزر کرنے والے ہیں، اللہ تعالیٰ ان نیک کاروں سے محبت کرتا ہے
+
 English Translation:
 
 “Who spend [in the cause of Allah] during ease and hardship and who restrain anger and who pardon the people - and Allah loves the doers of good”
@@ -35,6 +39,10 @@ Surah Ash-Shura (سُورَةُ الشُّورَىٰ)
 Arabic:
 
 وَٱلَّذِينَ يَجۡتَنِبُونَ كَبَٰٓئِرَ ٱلۡإِثۡمِ وَٱلۡفَوَٰحِشَ وَإِذَا مَا غَضِبُواْ هُمۡ يَغۡفِرُونَ
+
+Urdu Translation:
+
+اور کبیره گناہوں سے اور بے حیائیوں سے بچتے ہیں اور غصے کے وقت (بھی) معاف کردیتے ہیں
 
 English Translation:
 
@@ -70,6 +78,10 @@ Arabic:
 
 لَيْسَ الشَّدِيدُ بِالصُّرَعَةِ، إِنَّمَا الشَّدِيدُ الَّذِي يَمْلِكُ نَفْسَهُ عِنْدَ الْغَضَبِ
 
+Urdu Translation:
+
+پہلوان وہ نہیں ہے جو کشتی لڑنے میں غالب ہو جائے بلکہ اصلی پہلوان تو وہ ہے جو غصہ کی حالت میں اپنے آپ پر قابو پائے بے قابو نہ ہو جائے
+
 English Translation:
 
 “The strong is not the one who overcomes the people by his strength, but the strong is the one who controls himself while in anger.”
@@ -103,6 +115,10 @@ The Prophet Muhammad ﷺ said:
 Arabic:
 
 لَيْسَ الشَّدِيدُ بِالصُّرَعَةِ إِنَّمَا الشَّدِيدُ الَّذِي يَمْلِكُ نَفْسَهُ عِنْدَ الْغَضَبِ
+
+Urdu Translation:
+
+( کوئی شخص ) پچھاڑ دینے سے طاقت نہیں ہوتا ۔ طاقتور ( مضبوط ) وہ ہے جو غصے کے وقت خود کو قابو میں رکھتا ہے
 
 English Translation:
 
@@ -138,9 +154,13 @@ Arabic:
 
 إِنِّي لأَعْرِفُ كَلِمَةً لَوْ قَالَهَا لَذَهَبَ عَنْهُ الَّذِي يَجِدُ أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
 
+Urdu Translation:
+
+مجھے ایک ایسا کلمہ معلوم ہے کہ اگر یہ شخص اسے کہہ دے تو وہ ( غصے کی ) جس کیفیت میں خود کو پا رہا ہے وہ جاتی رہے گی ، ( وہ کلمہ ہے ) :  اعوذبالله من الشيطان الرجيم
+
 English Translation:
 
-“I know of a wording, if he were to utter that, his fit of rage (would be no more and that wording is): I seek refuge with Allah from Satan the accursed. The person said: Do you find any madness in me? Ibn al-'Ala' said: Do you see it? And he made no mention of the person.”
+“I know of a wording, if he were to utter that, his fit of rage (would be no more and that wording is): I seek refuge with Allah from Satan the accursed”
 
 Meaning ❤️
 
@@ -170,11 +190,15 @@ The Prophet Muhammad ﷺ said:
 
 Arabic:
 
-لَا تَغْضَبْ
+لاَ تَغْضَبْ
+
+Urdu Translation:
+
+غصہ مت کرو
 
 English Translation:
 
-“Do not get angry.”
+“Do not get angry”
 
 Meaning ❤️
 
@@ -205,6 +229,10 @@ The Prophet Muhammad ﷺ said:
 Arabic:
 
 إِنِّي لأَعْلَمُ كَلِمَةً لَوْ قَالَهَا لَذَهَبَ غَضَبُهُ أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
+
+Urdu Translation:
+
+میں ایک ایسا کلمہ جانتا ہوں کہ اگر وہ اس کلمے کو کہہ لے تو اس کا غصہ کافور ہو جائے، وہ کلمہ یہ ہے: «أعوذ بالله من الشيطان الرجيم» ”میں اللہ کی پناہ مانگتا ہوں راندے ہوئے شیطان سے
 
 English Translation:
 
@@ -240,9 +268,13 @@ Arabic:
 
 مَنْ كَظَمَ غَيْظًا - وَهُوَ قَادِرٌ عَلَى أَنْ يُنْفِذَهُ - دَعَاهُ اللَّهُ عَزَّ وَجَلَّ عَلَى رُءُوسِ الْخَلاَئِقِ يَوْمَ الْقِيَامَةِ حَتَّى يُخَيِّرَهُ اللَّهُ مِنَ الْحُورِ مَا شَاءَ
 
+Urdu Translation:
+
+جس نے اپنا غصہ پی لیا حالانکہ وہ اسے نافذ کرنے پر قادر تھا تو قیامت کے دن اللہ تعالیٰ اسے سب لوگوں کے سامنے بلائے گا یہاں تک کہ اسے اللہ تعالیٰ اختیار دے گا کہ وہ بڑی آنکھ والی حوروں میں سے جسے چاہے چن لے
+
 English Translation:
 
-“Whoever suppresses anger when he is able to act on it, Allah will call him on the Day of Resurrection before all of creation and let him choose whichever of the maidens of Paradise he wishes.”
+“If anyone suppresses anger when he is in a position to give vent to it, Allah, the Exalted, will call him on the Day of Resurrection over the heads of all creatures, and ask him to choose any of the bright and large eyed maidens he wishes”
 
 Meaning ❤️
 
@@ -274,9 +306,13 @@ Arabic:
 
 إِذَا غَضِبَ أَحَدُكُمْ وَهُوَ قَائِمٌ فَلْيَجْلِسْ فَإِنْ ذَهَبَ عَنْهُ الْغَضَبُ وَإِلاَّ فَلْيَضْطَجِعْ
 
+Urdu Translation:
+
+جب تم میں سے کسی کو غصہ آئے اور وہ کھڑا ہو تو چاہیئے کہ بیٹھ جائے، اب اگر اس کا غصہ رفع ہو جائے ( تو بہتر ہے ) ورنہ پھر لیٹ جائے
+
 English Translation:
 
-“When one of you becomes angry while standing, let him sit down. If the anger leaves him, well and good; otherwise let him lie down.”
+“When one of you becomes angry while standing, he should sit down. If the anger leaves him, well and good; otherwise he should lie down”
 
 Meaning ❤️
 
@@ -293,37 +329,3 @@ When anger rises, change your position before you change someone’s day.
 A small physical step can protect hearts—including your own.
 
 Reference: Sunan Abi Dawud 4782, Book of General Behavior (Kitab Al-Adab).
-
-────────────────────────────────────────
-
-Al-Adab Al-Mufrad 245
-
-Al-Adab Al-Mufrad (الأدب المفرد)
-
-Ibn 'Abbas reported (رضي الله عنه/عنهم):
-
-The Prophet Muhammad ﷺ said:
-
-Arabic:
-
-علموا ويسروا ولا تعسروا، وإذا غضب أحدكم فليسكت
-
-English Translation:
-
-“Teach and make things easy and not difficult. When one of you is angry, he should be silent.”
-
-Meaning ❤️
-
-The Prophet ﷺ teaches us to make learning and guidance easy, not harsh or overwhelming.
-
-He also teaches that when anger comes, silence is a form of protection. Words spoken in rage are often words we regret.
-
-Gentleness in teaching and restraint in anger both reflect a heart seeking Allah’s pleasure.
-
-Reflection
-
-Ease is part of prophetic character.
-
-If anger floods you, choose silence until your heart softens again.
-
-Reference: Al-Adab Al-Mufrad 245, Book of Al-Adab Al-Mufrad.

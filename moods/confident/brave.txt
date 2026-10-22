@@ -6,6 +6,10 @@ Arabic:
 
 فَلَمَّا فَصَلَ طَالُوتُ بِٱلۡجُنُودِ قَالَ إِنَّ ٱللَّهَ مُبۡتَلِيكُم بِنَهَرࣲ فَمَن شَرِبَ مِنۡهُ فَلَيۡسَ مِنِّي وَمَن لَّمۡ يَطۡعَمۡهُ فَإِنَّهُۥ مِنِّيٓ إِلَّا مَنِ ٱغۡتَرَفَ غُرۡفَةَۢ بِيَدِهِۦۚ فَشَرِبُواْ مِنۡهُ إِلَّا قَلِيلࣰ ا مِّنۡهُمۡۚ فَلَمَّا جَاوَزَهُۥ هُوَ وَٱلَّذِينَ ءَامَنُواْ مَعَهُۥ قَالُواْ لَا طَاقَةَ لَنَا ٱلۡيَوۡمَ بِجَالُوتَ وَجُنُودِهِۦۚ قَالَ ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَٰقُواْ ٱللَّهِ كَم مِّن فِئَةࣲ قَلِيلَةٍ غَلَبَتۡ فِئَةࣰ كَثِيرَةَۢ بِإِذۡنِ ٱللَّهِۗ وَٱللَّهُ مَعَ ٱلصَّٰبِرِينَ
 
+Urdu Translation:
+
+جب (حضرت) طالوت لشکروں کو لے کر نکلے تو کہا سنو اللہ تعالیٰ تمہیں ایک نہر سے آزمانے واﻻہے، جس نے اس میں سے پانی پی لیا وه میرا نہیں اور جو اسے نہ چکھے وه میرا ہے، ہاں یہ اور بات ہے کہ اپنے ہاتھ سے ایک چلو بھرلے۔ لیکن سوائے چند کے باقی سب نے وه پانی پی لیا (حضرت) طالوت مومنین سمیت جب نہر سے گزر گئے تو وه لوگ کہنے لگے آج تو ہم میں طاقت نہیں کہ جالوت اور اس کے لشکروں سے لڑیں۔ لیکن اللہ تعالیٰ کی ملاقات پر یقین رکھنے والوں نے کہا، بسا اوقات چھوٹی اور تھوڑی سی جماعتیں بڑی اور بہت سی جماعتوں پر اللہ کے حکم سے غلبہ پالیتی ہیں، اللہ تعالیٰ صبر والوں کے ساتھ ہے
+
 English Translation:
 
 “And when Saul went forth with the soldiers, he said, "Indeed, Allah will be testing you with a river. So whoever drinks from it is not of me, and whoever does not taste it is indeed of me, excepting one who takes [from it] in the hollow of his hand." But they drank from it, except a [very] few of them. Then when he had crossed it along with those who believed with him, they said, "There is no power for us today against Goliath and his soldiers." But those who were certain that they would meet Allah said, "How many a small company has overcome a large company by permission of Allah. And Allah is with the patient”
@@ -35,6 +39,10 @@ Surah Aal-i-Imraan (سُورَةُ آلِ عِمۡرَانَ)
 Arabic:
 
 ٱلَّذِينَ قَالَ لَهُمُ ٱلنَّاسُ إِنَّ ٱلنَّاسَ قَدۡ جَمَعُواْ لَكُمۡ فَٱخۡشَوۡهُمۡ فَزَادَهُمۡ إِيمَٰنࣰ ا وَقَالُواْ حَسۡبُنَا ٱللَّهُ وَنِعۡمَ ٱلۡوَكِيلُ
+
+Urdu Translation:
+
+وه لوگ کہ جب ان سے لوگوں نے کہا کہ کافروں نے تمہارے مقابلے پر لشکر جمع کر لئے ہیں، تم ان سے خوف کھاؤ تو اس بات نے انہیں ایمان میں اور بڑھا دیا اور کہنے لگے ہمیں اللہ کافی ہے اور وه بہت اچھا کارساز ہے
 
 English Translation:
 
@@ -66,6 +74,10 @@ Arabic:
 
 يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓاْ إِذَا لَقِيتُمۡ فِئَةࣰ فَٱثۡبُتُواْ وَٱذۡكُرُواْ ٱللَّهَ كَثِيرࣰ ا لَّعَلَّكُمۡ تُفۡلِحُونَ
 
+Urdu Translation:
+
+اے ایمان والو! جب تم کسی مخالف فوج سے بھڑ جاؤ تو ﺛابت قدم رہو اور بکثرت اللہ کو یاد کرو تاکہ تمہیں کامیابی حاصل ہو
+
 English Translation:
 
 “O you who have believed, when you encounter a company [from the enemy forces], stand firm and remember Allah much that you may be successful”
@@ -95,6 +107,10 @@ Surah Al-Anfaal (سُورَةُ الأَنفَالِ)
 Arabic:
 
 وَأَطِيعُواْ ٱللَّهَ وَرَسُولَهُۥ وَلَا تَنَٰزَعُواْ فَتَفۡشَلُواْ وَتَذۡهَبَ رِيحُكُمۡۖ وَٱصۡبِرُوٓاْۚ إِنَّ ٱللَّهَ مَعَ ٱلصَّٰبِرِينَ
+
+Urdu Translation:
+
+اور اللہ کی اور اس کے رسول کی فرماں برداری کرتے رہو، آپس میں اختلاف نہ کرو ورنہ بزدل ہو جاؤ گے اور تمہاری ہوا اکھڑ جائے گی اور صبر و سہارا رکھو، یقیناً اللہ تعالیٰ صبر کرنے والوں کے ساتھ ہے
 
 English Translation:
 
@@ -130,6 +146,10 @@ Arabic:
 
 لَمْ تُرَاعُوا لَمْ تُرَاعُوا
 
+Urdu Translation:
+
+ڈرو مت
+
 English Translation:
 
 “Don't be afraid! Don't be afraid!”
@@ -164,9 +184,13 @@ Arabic:
 
 لَمْ تُرَاعُوا لَمْ تُرَاعُوا
 
+Urdu Translation:
+
+خوف میں مبتلا نہ ہو خوف میں مبتلانہ ہو
+
 English Translation:
 
-“There is nothing to be afraid of, there is nothing to be afraid of.”
+“There was nothing to be afraid of”
 
 Meaning ❤️
 

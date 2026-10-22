@@ -132,7 +132,7 @@ Working product name in code: **Heart Threads** (product docs also say Mood & Li
 5. Read — Arabic, English, meaning, reflection + Report  
 
 **Content today in the app:** curated offline catalog baked into  
-`app/src/content/catalog.json` (**8 moods · 37 subs · 180 passages**), built from `moods/**/*.txt` by `scripts/build_catalog.py`.
+`app/src/content/catalog.json` (**8 moods · 37 subs · 179 passages**), built from `moods/**/*.txt` by `scripts/build_catalog.py`.
 Every hadith carries its authenticity grade; only sahih/hasan hadith are shipped.  
 Full Quran/Hadith SQLite search DBs exist in the repo for later “Search”; v1 reading path does **not** open those DBs at runtime yet.
 
@@ -262,6 +262,12 @@ Mockup kept aligned conceptually with the same interaction model.
 - New `GradeBar` on hadith pages (Sahih / Hasan / Da'if / Mawdu' with grader + "scholars differ" sheet).
 - UI: Amiri fonts for Arabic, card fan layout/titles, scroll reset, report keyboard + full payload, saved name, label cleanups.
 - **Not yet applied:** the passage *replacement* suggestions in the audit (sections 5 / entries marked REPLACE/MERGE/ADD) — waiting on scholar review.
+
+### Phase J — Home feel + Urdu round (2026-10-23)
+
+- Card fan: bigger cards, instruction pills, tap/idle "Pull me down" hint, card-to-screen open animation, clean return.
+- Read: Arabic → Urdu → English (authentic, verbatim-checked), swipe to page, edge swipe-back kept.
+- Name asked only on first launch.
 
 ---
 

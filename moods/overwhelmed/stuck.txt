@@ -6,6 +6,10 @@ Arabic:
 
 فَإِذَا بَلَغۡنَ أَجَلَهُنَّ فَأَمۡسِكُوهُنَّ بِمَعۡرُوفٍ أَوۡ فَارِقُوهُنَّ بِمَعۡرُوفࣲ وَأَشۡهِدُواْ ذَوَيۡ عَدۡلࣲ مِّنكُمۡ وَأَقِيمُواْ ٱلشَّهَٰدَةَ لِلَّهِۚ ذَٰلِكُمۡ يُوعَظُ بِهِۦ مَن كَانَ يُؤۡمِنُ بِٱللَّهِ وَٱلۡيَوۡمِ ٱلۡأٓخِرِۚ وَمَن يَتَّقِ ٱللَّهَ يَجۡعَل لَّهُۥ مَخۡرَجࣰ ا
 
+Urdu Translation:
+
+پس جب یہ عورتیں اپنی عدت پوری کرنے کے قریب پہنچ جائیں تو انہیں یا تو قاعده کے مطابق اپنے نکاح میں رہنے دو یا دستور کے مطابق انہیں الگ کر دو اور آپس میں سے دو عادل شخصوں کو گواه کر لو اور اللہ کی رضامندی کے لیے ٹھیک ٹھیک گواہی دو۔ یہی ہے وه جس کی نصیحت اسے کی جاتی ہے جو اللہ پر اور قیامت کے دن پر ایمان رکھتا ہو اور جو شخص اللہ سے ڈرتا ہے اللہ اس کے لیے چھٹکارے کی شکل نکال دیتا ہے
+
 English Translation:
 
 “And when they have [nearly] fulfilled their term, either retain them according to acceptable terms or part with them according to acceptable terms. And bring to witness two just men from among you and establish the testimony for [the acceptance of] Allah. That is instructed to whoever should believe in Allah and the Last day. And whoever fears Allah - He will make for him a way out”
@@ -35,6 +39,10 @@ Surah At-Talaaq (سُورَةُ الطَّلَاقِ)
 Arabic:
 
 وَيَرۡزُقۡهُ مِنۡ حَيۡثُ لَا يَحۡتَسِبُۚ وَمَن يَتَوَكَّلۡ عَلَى ٱللَّهِ فَهُوَ حَسۡبُهُۥٓۚ إِنَّ ٱللَّهَ بَٰلِغُ أَمۡرِهِۦۚ قَدۡ جَعَلَ ٱللَّهُ لِكُلِّ شَيۡءࣲ قَدۡرࣰ ا
+
+Urdu Translation:
+
+اور اسے ایسی جگہ سے روزی دیتا ہے جس کا اسے گمان بھی نہ ہو اور جو شخص اللہ پر توکل کرے گا اللہ اسے کافی ہوگا۔ اللہ تعالیٰ اپنا کام پورا کرکے ہی رہے گا۔ اللہ تعالیٰ نے ہر چیز کا ایک اندازه مقرر کر رکھا ہے
 
 English Translation:
 
@@ -66,6 +74,10 @@ Arabic:
 
 فَإِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرًا
 
+Urdu Translation:
+
+پس یقیناً مشکل کے ساتھ آسانی ہے
+
 English Translation:
 
 “For indeed, with hardship [will be] ease”
@@ -95,6 +107,10 @@ Surah Ash-Sharh (سُورَةُ الشَّرۡحِ)
 Arabic:
 
 إِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرࣰ ا
+
+Urdu Translation:
+
+بیشک مشکل کے ساتھ آسانی ہے
 
 English Translation:
 
@@ -128,11 +144,15 @@ The Prophet Muhammad ﷺ said:
 
 Arabic:
 
-دَعْوَةُ ذِي النُّونِ إِذْ دَعَا وَهُوَ فِي بَطْنِ الْحُوتِ لاَ إِلَهَ إِلاَّ أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ فَإِنَّهُ لَمْ يَدْعُ بِهَا رَجُلٌ مُسْلِمٌ فِي شَيْءٍ قَطُّ إِلاَّ اسْتَجَابَ اللَّهُ لَهُ
+دَعْوَةُ ذِي النُّونِ إِذْ دَعَا وَهُوَ فِي بَطْنِ الْحُوتِ لاَ إِلَهَ إِلاَّ أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ ‏.‏ فَإِنَّهُ لَمْ يَدْعُ بِهَا رَجُلٌ مُسْلِمٌ فِي شَيْءٍ قَطُّ إِلاَّ اسْتَجَابَ اللَّهُ لَهُ
+
+Urdu Translation:
+
+ذوالنون ( یونس علیہ السلام ) کی دعا جو انہوں نے مچھلی کے پیٹ میں رہنے کے دوران کی تھی وہ یہ تھی: «لا إله إلا أنت سبحانك إني كنت من الظالمين» ”تیرے سوا کوئی معبود برحق نہیں، تو پاک ہے، میں ہی ظالم ( خطاکار ) ہوں“، کیونکہ یہ ایسی دعا ہے کہ جب بھی کوئی مسلمان شخص اسے پڑھ کر دعا کرے گا تو اللہ تعالیٰ اس کی دعا قبول فرمائے گا
 
 English Translation:
 
-“The supplication of Dhun-Nun (Prophet Yunus) when he called out from the belly of the whale was: "There is no god but You, glory be to You; indeed I have been among the wrongdoers." No Muslim ever supplicates with it for anything except that Allah answers him.”
+“The supplication of Dhun-Nun (Prophet Yunus) when he supplicated, while in the belly of the whale was: ‘There is none worthy of worship except You, Glory to You, Indeed, I have been of the transgressors. (Lā ilāha illā anta subḥānaka innī kuntu minaẓ-ẓālimīn)’ So indeed, no Muslim man supplicates with it for anything, ever, except Allah responds to him”
 
 Meaning ❤️
 

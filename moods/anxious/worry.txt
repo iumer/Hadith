@@ -6,6 +6,10 @@ Arabic:
 
 ثُمَّ أَنزَلَ عَلَيۡكُم مِّنۢ بَعۡدِ ٱلۡغَمِّ أَمَنَةࣰ نُّعَاسࣰ ا يَغۡشَىٰ طَآئِفَةࣰ مِّنكُمۡۖ وَطَآئِفَةࣱ قَدۡ أَهَمَّتۡهُمۡ أَنفُسُهُمۡ يَظُنُّونَ بِٱللَّهِ غَيۡرَ ٱلۡحَقِّ ظَنَّ ٱلۡجَٰهِلِيَّةِۖ يَقُولُونَ هَل لَّنَا مِنَ ٱلۡأَمۡرِ مِن شَيۡءࣲۗ قُلۡ إِنَّ ٱلۡأَمۡرَ كُلَّهُۥ لِلَّهِۗ يُخۡفُونَ فِيٓ أَنفُسِهِم مَّا لَا يُبۡدُونَ لَكَۖ يَقُولُونَ لَوۡ كَانَ لَنَا مِنَ ٱلۡأَمۡرِ شَيۡءࣱ مَّا قُتِلۡنَا هَٰهُنَاۗ قُل لَّوۡ كُنتُمۡ فِي بُيُوتِكُمۡ لَبَرَزَ ٱلَّذِينَ كُتِبَ عَلَيۡهِمُ ٱلۡقَتۡلُ إِلَىٰ مَضَاجِعِهِمۡۖ وَلِيَبۡتَلِيَ ٱللَّهُ مَا فِي صُدُورِكُمۡ وَلِيُمَحِّصَ مَا فِي قُلُوبِكُمۡۚ وَٱللَّهُ عَلِيمُۢ بِذَاتِ ٱلصُّدُورِ
 
+Urdu Translation:
+
+پھر اس نے اس غم کے بعد تم پر امن نازل فرمایا اور تم میں سے ایک جماعت کو امن کی نیند آنے لگی۔ ہاں کچھ وه لوگ بھی تھے کہ انہیں اپنی جانوں کی پڑی ہوئی تھی، وه اللہ تعالیٰ کے ساتھ ناحق جہالت بھری بدگمانیاں کر رہے تھے اور کہتے تھے کیا ہمیں بھی کسی چیز کا اختیار ہے؟ آپ کہہ دیجئے کہ کام کل کا کل اللہ کے اختیار میں ہے، یہ لوگ اپنے دلوں کے بھید آپ کو نہیں بتاتے، کہتے ہیں کہ اگر ہمیں کچھ بھی اختیار ہوتا تو یہاں قتل نہ کئے جاتے۔ آپ کہہ دیجئے کہ گو تم اپنے گھروں میں ہوتے پھر بھی جن کی قمست میں قتل ہونا تھا وه تو مقتل کی طرف چل کھڑے ہوتے، اللہ تعالیٰ کو تمہارے سینوں کے اندر کی چیز کا آزمانا اور جو کچھ تمہارے دلوں میں ہے، اس کو پاک کرنا تھا، اور اللہ تعالی سینوں کے بھید سے آگاه ہے
+
 English Translation:
 
 “Then after distress, He sent down upon you security [in the form of] drowsiness, overcoming a faction of you, while another faction worried about themselves, thinking of Allah other than the truth - the thought of ignorance, saying, "Is there anything for us [to have done] in this matter?" Say, "Indeed, the matter belongs completely to Allah." They conceal within themselves what they will not reveal to you. They say, "If there was anything we could have done in the matter, some of us would not have been killed right here." Say, "Even if you had been inside your houses, those decreed to be killed would have come out to their death beds." [It was] so that Allah might test what is in your breasts and purify what is in your hearts. And Allah is Knowing of that within the breasts”
@@ -35,6 +39,10 @@ Surah At-Talaaq (سُورَةُ الطَّلَاقِ)
 Arabic:
 
 وَيَرۡزُقۡهُ مِنۡ حَيۡثُ لَا يَحۡتَسِبُۚ وَمَن يَتَوَكَّلۡ عَلَى ٱللَّهِ فَهُوَ حَسۡبُهُۥٓۚ إِنَّ ٱللَّهَ بَٰلِغُ أَمۡرِهِۦۚ قَدۡ جَعَلَ ٱللَّهُ لِكُلِّ شَيۡءࣲ قَدۡرࣰ ا
+
+Urdu Translation:
+
+اور اسے ایسی جگہ سے روزی دیتا ہے جس کا اسے گمان بھی نہ ہو اور جو شخص اللہ پر توکل کرے گا اللہ اسے کافی ہوگا۔ اللہ تعالیٰ اپنا کام پورا کرکے ہی رہے گا۔ اللہ تعالیٰ نے ہر چیز کا ایک اندازه مقرر کر رکھا ہے
 
 English Translation:
 
@@ -70,6 +78,10 @@ Arabic:
 
 اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ
 
+Urdu Translation:
+
+اے اللہ! میں تیری پناہ مانگتا ہوں غم و الم سے، عاجزی سے، سستی سے، بزدلی سے، بخل، قرض چڑھ جانے اور لوگوں کے غلبہ سے
+
 English Translation:
 
 “O Allah! I seek refuge with You from worry and grief, from incapacity and laziness, from cowardice and miserliness, from being heavily in debt and from being overpowered by (other) men.”
@@ -92,66 +104,70 @@ Reference: Sahih al-Bukhari 6369, Book of Invocations.
 
 ────────────────────────────────────────
 
-Sahih Ibn Hibban 972
+Sunan Ibn Majah 3882
 
-Book 7: كتاب الرقائق
+Book 34: Supplication (كتاب الدعاء)
 
-It is narrated:
+It was narrated that Asma’ bint ‘Umais said (رضي الله عنه/عنهم):
 
 The Prophet Muhammad ﷺ said:
 
 Arabic:
 
-مَا قَالَ عَبْدٌ قَطُّ إِذَا أَصَابَهُ هَمٌّ أَوْ حَزَنٌ: اللَّهُمَّ إِنِّي عَبْدُكَ، ابْنُ عَبْدِكَ، ابْنُ أَمَتِكَ، نَاصِيَتِي بِيَدِكَ، مَاضٍ فِيَّ حُكْمُكَ، عَدْلٌ فِيَّ قَضَاؤُكَ، أَسْأَلُكَ بِكُلِّ اسْمٍ هُوَ لَكَ سَمَّيْتَ بِهِ نَفْسَكَ، أَوْ أَنْزَلْتَهُ فِي كِتَابِكَ، أَوْ عَلَّمْتَهُ أَحَدًا مِنْ خَلْقِكَ، أَوِ اسْتَأْثَرْتَ بِهِ فِي عِلْمِ الْغَيْبِ عِنْدَكَ، أَنْ تَجْعَلَ الْقُرْآنَ رَبِيعَ قَلْبِي، وَنُورَ بَصَرِي، وَجِلَاءَ حُزْنِي، وَذَهَابَ هَمِّي، إِلَّا أَذْهَبَ اللَّهُ هَمَّهُ، وَأَبْدَلَهُ مَكَانَ حُزْنِهِ فَرَحًا
+اللَّهُ اللَّهُ رَبِّي لاَ أُشْرِكُ بِهِ شَيْئًا
+
+Urdu Translation:
+
+اللہ، اللہ ہی میرا رب ہے میں اس کے ساتھ کسی کو شریک نہیں ٹھہراتی
 
 English Translation:
 
-“No servant is ever struck by worry or grief and says: "O Allah, I am Your servant, son of Your servant, son of Your maidservant. My forelock is in Your hand; Your command over me is carried out and Your decree for me is just. I ask You by every name that is Yours — with which You named Yourself, or revealed in Your Book, or taught to any of Your creation, or kept in the knowledge of the unseen with You — to make the Quran the spring of my heart, the light of my eyes, the lifting of my sorrow and the departure of my worry," except that Allah removes his worry and replaces his grief with joy.”
+“Allah! Allahu Rabbi la ushriku bihi shay’an (Allah, Allah is my Lord, I do not associate anything with Him)”
 
 Meaning ❤️
 
-The Prophet ﷺ gave this du'a specifically for worry about what is coming and sadness about what has happened. When the Companions asked if they should learn it, he said that whoever hears it should learn it.
+The Prophet ﷺ taught Asma bint 'Umays these words for moments of distress: Allah, Allah is my Lord; I associate nothing with Him.
 
-It begins by admitting complete dependence on Allah, then asks Him to heal the heart through the Quran.
+In the middle of worry, the heart returns to its simplest truth — who its Lord is.
 
 Reflection
 
-Learn this du'a slowly, one line at a time.
+When your thoughts race, slow down and say it: Allahu Allahu Rabbi, la ushriku bihi shay'an.
 
-It was promised for exactly the feeling you have right now.
+A few words of tawhid can steady a restless heart.
 
-Reference: Sahih Ibn Hibban 972.
+Reference: Sunan Ibn Majah 3882, Book of Supplication.
 
 ────────────────────────────────────────
 
-Sunan an-Nasa'i 5453
+Quran 13:28
 
-Book 50: The Book of Seeking Refuge with Allah (كتاب الاستعاذة)
-
-It was narrated from Anas bin Malik, that  (رضي الله عنه/عنهم):
-
-The Prophet Muhammad ﷺ said:
+Surah Ar-Ra'd (سُورَةُ الرَّعۡدِ)
 
 Arabic:
 
-اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَالْعَجْزِ وَالْكَسَلِ وَالْبُخْلِ وَالْجُبْنِ وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ
+ٱلَّذِينَ ءَامَنُواْ وَتَطۡمَئِنُّ قُلُوبُهُم بِذِكۡرِ ٱللَّهِۗ أَلَا بِذِكۡرِ ٱللَّهِ تَطۡمَئِنُّ ٱلۡقُلُوبُ
+
+Urdu Translation:
+
+جو لوگ ایمان ﻻئے ان کے دل اللہ کے ذکر سے اطمینان حاصل کرتے ہیں۔ یاد رکھو اللہ کے ذکر سے ہی دلوں کو تسلی حاصل ہوتی ہے
 
 English Translation:
 
-“O Allah, I seek refuge with You from worry and grief, from incapacity and laziness, from miserliness and cowardice, from the burden of debt and from being overpowered by men.”
+“Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured”
 
 Meaning ❤️
 
-The Prophet ﷺ would seek refuge in Allah from worry, grief, incapacity, laziness, miserliness, cowardice, the burden of debt, and being overpowered by people.
+Allah tells us that hearts find assurance through His remembrance—and that by the remembrance of Allah, hearts are assured.
 
-This dua gathers the quiet struggles many carry—emotional, spiritual, and worldly—and places them before Allah.
+Dhikr is not empty repetition; it is the means by which restless hearts settle.
 
-It is prophetic permission to ask for relief from what drains strength.
+Belief and remembrance together bring a calm the world cannot manufacture.
 
 Reflection
 
-Bring your worry and heaviness to Allah by name.
+When your heart races, remember Allah until it softens.
 
-Seeking His refuge from grief and incapacity is sunnah, not weakness.
+True assurance grows in His remembrance.
 
-Reference: Sunan an-Nasa'i 5453, Book of The Book of Seeking Refuge with Allah.
+Reference: Quran 13:28, Surah Ar-Ra'd.

@@ -1,5 +1,15 @@
 import { type ComponentRef, useEffect, useRef, useState } from 'react'
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Platform, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
+import { Gesture, GestureDetector } from 'react-native-gesture-handler'
+import Animated, {
+  Easing,
+  runOnJS,
+  useAnimatedStyle,
+  useSharedValue,
+  withSpring,
+  withTiming,
+} from 'react-native-reanimated'
+import * as Haptics from 'expo-haptics'
 import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Ambient } from '../components/Ambient'
@@ -12,6 +22,11 @@ import { colors, fonts } from '../theme'
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Read'>
 
+// Left edge stays free for the iOS swipe-back gesture (and both edges for Android's
+// system back), so a swipe that starts there goes back instead of paging.
+const EDGE = 28
+const OUT_MS = 170
+
 export function ReadScreen({ navigation, route }: Props) {
   const insets = useSafeAreaInsets()
   const { sub } = getSub(route.params.moodId, route.params.subId)
@@ -19,14 +34,64 @@ export function ReadScreen({ navigation, route }: Props) {
   const item = sub.items[index]
   const [reportOpen, setReportOpen] = useState(false)
   const scrollRef = useRef<ComponentRef<typeof ScrollView>>(null)
+  const { width } = useWindowDimensions()
+  const last = sub.items.length - 1
+  const dragX = useSharedValue(0)
+  const fade = useSharedValue(1)
 
   // Each passage starts at the top, not where the previous one was scrolled to
   useEffect(() => {
     scrollRef.current?.scrollTo({ y: 0, animated: false })
   }, [index])
 
-  const go = (next: number) => {
+  const showIndex = (next: number, dir: number) => {
     navigation.setParams({ index: next })
+    // New passage glides in from the side it is coming from
+    dragX.value = dir * width * 0.28
+    fade.value = 0
+    dragX.value = withSpring(0, { damping: 26, stiffness: 240, mass: 0.9 })
+    fade.value = withTiming(1, { duration: 220 })
+  }
+
+  /** dir 1 = forward (content leaves to the left), -1 = back */
+  const page = (dir: 1 | -1, next = index + dir) => {
+    if (next < 0 || next > last) return
+    Haptics.selectionAsync().catch(() => {})
+    dragX.value = withTiming(-dir * width * 0.6, { duration: OUT_MS, easing: Easing.in(Easing.quad) })
+    fade.value = withTiming(0, { duration: OUT_MS }, (done) => {
+      if (done) runOnJS(showIndex)(next, dir)
+    })
+  }
+
+  const swipe = Gesture.Pan()
+    .activeOffsetX([-16, 16])
+    .failOffsetY([-12, 12])
+    .hitSlop({ left: -EDGE, right: Platform.OS === 'android' ? -EDGE : 0 })
+    .onUpdate((e) => {
+      const blocked = (e.translationX > 0 && index <= 0) || (e.translationX < 0 && index >= last)
+      // Rubber-band when there is nothing further in that direction
+      dragX.value = blocked ? e.translationX * 0.22 : e.translationX
+      fade.value = 1 - Math.min(0.35, Math.abs(dragX.value) / width)
+    })
+    .onEnd((e) => {
+      const dir = e.translationX < 0 ? 1 : -1
+      const target = index + dir
+      const far = Math.abs(e.translationX) > width * 0.22 || Math.abs(e.velocityX) > 650
+      if (far && target >= 0 && target <= last) {
+        runOnJS(page)(dir)
+      } else {
+        dragX.value = withSpring(0, { damping: 20, stiffness: 260 })
+        fade.value = withTiming(1, { duration: 160 })
+      }
+    })
+
+  const cardStyle = useAnimatedStyle(() => ({
+    opacity: fade.value,
+    transform: [{ translateX: dragX.value }],
+  }))
+
+  const go = (next: number) => {
+    if (next !== index) page(next > index ? 1 : -1, next)
   }
 
   return (
@@ -53,6 +118,8 @@ export function ReadScreen({ navigation, route }: Props) {
         ))}
       </View>
 
+      <GestureDetector gesture={swipe}>
+      <Animated.View style={[styles.scroll, cardStyle]}>
       <ScrollView
         ref={scrollRef}
         style={styles.scroll}
@@ -72,7 +139,22 @@ export function ReadScreen({ navigation, route }: Props) {
             {item.arabic}
           </Text>
         ) : null}
-        {item.english ? <Text style={styles.english}>{item.english}</Text> : null}
+        {item.urdu ? (
+          <View style={styles.translation}>
+            <Text style={styles.label}>
+              Urdu{item.kind === 'quran' ? ' · Muhammad Junagarhi' : ''}
+            </Text>
+            <Text style={styles.urdu}>{item.urdu}</Text>
+          </View>
+        ) : null}
+        {item.english ? (
+          <View style={styles.translation}>
+            <Text style={styles.label}>
+              English{item.kind === 'quran' ? ' · Saheeh International' : ''}
+            </Text>
+            <Text style={styles.english}>{item.english}</Text>
+          </View>
+        ) : null}
         {item.meaning ? (
           <View style={styles.block}>
             <Text style={styles.label}>Meaning</Text>
@@ -86,18 +168,20 @@ export function ReadScreen({ navigation, route }: Props) {
           </View>
         ) : null}
       </ScrollView>
+      </Animated.View>
+      </GestureDetector>
 
       <View style={[styles.nav, { paddingBottom: Math.max(insets.bottom, 12) }]}>
         <Pressable
           disabled={index <= 0}
-          onPress={() => go(index - 1)}
+          onPress={() => page(-1)}
           style={[styles.ghost, index <= 0 && { opacity: 0.35 }]}
         >
           <Text style={styles.ghostText}>Previous</Text>
         </Pressable>
         <Pressable
           disabled={index >= sub.items.length - 1}
-          onPress={() => go(index + 1)}
+          onPress={() => page(1)}
           style={[styles.primary, index >= sub.items.length - 1 && { opacity: 0.35 }]}
         >
           <Text style={styles.primaryText}>Next</Text>
@@ -211,6 +295,17 @@ const styles = StyleSheet.create({
     fontFamily: fonts.arabic,
     fontSize: 22,
     lineHeight: 42,
+  },
+  translation: {
+    gap: 6,
+  },
+  urdu: {
+    fontFamily: fonts.urdu,
+    fontSize: 18,
+    lineHeight: 44,
+    textAlign: 'right',
+    writingDirection: 'rtl',
+    color: colors.ink,
   },
   english: {
     fontFamily: fonts.body,

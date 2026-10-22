@@ -7,6 +7,7 @@ export type Passage = {
   /** Surah name line, Quran only */
   source?: string
   arabic?: string
+  urdu?: string
   english?: string
   meaning?: string
   reflection?: string
@@ -36,7 +37,7 @@ export type Catalog = {
 }
 
 export type RootStackParamList = {
-  Name: { edit?: boolean } | undefined
+  Name: { current?: string } | undefined
   Feeling: { name: string }
   Subs: { name: string; moodId: string }
   Threads: { name: string; moodId: string; subId: string }

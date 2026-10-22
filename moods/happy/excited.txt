@@ -6,6 +6,10 @@ Arabic:
 
 قُلۡ بِفَضۡلِ ٱللَّهِ وَبِرَحۡمَتِهِۦ فَبِذَٰلِكَ فَلۡيَفۡرَحُواْ هُوَ خَيۡرࣱ مِّمَّا يَجۡمَعُونَ
 
+Urdu Translation:
+
+آپ کہہ دیجئے کہ بس لوگوں کو اللہ کے اس انعام اور رحمت پر خوش ہونا چاہئے۔ وه اس سے بدرجہا بہتر ہے جس کو وه جمع کر رہے ہیں
+
 English Translation:
 
 “Say, "In the bounty of Allah and in His mercy - in that let them rejoice; it is better than what they accumulate”
@@ -36,6 +40,10 @@ Arabic:
 
 وَٱلَّذِينَ ٱجۡتَنَبُواْ ٱلطَّٰغُوتَ أَن يَعۡبُدُوهَا وَأَنَابُوٓاْ إِلَى ٱللَّهِ لَهُمُ ٱلۡبُشۡرَىٰۚ فَبَشِّرۡ عِبَادِ
 
+Urdu Translation:
+
+اور جن لوگوں نے طاغوت کی عبادت سے پرہیز کیا اور (ہمہ تن) اللہ تعالیٰ کی طرف متوجہ رہے وه خوش خبری کے مستحق ہیں، میرے بندوں کو خوشخبری سنا دیجئے
+
 English Translation:
 
 “But those who have avoided Taghut, lest they worship it, and turned back to Allah - for them are good tidings. So give good tidings to My servants”
@@ -65,6 +73,10 @@ Surah As-Saff (سُورَةُ الصَّفِّ)
 Arabic:
 
 وَأُخۡرَىٰ تُحِبُّونَهَاۖ نَصۡرࣱ مِّنَ ٱللَّهِ وَفَتۡحࣱ قَرِيبࣱۗ وَبَشِّرِ ٱلۡمُؤۡمِنِينَ
+
+Urdu Translation:
+
+اور تمہیں ایک دوسری (نعمت) بھی دے گا جسے تم چاہتے ہو وه اللہ کی مدد اور جلد فتح یابی ہے، ایمان والوں کو خوشخبری دے دو
 
 English Translation:
 

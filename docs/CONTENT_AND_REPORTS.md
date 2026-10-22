@@ -4,7 +4,21 @@
 
 - **Source of truth:** `moods/{mood}/{subcategory}.txt`
 - Each file is a sequence of passage cards separated by `────` rules.
-- Fields we parse: title/reference, Arabic, English, Meaning, Reflection.
+- Fields we parse: title/reference, Arabic, Urdu, English, Meaning, Reflection.
+
+### Translations (authentic sources only)
+
+| | Urdu | English |
+|---|---|---|
+| Quran | Muhammad Junagarhi | Saheeh International |
+| Hadith | Urdu edition in `hadith.db` (fawazahmed0/hadith-api) | sunnah.com translation in `hadith.db` |
+
+Nothing is paraphrased. When the automatic extraction picks the wrong sentence, pin the
+Prophet's ﷺ words in `EN_SLICE` / `UR_SLICE` / `AR_SLICE` in `scripts/expand_mood_files.py`
+as a (first words, last words) slice of the source. `build_catalog.py` refuses to build if any
+shown Arabic/Urdu/English is not a verbatim excerpt of its source. Hadith without an Urdu
+translation in the source cannot be used (Bukhari 5641, Nasa'i 5453, Ibn Hibban 972 and
+Adab al-Mufrad 245 were replaced for this reason).
 
 ### Rebuilding the app catalog
 
@@ -45,12 +59,13 @@ No preview blurb on the threads list. Full text appears only on the reading scre
 ## Reading screen
 
 Order:
-1. Badge + reference title  
+1. Badge + reference title (+ authenticity bar for hadith)  
 2. Arabic  
-3. English translation  
-4. Meaning  
-5. Reflection  
-6. Previous / Next (+ progress)
+3. Urdu translation  
+4. English translation  
+5. Meaning  
+6. Reflection  
+7. Previous / Next (+ progress); swipe left/right in the middle of the screen to page
 
 ## Report reasons (v1)
 

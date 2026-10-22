@@ -6,6 +6,10 @@ Arabic:
 
 إِلَّا تَنصُرُوهُ فَقَدۡ نَصَرَهُ ٱللَّهُ إِذۡ أَخۡرَجَهُ ٱلَّذِينَ كَفَرُواْ ثَانِيَ ٱثۡنَيۡنِ إِذۡ هُمَا فِي ٱلۡغَارِ إِذۡ يَقُولُ لِصَٰحِبِهِۦ لَا تَحۡزَنۡ إِنَّ ٱللَّهَ مَعَنَاۖ فَأَنزَلَ ٱللَّهُ سَكِينَتَهُۥ عَلَيۡهِ وَأَيَّدَهُۥ بِجُنُودࣲ لَّمۡ تَرَوۡهَا وَجَعَلَ كَلِمَةَ ٱلَّذِينَ كَفَرُواْ ٱلسُّفۡلَىٰۗ وَكَلِمَةُ ٱللَّهِ هِيَ ٱلۡعُلۡيَاۗ وَٱللَّهُ عَزِيزٌ حَكِيمٌ
 
+Urdu Translation:
+
+اگر تم ان (نبی صلی اللہ علیہ وسلم) کی مدد نہ کرو تو اللہ ہی نے ان کی مدد کی اس وقت جبکہ انہیں کافروں نے (دیس سے) نکال دیا تھا، دو میں سے دوسرا جبکہ وه دونوں غار میں تھے جب یہ اپنے ساتھی سے کہہ رہے تھے کہ غم نہ کر اللہ ہمارے ساتھ ہے، پس جناب باری نے اپنی طرف سے تسکین اس پر نازل فرما کر ان لشکروں سے اس کی مدد کی جنہیں تم نے دیکھا ہی نہیں، اس نے کافروں کی بات پست کر دی اور بلند وعزیز تو اللہ کا کلمہ ہی ہے، اللہ غالب ہے حکمت واﻻ ہے
+
 English Translation:
 
 “If you do not aid the Prophet - Allah has already aided him when those who disbelieved had driven him out [of Makkah] as one of two, when they were in the cave and he said to his companion, "Do not grieve; indeed Allah is with us." And Allah sent down his tranquillity upon him and supported him with angels you did not see and made the word of those who disbelieved the lowest, while the word of Allah - that is the highest. And Allah is Exalted in Might and Wise”
@@ -35,6 +39,10 @@ Surah Taa-Haa (سُورَةُ طه)
 Arabic:
 
 قَالَ لَا تَخَافَآۖ إِنَّنِي مَعَكُمَآ أَسۡمَعُ وَأَرَىٰ
+
+Urdu Translation:
+
+جواب ملا کہ تم مطلقاً خوف نہ کرو میں تمہارے ساتھ ہوں اور سنتا دیکھتا رہوں گا
 
 English Translation:
 
@@ -66,6 +74,10 @@ Arabic:
 
 قُلۡنَا لَا تَخَفۡ إِنَّكَ أَنتَ ٱلۡأَعۡلَىٰ
 
+Urdu Translation:
+
+ہم نے فرمایا کچھ خوف نہ کر یقیناً تو ہی غالب اور برتر رہے گا
+
 English Translation:
 
 “Allah said, "Fear not. Indeed, it is you who are superior”
@@ -95,6 +107,10 @@ Surah Ash-Shu'araa (سُورَةُ الشُّعَرَاءِ)
 Arabic:
 
 قَالَ كَلَّآۖ إِنَّ مَعِيَ رَبِّي سَيَهۡدِينِ
+
+Urdu Translation:
+
+موسیٰ نے کہا، ہرگز نہیں۔ یقین مانو، میرا رب میرے ساتھ ہے جو ضرور مجھے راه دکھائے گا
 
 English Translation:
 
@@ -129,6 +145,10 @@ The Prophet Muhammad ﷺ said:
 Arabic:
 
 لَمْ تُرَاعُوا لَمْ تُرَاعُوا
+
+Urdu Translation:
+
+ڈرو مت
 
 English Translation:
 

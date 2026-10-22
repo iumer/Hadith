@@ -13,12 +13,14 @@ import json
 import re
 import sqlite3
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MOODS = ROOT / "moods"
 OUT = ROOT / "app" / "src" / "content" / "catalog.json"
 DB = ROOT / "data" / "build" / "hadith.db"
+QURAN_DB = ROOT / "data" / "build" / "quran.db"
 
 # Display order and card metadata for the eight moods.
 MOOD_META = [
@@ -35,7 +37,7 @@ SUB_LABELS = {"grateful-blessed": "Grateful & Blessed"}
 
 ALLOWED = {"sahih", "hasan"}
 SEPARATOR = re.compile(r"^─{10,}\s*$", re.M)
-SECTIONS = ("Arabic:", "English Translation:", "Meaning ❤️", "Reflection", "Reference:")
+SECTIONS = ("Arabic:", "Urdu Translation:", "English Translation:", "Meaning ❤️", "Reflection", "Reference:")
 
 
 def fix_arabic(text: str) -> str:
@@ -73,10 +75,33 @@ def parse_block(block: str) -> dict:
         "kind": "quran" if title.startswith("Quran ") else "hadith",
         "source": source,
         "arabic": fix_arabic(parts.get("Arabic:", "")),
+        "urdu": parts.get("Urdu Translation:", ""),
         "english": strip_quotes(parts.get("English Translation:", "")),
         "meaning": parts.get("Meaning ❤️", ""),
         "reflection": parts.get("Reflection", ""),
     }
+
+
+def comparable(text: str, arabic: bool = False) -> str:
+    """Form used to prove a shown text is a verbatim excerpt of its source."""
+    t = unicodedata.normalize("NFC", text or "")
+    if arabic:
+        t = re.sub(r"[\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08FF\u0640\u200f]", "", t)
+    t = re.sub(r"[\"“”‘’'`.,:;!?()\[\]«»،۔\s-]+", " ", t)
+    return t.strip().lower()
+
+
+def verify_source(item: dict, src: dict) -> list[str]:
+    """Every Arabic/Urdu/English line must come verbatim from the indexed source."""
+    errs = []
+    for field, arabic in (("arabic", True), ("urdu", False), ("english", False)):
+        original = fix_arabic(src.get(field) or "") if arabic else src.get(field, "")
+        shown, source = comparable(item.get(field, ""), arabic), comparable(original, arabic)
+        if not shown:
+            errs.append(f"{item['title']}: no {field}")
+        elif shown not in source:
+            errs.append(f"{item['title']}: {field} is not a verbatim excerpt of the source translation")
+    return errs
 
 
 def normalize_grade(text: str) -> str | None:
@@ -97,17 +122,19 @@ class Grades:
         self.db = sqlite3.connect(db)
         self.names = dict(self.db.execute("select name_en, slug from collections"))
 
-    def lookup(self, title: str) -> dict:
+    def lookup(self, title: str) -> tuple[dict, dict]:
         for name, slug in sorted(self.names.items(), key=lambda x: -len(x[0])):
             if title.startswith(name + " "):
                 number = title[len(name) + 1 :]
                 row = self.db.execute(
-                    "select grade, grade_text, grades from hadiths where collection=? and number=?",
+                    "select grade, grade_text, grades, text_ar, text_ur, text_en from hadiths"
+                    " where collection=? and number=?",
                     (slug, number),
                 ).fetchone()
                 if not row:
                     raise SystemExit(f"{title}: not found in {DB}")
-                return self._describe(slug, name, *row)
+                source = {"arabic": row[3], "urdu": row[4], "english": row[5]}
+                return self._describe(slug, name, *row[:3]), source
         raise SystemExit(f"{title}: unknown collection")
 
     def _describe(self, slug: str, name: str, grade: str, grade_text: str, grades_json: str) -> dict:
@@ -136,6 +163,7 @@ def main() -> None:
     if not DB.exists():
         sys.exit(f"{DB} missing — run `python -m hadith setup` first")
     grades = Grades(DB)
+    quran = sqlite3.connect(QURAN_DB)
     errors: list[str] = []
     moods = []
     for mood_id, label, short, color in MOOD_META:
@@ -147,13 +175,17 @@ def main() -> None:
                 if not block.strip():
                     continue
                 item = parse_block(block)
-                if not item["english"] or not item["arabic"]:
-                    errors.append(f"{path.relative_to(ROOT)}: {item['title']} has empty Arabic or English")
+                rel = path.relative_to(ROOT)
                 if item["kind"] == "hadith":
-                    g = grades.lookup(item["title"])
+                    g, source = grades.lookup(item["title"])
                     if g["grade"] not in ALLOWED:
-                        errors.append(f"{path.relative_to(ROOT)}: {item['title']} is graded '{g['grade'] or 'ungraded'}'")
+                        errors.append(f"{rel}: {item['title']} is graded '{g['grade'] or 'ungraded'}'")
                     item.update(g)
+                else:
+                    s, a = map(int, item["title"].split()[1].split(":"))
+                    row = quran.execute("select text_ar, text_ur, text_en from ayahs where surah=? and ayah=?", (s, a)).fetchone()
+                    source = {"arabic": row[0], "urdu": row[1], "english": row[2]}
+                errors += [f"{rel}: {e}" for e in verify_source(item, source)]
                 items.append({"id": f"{mood_id}-{sub_id}-{i}", **{k: v for k, v in item.items() if v != ""}})
             sub_label = SUB_LABELS.get(sub_id, sub_id.replace("-", " ").title())
             subs.append({"id": sub_id, "label": sub_label, "items": items})

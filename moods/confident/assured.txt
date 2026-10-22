@@ -6,6 +6,10 @@ Arabic:
 
 وَمَا جَعَلَهُ ٱللَّهُ إِلَّا بُشۡرَىٰ وَلِتَطۡمَئِنَّ بِهِۦ قُلُوبُكُمۡۚ وَمَا ٱلنَّصۡرُ إِلَّا مِنۡ عِندِ ٱللَّهِۚ إِنَّ ٱللَّهَ عَزِيزٌ حَكِيمٌ
 
+Urdu Translation:
+
+اور اللہ تعالیٰ نے یہ امداد محض اس لیے کی کہ بشارت ہو اور تاکہ تمہارے دلوں کو قرار ہو جائے اور مدد صرف اللہ ہی کی طرف سے ہے جو کہ زبردست حکمت واﻻ ہے
+
 English Translation:
 
 “And Allah made it not but good tidings and so that your hearts would be assured thereby. And victory is not but from Allah. Indeed, Allah is Exalted in Might and Wise”
@@ -36,6 +40,10 @@ Arabic:
 
 ٱلَّذِينَ ءَامَنُواْ وَتَطۡمَئِنُّ قُلُوبُهُم بِذِكۡرِ ٱللَّهِۗ أَلَا بِذِكۡرِ ٱللَّهِ تَطۡمَئِنُّ ٱلۡقُلُوبُ
 
+Urdu Translation:
+
+جو لوگ ایمان ﻻئے ان کے دل اللہ کے ذکر سے اطمینان حاصل کرتے ہیں۔ یاد رکھو اللہ کے ذکر سے ہی دلوں کو تسلی حاصل ہوتی ہے
+
 English Translation:
 
 “Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured”
@@ -65,6 +73,10 @@ Surah Al-Fajr (سُورَةُ الفَجۡرِ)
 Arabic:
 
 يَٰٓأَيَّتُهَا ٱلنَّفۡسُ ٱلۡمُطۡمَئِنَّةُ
+
+Urdu Translation:
+
+اے اطمینان والی روح
 
 English Translation:
 
@@ -100,6 +112,10 @@ Arabic:
 
 يَقُولُ اللَّهُ تَعَالَى أَنَا عِنْدَ ظَنِّ عَبْدِي بِي، وَأَنَا مَعَهُ إِذَا ذَكَرَنِي، فَإِنْ ذَكَرَنِي فِي نَفْسِهِ ذَكَرْتُهُ فِي نَفْسِي، وَإِنْ ذَكَرَنِي فِي مَلأٍ ذَكَرْتُهُ فِي مَلأٍ خَيْرٍ مِنْهُمْ، وَإِنْ تَقَرَّبَ إِلَىَّ بِشِبْرٍ تَقَرَّبْتُ إِلَيْهِ ذِرَاعًا، وَإِنْ تَقَرَّبَ إِلَىَّ ذِرَاعًا تَقَرَّبْتُ إِلَيْهِ بَاعًا، وَإِنْ أَتَانِي يَمْشِي أَتَيْتُهُ هَرْوَلَةً
 
+Urdu Translation:
+
+اللہ تعالیٰ فرماتا ہے کہ میں اپنے بندے کے گمان کے ساتھ ہوں اور جب وہ مجھے اپنے دل میں یاد کرتا ہے تو میں بھی اسے اپنے دل میں یاد کرتا ہوں اور جب وہ مجھے مجلس میں یاد کرتا ہے تو میں اسے اس سے بہتر فرشتوں کی مجلس میں اسے یاد کرتا ہوں اور اگر وہ مجھ سے ایک بالشت قریب آتا ہے تو میں اس سے ایک ہاتھ قریب ہو جاتا ہوں اور اگر وہ مجھ سے ایک ہاتھ قریب آتا ہے تو میں اس سے دو ہاتھ قریب ہو جاتا ہوں اور اگر وہ میری طرف چل کر آتا ہے تو میں اس کے پاس دوڑ کر آ جاتا ہوں
+
 English Translation:
 
 “Allah says: 'I am just as My slave thinks I am, (i.e. I am able to do for him what he thinks I can do for him) and I am with him if He remembers Me. If he remembers Me in himself, I too, remember him in Myself; and if he remembers Me in a group of people, I remember him in a group that is better than they; and if he comes one span nearer to Me, I go one cubit nearer to him; and if he comes one cubit nearer to Me, I go a distance of two outstretched arms nearer to him; and if he comes to Me walking, I go to him running.”
@@ -134,9 +150,13 @@ Arabic:
 
 يَقُولُ اللَّهُ عَزَّ وَجَلَّ أَنَا عِنْدَ ظَنِّ عَبْدِي بِي وَأَنَا مَعَهُ حِينَ يَذْكُرُنِي إِنْ ذَكَرَنِي فِي نَفْسِهِ ذَكَرْتُهُ فِي نَفْسِي وَإِنْ ذَكَرَنِي فِي مَلإٍ ذَكَرْتُهُ فِي مَلإٍ هُمْ خَيْرٌ مِنْهُمْ وَإِنْ تَقَرَّبَ مِنِّي شِبْرًا تَقَرَّبْتُ إِلَيْهِ ذِرَاعًا وَإِنْ تَقَرَّبَ إِلَىَّ ذِرَاعًا تَقَرَّبْتُ مِنْهُ بَاعًا وَإِنْ أَتَانِي يَمْشِي أَتَيْتُهُ هَرْوَلَةً
 
+Urdu Translation:
+
+اللہ عزوجل فرماتا ہے : میرے بارے میں میرا بندہ جو گمان کرتا ہے میں ( اس کو پورا کرنے کے لیے ) اس کے پاس ہوتا ہوں ۔ جب وہ مجھے یاد کرتا ہے تو میں اس کے ساتھ ہوتا ہوں ۔ اگر وہ مجھے اپنے دل میں یاد کرتا ہے تو میں اسے دل میں یاد کرتا ہوں اور اگر وہ مجھے ( بھری ) مجلس میں یاد کرتا ہے تو میں ان کی مجلس سے اچھی مجلس میں اسے یاد کرتا ہوں ، اگر وہ ایک بالشت میرے قریب آتا ہے تو میں ایک ہاتھ اس کے قریب جاتا ہوں اور اگر وہ ایک ہاتھ میر قریب آتا ہے تو میں دونوں ہاتھوں کی پوری لمبارئی کے برابر اس کے قریب آتا ہوں ، اگر وہ میرے پاس چلتا ہوا آتا ہے تو میں دوڑتا ہوا اس کے پاس جاتا ہوں
+
 English Translation:
 
-“Allah, the Exalted and Glorious, says: I am near to the thought of My servant as he thinks about Me, and I am with him as he remembers Me. If he remembers Me in his heart, I remember him in My Heart; and if he remembers Me in an assembly, I remember him in an assembly better than his. If he draws near Me by the span of a palm, I draw near him by a cubit; and if he draws near Me by a cubit, I draw near him by the space of two outstretched arms. And if he walks towards Me, I rush towards him.”
+“I am near to the thought of My servant as he thinks about Me, and I am with him as he remembers Me. And if he remembers Me in his heart, I also remember him in My Heart, and if he remembers Me in assembly I remember him in assembly, better than his (remembrance), and if he draws near Me by the span of a palm, I draw near him by the cubit, and if he draws near Me by the cubit I draw near him by the space (covered by) two hands. And if he walks towards Me, I rush towards him”
 
 Meaning ❤️
 

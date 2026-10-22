@@ -6,6 +6,10 @@ Arabic:
 
 لَا يُكَلِّفُ ٱللَّهُ نَفۡسًا إِلَّا وُسۡعَهَاۚ لَهَا مَا كَسَبَتۡ وَعَلَيۡهَا مَا ٱكۡتَسَبَتۡۗ رَبَّنَا لَا تُؤَاخِذۡنَآ إِن نَّسِينَآ أَوۡ أَخۡطَأۡنَاۚ رَبَّنَا وَلَا تَحۡمِلۡ عَلَيۡنَآ إِصۡرࣰ ا كَمَا حَمَلۡتَهُۥ عَلَى ٱلَّذِينَ مِن قَبۡلِنَاۚ رَبَّنَا وَلَا تُحَمِّلۡنَا مَا لَا طَاقَةَ لَنَا بِهِۦۖ وَٱعۡفُ عَنَّا وَٱغۡفِرۡ لَنَا وَٱرۡحَمۡنَآۚ أَنتَ مَوۡلَىٰنَا فَٱنصُرۡنَا عَلَى ٱلۡقَوۡمِ ٱلۡكَٰفِرِينَ
 
+Urdu Translation:
+
+اللہ تعالیٰ کسی جان کو اس کی طاقت سے زیاده تکلیف نہیں دیتا، جو نیکی وه کرے وه اس کے لئے اور جو برائی وه کرے وه اس پر ہے، اے ہمارے رب! اگر ہم بھول گئے ہوں یا خطا کی ہو تو ہمیں نہ پکڑنا، اے ہمارے رب! ہم پر وه بوجھ نہ ڈال جو ہم سے پہلے لوگوں پر ڈاﻻ تھا، اے ہمارے رب! ہم پر وه بوجھ نہ ڈال جس کی ہمیں طاقت نہ ہو اور ہم سے درگزر فرما! اور ہمیں بخش دے اور ہم پر رحم کر! تو ہی ہمارا مالک ہے، ہمیں کافروں کی قوم پر غلبہ عطا فرما
+
 English Translation:
 
 “Allah does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. "Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people”
@@ -36,6 +40,10 @@ Arabic:
 
 إِن يَنصُرۡكُمُ ٱللَّهُ فَلَا غَالِبَ لَكُمۡۖ وَإِن يَخۡذُلۡكُمۡ فَمَن ذَا ٱلَّذِي يَنصُرُكُم مِّنۢ بَعۡدِهِۦۗ وَعَلَى ٱللَّهِ فَلۡيَتَوَكَّلِ ٱلۡمُؤۡمِنُونَ
 
+Urdu Translation:
+
+اگر اللہ تعالیٰ تمہاری مدد کرے تو تم پر کوئی غالب نہیں آسکتا اور اگر وہ تمہیں چھوڑ دے تو اس کے بعد کون ہے جو تمہاری مدد کرے؟ ایمان والوں کو اللہ تعالیٰ ہی پر بھروسہ رکھنا چاہئے
+
 English Translation:
 
 “If Allah should aid you, no one can overcome you; but if He should forsake you, who is there that can aid you after Him? And upon Allah let the believers rely”
@@ -65,6 +73,10 @@ Surah An-Nisaa (سُورَةُ النِّسَاءِ)
 Arabic:
 
 يُرِيدُ ٱللَّهُ أَن يُخَفِّفَ عَنكُمۡۚ وَخُلِقَ ٱلۡإِنسَٰنُ ضَعِيفࣰ ا
+
+Urdu Translation:
+
+اللہ چاہتا ہے کہ تم سے تخفیف کر دے کیونکہ انسان کمزور پیدا کیا گیا ہے
 
 English Translation:
 
@@ -100,9 +112,13 @@ Arabic:
 
 يَا غُلاَمُ إِنِّي أُعَلِّمُكَ كَلِمَاتٍ احْفَظِ اللَّهَ يَحْفَظْكَ احْفَظِ اللَّهَ تَجِدْهُ تُجَاهَكَ إِذَا سَأَلْتَ فَاسْأَلِ اللَّهَ وَإِذَا اسْتَعَنْتَ فَاسْتَعِنْ بِاللَّهِ وَاعْلَمْ أَنَّ الأُمَّةَ لَوِ اجْتَمَعَتْ عَلَى أَنْ يَنْفَعُوكَ بِشَيْءٍ لَمْ يَنْفَعُوكَ إِلاَّ بِشَيْءٍ قَدْ كَتَبَهُ اللَّهُ لَكَ وَلَوِ اجْتَمَعُوا عَلَى أَنْ يَضُرُّوكَ بِشَيْءٍ لَمْ يَضُرُّوكَ إِلاَّ بِشَيْءٍ قَدْ كَتَبَهُ اللَّهُ عَلَيْكَ رُفِعَتِ الأَقْلاَمُ وَجَفَّتِ الصُّحُفُ
 
+Urdu Translation:
+
+اے لڑکے! بیشک میں تمہیں چند اہم باتیں بتلا رہا ہوں: تم اللہ کے احکام کی حفاظت کرو، وہ تمہاری حفاظت فرمائے گا، تو اللہ کے حقوق کا خیال رکھو اسے تم اپنے سامنے پاؤ گے، جب تم کوئی چیز مانگو تو صرف اللہ سے مانگو، جب تو مدد چاہو تو صرف اللہ سے مدد طلب کرو، اور یہ بات جان لو کہ اگر ساری امت بھی جمع ہو کر تمہیں کچھ نفع پہنچانا چاہے تو وہ تمہیں اس سے زیادہ کچھ بھی نفع نہیں پہنچا سکتی جو اللہ نے تمہارے لیے لکھ دیا ہے، اور اگر وہ تمہیں کچھ نقصان پہنچانے کے لیے جمع ہو جائے تو اس سے زیادہ کچھ نقصان نہیں پہنچا سکتی جو اللہ نے تمہارے لیے لکھ دیا ہے، قلم اٹھا لیے گئے اور ( تقدیر کے ) صحیفے خشک ہو گئے ہیں
+
 English Translation:
 
-“'O boy! I will teach you a statement: Be mindful of Allah and He will protect you. Be mindful of Allah and you will find Him before you. When you ask, ask Allah, and when you seek aid, seek Allah's aid. Know that if the entire creation were to gather together to do something to benefit you- you would never get any benefit except that Allah had written for you. And if they were to gather to do something to harm you- you would never be harmed except that Allah had written for you. The pens are lifted and the pages are dried.”
+“O boy! I will teach you a statement: Be mindful of Allah and He will protect you. Be mindful of Allah and you will find Him before you. When you ask, ask Allah, and when you seek aid, seek Allah's aid. Know that if the entire creation were to gather together to do something to benefit you- you would never get any benefit except that Allah had written for you. And if they were to gather to do something to harm you- you would never be harmed except that Allah had written for you. The pens are lifted and the pages are dried.”
 
 Meaning ❤️
 

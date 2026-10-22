@@ -1,10 +1,8 @@
-import { useCallback, useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { useState } from 'react'
+import { Image, StyleSheet, Text, View } from 'react-native'
 import type { NativeStackScreenProps } from '@react-navigation/native-stack'
-import { useFocusEffect } from '@react-navigation/native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Ambient } from '../components/Ambient'
-import { BackButton } from '../components/BackButton'
 import { CardFan } from '../components/CardFan'
 import { catalog } from '../content'
 import type { RootStackParamList } from '../types'
@@ -15,31 +13,29 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Feeling'>
 export function FeelingScreen({ navigation, route }: Props) {
   const insets = useSafeAreaInsets()
   const [focus, setFocus] = useState(2)
-  const [fanEpoch, setFanEpoch] = useState(0)
-
-  // Fresh fan instance when coming back from Subs (kills stuck reveal card)
-  useFocusEffect(
-    useCallback(() => {
-      setFanEpoch((n) => n + 1)
-    }, []),
-  )
+  const { name } = route.params
 
   return (
-    <View style={[styles.root, { paddingTop: insets.top + 8 }]}>
+    <View style={[styles.root, { paddingTop: insets.top + 24 }]}>
       <Ambient />
-      <View style={styles.top}>
-        <BackButton onPress={() => navigation.replace('Name', { edit: true })} />
+      <View style={styles.brandRow}>
+        <Image source={require('../../assets/logo.png')} style={styles.logo} accessibilityLabel="Sakinah" />
+        <Text style={styles.eyebrow}>Salaam</Text>
       </View>
-      <Text style={styles.eyebrow}>Salaam</Text>
-      <Text style={styles.title}>Assalamoalikum {route.params.name}</Text>
-      <Text style={styles.lede}>How are you feeling today?</Text>
+      <Text
+        style={styles.title}
+        onLongPress={() => navigation.replace('Name', { current: name })}
+        accessibilityHint="Long press to change your name"
+      >
+        Assalamoalikum {name}
+      </Text>
       <CardFan
-        key={fanEpoch}
+        heading="How are you feeling today?"
         moods={catalog.moods}
         focus={focus}
         setFocus={setFocus}
         onOpen={(mood) =>
-          navigation.navigate('Subs', { name: route.params.name, moodId: mood.id })
+          navigation.navigate('Subs', { name, moodId: mood.id })
         }
       />
     </View>
@@ -47,14 +43,21 @@ export function FeelingScreen({ navigation, route }: Props) {
 }
 
 const styles = StyleSheet.create({
+  brandRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    marginLeft: -8,
+  },
+  logo: {
+    width: 40,
+    height: 40,
+  },
   root: {
     flex: 1,
     backgroundColor: colors.cream,
     paddingHorizontal: 20,
     paddingBottom: 16,
-  },
-  top: {
-    marginBottom: 8,
   },
   eyebrow: {
     fontFamily: fonts.bodyExtra,
@@ -69,12 +72,5 @@ const styles = StyleSheet.create({
     lineHeight: 36,
     color: colors.ink,
     marginTop: 4,
-  },
-  lede: {
-    fontFamily: fonts.body,
-    fontSize: 15,
-    color: colors.mist,
-    marginTop: 6,
-    marginBottom: 8,
   },
 })

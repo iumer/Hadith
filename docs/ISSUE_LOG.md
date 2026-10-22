@@ -31,6 +31,13 @@ Last updated: 2026-10-23 (Asia/Karachi). Agent test surface for this round: Expo
 | I-018 | Agent audit | Name not saved; needed double-tap on Continue with keyboard up | fixed-pending-device | AsyncStorage `hadith.name.v1`; relaunch skips Name — sim verified |
 | I-019 | User request | Authenticity bar on hadith pages | fixed-pending-device | `GradeBar.tsx`: Sahih full green, Hasan ¾ light green, Da'if amber, Mawdu' red; tap for graders + "scholars differ" |
 | I-020 | Agent audit | `expo lint` reports 22 React Compiler errors in `CardFan.tsx` (Reanimated `.value` writes) | open | Pre-existing pattern; needs `useSharedValue` refactor or rule override |
+| I-021 | User request | Cards too small; swipe/pull instructions read like captions | fixed-pending-device | 172×236 cards; "Swipe to browse" pill above, dark "↓ Pull Sad down to open" pill below ("Release to open" when armed) |
+| I-022 | User request | Tapping a card did nothing | fixed-pending-device | Tap (or ~4.5s idle) makes the card tug/wiggle + "Pull me down" bubble; tapping a side card brings it to front |
+| I-023 | User both platforms | Pull-to-open animation broke midway | fixed-pending-device | Card now expands into a full-screen tile (iOS ease curve, 560ms) and Subs fades in on the same tint; haptics on threshold/open |
+| I-024 | User both platforms | Read→back→back showed the opened mood as a giant tile, then it shrank | fixed-pending-device | Fan resets only after the next screen covers it; on return the card just settles. Sim verified |
+| I-025 | User request | Arabic → Urdu → English for every passage, authentic translations only | fixed-pending-device | Quran: Junagarhi (UR) + Saheeh International (EN). Hadith: source Urdu/English excerpts; `build_catalog.py` fails if any shown text is not verbatim from the source |
+| I-026 | User request | Swipe left/right on Read pages to change passage, keep iOS edge swipe-back | fixed-pending-device | Pan with 28pt edge exclusion (both edges on Android). Sim verified both |
+| I-027 | User request | Name asked again after relaunch | fixed-pending-device | App reads saved name before choosing first screen; Feeling has no back-to-name (long-press the greeting to change name) |
 
 ## Suggestions (from user / agent)
 

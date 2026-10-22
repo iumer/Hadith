@@ -6,6 +6,10 @@ Arabic:
 
 وَلَا تَهِنُواْ وَلَا تَحۡزَنُواْ وَأَنتُمُ ٱلۡأَعۡلَوۡنَ إِن كُنتُم مُّؤۡمِنِينَ
 
+Urdu Translation:
+
+تم نہ سستی کرو اور غمگین ہو، تم ہی غالب رہو گے، اگر تم ایماندار ہو
+
 English Translation:
 
 “So do not weaken and do not grieve, and you will be superior if you are [true] believers”
@@ -36,6 +40,10 @@ Arabic:
 
 وَكَأَيِّن مِّن نَّبِيࣲّ قَٰتَلَ مَعَهُۥ رِبِّيُّونَ كَثِيرࣱ فَمَا وَهَنُواْ لِمَآ أَصَابَهُمۡ فِي سَبِيلِ ٱللَّهِ وَمَا ضَعُفُواْ وَمَا ٱسۡتَكَانُواْۗ وَٱللَّهُ يُحِبُّ ٱلصَّٰبِرِينَ
 
+Urdu Translation:
+
+بہت سے نبیوں کے ہم رکاب ہو کر، بہت سے اللہ والے جہاد کر چکے ہیں، انہیں بھی اللہ کی راه میں تکلیفیں پہنچیں لیکن نہ تو انہوں نے ہمت ہاری نہ سست رہے اور نہ دبے، اور اللہ صبر کرنے والوں کو (ہی) چاہتا ہے
+
 English Translation:
 
 “And how many a prophet [fought and] with him fought many religious scholars. But they never lost assurance due to what afflicted them in the cause of Allah, nor did they weaken or submit. And Allah loves the steadfast”
@@ -65,6 +73,10 @@ Surah Muhammad (سُورَةُ مُحَمَّدٍ)
 Arabic:
 
 يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓاْ إِن تَنصُرُواْ ٱللَّهَ يَنصُرۡكُمۡ وَيُثَبِّتۡ أَقۡدَامَكُمۡ
+
+Urdu Translation:
+
+اے ایمان والو! اگر تم اللہ (کے دین) کی مدد کرو گے تو وه تمہاری مدد کرے گا اور تمہیں ﺛابت قدم رکھے گا
 
 English Translation:
 

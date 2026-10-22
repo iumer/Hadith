@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -29,34 +30,100 @@ COLL = {
     "Ibn Hibban": "ibnhibban",
 }
 
-# The automatic quote extraction picks the longest quoted span, which is sometimes a
-# bystander's words or carries chain notes. These overrides pin the Prophet's ﷺ words.
-EN_FIX = {
-    "Tirmidhi 2020": "Do not get angry.",
-    "Bukhari 1283": "Indeed, patience is at the first stroke of a calamity.",
-    "Bukhari 1303": "The eyes shed tears and the heart grieves, and we say nothing except what pleases our Lord. O Ibrahim, we are truly saddened by your parting.",
-    "Muslim 923a": "To Allah belongs what He took and to Him belongs what He gave, and everything with Him has an appointed term. So tell her to be patient and to seek her reward from Allah.",
-    "Bukhari 2908": "Don't be afraid! Don't be afraid!",
-    "Muslim 2307a": "There is nothing to be afraid of, there is nothing to be afraid of.",
-    "Tirmidhi 2517": "Tie it, and rely upon Allah.",
-    "Ibn Majah 3818": "Glad tidings to the one who finds much seeking of forgiveness in the record of his deeds.",
-    "Nasa'i 5453": "O Allah, I seek refuge with You from worry and grief, from incapacity and laziness, from miserliness and cowardice, from the burden of debt and from being overpowered by men.",
-    "Muslim 2675a": "Allah, the Exalted and Glorious, says: I am near to the thought of My servant as he thinks about Me, and I am with him as he remembers Me. If he remembers Me in his heart, I remember him in My Heart; and if he remembers Me in an assembly, I remember him in an assembly better than his. If he draws near Me by the span of a palm, I draw near him by a cubit; and if he draws near Me by a cubit, I draw near him by the space of two outstretched arms. And if he walks towards Me, I rush towards him.",
-    "Muslim 2610a": "I know a word which, if he were to say it, his rage would leave him: I seek refuge with Allah from Satan the accursed.",
-    "Abu Dawud 4777": "Whoever suppresses anger when he is able to act on it, Allah will call him on the Day of Resurrection before all of creation and let him choose whichever of the maidens of Paradise he wishes.",
-    "Abu Dawud 4782": "When one of you becomes angry while standing, let him sit down. If the anger leaves him, well and good; otherwise let him lie down.",
-    "Abu Dawud 3330": "Between them are doubtful matters which many people do not know. Whoever guards against doubtful matters keeps his religion and his honour blameless, and whoever falls into doubtful matters falls into what is unlawful.",
-    "Ibn Majah 4251": "Every son of Adam commits sin, and the best of those who commit sin are those who repent.",
-    "Ibn Hibban 972": "No servant is ever struck by worry or grief and says: \"O Allah, I am Your servant, son of Your servant, son of Your maidservant. My forelock is in Your hand; Your command over me is carried out and Your decree for me is just. I ask You by every name that is Yours — with which You named Yourself, or revealed in Your Book, or taught to any of Your creation, or kept in the knowledge of the unseen with You — to make the Quran the spring of my heart, the light of my eyes, the lifting of my sorrow and the departure of my worry,\" except that Allah removes his worry and replaces his grief with joy.",
-    "Tirmidhi 3524": "O Ever-Living, O Self-Sustaining, by Your mercy I seek relief.",
-    "Tirmidhi 3505": "The supplication of Dhun-Nun (Prophet Yunus) when he called out from the belly of the whale was: \"There is no god but You, glory be to You; indeed I have been among the wrongdoers.\" No Muslim ever supplicates with it for anything except that Allah answers him.",
+# Translations must be the published ones, never paraphrased. When the automatic
+# extraction picks the wrong quote (a bystander's words, chain notes) these pin the
+# Prophet's ﷺ words as a (first words, last words) slice of the source text, so the
+# result is always a verbatim excerpt. Arabic and Urdu use the same scheme.
+EN_SLICE = {
+    "Tirmidhi 2020": ("Do not get angry", "Do not get angry"),
+    "Bukhari 52": ("Both legal and illegal", "his religion and his honor"),
+    "Bukhari 1283": ("Verily, the patience", "stroke of a calamity"),
+    "Bukhari 1303": ("The eyes are shedding tears", "grieved by your separation"),
+    "Muslim 923a": ("what Allah had taken belonged to Him", "seek reward from Allah"),
+    "Bukhari 2908": ("Don't be afraid! Don't be afraid!", "Don't be afraid!"),
+    "Muslim 2307a": ("There was nothing to be afraid of", "nothing to be afraid of"),
+    "Tirmidhi 2517": ("Tie it and rely", "(upon Allah)"),
+    "Ibn Majah 3818": ("Glad tidings", "record of their deeds"),
+    "Ibn Majah 3882": ("Allah! Allahu Rabbi", "anything with Him)"),
+    "Muslim 2573": ("Never a believer", "expiated for him"),
+    "Muslim 2593": ("A'isha, verily Allah is kind", "besides it (kindness)"),
+    "Muslim 2675a": ("I am near to the thought", "I rush towards him"),
+    "Muslim 2610": ("I know of a wording", "Satan the accursed"),
+    "Abu Dawud 4777": ("If anyone suppresses anger", "maidens he wishes"),
+    "Abu Dawud 4782": ("When one of you becomes angry", "should lie down"),
+    "Abu Dawud 3330": ("But between them", "what is unlawful"),
+    "Ibn Majah 4251": ("Every son of Adam", "those who repent"),
+    "Tirmidhi 3524": ("O Living, O Self-Sustaining", "astaghīth)"),
+    "Tirmidhi 3505": ("The supplication of Dhun-Nun", "Allah responds to him"),
+    "Tirmidhi 2032": ("O you who accepted Islam", "the depth of his house"),
 }
-AR_FIX = {
-    "Tirmidhi 2020": "لَا تَغْضَبْ",
-    "Muslim 2307a": "لَمْ تُرَاعُوا لَمْ تُرَاعُوا",
-    "Ibn Hibban 972": "مَا قَالَ عَبْدٌ قَطُّ إِذَا أَصَابَهُ هَمٌّ أَوْ حَزَنٌ: اللَّهُمَّ إِنِّي عَبْدُكَ، ابْنُ عَبْدِكَ، ابْنُ أَمَتِكَ، نَاصِيَتِي بِيَدِكَ، مَاضٍ فِيَّ حُكْمُكَ، عَدْلٌ فِيَّ قَضَاؤُكَ، أَسْأَلُكَ بِكُلِّ اسْمٍ هُوَ لَكَ سَمَّيْتَ بِهِ نَفْسَكَ، أَوْ أَنْزَلْتَهُ فِي كِتَابِكَ، أَوْ عَلَّمْتَهُ أَحَدًا مِنْ خَلْقِكَ، أَوِ اسْتَأْثَرْتَ بِهِ فِي عِلْمِ الْغَيْبِ عِنْدَكَ، أَنْ تَجْعَلَ الْقُرْآنَ رَبِيعَ قَلْبِي، وَنُورَ بَصَرِي، وَجِلَاءَ حُزْنِي، وَذَهَابَ هَمِّي، إِلَّا أَذْهَبَ اللَّهُ هَمَّهُ، وَأَبْدَلَهُ مَكَانَ حُزْنِهِ فَرَحًا",
-    "Tirmidhi 3505": "دَعْوَةُ ذِي النُّونِ إِذْ دَعَا وَهُوَ فِي بَطْنِ الْحُوتِ لاَ إِلَهَ إِلاَّ أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ فَإِنَّهُ لَمْ يَدْعُ بِهَا رَجُلٌ مُسْلِمٌ فِي شَيْءٍ قَطُّ إِلاَّ اسْتَجَابَ اللَّهُ لَهُ",
+AR_SLICE = {
+    "Tirmidhi 2020": ("لاَ تَغْضَبْ", "لاَ تَغْضَبْ"),
+    "Bukhari 52": ("الْحَلاَلُ بَيِّنٌ", "لِدِيِنِهِ وَعِرْضِهِ"),
+    "Muslim 2307a": ("لَمْ تُرَاعُوا", "لَمْ تُرَاعُوا لَمْ تُرَاعُوا"),
+    "Tirmidhi 3505": ("دَعْوَةُ ذِي النُّونِ", "اسْتَجَابَ اللَّهُ لَهُ"),
 }
+UR_SLICE = {
+    "Abu Dawud 3330": ("ان دونوں کے درمیان", "حرام میں پھنس گیا"),
+    "Abu Dawud 4777": ("جس نے اپنا غصہ", "جسے چاہے چن لے"),
+    "Abu Dawud 4782": ("جب تم میں سے کسی کو غصہ", "ورنہ پھر لیٹ جائے"),
+    "Bukhari 1283": ("صبر تو جب صدمہ", "اس وقت کرنا چاہیے"),
+    "Bukhari 1303": ("آنکھوں سے آنسو جاری ہیں", "ہم تمہاری جدائی سے غمگین ہیں"),
+    "Bukhari 24": ("اس کو اس کے حال پر رہنے دو", "ایمان ہی کا ایک حصہ ہے"),
+    "Bukhari 2443": ("اپنے بھائی کی مدد کرو", "ظالم ہو یا مظلوم"),
+    "Bukhari 2447": ("ظلم قیامت کے دن", "اندھیرے ہوں گے"),
+    "Bukhari 2908": ("ڈرو مت", "ڈرو مت"),
+    "Bukhari 52": ("حلال کھلا ہوا ہے", "اپنے دین اور عزت کو بچا لیا"),
+    "Bukhari 6065": ("آپس میں بغض نہ رکھو", "سلام کلام چھوڑ کر رہے"),
+    "Bukhari 6114": ("پہلوان وہ نہیں ہے", "بے قابو نہ ہو جائے"),
+    "Bukhari 6306": ("اے اللہ! تو میرا رب ہے", "کوئی بھی گناہ نہیں معاف کرتا"),
+    "Bukhari 6338": ("جب تم میں سے کوئی دعا کرے", "کوئی زبردستی کرنے والا نہیں ہے"),
+    "Bukhari 6369": ("اے اللہ! میں تیری پناہ مانگتا ہوں", "لوگوں کے غلبہ سے"),
+    "Bukhari 6446": ("تونگری یہ نہیں ہے", "دل غنی ہو"),
+    "Bukhari 6472": ("میری امت کے ستر ہزار", "اپنے رب ہی پر بھروسہ رکھتے ہیں"),
+    "Bukhari 7405": ("اللہ تعالیٰ فرماتا ہے", "دوڑ کر آ جاتا ہوں"),
+    "Ibn Majah 3818": ("مبارکبادی ہے", "کثرت سے استغفار پائے"),
+    "Ibn Majah 3882": ("اللہ، اللہ ہی میرا رب ہے", "شریک نہیں ٹھہراتی"),
+    "Ibn Majah 4251": ("سارے بنی آدم", "توبہ کرنے والے ہیں"),
+    "Muslim 1051": ("غنا مال و اسباب", "دل کی بے نیا زی ہے"),
+    "Muslim 1054": ("وہ انسان کا میاب", "قناعت کی تو فیق بخشی"),
+    "Muslim 2307a": ("خوف میں مبتلا نہ ہو خوف", "خوف میں مبتلانہ ہو"),
+    "Muslim 2558b": ("ایک دوسرے سے بغض نہ رکھو", "تعلق ترک کیے رکھے"),
+    "Muslim 2573": ("مومن کو کوئی تکلیف", "گناہوں کو مٹا دیا جاتا ہے"),
+    "Muslim 2578": ("ظلم سے بچو", "حلال کر لیا"),
+    "Muslim 2593": ("عائشہ! اللہ تعالیٰ نرمی", "اتنا عطا نہیں فرماتا"),
+    "Muslim 2609a": ("( کوئی شخص ) پچھاڑ", "قابو میں رکھتا ہے"),
+    "Muslim 2610": ("مجھے ایک ایسا کلمہ معلوم ہے", "اعوذبالله من الشيطان الرجيم"),
+    "Muslim 2675a": ("اللہ عزوجل فرماتا ہے", "دوڑتا ہوا اس کے پاس جاتا ہوں"),
+    "Muslim 2999": ("مومن کا معاملہ عجیب ہے", "اس کے لیے بھلائی ہوتی ہے"),
+    "Muslim 923a": ("اللہ ہی کا ہے جو اس نے لے لیا", "اجر وثواب کی طلب گار ہوں"),
+    "Tirmidhi 1935": ("آپس میں قطع تعلق نہ کرو", "سلام کلام بند رکھے"),
+    "Tirmidhi 2014": ("مظلوم کی دعا سے ڈرو", "کوئی پردہ آڑے نہیں آتا"),
+    "Tirmidhi 2020": ("غصہ مت کرو", "غصہ مت کرو"),
+    "Tirmidhi 2032": ("اے اسلام لانے والے", "اگرچہ وہ اپنے گھر کے اندر ہو"),
+    "Tirmidhi 2344": ("اگر تم لوگ اللہ پر توکل", "آسودہ واپس آتے ہیں"),
+    "Tirmidhi 2499": ("سارے انسان خطاکار ہیں", "توبہ کرنے والے ہیں"),
+    "Tirmidhi 2516": ("اے لڑکے!", "صحیفے خشک ہو گئے ہیں"),
+    "Tirmidhi 2517": ("اسے باندھ دو", "پھر توکل کرو"),
+    "Tirmidhi 3452": ("میں ایک ایسا کلمہ جانتا ہوں", "راندے ہوئے شیطان سے"),
+    "Tirmidhi 3489": ("اے اللہ! میں تجھ سے ہدایت", "بے نیازی چاہتا ہوں"),
+    "Tirmidhi 3505": ("ذوالنون ( یونس", "اس کی دعا قبول فرمائے گا"),
+    "Tirmidhi 3524": ("اے زندہ اور ہمیشہ", "مدد چاہتا ہوں"),
+    "Tirmidhi 3537": ("اللہ اپنے بندے کی توبہ", "خر خر کی آواز نہ آنے لگے"),
+    "Tirmidhi 766": ("روزہ دار کے لیے", "اپنے رب سے ملے گا"),
+}
+
+
+def source_slice(ref: str, text: str, first: str, last: str) -> str:
+    # NFC: some Urdu sources store آ as alef + madda; it renders identically
+    text = unicodedata.normalize("NFC", re.sub(r"\s+", " ", text or ""))
+    first, last = unicodedata.normalize("NFC", first), unicodedata.normalize("NFC", last)
+    i = text.find(first)
+    j = text.find(last, i + len(first) - len(last) if last in first else i)
+    if i < 0 or j < 0:
+        sys.exit(f"{ref}: slice ({first!r} … {last!r}) not found in source text")
+    out = text[i : j + len(last)].replace('""', "").strip(' "“”')
+    return out[0].upper() + out[1:]
 
 
 def extract_matn(ar: str) -> str:
@@ -128,11 +195,15 @@ def format_hadith(ref: str, d: dict, meaning: str, reflection: str) -> str:
     if bl:
         parts += [bl, ""]
     parts += [narrator_line(d), "", "The Prophet Muhammad ﷺ said:", ""]
-    ar = AR_FIX.get(ref) or extract_matn(d.get("text_ar") or "")
-    en = EN_FIX.get(ref) or extract_en(d.get("text_en") or "")
-    en = en.strip().strip("“”\"")
+    ar = source_slice(ref, d.get("text_ar"), *AR_SLICE[ref]) if ref in AR_SLICE else extract_matn(d.get("text_ar") or "")
+    en = source_slice(ref, d.get("text_en"), *EN_SLICE[ref]) if ref in EN_SLICE else extract_en(d.get("text_en") or "")
+    en = en.strip().strip("“”\"'‘’")
+    if ref not in UR_SLICE:
+        sys.exit(f"{ref}: add its Urdu matn to UR_SLICE")
+    ur = source_slice(ref, d.get("text_ur"), *UR_SLICE[ref])
     if ar:
         parts += ["Arabic:", "", ar, ""]
+    parts += ["Urdu Translation:", "", ur, ""]
     parts += ["English Translation:", "", f"“{en}”", ""]
     parts += ["Meaning ❤️", "", meaning.strip(), ""]
     parts += ["Reflection", "", reflection.strip(), ""]
@@ -153,6 +224,7 @@ def format_quran(d: dict, meaning: str, reflection: str) -> str:
         ar_name = d.get("surah_ar") or ""
         parts += [f"Surah {surah}" + (f" ({ar_name})" if ar_name else ""), ""]
     parts += ["Arabic:", "", (d.get("text_ar") or "").strip(), ""]
+    parts += ["Urdu Translation:", "", (d.get("text_ur") or "").strip(), ""]
     parts += ["English Translation:", "", f"“{(d.get('text_en') or '').strip()}”", ""]
     parts += ["Meaning ❤️", "", meaning.strip(), ""]
     parts += ["Reflection", "", reflection.strip(), ""]

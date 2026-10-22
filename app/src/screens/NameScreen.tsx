@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import {
+  Image,
   KeyboardAvoidingView,
   Platform,
   Pressable,
@@ -8,43 +9,25 @@ import {
   Text,
   TextInput,
 } from 'react-native'
-import AsyncStorage from '@react-native-async-storage/async-storage'
 import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { Ambient } from '../components/Ambient'
+import { saveName } from '../storage'
 import type { RootStackParamList } from '../types'
 import { colors, fonts } from '../theme'
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Name'>
 
-const NAME_KEY = 'hadith.name.v1'
-
+// Only shown on first launch (App skips it once a name is saved), or when the
+// user long-presses their name on the greeting to change it.
 export function NameScreen({ navigation, route }: Props) {
-  const [name, setName] = useState('')
-  const [ready, setReady] = useState(false)
-  const editing = route.params?.edit === true
-
-  // Returning users go straight to their greeting; the back button on Feeling
-  // comes here with `edit` to change the saved name.
-  useEffect(() => {
-    AsyncStorage.getItem(NAME_KEY)
-      .then((saved) => {
-        if (saved && !editing) navigation.replace('Feeling', { name: saved })
-        else {
-          if (saved) setName(saved)
-          setReady(true)
-        }
-      })
-      .catch(() => setReady(true))
-  }, [editing, navigation])
+  const [name, setName] = useState(route.params?.current ?? '')
 
   const submit = () => {
     const trimmed = name.trim()
     if (!trimmed) return
-    AsyncStorage.setItem(NAME_KEY, trimmed).catch(() => {})
+    saveName(trimmed)
     navigation.replace('Feeling', { name: trimmed })
   }
-
-  if (!ready) return <KeyboardAvoidingView style={styles.root} />
 
   return (
     <KeyboardAvoidingView
@@ -53,7 +36,8 @@ export function NameScreen({ navigation, route }: Props) {
     >
       <Ambient />
       <ScrollView contentContainerStyle={styles.inner} keyboardShouldPersistTaps="handled">
-        <Text style={styles.eyebrow}>Welcome</Text>
+        <Image source={require('../../assets/logo.png')} style={styles.logo} accessibilityLabel="Sakinah" />
+        <Text style={styles.eyebrow}>Welcome to Sakinah</Text>
         <Text style={styles.title}>What should we call you?</Text>
         <Text style={styles.lede}>A quiet space for the heart.</Text>
         <Text style={styles.label}>Your name</Text>
@@ -80,6 +64,12 @@ export function NameScreen({ navigation, route }: Props) {
 }
 
 const styles = StyleSheet.create({
+  logo: {
+    width: 96,
+    height: 96,
+    marginLeft: -14,
+    marginBottom: 4,
+  },
   root: {
     flex: 1,
     backgroundColor: colors.cream,
