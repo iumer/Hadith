@@ -92,15 +92,14 @@ We pin `react-native-screens@4.29.0` for Xcode 27 (`UIBarMinimization`). If nati
 
 Yes: for Android we give a **ready `.apk`**. Testers do **not** need a Mac or Expo Go.
 
-**Current APK (this cloud run):**
+**Direct download (~90 MB):**  
+https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
 
-- Artifact path: `/opt/cursor/artifacts/HeartThreads-preview.apk` (~90 MB)
-- Also built at: `app/android/app/build/outputs/apk/release/app-release.apk` in the agent workspace
-- Download it from the **Cursor agent Artifacts** UI for this run (same place as screenshots), then send the file (AirDrop, Drive, WhatsApp, etc.).
+Release page: https://github.com/iumer/Hadith/releases/tag/android-preview-2026-10-22
 
 **On the Android phone**
 
-1. Open the downloaded `HeartThreads-preview.apk`.
+1. Open the download link (or send the file via WhatsApp/Drive).
 2. Allow **Install unknown apps** for Files/Chrome if asked.
 3. Install → open → enter name → test swipe / pull-down / back from a hadith or verse.
 

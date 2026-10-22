@@ -17,7 +17,14 @@ Install **Expo Go** on the iPhone → same Wi‑Fi → scan the QR.
 
 ## Android (direct APK)
 
-Download **`HeartThreads-preview.apk`** from the Cursor agent Artifacts (~90 MB) → open on phone → allow unknown apps → Install.
+**Direct download (~90 MB):**  
+https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
+
+Release page: https://github.com/iumer/Hadith/releases/tag/android-preview-2026-10-22
+
+1. Open the link on the phone (or download on a computer and send the file).
+2. Allow **Install unknown apps** for the browser/Files if asked.
+3. Install → open → enter a name → test swipe / pull-down / back.
 
 No Expo Go required for APK testers.
 
