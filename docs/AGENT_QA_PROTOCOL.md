@@ -23,10 +23,10 @@ Every build/test pass starts by refreshing that list, retesting prior items, the
 | Surface | Available in cloud agent VM? |
 |---|---|
 | Vite mockup (browser) | Yes |
-| Expo web (browser) | Yes |
+| Expo web (browser) | Yes — use **web Prev/Next/Open** on CardFan (Pan mouse is unreliable) |
 | iOS Simulator (Xcode) | **No** — Linux VM, no Xcode |
 | Android Emulator | **No** unless separately provisioned |
-| Your physical iPhone / Android | **You** — after agent gate passes |
+| Your physical iPhone / Android | **You** — after agent gate passes; swipe/pull only on native |
 
 After the agent gate passes, you re-verify on **your** iOS and Android. Agent does not claim device sign-off.
 

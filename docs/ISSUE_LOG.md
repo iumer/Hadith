@@ -20,6 +20,7 @@ Last updated: 2026-10-22 (Asia/Karachi).
 | I-007 | User both platforms | Pull-down cuts mid-expand → sudden next page | fixed-pending-device | Pull to max → 820ms reveal → then navigate |
 | I-008 | User both platforms | After Read→back→back, stuck on giant card, gestures dead | fixed-pending-device | Remount fan on focus + reset shared values |
 | I-009 | User request | Android APK for testers | fixed-pending-device | `HeartThreads-preview.apk` artifact (~90MB) |
+| I-010 | Agent web QA | CardFan Pan gestures ignore mouse on Expo web — blocked smoke | fixed-pending-device | Web-only Prev/Next/Open controls; native keeps swipe/pull |
 
 ## Suggestions (from user / agent)
 

@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Platform, Pressable, StyleSheet, Text, View } from 'react-native'
 import { useFocusEffect } from '@react-navigation/native'
 import { Gesture, GestureDetector } from 'react-native-gesture-handler'
 import Animated, {
@@ -156,6 +156,25 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
   })
 
   const active = moods[Math.max(0, Math.min(moods.length - 1, focus))]
+  const isWeb = Platform.OS === 'web'
+
+  const browseBy = (dir: number) => {
+    const next = Math.max(0, Math.min(moods.length - 1, focus + dir))
+    if (next === focus) return
+    scroll.value = withSpring(next, { damping: 20, stiffness: 260 })
+    setHintJS(next)
+  }
+
+  const openWithReveal = () => {
+    const idx = Math.max(0, Math.min(moods.length - 1, focus))
+    busy.value = 1
+    pullY.value = withTiming(PULL_MAX, { duration: 280 }, (ok) => {
+      if (!ok) return
+      revealing.value = withTiming(1, { duration: REVEAL_MS }, (done) => {
+        if (done) runOnJS(openMood)(idx)
+      })
+    })
+  }
 
   return (
     <View style={styles.stage}>
@@ -180,10 +199,34 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
         </View>
       </GestureDetector>
 
-      <Text style={styles.hint}>
-        Swipe left or right to browse · pull{' '}
-        <Text style={styles.hintStrong}>{shortLabel(active)}</Text> down to open
-      </Text>
+      {isWeb ? (
+        <View style={styles.webBar}>
+          <Pressable
+            style={[styles.webBtn, focus <= 0 && styles.webBtnDisabled]}
+            disabled={focus <= 0}
+            onPress={() => browseBy(-1)}
+            accessibilityLabel="Previous mood"
+          >
+            <Text style={styles.webBtnText}>‹</Text>
+          </Pressable>
+          <Pressable style={styles.webOpen} onPress={openWithReveal} accessibilityLabel="Open mood">
+            <Text style={styles.webOpenText}>Open {shortLabel(active)}</Text>
+          </Pressable>
+          <Pressable
+            style={[styles.webBtn, focus >= moods.length - 1 && styles.webBtnDisabled]}
+            disabled={focus >= moods.length - 1}
+            onPress={() => browseBy(1)}
+            accessibilityLabel="Next mood"
+          >
+            <Text style={styles.webBtnText}>›</Text>
+          </Pressable>
+        </View>
+      ) : (
+        <Text style={styles.hint}>
+          Swipe left or right to browse · pull{' '}
+          <Text style={styles.hintStrong}>{shortLabel(active)}</Text> down to open
+        </Text>
+      )}
       <View style={styles.track}>
         <Animated.View style={[styles.trackFill, trackStyle as object]} />
       </View>
@@ -386,5 +429,39 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: colors.accent,
     borderRadius: 999,
+  },
+  webBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    maxWidth: 320,
+  },
+  webBtn: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  webBtnDisabled: { opacity: 0.35 },
+  webBtnText: {
+    fontSize: 28,
+    lineHeight: 30,
+    color: colors.ink,
+    fontFamily: fonts.bodyBold,
+  },
+  webOpen: {
+    flex: 1,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 999,
+    backgroundColor: colors.ink,
+    alignItems: 'center',
+  },
+  webOpenText: {
+    color: colors.white,
+    fontFamily: fonts.bodyBold,
+    fontSize: 15,
   },
 })
