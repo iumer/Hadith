@@ -10,11 +10,15 @@ npm install
 npx expo start
 ```
 
-iPhone (Mac + free Apple ID):
+iPhone / Simulator (Mac + free Apple ID):
 
 ```bash
-npx expo run:ios --device
+cd "/Users/geovision/Desktop/Developmentt/New Ideas/Hadith app/app"
+git pull && npm install
+npx expo run:ios
 ```
+
+Pick your **physical iPhone** when prompted (or an iOS 18 simulator). If the build fails after a dependency change, wipe native folders once: `rm -rf ios && npx expo run:ios`.
 
 Android preview APK (EAS):
 

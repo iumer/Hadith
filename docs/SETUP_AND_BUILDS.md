@@ -36,14 +36,29 @@ Free provisioning expires ~7 days — rebuild weekly:
 
 ```bash
 cd "/Users/geovision/Desktop/Developmentt/New Ideas/Hadith app/app"
+git pull
 npm install
-npx expo start          # Expo Go / tunnel for quick checks
-npx expo run:ios --device   # native build on your iPhone
+npx expo run:ios
 ```
+
+When Expo asks for a device:
+- **Simulator (quick check):** pick e.g. iPhone 16 / any iOS 18.x sim — avoid bleeding-edge iOS 27 sims if the build breaks.
+- **Real iPhone:** plug in the cable, trust the Mac, then pick your **phone’s name** (not “iPhone 17 Pro Max” simulator).
 
 Or open `ios/*.xcworkspace` in Xcode → select your iPhone → Run.
 
 If signing errors appear: Xcode → Signing & Capabilities → Team = your personal team → unique Bundle ID.
+
+### If iOS build fails on `UIBarMinimization` / react-native-screens
+
+We pin `react-native-screens@4.29.0` (Xcode 27 SDK renamed those APIs). After `git pull`:
+
+```bash
+cd "/Users/geovision/Desktop/Developmentt/New Ideas/Hadith app/app"
+rm -rf ios
+npm install
+npx expo run:ios
+```
 
 ---
 
