@@ -10,6 +10,16 @@ type Screen =
   | { id: 'list'; name: string; mood: Mood; sub: SubMood }
   | { id: 'read'; name: string; mood: Mood; sub: SubMood; index: number }
 
+const REPORT_OPTIONS = [
+  { id: 'ref-wrong', label: 'Issue in the reference (wrong book / number)' },
+  { id: 'ref-mismatch', label: 'Reference differs from the original book' },
+  { id: 'translation', label: 'The translation is not correct' },
+  { id: 'arabic', label: 'The Arabic text looks incorrect' },
+  { id: 'meaning', label: 'The explanation / meaning is not correct' },
+  { id: 'reflection', label: 'The reflection feels off or misleading' },
+  { id: 'other', label: 'Something else' },
+] as const
+
 const page = {
   initial: { opacity: 0, y: 22, scale: 0.97 },
   animate: { opacity: 1, y: 0, scale: 1 },
@@ -19,12 +29,7 @@ const page = {
 
 function Back({ onClick }: { onClick: () => void }) {
   return (
-    <motion.button
-      className="back-btn"
-      onClick={onClick}
-      aria-label="Go back"
-      whileTap={{ scale: 0.9 }}
-    >
+    <motion.button className="back-btn" onClick={onClick} aria-label="Go back" whileTap={{ scale: 0.9 }}>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
         <path
           d="M15 6L9 12L15 18"
@@ -49,27 +54,28 @@ function MoodFan({
   setFocus: (i: number) => void
   onOpen: (mood: Mood) => void
 }) {
+  const active = moods[focus]
   return (
     <div className="card-stage calm-fan">
       <div className="card-fan">
         {moods.map((mood, i) => {
           const mid = (moods.length - 1) / 2
           const spread = i - mid
-          const active = i === focus
+          const isActive = i === focus
           return (
             <motion.button
               key={mood.id}
-              className={`fan-card ${active ? 'is-active' : ''}`}
+              className={`fan-card ${isActive ? 'is-active' : ''}`}
               style={{ ['--c' as string]: MOOD_COLORS[mood.id] }}
               animate={{
-                x: active ? 0 : spread * 26,
-                y: active ? -40 : Math.abs(spread) * 7,
-                rotate: active ? 0 : spread * 8,
-                scale: active ? 1.14 : 0.9,
-                zIndex: active ? 20 : 10 - Math.abs(spread),
+                x: isActive ? 0 : spread * 26,
+                y: isActive ? -40 : Math.abs(spread) * 7,
+                rotate: isActive ? 0 : spread * 8,
+                scale: isActive ? 1.14 : 0.9,
+                zIndex: isActive ? 20 : 10 - Math.abs(spread),
               }}
               transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-              onClick={() => (active ? onOpen(mood) : setFocus(i))}
+              onClick={() => (isActive ? onOpen(mood) : setFocus(i))}
             >
               <span className="fan-sheen" />
               <span className="fan-count">{mood.subs.length}</span>
@@ -79,12 +85,12 @@ function MoodFan({
           )
         })}
       </div>
-      <motion.button
-        className="primary-btn fan-enter"
-        onClick={() => onOpen(moods[focus])}
-        whileTap={{ scale: 0.97 }}
-      >
-        Open {shortLabel(moods[focus])}
+      <p className="fan-hint">
+        Tap a card to pull it forward · tap again to open{' '}
+        <strong>{shortLabel(active)}</strong>
+      </p>
+      <motion.button className="primary-btn fan-enter" onClick={() => onOpen(active)} whileTap={{ scale: 0.97 }}>
+        Reveal {shortLabel(active)}
       </motion.button>
     </div>
   )
@@ -98,7 +104,7 @@ export default function App() {
   const reduce = useReducedMotion()
   const [screen, setScreen] = useState<Screen>({ id: 'feeling', name: 'Asif' })
   const [draftName, setDraftName] = useState('Asif')
-  const [focus, setFocus] = useState(2) // Sad toward center for demo
+  const [focus, setFocus] = useState(2)
 
   const motionProps = useMemo(
     () =>
@@ -108,14 +114,11 @@ export default function App() {
     [reduce],
   )
 
-  // Allow starting from name if they reset
-  const goFeeling = (name: string) => setScreen({ id: 'feeling', name })
-
   return (
     <div className="stage stage-calm">
       <div className="stage-label">
         <h1>Card flow preview</h1>
-        <p>Main moods → subcategories → neat Hadith & Quran reading.</p>
+        <p>Pull a mood · pick a thread · read & report.</p>
       </div>
 
       <div className="phone-shell phone-calm">
@@ -137,7 +140,7 @@ export default function App() {
                   onSubmit={(e) => {
                     e.preventDefault()
                     if (!draftName.trim()) return
-                    goFeeling(draftName.trim())
+                    setScreen({ id: 'feeling', name: draftName.trim() })
                   }}
                 >
                   <label htmlFor="name">Your name</label>
@@ -195,13 +198,10 @@ export default function App() {
                         setScreen({ id: 'list', name: screen.name, mood: screen.mood, sub })
                       }
                     >
-                      <span
-                        className="sub-dot"
-                        style={{ background: MOOD_COLORS[screen.mood.id] }}
-                      />
+                      <span className="sub-dot" style={{ background: MOOD_COLORS[screen.mood.id] }} />
                       <span className="sub-copy">
                         <strong>{sub.label}</strong>
-                        <small>{sub.items.length} passages from Quran & Hadith</small>
+                        <small>{sub.items.length} threads</small>
                       </span>
                       <span className="sub-chevron">›</span>
                     </motion.button>
@@ -214,28 +214,24 @@ export default function App() {
               <motion.section key="list" className="screen" {...motionProps}>
                 <div className="top-bar">
                   <Back
-                    onClick={() =>
-                      setScreen({ id: 'subs', name: screen.name, mood: screen.mood })
-                    }
+                    onClick={() => setScreen({ id: 'subs', name: screen.name, mood: screen.mood })}
                   />
                   <p className="eyebrow" style={{ margin: 0 }}>
                     {screen.sub.label}
                   </p>
                 </div>
                 <h2 className="display display-lg">{screen.sub.label}</h2>
-                <p className="lede">
-                  {screen.sub.items.length} passages · tap any to read
-                </p>
-                <div className="passage-list">
+                <p className="lede">Threads · tap a reference to read</p>
+                <div className="thread-list">
                   {screen.sub.items.map((item, i) => {
                     const kind = kindOf(item.title)
                     return (
                       <motion.button
                         key={item.id}
-                        className="passage-row"
-                        initial={reduce ? false : { opacity: 0, y: 12 }}
+                        className="thread-row"
+                        initial={reduce ? false : { opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.04 * i, duration: 0.35 }}
+                        transition={{ delay: 0.035 * i, duration: 0.3 }}
                         whileTap={{ scale: 0.985 }}
                         onClick={() =>
                           setScreen({
@@ -250,8 +246,8 @@ export default function App() {
                         <span className={`passage-badge ${kind}`}>
                           {kind === 'quran' ? 'Quran' : 'Hadith'}
                         </span>
-                        <h3>{item.title}</h3>
-                        {item.preview ? <p>{item.preview}</p> : null}
+                        <span className="thread-ref">{item.title}</span>
+                        <span className="sub-chevron">›</span>
                       </motion.button>
                     )
                   })}
@@ -263,8 +259,6 @@ export default function App() {
               <ReadScreen
                 key="read"
                 motionProps={motionProps}
-                name={screen.name}
-                mood={screen.mood}
                 sub={screen.sub}
                 index={screen.index}
                 onBack={() =>
@@ -293,8 +287,6 @@ function ReadScreen({
   onIndex,
 }: {
   motionProps: object
-  name: string
-  mood: Mood
   sub: SubMood
   index: number
   onBack: () => void
@@ -303,6 +295,27 @@ function ReadScreen({
   const item: RefItem = sub.items[index]
   const kind = kindOf(item.title)
   const total = sub.items.length
+  const [reportOpen, setReportOpen] = useState(false)
+  const [selected, setSelected] = useState<string[]>([])
+  const [note, setNote] = useState('')
+  const [sent, setSent] = useState(false)
+
+  const toggle = (id: string) => {
+    setSelected((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]))
+  }
+
+  const submitReport = () => {
+    if (!selected.length) return
+    // Mockup only — later this posts to our backend / store
+    console.info('report', { ref: item.title, selected, note })
+    setSent(true)
+    window.setTimeout(() => {
+      setReportOpen(false)
+      setSent(false)
+      setSelected([])
+      setNote('')
+    }, 1100)
+  }
 
   return (
     <motion.section className="screen read-screen" {...motionProps}>
@@ -311,6 +324,9 @@ function ReadScreen({
         <p className="eyebrow" style={{ margin: 0 }}>
           {index + 1} of {total}
         </p>
+        <button className="report-btn" onClick={() => setReportOpen(true)}>
+          Report
+        </button>
       </div>
 
       <div className="read-progress">
@@ -353,11 +369,7 @@ function ReadScreen({
       </AnimatePresence>
 
       <div className="read-nav">
-        <button
-          className="ghost-btn"
-          disabled={index <= 0}
-          onClick={() => onIndex(index - 1)}
-        >
+        <button className="ghost-btn" disabled={index <= 0} onClick={() => onIndex(index - 1)}>
           Previous
         </button>
         <button
@@ -365,9 +377,77 @@ function ReadScreen({
           disabled={index >= total - 1}
           onClick={() => onIndex(index + 1)}
         >
-          Next passage
+          Next
         </button>
       </div>
+
+      <AnimatePresence>
+        {reportOpen && (
+          <motion.div
+            className="report-sheet"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <button className="report-backdrop" aria-label="Close" onClick={() => setReportOpen(false)} />
+            <motion.div
+              className="report-panel"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 24, opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 280, damping: 24 }}
+            >
+              {sent ? (
+                <div className="report-thanks">
+                  <h3>Thank you</h3>
+                  <p>Your report helps us improve these passages.</p>
+                </div>
+              ) : (
+                <>
+                  <div className="report-head">
+                    <h3>Report an issue</h3>
+                    <p>Select all that apply for “{item.title}”.</p>
+                  </div>
+                  <div className="report-options">
+                    {REPORT_OPTIONS.map((opt) => {
+                      const on = selected.includes(opt.id)
+                      return (
+                        <button
+                          key={opt.id}
+                          className={`report-option ${on ? 'is-on' : ''}`}
+                          onClick={() => toggle(opt.id)}
+                        >
+                          <span className="report-check">{on ? '✓' : ''}</span>
+                          {opt.label}
+                        </button>
+                      )
+                    })}
+                  </div>
+                  <label className="report-note-label" htmlFor="report-note">
+                    Optional note
+                  </label>
+                  <textarea
+                    id="report-note"
+                    className="report-note"
+                    rows={3}
+                    placeholder="Anything else we should know?"
+                    value={note}
+                    onChange={(e) => setNote(e.target.value)}
+                  />
+                  <div className="report-actions">
+                    <button className="ghost-btn" onClick={() => setReportOpen(false)}>
+                      Cancel
+                    </button>
+                    <button className="primary-btn" disabled={!selected.length} onClick={submitReport}>
+                      Submit report
+                    </button>
+                  </div>
+                </>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.section>
   )
 }

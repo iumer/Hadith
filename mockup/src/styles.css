@@ -169,6 +169,17 @@ button:disabled {
   margin-bottom: 6px;
 }
 
+.report-btn {
+  margin-left: auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent);
+  box-shadow: 0 4px 12px rgba(80, 100, 120, 0.08);
+}
+
 .back-btn {
   width: 38px;
   height: 38px;
@@ -357,6 +368,20 @@ button:disabled {
   width: min(100%, 280px);
 }
 
+.fan-hint {
+  margin: 0;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--mist-dim);
+  line-height: 1.4;
+  max-width: 280px;
+}
+
+.fan-hint strong {
+  color: var(--ink);
+}
+
 /* —— Subcategories —— */
 .neat-subs {
   margin-top: 16px;
@@ -411,7 +436,36 @@ button:disabled {
   font-weight: 300;
 }
 
-/* —— Passage list —— */
+/* —— Thread list (references only) —— */
+.thread-list {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+  overflow: auto;
+  padding: 4px 2px 12px;
+}
+
+.thread-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.98);
+  box-shadow: 0 6px 16px rgba(80, 100, 120, 0.06);
+}
+
+.thread-ref {
+  flex: 1;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  min-width: 0;
+}
+
 .passage-list {
   margin-top: 14px;
   display: grid;
@@ -564,6 +618,133 @@ button:disabled {
 
 .read-next {
   height: 48px;
+}
+
+/* —— Report sheet —— */
+.report-sheet {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: flex-end;
+}
+
+.report-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(36, 48, 68, 0.35);
+}
+
+.report-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-height: 86%;
+  overflow: auto;
+  background: #fffcf8;
+  border-radius: 24px 24px 0 0;
+  padding: 20px 18px 22px;
+  box-shadow: 0 -12px 40px rgba(36, 48, 68, 0.18);
+}
+
+.report-head h3,
+.report-thanks h3 {
+  margin: 0;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.45rem;
+}
+
+.report-head p,
+.report-thanks p {
+  margin: 6px 0 0;
+  font-weight: 600;
+  color: var(--mist-dim);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.report-thanks {
+  padding: 28px 8px 18px;
+  text-align: center;
+}
+
+.report-options {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.report-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  padding: 12px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(36, 48, 68, 0.08);
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.report-option.is-on {
+  border-color: color-mix(in srgb, var(--accent) 55%, white);
+  background: #fff5f0;
+}
+
+.report-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(36, 48, 68, 0.2);
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: #fff;
+}
+
+.report-option.is-on .report-check {
+  border-color: var(--accent);
+  background: #fff;
+}
+
+.report-note-label {
+  display: block;
+  margin-top: 14px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--mist-dim);
+}
+
+.report-note {
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(36, 48, 68, 0.1);
+  padding: 12px;
+  font: inherit;
+  font-weight: 600;
+  resize: none;
+  background: #fff;
+  color: var(--ink);
+  outline: none;
+}
+
+.report-note:focus {
+  border-color: var(--accent);
+}
+
+.report-actions {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 10px;
+  margin-top: 14px;
 }
 
 @media (max-width: 520px) {
