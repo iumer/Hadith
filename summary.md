@@ -92,10 +92,12 @@ We pin `react-native-screens@4.29.0` for Xcode 27 (`UIBarMinimization`). If nati
 
 Yes: for Android we give a **ready `.apk`**. Testers do **not** need a Mac or Expo Go.
 
-**Direct download (~90 MB):**  
-https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
+**Stable download link (same forever — share once with testers):**  
+https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk
 
-Release page: https://github.com/iumer/Hadith/releases/tag/android-preview-2026-10-22
+Release page: https://github.com/iumer/Hadith/releases/tag/android-preview
+
+New builds **overwrite that same file** via `./scripts/publish_android_apk.sh` — no new link to redistribute.
 
 **On the Android phone**
 
@@ -103,7 +105,7 @@ Release page: https://github.com/iumer/Hadith/releases/tag/android-preview-2026-
 2. Allow **Install unknown apps** for Files/Chrome if asked.
 3. Install → open → enter name → test swipe / pull-down / back from a hadith or verse.
 
-**When we push another Android update:** download the **new** APK and install over the old one (same steps). No App Store.
+**When we push another Android update:** re-download the **same** URL and install over the old app. No App Store.
 
 ---
 
