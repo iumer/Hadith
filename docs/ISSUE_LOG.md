@@ -19,8 +19,8 @@ Last updated: 2026-10-22 (Asia/Karachi).
 | I-006 | User both platforms | Swipe L/R feels stiff — cards don’t slide with finger | fixed-pending-device | Continuous `scroll` shared value follows finger |
 | I-007 | User both platforms | Pull-down cuts mid-expand → sudden next page | fixed-pending-device | Pull to max → 820ms reveal → then navigate |
 | I-008 | User both platforms | After Read→back→back, stuck on giant card, gestures dead | fixed-pending-device | Remount fan on focus + reset shared values |
-| I-009 | User request | Android APK for testers | fixed-pending-device | `HeartThreads-preview.apk` artifact (~90MB) |
-| I-010 | Agent web QA | CardFan Pan gestures ignore mouse on Expo web — blocked smoke | fixed-pending-device | Web-only Prev/Next/Open controls; native keeps swipe/pull |
+| I-009 | User request | Android APK for testers | fixed-pending-device | `HeartThreads-preview.apk` artifact (~90MB); device install pending |
+| I-010 | Agent web QA | CardFan Pan gestures ignore mouse on Expo web — blocked smoke | verified-agent | Web Prev/Next/Open; Playwright hard-refresh smoke **PASS** (steps 1–9); see `qa-web-retest-*.png` |
 
 ## Suggestions (from user / agent)
 

@@ -159,14 +159,16 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
   const isWeb = Platform.OS === 'web'
 
   const browseBy = (dir: number) => {
-    const next = Math.max(0, Math.min(moods.length - 1, focus + dir))
-    if (next === focus) return
+    // Use live scroll (same source as pan), not possibly-stale React focus
+    const base = Math.round(scroll.value)
+    const next = Math.max(0, Math.min(moods.length - 1, base + dir))
+    if (next === base) return
     scroll.value = withSpring(next, { damping: 20, stiffness: 260 })
     setHintJS(next)
   }
 
   const openWithReveal = () => {
-    const idx = Math.max(0, Math.min(moods.length - 1, focus))
+    const idx = Math.max(0, Math.min(moods.length - 1, Math.round(scroll.value)))
     busy.value = 1
     pullY.value = withTiming(PULL_MAX, { duration: 280 }, (ok) => {
       if (!ok) return
