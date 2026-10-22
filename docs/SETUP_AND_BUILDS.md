@@ -1,5 +1,7 @@
 # Setup & builds (Mac + cloud + APK)
 
+**Short install only:** see [`INSTALL.md`](INSTALL.md) and root [`summary.md`](../summary.md) §1.
+
 How we develop and how **you** get installs on iPhone and Android.
 
 ## Roles
