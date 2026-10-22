@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { type ComponentRef, useEffect, useRef, useState } from 'react'
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Ambient } from '../components/Ambient'
 import { BackButton } from '../components/BackButton'
+import { GradeBar } from '../components/GradeBar'
 import { ReportSheet } from '../components/ReportSheet'
 import { getSub } from '../content'
 import type { RootStackParamList } from '../types'
@@ -17,6 +18,12 @@ export function ReadScreen({ navigation, route }: Props) {
   const index = route.params.index
   const item = sub.items[index]
   const [reportOpen, setReportOpen] = useState(false)
+  const scrollRef = useRef<ComponentRef<typeof ScrollView>>(null)
+
+  // Each passage starts at the top, not where the previous one was scrolled to
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ y: 0, animated: false })
+  }, [index])
 
   const go = (next: number) => {
     navigation.setParams({ index: next })
@@ -47,6 +54,7 @@ export function ReadScreen({ navigation, route }: Props) {
       </View>
 
       <ScrollView
+        ref={scrollRef}
         style={styles.scroll}
         contentContainerStyle={styles.card}
         showsVerticalScrollIndicator={false}
@@ -54,8 +62,16 @@ export function ReadScreen({ navigation, route }: Props) {
         <View style={[styles.badge, item.kind === 'quran' ? styles.quran : styles.hadith]}>
           <Text style={styles.badgeText}>{item.kind === 'quran' ? 'Quran' : 'Hadith'}</Text>
         </View>
-        <Text style={styles.title}>{item.title}</Text>
-        {item.arabic ? <Text style={styles.arabic}>{item.arabic}</Text> : null}
+        <View style={styles.titleBlock}>
+          <Text style={styles.title}>{item.title}</Text>
+          {item.source ? <Text style={styles.source}>{item.source}</Text> : null}
+        </View>
+        <GradeBar item={item} />
+        {item.arabic ? (
+          <Text style={[styles.arabic, item.kind === 'quran' ? styles.arabicQuran : styles.arabicHadith]}>
+            {item.arabic}
+          </Text>
+        ) : null}
         {item.english ? <Text style={styles.english}>{item.english}</Text> : null}
         {item.meaning ? (
           <View style={styles.block}>
@@ -90,7 +106,9 @@ export function ReadScreen({ navigation, route }: Props) {
 
       <ReportSheet
         visible={reportOpen}
-        refTitle={item.title}
+        passage={item}
+        moodId={route.params.moodId}
+        subId={route.params.subId}
         onClose={() => setReportOpen(false)}
       />
     </View>
@@ -166,18 +184,33 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: colors.ink,
   },
+  titleBlock: {
+    gap: 2,
+  },
   title: {
     fontFamily: fonts.display,
     fontSize: 26,
     color: colors.ink,
   },
+  source: {
+    fontFamily: fonts.body,
+    fontSize: 13,
+    color: colors.mist,
+  },
   arabic: {
-    fontSize: 22,
-    lineHeight: 40,
     textAlign: 'right',
     writingDirection: 'rtl',
     color: colors.ink,
-    fontFamily: fonts.body,
+  },
+  arabicQuran: {
+    fontFamily: fonts.quran,
+    fontSize: 24,
+    lineHeight: 52,
+  },
+  arabicHadith: {
+    fontFamily: fonts.arabic,
+    fontSize: 22,
+    lineHeight: 42,
   },
   english: {
     fontFamily: fonts.body,

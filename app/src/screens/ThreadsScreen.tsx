@@ -3,30 +3,38 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Ambient } from '../components/Ambient'
 import { BackButton } from '../components/BackButton'
-import { getSub } from '../content'
-import type { RootStackParamList } from '../types'
+import { getMood, getSub } from '../content'
+import type { Passage, RootStackParamList } from '../types'
 import { colors, fonts } from '../theme'
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Threads'>
 
+/** "2:286 · Al-Baqara": the badge already says Quran */
+function quranRef(item: Passage) {
+  const ref = item.title.replace(/^Quran /, '')
+  const surah = item.source?.replace(/^Surah /, '').replace(/\s*\(.*\)$/, '')
+  return surah ? `${ref} · ${surah}` : ref
+}
+
 export function ThreadsScreen({ navigation, route }: Props) {
   const insets = useSafeAreaInsets()
   const { sub } = getSub(route.params.moodId, route.params.subId)
+  const mood = getMood(route.params.moodId)
 
   return (
     <View style={[styles.root, { paddingTop: insets.top + 8 }]}>
       <Ambient />
       <View style={styles.top}>
         <BackButton onPress={() => navigation.goBack()} />
-        <Text style={styles.eyebrow}>{sub.label}</Text>
+        <Text style={styles.eyebrow}>{mood.label}</Text>
       </View>
       <Text style={styles.title}>{sub.label}</Text>
-      <Text style={styles.lede}>Threads · open a reference to read</Text>
+      <Text style={styles.lede}>Open a passage to read</Text>
       <ScrollView contentContainerStyle={styles.list} showsVerticalScrollIndicator={false}>
         {sub.items.map((item, i) => (
           <Pressable
             key={item.id}
-            style={styles.row}
+            style={({ pressed }) => [styles.row, pressed && styles.pressed]}
             onPress={() =>
               navigation.navigate('Read', {
                 name: route.params.name,
@@ -39,7 +47,9 @@ export function ThreadsScreen({ navigation, route }: Props) {
             <View style={[styles.badge, item.kind === 'quran' ? styles.quran : styles.hadith]}>
               <Text style={styles.badgeText}>{item.kind === 'quran' ? 'Quran' : 'Hadith'}</Text>
             </View>
-            <Text style={styles.ref}>{item.title}</Text>
+            <Text style={styles.ref}>
+              {item.kind === 'quran' ? quranRef(item) : item.title}
+            </Text>
             <Text style={styles.chev}>›</Text>
           </Pressable>
         ))}
@@ -92,7 +102,12 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     backgroundColor: 'rgba(255,255,255,0.78)',
   },
+  pressed: {
+    opacity: 0.6,
+  },
   badge: {
+    minWidth: 64,
+    alignItems: 'center',
     borderRadius: 999,
     paddingHorizontal: 10,
     paddingVertical: 4,

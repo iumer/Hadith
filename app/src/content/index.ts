@@ -17,5 +17,5 @@ export function getSub(moodId: string, subId: string): { mood: Mood; sub: SubMoo
 }
 
 export function shortLabel(mood: Mood) {
-  return mood.label === 'Shame Guilt' ? 'Shame' : mood.label.split(' ')[0]
+  return mood.label.split(' ')[0]
 }

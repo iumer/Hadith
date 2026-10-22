@@ -1,11 +1,20 @@
+export type Grade = 'sahih' | 'hasan' | 'daif' | 'mawdu'
+
 export type Passage = {
   id: string
   title: string
   kind: 'quran' | 'hadith'
+  /** Surah name line, Quran only */
+  source?: string
   arabic?: string
   english?: string
   meaning?: string
   reflection?: string
+  /** Authenticity, hadith only */
+  grade?: Grade
+  gradedBy?: string
+  gradings?: { grader: string; grade: Grade }[]
+  disputed?: boolean
 }
 
 export type SubMood = {
@@ -27,7 +36,7 @@ export type Catalog = {
 }
 
 export type RootStackParamList = {
-  Name: undefined
+  Name: { edit?: boolean } | undefined
   Feeling: { name: string }
   Subs: { name: string; moodId: string }
   Threads: { name: string; moodId: string; subId: string }

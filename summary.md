@@ -1,7 +1,7 @@
 # Heart Threads / Hadith project — handoff summary
 
 **Audience:** humans installing the app + any AI agent continuing the work.  
-**Last updated:** 2026-10-22 (Asia/Karachi)  
+**Last updated:** 2026-10-23 (Asia/Karachi)  
 **Working branch for the mobile app:** `cursor/app-interactive-mockup-db55`  
 **PR:** https://github.com/iumer/Hadith/pull/3  
 **Preferred Mac project folder:**  
@@ -132,7 +132,8 @@ Working product name in code: **Heart Threads** (product docs also say Mood & Li
 5. Read — Arabic, English, meaning, reflection + Report  
 
 **Content today in the app:** curated offline catalog baked into  
-`app/src/content/catalog.json` (**8 moods · 37 subs · 182 passages**), sourced from `moods/**/*.txt`.  
+`app/src/content/catalog.json` (**8 moods · 37 subs · 180 passages**), built from `moods/**/*.txt` by `scripts/build_catalog.py`.
+Every hadith carries its authenticity grade; only sahih/hasan hadith are shipped.  
 Full Quran/Hadith SQLite search DBs exist in the repo for later “Search”; v1 reading path does **not** open those DBs at runtime yet.
 
 ---
@@ -249,6 +250,19 @@ Mockup kept aligned conceptually with the same interaction model.
 - Expo web + Playwright smoke for navigation/back path (gestures still need device).
 - Release APK: `HeartThreads-preview.apk` (~90MB) under cloud artifacts.
 
+### Phase I — Full audit + content/UI fix round (2026-10-23)
+
+**Why:** User asked for a full UI / functionality / content audit, then fixes, plus an authenticity indicator.
+
+**What:**
+
+- Audit report: `docs/AUDIT_2026-10-23.md` (19 UI, 8 functional issues; 53 content entries with current vs suggested cards).
+- New `scripts/build_catalog.py` (the catalog previously came from a one-off step that truncated English at the first `"`).
+- Fixed wrong/empty hadith English via `EN_FIX`; replaced weak Abu Dawud 1518 and ungraded Nawawi 19.
+- New `GradeBar` on hadith pages (Sahih / Hasan / Da'if / Mawdu' with grader + "scholars differ" sheet).
+- UI: Amiri fonts for Arabic, card fan layout/titles, scroll reset, report keyboard + full payload, saved name, label cleanups.
+- **Not yet applied:** the passage *replacement* suggestions in the audit (sections 5 / entries marked REPLACE/MERGE/ADD) — waiting on scholar review.
+
 ---
 
 ## 5. Current milestone status
@@ -282,7 +296,7 @@ See `docs/MILESTONES.md`.
 
 1. Read `docs/ISSUE_LOG.md` and this file.
 2. Work on `cursor/app-interactive-mockup-db55` (or branch off it with `cursor/…-db55`).
-3. After mood txt edits: regenerate catalog into `app/src/content/catalog.json` (see expand script + any catalog build step used previously).
+3. After mood edits: `python scripts/expand_mood_files.py && python scripts/build_catalog.py` (see `docs/CONTENT_AND_REPORTS.md`).
 4. Retest CardFan: swipe continuity, full pull reveal, back-from-Read not stuck.
 5. For Android tester builds: `cd app/android && ./gradlew assembleRelease` (with Android SDK), copy APK to `/opt/cursor/artifacts/HeartThreads-preview.apk`.
 6. For iOS: user uses Expo Go + `npx expo start` on Mac (section 1).
@@ -292,10 +306,10 @@ See `docs/MILESTONES.md`.
 ### Likely next features
 
 - Wire optional in-app **Search** against `hadith.db` / `quran.db` (architecture already sketched).
-- Automate `moods/**/*.txt` → `catalog.json` in CI.
+- Run `scripts/build_catalog.py` in CI.
+- Apply the reviewed content replacements from `docs/AUDIT_2026-10-23.md`.
 - GitHub Action for APK artifacts.
 - Report sync endpoint / weekly dump.
-- Fix Arabic font “tofu” on some glyphs if still seen on Read (web QA noted missing glyphs).
 
 ---
 
@@ -331,6 +345,7 @@ cd app/android && ./gradlew assembleRelease
 | `docs/ARCHITECTURE.md` | Target app architecture |
 | `docs/SETUP_AND_BUILDS.md` | Longer Mac/EAS notes |
 | `docs/ISSUE_LOG.md` | Living bugs |
+| `docs/AUDIT_2026-10-23.md` | Full UI/function/content audit + content suggestions |
 | `docs/AGENT_QA_PROTOCOL.md` | How agents must QA |
 | `docs/CONTENT_AND_REPORTS.md` | Mood txt + report reasons |
 | `app/README.md` | Expo app short readme |

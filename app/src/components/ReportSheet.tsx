@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import {
+  Keyboard,
+  KeyboardAvoidingView,
   Modal,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -9,6 +12,8 @@ import {
   View,
 } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import appJson from '../../app.json'
+import type { Passage } from '../types'
 import { colors, fonts } from '../theme'
 
 const REPORT_OPTIONS = [
@@ -25,11 +30,14 @@ const STORAGE_KEY = 'hadith.reports.v1'
 
 type Props = {
   visible: boolean
-  refTitle: string
+  passage: Passage
+  moodId: string
+  subId: string
   onClose: () => void
 }
 
-export function ReportSheet({ visible, refTitle, onClose }: Props) {
+export function ReportSheet({ visible, passage, moodId, subId, onClose }: Props) {
+  const refTitle = passage.title
   const [selected, setSelected] = useState<string[]>([])
   const [note, setNote] = useState('')
   const [sent, setSent] = useState(false)
@@ -52,9 +60,15 @@ export function ReportSheet({ visible, refTitle, onClose }: Props) {
   const submit = async () => {
     if (!selected.length) return
     const entry = {
-      at: new Date().toISOString(),
-      ref: refTitle,
-      selected,
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      createdAt: new Date().toISOString(),
+      platform: Platform.OS,
+      appVersion: appJson.expo.version,
+      passageRef: refTitle,
+      passageId: passage.id,
+      moodId,
+      subId,
+      reasons: selected,
       note: note.trim() || undefined,
     }
     try {
@@ -71,8 +85,15 @@ export function ReportSheet({ visible, refTitle, onClose }: Props) {
 
   return (
     <Modal visible={visible} animationType="fade" transparent onRequestClose={close}>
-      <View style={styles.wrap}>
-        <Pressable style={styles.backdrop} onPress={close} />
+      <KeyboardAvoidingView
+        style={styles.wrap}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      >
+        {/* First tap with the keyboard up only hides it, so a half-written report isn't lost */}
+        <Pressable
+          style={styles.backdrop}
+          onPress={() => (Keyboard.isVisible() ? Keyboard.dismiss() : close())}
+        />
         <View style={styles.panel}>
           {sent ? (
             <View style={styles.thanks}>
@@ -92,7 +113,9 @@ export function ReportSheet({ visible, refTitle, onClose }: Props) {
                       onPress={() => toggle(opt.id)}
                       style={[styles.option, on && styles.optionOn]}
                     >
-                      <Text style={styles.check}>{on ? '✓' : ''}</Text>
+                      <View style={[styles.box, on && styles.boxOn]}>
+                        <Text style={styles.check}>{on ? '✓' : ''}</Text>
+                      </View>
                       <Text style={styles.optionLabel}>{opt.label}</Text>
                     </Pressable>
                   )
@@ -106,6 +129,8 @@ export function ReportSheet({ visible, refTitle, onClose }: Props) {
                 placeholderTextColor={colors.mist}
                 value={note}
                 onChangeText={setNote}
+                submitBehavior="blurAndSubmit"
+                returnKeyType="done"
               />
               <View style={styles.actions}>
                 <Pressable onPress={close} style={styles.ghost}>
@@ -122,7 +147,7 @@ export function ReportSheet({ visible, refTitle, onClose }: Props) {
             </>
           )}
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </Modal>
   )
 }
@@ -157,7 +182,8 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
   options: {
-    maxHeight: 280,
+    flexGrow: 0,
+    flexShrink: 1,
   },
   option: {
     flexDirection: 'row',
@@ -173,11 +199,23 @@ const styles = StyleSheet.create({
     borderColor: colors.accent,
     backgroundColor: 'rgba(224,138,106,0.12)',
   },
-  check: {
+  box: {
     width: 22,
-    textAlign: 'center',
+    height: 22,
+    borderRadius: 6,
+    borderWidth: 1.5,
+    borderColor: 'rgba(36,48,68,0.3)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  boxOn: {
+    borderColor: colors.accent,
+    backgroundColor: colors.accent,
+  },
+  check: {
     fontFamily: fonts.bodyExtra,
-    color: colors.accent,
+    fontSize: 13,
+    color: colors.white,
   },
   optionLabel: {
     flex: 1,

@@ -19,7 +19,7 @@ import { colors, fonts } from '../theme'
 
 const PULL_OPEN = 120
 const PULL_MAX = 240
-const SWIPE_STEP = 90
+const SWIPE_STEP = 120
 const CARD_W = 138
 const CARD_H = 188
 const REVEAL_MS = 820
@@ -143,6 +143,11 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
     width: `${Math.min(100, (pullY.value / PULL_OPEN) * 100)}%`,
   }))
 
+  // Only visible while pulling, so it doesn't read as a second home indicator
+  const trackWrapStyle = useAnimatedStyle(() => ({
+    opacity: interpolate(pullY.value, [0, 12], [0, 1], Extrapolation.CLAMP),
+  }))
+
   const curtainStyle = useAnimatedStyle(() => {
     const r = revealing.value
     const p = Math.min(1, pullY.value / PULL_OPEN)
@@ -180,6 +185,15 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
 
   return (
     <View style={styles.stage}>
+      {isWeb ? null : (
+        <Text style={styles.hint}>
+          Swipe left or right to browse · pull{' '}
+          <Text style={styles.hintStrong}>{shortLabel(active)}</Text> down to open
+        </Text>
+      )}
+      <Animated.View style={[styles.track, trackWrapStyle]}>
+        <Animated.View style={[styles.trackFill, trackStyle as object]} />
+      </Animated.View>
       <GestureDetector gesture={pan}>
         <View style={styles.fan} collapsable={false}>
           <Animated.View pointerEvents="none" style={[styles.veil, veilStyle]} />
@@ -223,15 +237,7 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
             <Text style={styles.webBtnText}>›</Text>
           </Pressable>
         </View>
-      ) : (
-        <Text style={styles.hint}>
-          Swipe left or right to browse · pull{' '}
-          <Text style={styles.hintStrong}>{shortLabel(active)}</Text> down to open
-        </Text>
-      )}
-      <View style={styles.track}>
-        <Animated.View style={[styles.trackFill, trackStyle as object]} />
-      </View>
+      ) : null}
     </View>
   )
 }
@@ -294,9 +300,14 @@ function FanCard({
     return {
       transform: [{ translateX: x }, { translateY: y }, { rotate: `${rot}deg` }, { scale }],
       zIndex: isActive ? 20 : 10 - Math.round(Math.abs(offset)),
-      opacity: interpolate(Math.abs(offset), [0, 2.2, 4], [1, 0.8, 0.3], Extrapolation.CLAMP),
+      opacity: interpolate(Math.abs(offset), [0, 2, 3.2], [1, 0.75, 0], Extrapolation.CLAMP),
     }
   })
+
+  // Titles on cards behind the front one overlap into noise, so fade them out
+  const textStyle = useAnimatedStyle(() => ({
+    opacity: interpolate(Math.abs(index - scroll.value), [0, 0.6, 1.2], [1, 0.25, 0], Extrapolation.CLAMP),
+  }))
 
   const cueStyle = useAnimatedStyle(() => {
     const isActive = Math.abs(index - scroll.value) < 0.5
@@ -309,12 +320,13 @@ function FanCard({
   return (
     <Animated.View style={[styles.card, { backgroundColor: mood.color }, style]}>
       <View style={styles.whiteWash} />
-      <View style={styles.count}>
-        <Text style={styles.countText}>{mood.subs.length}</Text>
-      </View>
       <Animated.Text style={[styles.cue, cueStyle]}>Pull down</Animated.Text>
-      <Text style={styles.title}>{shortLabel(mood)}</Text>
-      <Text style={styles.sub}>{mood.short}</Text>
+      <Animated.View style={textStyle}>
+        <Text style={styles.title} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6}>
+          {shortLabel(mood)}
+        </Text>
+        <Text style={styles.sub}>{mood.short}</Text>
+      </Animated.View>
     </Animated.View>
   )
 }
@@ -323,9 +335,10 @@ const styles = StyleSheet.create({
   stage: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     gap: 14,
-    paddingBottom: 4,
+    // Leaves room under the fan for the card to travel during the pull
+    paddingBottom: 160,
     minHeight: 320,
   },
   fan: {
@@ -369,22 +382,6 @@ const styles = StyleSheet.create({
   whiteWash: {
     ...StyleSheet.absoluteFill,
     backgroundColor: 'rgba(255,255,255,0.42)',
-  },
-  count: {
-    position: 'absolute',
-    top: 14,
-    right: 14,
-    width: 28,
-    height: 28,
-    borderRadius: 14,
-    backgroundColor: 'rgba(255,255,255,0.75)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  countText: {
-    fontFamily: fonts.bodyExtra,
-    fontSize: 12,
-    color: colors.inkSoft,
   },
   cue: {
     position: 'absolute',

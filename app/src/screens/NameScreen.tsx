@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   KeyboardAvoidingView,
   Platform,
   Pressable,
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
-  View,
 } from 'react-native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { Ambient } from '../components/Ambient'
 import type { RootStackParamList } from '../types'
@@ -15,8 +16,35 @@ import { colors, fonts } from '../theme'
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Name'>
 
-export function NameScreen({ navigation }: Props) {
+const NAME_KEY = 'hadith.name.v1'
+
+export function NameScreen({ navigation, route }: Props) {
   const [name, setName] = useState('')
+  const [ready, setReady] = useState(false)
+  const editing = route.params?.edit === true
+
+  // Returning users go straight to their greeting; the back button on Feeling
+  // comes here with `edit` to change the saved name.
+  useEffect(() => {
+    AsyncStorage.getItem(NAME_KEY)
+      .then((saved) => {
+        if (saved && !editing) navigation.replace('Feeling', { name: saved })
+        else {
+          if (saved) setName(saved)
+          setReady(true)
+        }
+      })
+      .catch(() => setReady(true))
+  }, [editing, navigation])
+
+  const submit = () => {
+    const trimmed = name.trim()
+    if (!trimmed) return
+    AsyncStorage.setItem(NAME_KEY, trimmed).catch(() => {})
+    navigation.replace('Feeling', { name: trimmed })
+  }
+
+  if (!ready) return <KeyboardAvoidingView style={styles.root} />
 
   return (
     <KeyboardAvoidingView
@@ -24,7 +52,7 @@ export function NameScreen({ navigation }: Props) {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <Ambient />
-      <View style={styles.inner}>
+      <ScrollView contentContainerStyle={styles.inner} keyboardShouldPersistTaps="handled">
         <Text style={styles.eyebrow}>Welcome</Text>
         <Text style={styles.title}>What should we call you?</Text>
         <Text style={styles.lede}>A quiet space for the heart.</Text>
@@ -34,21 +62,19 @@ export function NameScreen({ navigation }: Props) {
           value={name}
           onChangeText={setName}
           autoFocus
-          placeholder="Asif"
+          placeholder="Type your name"
           placeholderTextColor={colors.mist}
           returnKeyType="done"
-          onSubmitEditing={() => {
-            if (name.trim()) navigation.replace('Feeling', { name: name.trim() })
-          }}
+          onSubmitEditing={submit}
         />
         <Pressable
           style={[styles.btn, !name.trim() && { opacity: 0.4 }]}
           disabled={!name.trim()}
-          onPress={() => navigation.replace('Feeling', { name: name.trim() })}
+          onPress={submit}
         >
           <Text style={styles.btnText}>Continue</Text>
         </Pressable>
-      </View>
+      </ScrollView>
     </KeyboardAvoidingView>
   )
 }
@@ -59,7 +85,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.cream,
   },
   inner: {
-    flex: 1,
+    flexGrow: 1,
     paddingHorizontal: 24,
     paddingTop: 72,
     gap: 10,

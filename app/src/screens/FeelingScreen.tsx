@@ -28,7 +28,7 @@ export function FeelingScreen({ navigation, route }: Props) {
     <View style={[styles.root, { paddingTop: insets.top + 8 }]}>
       <Ambient />
       <View style={styles.top}>
-        <BackButton onPress={() => navigation.replace('Name')} />
+        <BackButton onPress={() => navigation.replace('Name', { edit: true })} />
       </View>
       <Text style={styles.eyebrow}>Salaam</Text>
       <Text style={styles.title}>Assalamoalikum {route.params.name}</Text>

@@ -12,6 +12,10 @@ export const colors = {
   white: '#ffffff',
   quran: '#6aa7c4',
   hadith: '#e08a6a',
+  gradeSahih: '#2f9461',
+  gradeHasan: '#7cb85a',
+  gradeDaif: '#d99a2b',
+  gradeMawdu: '#d0473f',
 } as const
 
 export const fonts = {
@@ -20,4 +24,6 @@ export const fonts = {
   body: 'Nunito_600SemiBold',
   bodyBold: 'Nunito_700Bold',
   bodyExtra: 'Nunito_800ExtraBold',
+  quran: 'AmiriQuran_400Regular',
+  arabic: 'Amiri_400Regular',
 } as const

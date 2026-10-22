@@ -18,7 +18,7 @@ export function SubsScreen({ navigation, route }: Props) {
       <Ambient />
       <View style={styles.top}>
         <BackButton onPress={() => navigation.goBack()} />
-        <Text style={styles.eyebrow}>{mood.label}</Text>
+        <Text style={styles.eyebrow}>How you feel</Text>
       </View>
       <Text style={styles.title}>{mood.label}</Text>
       <Text style={styles.lede}>Choose what fits most closely.</Text>
@@ -26,7 +26,7 @@ export function SubsScreen({ navigation, route }: Props) {
         {mood.subs.map((sub) => (
           <Pressable
             key={sub.id}
-            style={styles.row}
+            style={({ pressed }) => [styles.row, pressed && styles.pressed]}
             onPress={() =>
               navigation.navigate('Threads', {
                 name: route.params.name,
@@ -38,7 +38,9 @@ export function SubsScreen({ navigation, route }: Props) {
             <View style={[styles.dot, { backgroundColor: mood.color }]} />
             <View style={styles.copy}>
               <Text style={styles.rowTitle}>{sub.label}</Text>
-              <Text style={styles.rowMeta}>{sub.items.length} threads</Text>
+              <Text style={styles.rowMeta}>
+                {sub.items.length} {sub.items.length === 1 ? 'passage' : 'passages'}
+              </Text>
             </View>
             <Text style={styles.chev}>›</Text>
           </Pressable>
@@ -90,6 +92,9 @@ const styles = StyleSheet.create({
     padding: 14,
     borderRadius: 18,
     backgroundColor: 'rgba(255,255,255,0.78)',
+  },
+  pressed: {
+    opacity: 0.6,
   },
   dot: {
     width: 12,

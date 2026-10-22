@@ -3,7 +3,7 @@
 Living list. Status: `open` | `fixed-pending-device` | `verified-device` | `wontfix`.
 
 Last agent test surface: Expo web + Vite mockup (cloud browser).  
-Last updated: 2026-10-22 (Asia/Karachi).
+Last updated: 2026-10-23 (Asia/Karachi). Agent test surface for this round: Expo Go on iOS Simulator (iPhone 17 Pro Max, iOS 27). Full audit: `docs/AUDIT_2026-10-23.md`.
 
 ---
 
@@ -21,6 +21,16 @@ Last updated: 2026-10-22 (Asia/Karachi).
 | I-008 | User both platforms | After Read→back→back, stuck on giant card, gestures dead | fixed-pending-device | Remount fan on focus + reset shared values |
 | I-009 | User request | Android APK for testers | fixed-pending-device | `HeartThreads-preview.apk` artifact (~90MB); device install pending |
 | I-010 | Agent web QA | CardFan Pan gestures ignore mouse on Expo web — blocked smoke | verified-agent | Web Prev/Next/Open; Playwright hard-refresh smoke **PASS** (steps 1–9); see `qa-web-retest-*.png` |
+| I-011 | Agent audit | 33 Quran cards showed English cut off at the first `"` (e.g. 39:53 showed only `Say,`) | fixed-pending-device | New `scripts/build_catalog.py`; 0 truncated cards. Sim: 2:156 full text |
+| I-012 | Agent audit | Hadith English showed the wrong sentence (Bukhari 1283/1303/2908, Muslim 923a/2307a, Tirmidhi 2517) or only a narrator line (Ibn Majah 3818, Nasa'i 5453) | fixed-pending-device | `EN_FIX` overrides in `expand_mood_files.py`. Sim: Bukhari 1283, Nasa'i 5453 |
+| I-013 | Agent audit | Weak (da'if) hadith Abu Dawud 1518 used ×3; Nawawi 19 ungraded ×3 | fixed-pending-device | Replaced with Tirmidhi 3524 / 3505 / Ibn Hibban 972; Nawawi 19 → Tirmidhi 2516. Build now fails on any non-sahih/hasan hadith |
+| I-014 | Agent audit | Arabic words broken across lines (stray space after tanween, ~40 cards); Arabic used Latin font | fixed-pending-device | Build strips the space; Amiri Quran (ayahs) + Amiri (hadith) |
+| I-015 | Agent audit | Mood names wrapped mid-word ("Overwhe/lmed"); text bleed on back cards; fan pinned to bottom, pull ran off-screen; unlabeled count badges | fixed-pending-device | `CardFan.tsx` — sim screenshots |
+| I-016 | Agent audit | Read: Next/Previous kept old scroll position | fixed-pending-device | `scrollTo(0)` on index change — sim verified |
+| I-017 | Agent audit | Report: keyboard hid note + Submit; backdrop tap discarded report; reports lacked passageId/mood/sub/platform/version | fixed-pending-device | KeyboardAvoidingView, first backdrop tap only dismisses keyboard, full payload — sim verified in AsyncStorage |
+| I-018 | Agent audit | Name not saved; needed double-tap on Continue with keyboard up | fixed-pending-device | AsyncStorage `hadith.name.v1`; relaunch skips Name — sim verified |
+| I-019 | User request | Authenticity bar on hadith pages | fixed-pending-device | `GradeBar.tsx`: Sahih full green, Hasan ¾ light green, Da'if amber, Mawdu' red; tap for graders + "scholars differ" |
+| I-020 | Agent audit | `expo lint` reports 22 React Compiler errors in `CardFan.tsx` (Reanimated `.value` writes) | open | Pre-existing pattern; needs `useSharedValue` refactor or rule override |
 
 ## Suggestions (from user / agent)
 

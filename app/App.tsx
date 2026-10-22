@@ -11,6 +11,8 @@ import {
   Nunito_700Bold,
   Nunito_800ExtraBold,
 } from '@expo-google-fonts/nunito'
+import { Amiri_400Regular } from '@expo-google-fonts/amiri'
+import { AmiriQuran_400Regular } from '@expo-google-fonts/amiri-quran'
 import * as SplashScreen from 'expo-splash-screen'
 import { NameScreen } from './src/screens/NameScreen'
 import { FeelingScreen } from './src/screens/FeelingScreen'
@@ -31,6 +33,8 @@ export default function App() {
     Nunito_600SemiBold,
     Nunito_700Bold,
     Nunito_800ExtraBold,
+    Amiri_400Regular,
+    AmiriQuran_400Regular,
   })
 
   const onLayout = useCallback(() => {

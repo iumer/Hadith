@@ -6,6 +6,34 @@
 - Each file is a sequence of passage cards separated by `────` rules.
 - Fields we parse: title/reference, Arabic, English, Meaning, Reflection.
 
+### Rebuilding the app catalog
+
+```bash
+python -m hadith setup                 # once: builds data/build/hadith.db
+python scripts/expand_mood_files.py    # moods/_meta/file_refs.json → moods/*/*.txt
+python scripts/build_catalog.py        # moods/*/*.txt → app/src/content/catalog.json
+```
+
+- To change which passages appear, edit `moods/_meta/file_refs.json` (and add
+  Meaning/Reflection for new refs in `moods/_meta/explanations.json`).
+- If the automatic quote extraction picks the wrong sentence for a hadith, pin the
+  Prophet's ﷺ words in `EN_FIX` / `AR_FIX` in `scripts/expand_mood_files.py`.
+- `build_catalog.py` attaches each hadith's grade from `hadith.db` and **fails the build**
+  if any hadith is not sahih or hasan, or if any card has empty Arabic or English.
+
+### Authenticity (hadith only)
+
+| Grade | Label | Bar |
+|---|---|---|
+| Sahih | Authentic | Full, green |
+| Hasan | Good | ¾, light green |
+| Da'if | Weak | ⅓, amber (not shipped) |
+| Mawdu' | Fabricated | red (not shipped) |
+
+Bukhari and Muslim are shown as "In Sahih al-Bukhari / Sahih Muslim". Other collections
+credit the grader (usually al-Albani). When graders disagree the bar says "scholars differ"
+and the info sheet lists each grader's verdict. The Quran is not graded.
+
 ### Threads screen rule
 
 Show **only**:
@@ -37,6 +65,9 @@ Users may multi-select:
 7. Something else  
 
 Optional free-text note.
+
+Each report is stored in AsyncStorage (`hadith.reports.v1`) as
+`{id, createdAt, platform, appVersion, passageRef, passageId, moodId, subId, reasons, note?}`.
 
 Reports are used internally to fix catalog/copy; they are not public comments.
 
