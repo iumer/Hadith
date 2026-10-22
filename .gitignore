@@ -1,0 +1,13 @@
+data/raw/
+data/build/
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+app/node_modules/
+mockup/node_modules/
+mockup/dist/
+.expo/
+app/.expo/
+*.log
+.DS_Store
