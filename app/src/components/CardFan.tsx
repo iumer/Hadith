@@ -1,9 +1,11 @@
-import { useEffect } from 'react'
+import { useCallback } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { useFocusEffect } from '@react-navigation/native'
 import { Gesture, GestureDetector } from 'react-native-gesture-handler'
 import Animated, {
   Extrapolation,
   SharedValue,
+  cancelAnimation,
   interpolate,
   runOnJS,
   useAnimatedStyle,
@@ -15,9 +17,12 @@ import type { Mood } from '../types'
 import { shortLabel } from '../content'
 import { colors, fonts } from '../theme'
 
-const PULL_OPEN = 110
+const PULL_OPEN = 120
+const PULL_MAX = 240
+const SWIPE_STEP = 90
 const CARD_W = 138
 const CARD_H = 188
+const REVEAL_MS = 820
 
 type Props = {
   moods: Mood[]
@@ -29,66 +34,99 @@ type Props = {
 export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
   const pullY = useSharedValue(0)
   const revealing = useSharedValue(0)
-  const focusSV = useSharedValue(focus)
-  const startFocus = useSharedValue(focus)
+  /** Continuous fan position (card index as float) — drives live L/R motion */
+  const scroll = useSharedValue(focus)
+  const scrollAtStart = useSharedValue(focus)
   const axis = useSharedValue<'none' | 'x' | 'y'>('none')
+  const busy = useSharedValue(0)
+  const hintIndex = useSharedValue(focus)
 
-  useEffect(() => {
-    focusSV.value = focus
-  }, [focus, focusSV])
-
-  const openMood = (index: number) => {
-    onOpen(moods[index])
-  }
-
-  const setFocusJS = (i: number) => {
+  const openMood = (index: number) => onOpen(moods[index])
+  const setHintJS = (i: number) => {
+    hintIndex.value = i
     setFocus(i)
   }
 
-  const finishReveal = (index: number) => {
-    setTimeout(() => openMood(index), 560)
-  }
+  const resetFan = useCallback(() => {
+    cancelAnimation(pullY)
+    cancelAnimation(revealing)
+    cancelAnimation(scroll)
+    pullY.value = 0
+    revealing.value = 0
+    busy.value = 0
+    axis.value = 'none'
+    scroll.value = focus
+    scrollAtStart.value = focus
+    hintIndex.value = focus
+  }, [focus, pullY, revealing, scroll, scrollAtStart, busy, axis, hintIndex])
+
+  useFocusEffect(
+    useCallback(() => {
+      resetFan()
+      return () => {
+        cancelAnimation(pullY)
+        cancelAnimation(revealing)
+        cancelAnimation(scroll)
+      }
+    }, [resetFan, pullY, revealing, scroll]),
+  )
 
   const pan = Gesture.Pan()
+    .activeOffsetX([-10, 10])
+    .activeOffsetY([-10, 10])
     .onBegin(() => {
-      if (revealing.value > 0.5) return
-      startFocus.value = focusSV.value
+      if (busy.value > 0.5 || revealing.value > 0.05) return
+      cancelAnimation(scroll)
+      scrollAtStart.value = scroll.value
       axis.value = 'none'
       pullY.value = 0
     })
     .onUpdate((e) => {
-      if (revealing.value > 0.5) return
+      if (busy.value > 0.5 || revealing.value > 0.05) return
       const absX = Math.abs(e.translationX)
       const absY = Math.abs(e.translationY)
 
       if (axis.value === 'none') {
-        if (absX < 8 && absY < 8) return
+        if (absX < 10 && absY < 10) return
         axis.value = absY > absX ? 'y' : 'x'
       }
 
       if (axis.value === 'x') {
         pullY.value = 0
-        const steps = Math.round(-e.translationX / 72)
-        const next = Math.max(0, Math.min(moods.length - 1, startFocus.value + steps))
-        if (next !== focusSV.value) {
-          focusSV.value = next
-          runOnJS(setFocusJS)(next)
-        }
+        const next = scrollAtStart.value - e.translationX / SWIPE_STEP
+        scroll.value = Math.max(0, Math.min(moods.length - 1, next))
         return
       }
 
-      pullY.value = Math.max(0, Math.min(160, e.translationY))
+      pullY.value = Math.max(0, Math.min(PULL_MAX, e.translationY))
     })
     .onEnd(() => {
-      if (revealing.value > 0.5) return
+      if (busy.value > 0.5 || revealing.value > 0.05) return
       const wasY = axis.value === 'y'
+      const wasX = axis.value === 'x'
       axis.value = 'none'
-      if (wasY && pullY.value >= PULL_OPEN) {
-        revealing.value = withTiming(1, { duration: 520 })
-        pullY.value = withTiming(180, { duration: 200 })
-        runOnJS(finishReveal)(focusSV.value)
+
+      if (wasX) {
+        const next = Math.max(0, Math.min(moods.length - 1, Math.round(scroll.value)))
+        scroll.value = withSpring(next, { damping: 20, stiffness: 260 })
+        runOnJS(setHintJS)(next)
         return
       }
+
+      if (wasY && pullY.value >= PULL_OPEN) {
+        busy.value = 1
+        const idx = Math.max(0, Math.min(moods.length - 1, Math.round(scroll.value)))
+        // 1) Finish the downward pull all the way
+        pullY.value = withTiming(PULL_MAX, { duration: 280 }, (ok) => {
+          if (!ok) return
+          // 2) Expand / curtain fully, then navigate — no mid-cut
+          revealing.value = withTiming(1, { duration: REVEAL_MS }, (done) => {
+            if (done) runOnJS(openMood)(idx)
+          })
+        })
+        return
+      }
+
       pullY.value = withSpring(0, { damping: 18, stiffness: 220 })
     })
 
@@ -96,8 +134,8 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
     const p = Math.min(1, pullY.value / PULL_OPEN)
     const r = revealing.value
     return {
-      opacity: 0.15 + p * 0.55 + r * 0.25,
-      transform: [{ translateY: (1 - p) * 40 }, { scaleY: 0.4 + p * 0.8 + r * 0.35 }],
+      opacity: 0.12 + p * 0.5 + r * 0.35,
+      transform: [{ translateY: (1 - p) * 36 }, { scaleY: 0.35 + p * 0.85 + r * 0.4 }],
     }
   })
 
@@ -105,14 +143,19 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
     width: `${Math.min(100, (pullY.value / PULL_OPEN) * 100)}%`,
   }))
 
-  const curtainStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(revealing.value, [0, 0.15, 1], [0, 0.55, 1], Extrapolation.CLAMP),
-    transform: [
-      { scale: interpolate(revealing.value, [0, 1], [0.55, 1.2], Extrapolation.CLAMP) },
-    ],
-  }))
+  const curtainStyle = useAnimatedStyle(() => {
+    const r = revealing.value
+    const p = Math.min(1, pullY.value / PULL_OPEN)
+    return {
+      opacity: interpolate(r, [0, 0.25, 1], [0, 0.5, 1], Extrapolation.CLAMP),
+      transform: [
+        { translateY: interpolate(r, [0, 1], [48, 0], Extrapolation.CLAMP) },
+        { scale: interpolate(r, [0, 1], [0.5 + p * 0.12, 1.4], Extrapolation.CLAMP) },
+      ],
+    }
+  })
 
-  const active = moods[focus]
+  const active = moods[Math.max(0, Math.min(moods.length - 1, focus))]
 
   return (
     <View style={styles.stage}>
@@ -129,8 +172,7 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
               key={mood.id}
               mood={mood}
               index={i}
-              count={moods.length}
-              focusSV={focusSV}
+              scroll={scroll}
               pullY={pullY}
               revealing={revealing}
             />
@@ -152,33 +194,30 @@ export function CardFan({ moods, focus, setFocus, onOpen }: Props) {
 function FanCard({
   mood,
   index,
-  count,
-  focusSV,
+  scroll,
   pullY,
   revealing,
 }: {
   mood: Mood
   index: number
-  count: number
-  focusSV: SharedValue<number>
+  scroll: SharedValue<number>
   pullY: SharedValue<number>
   revealing: SharedValue<number>
 }) {
   const style = useAnimatedStyle(() => {
-    const mid = (count - 1) / 2
-    const spread = index - mid
-    const isActive = index === Math.round(focusSV.value)
-    const baseY = isActive ? -40 : Math.abs(spread) * 7
+    const offset = index - scroll.value
     const p = Math.min(1, pullY.value / PULL_OPEN)
     const r = revealing.value
+    const isActive = Math.abs(offset) < 0.5
 
     if (r > 0 && isActive) {
+      const fromY = -40 + pullY.value
       return {
         transform: [
           { translateX: 0 },
-          { translateY: interpolate(r, [0, 1], [baseY + pullY.value, -28]) },
+          { translateY: interpolate(r, [0, 1], [fromY, -52]) },
           { rotate: `${interpolate(r, [0, 1], [p * 2, 0])}deg` },
-          { scale: interpolate(r, [0, 1], [1.14 + p * 0.08, 2.25]) },
+          { scale: interpolate(r, [0, 1], [1.12 + p * 0.14, 2.6]) },
         ],
         zIndex: 40,
         opacity: 1,
@@ -188,33 +227,37 @@ function FanCard({
     if (r > 0) {
       return {
         transform: [
-          { translateX: interpolate(r, [0, 1], [spread * 26, spread * 42]) },
-          { translateY: interpolate(r, [0, 1], [baseY, baseY + 28]) },
-          { rotate: `${interpolate(r, [0, 1], [spread * 8, spread * 12])}deg` },
-          { scale: interpolate(r, [0, 1], [0.9, 0.7]) },
+          { translateX: interpolate(r, [0, 1], [offset * 30, offset * 58]) },
+          {
+            translateY: interpolate(r, [0, 1], [Math.abs(offset) * 8, 40 + Math.abs(offset) * 12]),
+          },
+          { rotate: `${interpolate(r, [0, 1], [offset * 9, offset * 18])}deg` },
+          { scale: interpolate(r, [0, 1], [0.9, 0.58]) },
         ],
-        zIndex: 10 - Math.abs(spread),
-        opacity: interpolate(r, [0, 1], [1, 0]),
+        zIndex: 10 - Math.round(Math.abs(offset)),
+        opacity: interpolate(r, [0, 0.8, 1], [1, 0.15, 0]),
       }
     }
 
+    const x = offset * 30
+    const y = isActive ? -40 + pullY.value : Math.abs(offset) * 8
+    const rot = isActive ? p * 2.5 : offset * 9
+    const scale = isActive
+      ? 1.14 + p * 0.12
+      : interpolate(Math.abs(offset), [0, 1, 2.5], [1.14, 0.9, 0.82], Extrapolation.CLAMP)
+
     return {
-      transform: [
-        { translateX: isActive ? 0 : spread * 26 },
-        { translateY: isActive ? baseY + pullY.value : baseY },
-        { rotate: `${isActive ? p * 2 : spread * 8}deg` },
-        { scale: isActive ? 1.14 + p * 0.08 : 0.9 },
-      ],
-      zIndex: isActive ? 20 : 10 - Math.abs(spread),
-      opacity: 1,
+      transform: [{ translateX: x }, { translateY: y }, { rotate: `${rot}deg` }, { scale }],
+      zIndex: isActive ? 20 : 10 - Math.round(Math.abs(offset)),
+      opacity: interpolate(Math.abs(offset), [0, 2.2, 4], [1, 0.8, 0.3], Extrapolation.CLAMP),
     }
   })
 
   const cueStyle = useAnimatedStyle(() => {
-    const isActive = index === Math.round(focusSV.value)
+    const isActive = Math.abs(index - scroll.value) < 0.5
     const p = Math.min(1, pullY.value / PULL_OPEN)
     return {
-      opacity: isActive && revealing.value < 0.2 ? 0.35 + p * 0.65 : 0,
+      opacity: isActive && revealing.value < 0.12 ? 0.35 + p * 0.65 : 0,
     }
   })
 
@@ -242,7 +285,7 @@ const styles = StyleSheet.create({
   },
   fan: {
     width: '100%',
-    height: 290,
+    height: 300,
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { useMemo, useRef, useState, type PointerEvent as RPE } from 'react'
+import { useEffect, useMemo, useRef, useState, type PointerEvent as RPE } from 'react'
 import { MOODS, type Mood, type RefItem, type SubMood } from './data/moods'
 import { MOOD_COLORS, shortLabel } from './concepts/shared'
 
@@ -54,26 +54,39 @@ function MoodFan({
   setFocus: (i: number) => void
   onOpen: (mood: Mood) => void
 }) {
-  const active = moods[focus]
   const [pullY, setPullY] = useState(0)
   const [revealing, setRevealing] = useState(false)
+  const [scroll, setScroll] = useState(focus)
   const pullYRef = useRef(0)
+  const scrollRef = useRef(focus)
   const drag = useRef<{
     x: number
     y: number
-    focus: number
+    scroll: number
     axis: 'x' | 'y' | null
   } | null>(null)
-  const PULL_OPEN = 110
+  useEffect(() => {
+    setScrollLive(focus)
+  }, [focus])
+
+  const PULL_OPEN = 120
+  const PULL_MAX = 240
+  const SWIPE_STEP = 90
 
   const setPull = (y: number) => {
     pullYRef.current = y
     setPullY(y)
   }
 
+  const setScrollLive = (v: number) => {
+    const clamped = Math.max(0, Math.min(moods.length - 1, v))
+    scrollRef.current = clamped
+    setScroll(clamped)
+  }
+
   const onPointerDown = (e: RPE) => {
     if (revealing) return
-    drag.current = { x: e.clientX, y: e.clientY, focus, axis: null }
+    drag.current = { x: e.clientX, y: e.clientY, scroll: scrollRef.current, axis: null }
     ;(e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId)
   }
 
@@ -89,19 +102,18 @@ function MoodFan({
 
     if (drag.current.axis === 'x') {
       setPull(0)
-      const steps = Math.round(-dx / 72)
-      const next = Math.max(0, Math.min(moods.length - 1, drag.current.focus + steps))
-      if (next !== focus) setFocus(next)
+      setScrollLive(drag.current.scroll - dx / SWIPE_STEP)
       return
     }
 
-    setPull(Math.max(0, Math.min(160, dy)))
+    setPull(Math.max(0, Math.min(PULL_MAX, dy)))
   }
 
   const finishOpen = (mood: Mood) => {
     setRevealing(true)
-    setPull(180)
-    window.setTimeout(() => onOpen(mood), 640)
+    setPull(PULL_MAX)
+    // Let pull + expand finish before page change
+    window.setTimeout(() => onOpen(mood), 900)
   }
 
   const onPointerUp = () => {
@@ -113,14 +125,22 @@ function MoodFan({
     const y = pullYRef.current
     drag.current = null
 
+    if (axis === 'x') {
+      const next = Math.round(scrollRef.current)
+      setScrollLive(next)
+      setFocus(next)
+      return
+    }
+
     if (axis === 'y' && y >= PULL_OPEN) {
-      finishOpen(moods[focus])
+      finishOpen(moods[Math.round(scrollRef.current)])
       return
     }
     setPull(0)
   }
 
   const pullProgress = Math.min(1, pullY / PULL_OPEN)
+  const active = moods[Math.max(0, Math.min(moods.length - 1, Math.round(scroll)))]
 
   return (
     <div className="card-stage calm-fan">
@@ -142,10 +162,9 @@ function MoodFan({
         />
 
         {moods.map((mood, i) => {
-          const mid = (moods.length - 1) / 2
-          const spread = i - mid
-          const isActive = i === focus
-          const baseY = isActive ? -40 : Math.abs(spread) * 7
+          const offset = i - scroll
+          const isActive = Math.abs(offset) < 0.5
+          const baseY = isActive ? -40 + pullY : Math.abs(offset) * 8
           return (
             <motion.div
               key={mood.id}
@@ -155,35 +174,35 @@ function MoodFan({
                 revealing && isActive
                   ? {
                       x: 0,
-                      y: -28,
+                      y: -52,
                       rotate: 0,
-                      scale: 2.35,
+                      scale: 2.55,
                       zIndex: 40,
                       opacity: 1,
                       borderRadius: 36,
                     }
                   : revealing
                     ? {
-                        x: spread * 40,
-                        y: baseY + 28,
-                        rotate: spread * 12,
-                        scale: 0.72,
-                        zIndex: 10 - Math.abs(spread),
+                        x: offset * 56,
+                        y: 40 + Math.abs(offset) * 12,
+                        rotate: offset * 16,
+                        scale: 0.62,
+                        zIndex: 10 - Math.round(Math.abs(offset)),
                         opacity: 0,
                       }
                     : {
-                        x: isActive ? 0 : spread * 26,
-                        y: isActive ? baseY + pullY : baseY,
-                        rotate: isActive ? pullProgress * 2 : spread * 8,
-                        scale: isActive ? 1.14 + pullProgress * 0.08 : 0.9,
-                        zIndex: isActive ? 20 : 10 - Math.abs(spread),
+                        x: offset * 30,
+                        y: baseY,
+                        rotate: isActive ? pullProgress * 2.5 : offset * 9,
+                        scale: isActive ? 1.14 + pullProgress * 0.12 : 0.9,
+                        zIndex: isActive ? 20 : 10 - Math.round(Math.abs(offset)),
                         opacity: 1,
                       }
               }
               transition={
                 revealing
-                  ? { duration: 0.58, ease: [0.22, 1, 0.36, 1] }
-                  : drag.current?.axis === 'y' && isActive
+                  ? { duration: 0.82, ease: [0.22, 1, 0.36, 1] }
+                  : drag.current?.axis === 'x' || (drag.current?.axis === 'y' && isActive)
                     ? { type: 'tween', duration: 0 }
                     : { type: 'spring', stiffness: 300, damping: 22 }
               }
@@ -208,7 +227,7 @@ function MoodFan({
                 className="reveal-curtain"
                 initial={{ clipPath: 'inset(100% 18% 0 18% round 28px)', opacity: 0.35 }}
                 animate={{ clipPath: 'inset(0% 0% 0% 0% round 0px)', opacity: 1 }}
-                transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.82, ease: [0.22, 1, 0.36, 1] }}
                 style={{ background: `linear-gradient(165deg, #fff 8%, ${MOOD_COLORS[active.id]})` }}
               />
               <motion.div

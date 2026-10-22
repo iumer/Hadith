@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import type { NativeStackScreenProps } from '@react-navigation/native-stack'
+import { useFocusEffect } from '@react-navigation/native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Ambient } from '../components/Ambient'
 import { BackButton } from '../components/BackButton'
@@ -14,6 +15,14 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Feeling'>
 export function FeelingScreen({ navigation, route }: Props) {
   const insets = useSafeAreaInsets()
   const [focus, setFocus] = useState(2)
+  const [fanEpoch, setFanEpoch] = useState(0)
+
+  // Fresh fan instance when coming back from Subs (kills stuck reveal card)
+  useFocusEffect(
+    useCallback(() => {
+      setFanEpoch((n) => n + 1)
+    }, []),
+  )
 
   return (
     <View style={[styles.root, { paddingTop: insets.top + 8 }]}>
@@ -25,6 +34,7 @@ export function FeelingScreen({ navigation, route }: Props) {
       <Text style={styles.title}>Assalamoalikum {route.params.name}</Text>
       <Text style={styles.lede}>How are you feeling today?</Text>
       <CardFan
+        key={fanEpoch}
         moods={catalog.moods}
         focus={focus}
         setFocus={setFocus}
