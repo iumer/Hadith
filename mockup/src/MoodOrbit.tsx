@@ -8,6 +8,18 @@ type Props = {
 
 const TAU = Math.PI * 2
 
+/** Happy candy palette — vivid but soft */
+const MOOD_COLORS: Record<string, { fill: string; glow: string }> = {
+  happy: { fill: '#FFE566', glow: '#FFD000' },
+  confident: { fill: '#7DFFB3', glow: '#3DFF95' },
+  sad: { fill: '#7EC8FF', glow: '#4AAFFF' },
+  overwhelmed: { fill: '#C4B5FD', glow: '#A78BFA' },
+  anxious: { fill: '#FFB347', glow: '#FF9F1C' },
+  angry: { fill: '#FF7A8A', glow: '#FF4D6D' },
+  'shame-guilt': { fill: '#FFB4A2', glow: '#FF8FA3' },
+  confused: { fill: '#80E5FF', glow: '#22D3EE' },
+}
+
 function normAngle(a: number) {
   let x = a % TAU
   if (x < 0) x += TAU
@@ -26,10 +38,10 @@ export function MoodOrbit({ moods, onSelect }: Props) {
   const cx = size / 2
   const cy = size / 2
   const radius = 118
-  const nodeR = 38
+  const nodeR = 40
 
-  const angleRef = useRef(-Math.PI / 2) // start with first mood near top
-  const velRef = useRef(0.008)
+  const angleRef = useRef(-Math.PI / 2)
+  const velRef = useRef(0.01)
   const draggingRef = useRef(false)
   const lastPtrRef = useRef<{ angle: number; t: number } | null>(null)
   const movedRef = useRef(0)
@@ -40,6 +52,7 @@ export function MoodOrbit({ moods, onSelect }: Props) {
   const [, setTick] = useState(0)
   const [activeIndex, setActiveIndex] = useState(0)
   const [holding, setHolding] = useState(false)
+  const [burst, setBurst] = useState(0)
 
   useEffect(() => {
     let alive = true
@@ -49,18 +62,17 @@ export function MoodOrbit({ moods, onSelect }: Props) {
       if (!alive) return
       const dt = Math.min(0.032, (now - last) / 1000)
       last = now
-
       const paused = now < pauseUntilRef.current
 
       if (!draggingRef.current) {
         if (paused) {
-          velRef.current *= 0.9
+          velRef.current *= 0.88
         } else {
-          const cruise = holdBoostRef.current ? 0.07 : 0.0075
-          velRef.current += (cruise - velRef.current) * (holdBoostRef.current ? 0.1 : 0.025)
-          velRef.current *= holdBoostRef.current ? 0.995 : 0.994
-          if (Math.abs(velRef.current) < 0.003 && !holdBoostRef.current) {
-            velRef.current = 0.0075
+          const cruise = holdBoostRef.current ? 0.08 : 0.01
+          velRef.current += (cruise - velRef.current) * (holdBoostRef.current ? 0.12 : 0.03)
+          velRef.current *= holdBoostRef.current ? 0.994 : 0.993
+          if (Math.abs(velRef.current) < 0.004 && !holdBoostRef.current) {
+            velRef.current = 0.01
           }
         }
       }
@@ -143,21 +155,21 @@ export function MoodOrbit({ moods, onSelect }: Props) {
     setHolding(false)
     velRef.current = Math.max(-0.18, Math.min(0.18, velRef.current))
     lastPtrRef.current = null
-
-    // Pause spin so the user can aim a second tap if needed
     pauseUntilRef.current = performance.now() + (wasTap ? 1600 : 900)
 
     if (wasTap) {
       const { index, distance } = nearestMoodIndex(e.clientX, e.clientY)
-      // Only select if the tap was aimed near a mood node (not the empty center)
       if (distance < 0.55) {
+        setBurst((b) => b + 1)
         onSelect(moods[index])
         setActiveIndex(index)
       }
     }
   }
 
-  const ringPulse = 0.5 + 0.5 * Math.sin(performance.now() / 900)
+  const t = performance.now()
+  const pulse = 0.5 + 0.5 * Math.sin(t / 700)
+  const ringSpin = (t / 40) % 360
 
   return (
     <div className="orbit-wrap" aria-label="Mood circle. Drag to spin, tap a mood.">
@@ -173,99 +185,157 @@ export function MoodOrbit({ moods, onSelect }: Props) {
       >
         <defs>
           <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="rgba(212,180,131,0.35)" />
-            <stop offset="55%" stopColor="rgba(126,168,148,0.12)" />
-            <stop offset="100%" stopColor="rgba(0,0,0,0)" />
+            <stop offset="0%" stopColor="rgba(255,229,102,0.55)" />
+            <stop offset="40%" stopColor="rgba(255,180,162,0.28)" />
+            <stop offset="100%" stopColor="rgba(126,200,255,0)" />
           </radialGradient>
-          <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
-            <feGaussianBlur stdDeviation="3.5" result="b" />
+          <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="4" result="b" />
             <feMerge>
               <feMergeNode in="b" />
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
+          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#FF7A8A" />
+            <stop offset="40%" stopColor="#FFE566" />
+            <stop offset="70%" stopColor="#7DFFB3" />
+            <stop offset="100%" stopColor="#7EC8FF" />
+          </linearGradient>
         </defs>
 
-        <circle cx={cx} cy={cy} r={radius + 28} fill="url(#coreGlow)" />
+        <circle cx={cx} cy={cy} r={radius + 36} fill="url(#coreGlow)" />
+
+        {/* Outer rainbow dash ring — slow anime spin */}
+        <g transform={`rotate(${ringSpin * 0.15} ${cx} ${cy})`}>
+          <circle
+            cx={cx}
+            cy={cy}
+            r={radius + 8}
+            fill="none"
+            stroke="url(#ringGrad)"
+            strokeWidth="3"
+            strokeDasharray="10 14"
+            opacity={0.55 + pulse * 0.25}
+          />
+        </g>
 
         <circle
           cx={cx}
           cy={cy}
           r={radius}
           fill="none"
-          stroke={`rgba(212,180,131,${0.18 + ringPulse * 0.12})`}
-          strokeWidth="1.25"
-          strokeDasharray="4 10"
+          stroke={`rgba(255,255,255,${0.35 + pulse * 0.25})`}
+          strokeWidth="2"
         />
+
+        {/* Orbit sparkles */}
+        {Array.from({ length: 10 }).map((_, i) => {
+          const a = angleRef.current * 1.3 + (i / 10) * TAU
+          const rr = radius - 28 + (i % 3) * 10
+          return (
+            <circle
+              key={i}
+              cx={cx + Math.cos(a) * rr}
+              cy={cy + Math.sin(a) * rr}
+              r={1.6 + (i % 3)}
+              fill="#fff"
+              opacity={0.35 + 0.45 * ((Math.sin(t / 300 + i) + 1) / 2)}
+            />
+          )
+        })}
+
+        {/* Center seal */}
         <circle
           cx={cx}
           cy={cy}
-          r={radius - 42}
-          fill="none"
-          stroke="rgba(232,236,228,0.08)"
-          strokeWidth="1"
+          r={38}
+          fill="#fff"
+          stroke="url(#ringGrad)"
+          strokeWidth="3"
+          filter="url(#softGlow)"
         />
-
-        <circle cx={cx} cy={cy} r={34} fill="rgba(11,18,16,0.85)" stroke="rgba(212,180,131,0.4)" strokeWidth="1" />
         <text
           x={cx}
-          y={cy - 4}
+          y={cy - 2}
           textAnchor="middle"
-          fill="#d4b483"
-          fontFamily="Cormorant Garamond, Georgia, serif"
-          fontSize="13"
-          letterSpacing="2"
+          fill="#FF6B8A"
+          fontFamily="Fraunces, Georgia, serif"
+          fontSize="15"
+          fontWeight={700}
         >
-          FEEL
+          feel
         </text>
         <text
           x={cx}
           y={cy + 14}
           textAnchor="middle"
-          fill="rgba(232,236,228,0.55)"
-          fontFamily="Sora, sans-serif"
+          fill="rgba(42,33,64,0.55)"
+          fontFamily="Nunito, sans-serif"
           fontSize="8"
-          letterSpacing="1.5"
+          fontWeight={800}
+          letterSpacing="1"
         >
-          {holding ? 'FASTER' : 'TAP · DRAG'}
+          {holding ? 'WHOOSH!' : 'TAP · SPIN'}
         </text>
+
+        {/* Selection burst rings */}
+        {burst > 0 && (
+          <circle
+            key={burst}
+            cx={cx}
+            cy={cy}
+            r={20}
+            fill="none"
+            stroke="#FFE566"
+            strokeWidth="3"
+            opacity="0.8"
+          >
+            <animate attributeName="r" from="20" to="140" dur="0.55s" fill="freeze" />
+            <animate attributeName="opacity" from="0.8" to="0" dur="0.55s" fill="freeze" />
+          </circle>
+        )}
 
         {moods.map((mood, i) => {
           const a = angleRef.current + (i / moods.length) * TAU
           const x = cx + Math.cos(a) * radius
           const y = cy + Math.sin(a) * radius
           const depth = (Math.sin(a) + 1) / 2
-          const scale = 0.84 + depth * 0.26
+          const bob = Math.sin(t / 400 + i) * 2.2
+          const scale = 0.86 + depth * 0.28
           const active = i === activeIndex
-          const fill = `hsl(${mood.hue} 42% ${active ? 48 : 38}% / ${0.55 + depth * 0.35})`
-          const stroke = active ? 'rgba(232,236,228,0.85)' : 'rgba(232,236,228,0.22)'
+          const colors = MOOD_COLORS[mood.id] ?? { fill: '#FFB4A2', glow: '#FF8FA3' }
           const r = nodeR * scale
-          // Slightly shorter labels for ring fit
           const label = mood.label === 'Shame Guilt' ? 'Shame' : mood.label.split(' ')[0]
 
           return (
-            <g key={mood.id} transform={`translate(${x} ${y})`} filter={active ? 'url(#softGlow)' : undefined}>
-              {/* Large invisible hit halo — selection still uses nearest-angle logic */}
+            <g key={mood.id} transform={`translate(${x} ${y + bob})`} filter={active ? 'url(#softGlow)' : undefined}>
+              <circle r={r + 16} fill={colors.glow} opacity={active ? 0.28 : 0.1} />
               <circle r={r + 14} fill="transparent" />
-              <circle r={r + 6} fill={`hsl(${mood.hue} 50% 50% / ${active ? 0.18 : 0.06})`} />
-              <circle r={r} fill={fill} stroke={stroke} strokeWidth={active ? 1.6 : 1} />
+              <circle
+                r={r}
+                fill={colors.fill}
+                stroke={active ? '#fff' : 'rgba(255,255,255,0.65)'}
+                strokeWidth={active ? 3 : 2}
+              />
               <text
-                y={-2}
+                y={-1}
                 textAnchor="middle"
-                fill="#f4f1ea"
-                fontFamily="Cormorant Garamond, Georgia, serif"
-                fontSize={active ? 13.5 : 12}
-                fontWeight={600}
+                fill="#2A2140"
+                fontFamily="Fraunces, Georgia, serif"
+                fontSize={active ? 14 : 12.5}
+                fontWeight={700}
               >
                 {label}
               </text>
               <text
-                y={12}
+                y={13}
                 textAnchor="middle"
-                fill="rgba(244,241,234,0.65)"
-                fontFamily="Sora, sans-serif"
+                fill="rgba(42,33,64,0.62)"
+                fontFamily="Nunito, sans-serif"
                 fontSize="7.5"
-                letterSpacing="0.5"
+                fontWeight={800}
+                letterSpacing="0.4"
               >
                 {mood.short}
               </text>
@@ -273,7 +343,7 @@ export function MoodOrbit({ moods, onSelect }: Props) {
           )
         })}
       </svg>
-      <p className="orbit-hint">Drag to spin · hold to speed up · tap a mood (pauses briefly)</p>
+      <p className="orbit-hint">Drag to spin · hold for whoosh · tap a mood</p>
     </div>
   )
 }
