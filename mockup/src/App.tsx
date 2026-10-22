@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState, type PointerEvent as RPE } from 'react'
 import { MOODS, type Mood, type RefItem, type SubMood } from './data/moods'
 import { MOOD_COLORS, shortLabel } from './concepts/shared'
 
@@ -55,43 +55,181 @@ function MoodFan({
   onOpen: (mood: Mood) => void
 }) {
   const active = moods[focus]
+  const [pullY, setPullY] = useState(0)
+  const [revealing, setRevealing] = useState(false)
+  const pullYRef = useRef(0)
+  const drag = useRef<{
+    x: number
+    y: number
+    focus: number
+    axis: 'x' | 'y' | null
+  } | null>(null)
+  const PULL_OPEN = 110
+
+  const setPull = (y: number) => {
+    pullYRef.current = y
+    setPullY(y)
+  }
+
+  const onPointerDown = (e: RPE) => {
+    if (revealing) return
+    drag.current = { x: e.clientX, y: e.clientY, focus, axis: null }
+    ;(e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId)
+  }
+
+  const onPointerMove = (e: RPE) => {
+    if (!drag.current || revealing) return
+    const dx = e.clientX - drag.current.x
+    const dy = e.clientY - drag.current.y
+
+    if (!drag.current.axis) {
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return
+      drag.current.axis = Math.abs(dy) > Math.abs(dx) ? 'y' : 'x'
+    }
+
+    if (drag.current.axis === 'x') {
+      setPull(0)
+      const steps = Math.round(-dx / 72)
+      const next = Math.max(0, Math.min(moods.length - 1, drag.current.focus + steps))
+      if (next !== focus) setFocus(next)
+      return
+    }
+
+    setPull(Math.max(0, Math.min(160, dy)))
+  }
+
+  const finishOpen = (mood: Mood) => {
+    setRevealing(true)
+    setPull(180)
+    window.setTimeout(() => onOpen(mood), 640)
+  }
+
+  const onPointerUp = () => {
+    if (!drag.current || revealing) {
+      drag.current = null
+      return
+    }
+    const axis = drag.current.axis
+    const y = pullYRef.current
+    drag.current = null
+
+    if (axis === 'y' && y >= PULL_OPEN) {
+      finishOpen(moods[focus])
+      return
+    }
+    setPull(0)
+  }
+
+  const pullProgress = Math.min(1, pullY / PULL_OPEN)
+
   return (
     <div className="card-stage calm-fan">
-      <div className="card-fan">
+      <div
+        className={`card-fan ${revealing ? 'is-revealing' : ''}`}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+        style={{ touchAction: 'none' }}
+      >
+        {/* Reveal veil — lifts as you pull */}
+        <div
+          className="reveal-veil"
+          style={{
+            opacity: 0.15 + pullProgress * 0.55,
+            transform: `translateY(${(1 - pullProgress) * 40}%) scaleY(${0.4 + pullProgress * 0.8})`,
+          }}
+        />
+
         {moods.map((mood, i) => {
           const mid = (moods.length - 1) / 2
           const spread = i - mid
           const isActive = i === focus
+          const baseY = isActive ? -40 : Math.abs(spread) * 7
           return (
-            <motion.button
+            <motion.div
               key={mood.id}
-              className={`fan-card ${isActive ? 'is-active' : ''}`}
-              style={{ ['--c' as string]: MOOD_COLORS[mood.id] }}
-              animate={{
-                x: isActive ? 0 : spread * 26,
-                y: isActive ? -40 : Math.abs(spread) * 7,
-                rotate: isActive ? 0 : spread * 8,
-                scale: isActive ? 1.14 : 0.9,
-                zIndex: isActive ? 20 : 10 - Math.abs(spread),
-              }}
-              transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-              onClick={() => (isActive ? onOpen(mood) : setFocus(i))}
+              className={`fan-card ${isActive ? 'is-active' : ''} ${revealing && isActive ? 'is-opening' : ''}`}
+              style={{ ['--c' as string]: MOOD_COLORS[mood.id], pointerEvents: 'none' }}
+              animate={
+                revealing && isActive
+                  ? {
+                      x: 0,
+                      y: -28,
+                      rotate: 0,
+                      scale: 2.35,
+                      zIndex: 40,
+                      opacity: 1,
+                      borderRadius: 36,
+                    }
+                  : revealing
+                    ? {
+                        x: spread * 40,
+                        y: baseY + 28,
+                        rotate: spread * 12,
+                        scale: 0.72,
+                        zIndex: 10 - Math.abs(spread),
+                        opacity: 0,
+                      }
+                    : {
+                        x: isActive ? 0 : spread * 26,
+                        y: isActive ? baseY + pullY : baseY,
+                        rotate: isActive ? pullProgress * 2 : spread * 8,
+                        scale: isActive ? 1.14 + pullProgress * 0.08 : 0.9,
+                        zIndex: isActive ? 20 : 10 - Math.abs(spread),
+                        opacity: 1,
+                      }
+              }
+              transition={
+                revealing
+                  ? { duration: 0.58, ease: [0.22, 1, 0.36, 1] }
+                  : drag.current?.axis === 'y' && isActive
+                    ? { type: 'tween', duration: 0 }
+                    : { type: 'spring', stiffness: 300, damping: 22 }
+              }
             >
               <span className="fan-sheen" />
               <span className="fan-count">{mood.subs.length}</span>
               <strong>{shortLabel(mood)}</strong>
               <small>{mood.short}</small>
-            </motion.button>
+              {isActive && !revealing && (
+                <span className="pull-cue" style={{ opacity: 0.35 + pullProgress * 0.65 }}>
+                  {pullProgress >= 1 ? 'Release to open' : 'Pull down'}
+                </span>
+              )}
+            </motion.div>
           )
         })}
+
+        <AnimatePresence>
+          {revealing && (
+            <motion.div key="reveal-layer" className="reveal-layer" initial={false}>
+              <motion.div
+                className="reveal-curtain"
+                initial={{ clipPath: 'inset(100% 18% 0 18% round 28px)', opacity: 0.35 }}
+                animate={{ clipPath: 'inset(0% 0% 0% 0% round 0px)', opacity: 1 }}
+                transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
+                style={{ background: `linear-gradient(165deg, #fff 8%, ${MOOD_COLORS[active.id]})` }}
+              />
+              <motion.div
+                className="reveal-burst"
+                initial={{ scale: 0.55, opacity: 0.85 }}
+                animate={{ scale: 2.8, opacity: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.62, ease: [0.22, 1, 0.36, 1] }}
+                style={{ background: MOOD_COLORS[active.id] }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
+
       <p className="fan-hint">
-        Tap a card to pull it forward · tap again to open{' '}
-        <strong>{shortLabel(active)}</strong>
+        Swipe left or right to browse · pull <strong>{shortLabel(active)}</strong> down to open
       </p>
-      <motion.button className="primary-btn fan-enter" onClick={() => onOpen(active)} whileTap={{ scale: 0.97 }}>
-        Reveal {shortLabel(active)}
-      </motion.button>
+      <div className="pull-track" aria-hidden>
+        <div className="pull-track-fill" style={{ width: `${pullProgress * 100}%` }} />
+      </div>
     </div>
   )
 }

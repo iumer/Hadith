@@ -20,7 +20,7 @@ How we develop and how **you** get installs on iPhone and Android.
 4. Clone the repo and use the Expo app folder (after Milestone 1):
    ```bash
    git clone <repo-url>
-   cd Hadith/app   # path TBD when scaffolded
+   cd app
    npm install
    ```
 5. Connect iPhone via cable, trust the computer, enable Developer Mode (iOS 16+).
@@ -33,7 +33,8 @@ Free provisioning expires ~7 days — rebuild weekly:
 ```bash
 cd app
 npm install
-npx expo run:ios --device
+npx expo start          # Expo Go / tunnel for quick checks
+npx expo run:ios --device   # native build on your iPhone
 ```
 
 Or open `ios/*.xcworkspace` in Xcode → select your iPhone → Run.

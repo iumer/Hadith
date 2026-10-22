@@ -1,0 +1,23 @@
+export const colors = {
+  ink: '#243044',
+  inkSoft: '#4a5568',
+  mist: 'rgba(36, 48, 68, 0.58)',
+  cream: '#f7f4ef',
+  paper: '#fffcf8',
+  sky: '#d9eef8',
+  mint: '#d8f3e8',
+  peach: '#f8e6dc',
+  accent: '#e08a6a',
+  accent2: '#6aa7c4',
+  white: '#ffffff',
+  quran: '#6aa7c4',
+  hadith: '#e08a6a',
+} as const
+
+export const fonts = {
+  display: 'Fraunces_700Bold',
+  displaySoft: 'Fraunces_600SemiBold',
+  body: 'Nunito_600SemiBold',
+  bodyBold: 'Nunito_700Bold',
+  bodyExtra: 'Nunito_800ExtraBold',
+} as const

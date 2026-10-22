@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import type { ConceptProps } from './shared'
 import { MOOD_COLORS, shortLabel } from './shared'
 
-/** Fanned deck — tap to pull a card forward */
+/** Concept gallery only — main app uses pull-down + swipe (see App MoodFan) */
 export function CardFan({ moods, name, onSelect, onBack }: ConceptProps) {
   const [focus, setFocus] = useState(Math.floor(moods.length / 2))
 
@@ -18,7 +18,7 @@ export function CardFan({ moods, name, onSelect, onBack }: ConceptProps) {
         </p>
       </div>
       <h2 className="display display-lg">Assalamoalikum {name}</h2>
-      <p className="lede">Tap a card to pull it · tap again to enter</p>
+      <p className="lede">Swipe to browse · pull down to open (main flow)</p>
       <div className="concept-stage card-stage">
         <div className="card-fan">
           {moods.map((mood, i) => {

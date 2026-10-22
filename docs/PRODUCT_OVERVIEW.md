@@ -7,7 +7,7 @@ A calm mobile app that greets the user by name, asks how they feel, and guides t
 ## User journey
 
 1. **Name** — “What should we call you?”
-2. **Feeling** — “Assalamoalikum {name}” + **card fan** of main moods (pull a card, then reveal).
+2. **Feeling** — “Assalamoalikum {name}” + **card fan**: swipe left/right to browse, **pull down** to open with a reveal animation (no double-tap).
 3. **Subcategories** — e.g. Sad → Sorrow, Grief, Loneliness…
 4. **Threads** — list of **references only** (e.g. `Quran 12:86`, `Sahih al-Bukhari 5641`).
 5. **Reading** — full Arabic, English, meaning, reflection; **Previous / Next** across threads; **Report** for quality feedback.
@@ -22,8 +22,8 @@ A calm mobile app that greets the user by name, asks how they feel, and guides t
 
 ## Design direction (locked for v1 mockup)
 
-- **Primary picker:** card fan (not spinning orbit as the control).
+- **Primary picker:** card fan — swipe browse, pull-down open + curtain reveal.
 - **Background:** calm dawn wash (cream → soft sky/mint), not candy blobs.
-- **Motion:** springy, clean, Apple-like; respects reduced-motion.
+- **Motion:** springy, clean; respects reduced-motion in the web mockup.
 
-Interactive mockup lives in `mockup/` (Vite + React). Expo app is the next build phase.
+Interactive mockup: `mockup/`. Expo app: `app/` (Milestone 1).

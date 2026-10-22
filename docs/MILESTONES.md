@@ -4,37 +4,43 @@ Phased plan from mockup → installable iOS + Android builds.
 
 ---
 
-## Milestone 0 — Design lock *(current)*
+## Milestone 0 — Design lock
 
 **Goal:** Agree UI flow and visuals.
 
 - [x] Interactive mockup (`mockup/`)
 - [x] Card fan + calm background
+- [x] Swipe L/R to browse · **pull down** to open (no double-tap)
+- [x] Reveal curtain animation into next screen
 - [x] Threads = references only
 - [x] Reading + Previous/Next
 - [x] Report multi-select sheet
-- [ ] You confirm “lock this for Expo”
+- [x] Locked for Expo build (pull-down + swipe)
 
 **Exit:** Written OK from you on screens + report reasons.
 
 ---
 
-## Milestone 1 — Expo skeleton
+## Milestone 1 — Expo skeleton *(in progress)*
 
-**Goal:** Empty Expo app runs on your iPhone and an Android emulator/APK.
+**Goal:** Expo app runs on your iPhone and an Android emulator/APK.
 
 **I do (cloud):**
-- Scaffold Expo (TypeScript, Expo Router or React Navigation)
-- Port design tokens + basic screens as static shells
-- Wire `eas.json` / GitHub Action for Android APK
-- Document Mac commands for iOS device run
+- [x] Scaffold Expo (TypeScript + React Navigation)
+- [x] Port theme + screens (Name → Feeling/CardFan → Subs → Threads → Read)
+- [x] CardFan: swipe L/R + pull-down reveal (Reanimated + Gesture Handler)
+- [x] Bundle mood catalog from `moods/`
+- [x] Report sheet → local AsyncStorage queue
+- [x] Wire `eas.json` preview APK profile
+- [ ] GitHub Action for Android APK (next)
+- [x] Document Mac commands for iOS device run
 
 **You do (Mac):**
 - Install Xcode CLT, Node, Watchman (if needed)
-- `npx expo run:ios --device` with free Apple ID
+- `cd app && npm install && npx expo run:ios --device` with free Apple ID
 - Confirm app launches on iPhone
 
-**Deliverable:** “Hello Assalamoalikum” app on your phone + APK link.
+**Deliverable:** Assalamoalikum + pull-down moods on your phone + APK link.
 
 ---
 
