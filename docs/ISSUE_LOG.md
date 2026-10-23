@@ -38,6 +38,7 @@ Last updated: 2026-10-23 (Asia/Karachi). Agent test surface for this round: Expo
 | I-025 | User request | Arabic → Urdu → English for every passage, authentic translations only | fixed-pending-device | Quran: Junagarhi (UR) + Saheeh International (EN). Hadith: source Urdu/English excerpts; `build_catalog.py` fails if any shown text is not verbatim from the source |
 | I-026 | User request | Swipe left/right on Read pages to change passage, keep iOS edge swipe-back | fixed-pending-device | Pan with 28pt edge exclusion (both edges on Android). Sim verified both |
 | I-027 | User request | Name asked again after relaunch | fixed-pending-device | App reads saved name before choosing first screen; Feeling has no back-to-name (long-press the greeting to change name) |
+| I-028 | User request | Catalog had fragments (e.g. Peaceful 89:29, 89:30 as 3-word cards); Quran must be complete ayat in context, hadith complete sayings | fixed-pending-device | Full recheck: ayah ranges (e.g. 89:27-30, 2:155-157, 26:61-62) shown as one card; hadith slices widened to include the question/story; off-context picks replaced (65:2 divorce, 8:46 battle, 3:154, 76:10, 33:35, 4:59, Bukhari 6472/24/2443); no repeats inside a mood. 148 passages, all source-verified |
 
 ## Suggestions (from user / agent)
 

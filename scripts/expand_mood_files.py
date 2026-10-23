@@ -35,44 +35,62 @@ COLL = {
 # Prophet's ﷺ words as a (first words, last words) slice of the source text, so the
 # result is always a verbatim excerpt. Arabic and Urdu use the same scheme.
 EN_SLICE = {
-    "Tirmidhi 2020": ("Do not get angry", "Do not get angry"),
-    "Bukhari 52": ("Both legal and illegal", "his religion and his honor"),
-    "Bukhari 1283": ("Verily, the patience", "stroke of a calamity"),
-    "Bukhari 1303": ("The eyes are shedding tears", "grieved by your separation"),
+    "Tirmidhi 2346": ("Whoever among you wakes up", "gathered for him"),
+    "Bukhari 6384": ("O `Abdullah bin Qais! Say", "for it is one of the treasures of Paradise"),
+    "Muslim 2577a": ("O My servants, all of you are astray", "I shall guide you"),
+    "Tirmidhi 2020": ("Teach me something", "Do not get angry"),
+    "Bukhari 1283": ("The Prophet (ﷺ) passed by a woman", "stroke of a calamity"),
+    "Bukhari 1303": ("`Abdur Rahman bin `Auf said", "grieved by your separation"),
     "Muslim 923a": ("what Allah had taken belonged to Him", "seek reward from Allah"),
-    "Bukhari 2908": ("Don't be afraid! Don't be afraid!", "Don't be afraid!"),
-    "Muslim 2307a": ("There was nothing to be afraid of", "nothing to be afraid of"),
-    "Tirmidhi 2517": ("Tie it and rely", "(upon Allah)"),
-    "Ibn Majah 3818": ("Glad tidings", "record of their deeds"),
-    "Ibn Majah 3882": ("Allah! Allahu Rabbi", "anything with Him)"),
+    "Muslim 918a": ("If any Muslim who suffers", "better than it in exchange"),
+    "Bukhari 2908": ("The 'Prophet was the best", "Don't be afraid! Don't be afraid!"),
+    "Tirmidhi 2517": ("O Messenger of Allah! Shall I tie it", "Tie it and rely(upon Allah)"),
+    "Ibn Majah 3882": ("The Messenger of Allah (ﷺ) taught me", "anything with Him)"),
     "Muslim 2573": ("Never a believer", "expiated for him"),
     "Muslim 2593": ("A'isha, verily Allah is kind", "besides it (kindness)"),
-    "Muslim 2675a": ("I am near to the thought", "I rush towards him"),
     "Muslim 2610": ("I know of a wording", "Satan the accursed"),
     "Abu Dawud 4777": ("If anyone suppresses anger", "maidens he wishes"),
     "Abu Dawud 4782": ("When one of you becomes angry", "should lie down"),
-    "Abu Dawud 3330": ("But between them", "what is unlawful"),
-    "Ibn Majah 4251": ("Every son of Adam", "those who repent"),
     "Tirmidhi 3524": ("O Living, O Self-Sustaining", "astaghīth)"),
     "Tirmidhi 3505": ("The supplication of Dhun-Nun", "Allah responds to him"),
-    "Tirmidhi 2032": ("O you who accepted Islam", "the depth of his house"),
+    "Abu Dawud 2774": ("When anything came", "gratitude to Allah"),
+    "Bukhari 39": ("Religion is very easy", "last hours of the nights"),
+    "Bukhari 6465": ("What deeds are loved most", "within your ability"),
+    "Tirmidhi 3540": ("O son of Adam! Verily", "nearly as great as it"),
+    "Muslim 2664": ("A strong believer", "for the Satan"),
+    "Bukhari 4563": ("Allah is Sufficient for us and He Is", "(of affairs, for us)"),
+    "Ibn Majah 4216": ("Which of the people is best", "rancor or envy in it"),
+    "Bukhari 2441": ("Allah will bring a believer near", "forgive them for you today"),
+    "Muslim 132a": ("Verily we perceive in our minds", "the faith manifest"),
 }
 AR_SLICE = {
-    "Tirmidhi 2020": ("لاَ تَغْضَبْ", "لاَ تَغْضَبْ"),
-    "Bukhari 52": ("الْحَلاَلُ بَيِّنٌ", "لِدِيِنِهِ وَعِرْضِهِ"),
-    "Muslim 2307a": ("لَمْ تُرَاعُوا", "لَمْ تُرَاعُوا لَمْ تُرَاعُوا"),
+    "Tirmidhi 2346": ("مَنْ أَصْبَحَ مِنْكُمْ", "حِيزَتْ لَهُ الدُّنْيَا"),
+    "Bukhari 6384": ("يَا عَبْدَ اللَّهِ بْنَ قَيْسٍ", "كُنُوزِ الْجَنَّةِ ‏"),
+    "Muslim 2577a": ("يَا عِبَادِي كُلُّكُمْ ضَالٌّ", "أَهْدِكُمْ"),
+    "Tirmidhi 2020": ("عَلِّمْنِي شَيْئًا", "لاَ تَغْضَبْ"),
+    "Bukhari 1283": ("مَرَّ النَّبِيُّ", "الصَّدْمَةِ الأُولَى"),
+    "Bukhari 1303": ("فَقَالَ لَهُ عَبْدُ الرَّحْمَنِ", "لَمَحْزُونُونَ"),
+    "Bukhari 2908": ("كَانَ النَّبِيُّ", "لَمْ تُرَاعُوا لَمْ تُرَاعُوا"),
+    "Tirmidhi 2517": ("يَا رَسُولَ اللَّهِ أَعْقِلُهَا", "اعْقِلْهَا وَتَوَكَّلْ"),
     "Tirmidhi 3505": ("دَعْوَةُ ذِي النُّونِ", "اسْتَجَابَ اللَّهُ لَهُ"),
+    "Muslim 918a": ("مَا مِنْ مُسْلِمٍ", "إِلاَّ أَخْلَفَ اللَّهُ لَهُ خَيْرًا مِنْهَا"),
+    "Abu Dawud 2774": ("كَانَ إِذَا جَاءَهُ", "شَاكِرًا لِلَّهِ"),
+    "Bukhari 6465": ("سُئِلَ النَّبِيُّ", "مَا تُطِيقُونَ"),
+    "Bukhari 4563": ("حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ", "وَنِعْمَ الْوَكِيلُ"),
+    "Ibn Majah 4216": ("أَىُّ النَّاسِ أَفْضَلُ", "وَلاَ حَسَدَ"),
+    "Bukhari 2441": ("إِنَّ اللَّهَ يُدْنِي", "أَغْفِرُهَا لَكَ الْيَوْمَ"),
+    "Muslim 132a": ("إِنَّا نَجِدُ فِي أَنْفُسِنَا", "صَرِيحُ الإِيمَانِ"),
+    "Ibn Majah 3882": ("عَلَّمَنِي رَسُولُ اللَّهِ", "لاَ أُشْرِكُ بِهِ شَيْئًا"),
 }
 UR_SLICE = {
+    "Bukhari 6384": ("عبداللہ بن قیس کہو", "ایک خزانہ ہے"),
+    "Muslim 2577a": ("میرے بندو! تم سب کے سب گمراہ ہو", "میں تمہیں ہدایت دوں گا"),
     "Abu Dawud 3330": ("ان دونوں کے درمیان", "حرام میں پھنس گیا"),
     "Abu Dawud 4777": ("جس نے اپنا غصہ", "جسے چاہے چن لے"),
     "Abu Dawud 4782": ("جب تم میں سے کسی کو غصہ", "ورنہ پھر لیٹ جائے"),
-    "Bukhari 1283": ("صبر تو جب صدمہ", "اس وقت کرنا چاہیے"),
-    "Bukhari 1303": ("آنکھوں سے آنسو جاری ہیں", "ہم تمہاری جدائی سے غمگین ہیں"),
     "Bukhari 24": ("اس کو اس کے حال پر رہنے دو", "ایمان ہی کا ایک حصہ ہے"),
     "Bukhari 2443": ("اپنے بھائی کی مدد کرو", "ظالم ہو یا مظلوم"),
     "Bukhari 2447": ("ظلم قیامت کے دن", "اندھیرے ہوں گے"),
-    "Bukhari 2908": ("ڈرو مت", "ڈرو مت"),
     "Bukhari 52": ("حلال کھلا ہوا ہے", "اپنے دین اور عزت کو بچا لیا"),
     "Bukhari 6065": ("آپس میں بغض نہ رکھو", "سلام کلام چھوڑ کر رہے"),
     "Bukhari 6114": ("پہلوان وہ نہیں ہے", "بے قابو نہ ہو جائے"),
@@ -83,7 +101,6 @@ UR_SLICE = {
     "Bukhari 6472": ("میری امت کے ستر ہزار", "اپنے رب ہی پر بھروسہ رکھتے ہیں"),
     "Bukhari 7405": ("اللہ تعالیٰ فرماتا ہے", "دوڑ کر آ جاتا ہوں"),
     "Ibn Majah 3818": ("مبارکبادی ہے", "کثرت سے استغفار پائے"),
-    "Ibn Majah 3882": ("اللہ، اللہ ہی میرا رب ہے", "شریک نہیں ٹھہراتی"),
     "Ibn Majah 4251": ("سارے بنی آدم", "توبہ کرنے والے ہیں"),
     "Muslim 1051": ("غنا مال و اسباب", "دل کی بے نیا زی ہے"),
     "Muslim 1054": ("وہ انسان کا میاب", "قناعت کی تو فیق بخشی"),
@@ -99,18 +116,42 @@ UR_SLICE = {
     "Muslim 923a": ("اللہ ہی کا ہے جو اس نے لے لیا", "اجر وثواب کی طلب گار ہوں"),
     "Tirmidhi 1935": ("آپس میں قطع تعلق نہ کرو", "سلام کلام بند رکھے"),
     "Tirmidhi 2014": ("مظلوم کی دعا سے ڈرو", "کوئی پردہ آڑے نہیں آتا"),
-    "Tirmidhi 2020": ("غصہ مت کرو", "غصہ مت کرو"),
     "Tirmidhi 2032": ("اے اسلام لانے والے", "اگرچہ وہ اپنے گھر کے اندر ہو"),
     "Tirmidhi 2344": ("اگر تم لوگ اللہ پر توکل", "آسودہ واپس آتے ہیں"),
     "Tirmidhi 2499": ("سارے انسان خطاکار ہیں", "توبہ کرنے والے ہیں"),
     "Tirmidhi 2516": ("اے لڑکے!", "صحیفے خشک ہو گئے ہیں"),
-    "Tirmidhi 2517": ("اسے باندھ دو", "پھر توکل کرو"),
     "Tirmidhi 3452": ("میں ایک ایسا کلمہ جانتا ہوں", "راندے ہوئے شیطان سے"),
     "Tirmidhi 3489": ("اے اللہ! میں تجھ سے ہدایت", "بے نیازی چاہتا ہوں"),
     "Tirmidhi 3505": ("ذوالنون ( یونس", "اس کی دعا قبول فرمائے گا"),
     "Tirmidhi 3524": ("اے زندہ اور ہمیشہ", "مدد چاہتا ہوں"),
     "Tirmidhi 3537": ("اللہ اپنے بندے کی توبہ", "خر خر کی آواز نہ آنے لگے"),
     "Tirmidhi 766": ("روزہ دار کے لیے", "اپنے رب سے ملے گا"),
+    "Muslim 2963a": ("جب تم میں سے کوئی شخص اس کی طرف دیکھے", "اسے فضیلت حاصل ہے"),
+    "Abu Dawud 2774": ("نبی اکرم صلی اللہ علیہ وسلم کے پاس جب کوئی خوشی", "سجدہ میں گر پڑتے"),
+    "Muslim 2734a": ("اللہ تعالیٰ اس بات پر", "اللہ کی حمد کرے"),
+    "Muslim 918a": ("کوئی مسلمان نہیں جسے مصیبت پہنچے", "بہتر بدل عطا فرمادیتا ہے"),
+    "Bukhari 6407": ("اس شخص کی مثال", "زندہ اور مردہ جیسی ہے"),
+    "Bukhari 39": ("بیشک دین آسان ہے", "مدد حاصل کرو"),
+    "Bukhari 6465": ("کون سا عمل اللہ کے نزدیک", "جتنی طاقت ہے"),
+    "Tirmidhi 3540": ("اللہ کہتا ہے", "مغفرت لے کر آؤں گا"),
+    "Muslim 2664": ("طاقت ور مومن", "کو کھول دیتا ہے"),
+    "Bukhari 4563": ("کلمہ «حسبنا", "بہترین کام بنانے والا ہے"),
+    "Muslim 2564c": ("اللہ تعالیٰ تمہاری صورتوں", "اعمال کی طرف دیکھتا ہے"),
+    "Muslim 2582": ("قیامت کے دن تم سب", "پورا پورا لیا جائے گا"),
+    "Ibn Majah 4216": ("لوگوں میں سب سے بہتر کون ہے", "نہ کینہ اور نہ حسد"),
+    "Bukhari 2441": ("اللہ تعالیٰ مومن کو اپنے نزدیک", "آج بھی میں تیری مغفرت کرتا ہوں"),
+    "Muslim 2749": ("اس ذات کی قسم", "ان کی مغفرت فرمائے"),
+    "Muslim 2588": ("صدقے نے مال میں", "اس کا مقام بلند کر دیتا ہے"),
+    "Tirmidhi 2518": ("اس چیز کو چھوڑ دو", "شک میں مبتلا کرتا ہے"),
+    "Muslim 132a": ("ہم اپنے دلوں میں ایسی چیزیں", "یہی صریح ایمان ہے"),
+    "Bukhari 3276": ("تم میں سے کسی کے پاس شیطان", "شیطانی خیال کو چھوڑ دے"),
+    "Tirmidhi 2346": ("تم میں سے جس نے بھی صبح کی", "پوری دنیا سمیٹ دی گئی"),
+    "Tirmidhi 2020": ("مجھے کچھ سکھائیے", "غصہ مت کرو"),
+    "Tirmidhi 2517": ("اللہ کے رسول! کیا میں اونٹ", "پھر توکل کرو"),
+    "Bukhari 1283": ("نبی کریم صلی اللہ علیہ وسلم کا گزر", "اس وقت کرنا چاہیے"),
+    "Bukhari 1303": ("تو عبدالرحمٰن بن عوف", "جدائی سے غمگین ہیں"),
+    "Bukhari 2908": ("نبی کریم صلی اللہ علیہ وسلم سب سے زیادہ خوبصورت", "ڈرو مت"),
+    "Ibn Majah 3882": ("رسول اللہ صلی اللہ علیہ وسلم نے مجھے یہ کلمات", "شریک نہیں ٹھہراتی"),
 }
 
 
@@ -119,10 +160,13 @@ def source_slice(ref: str, text: str, first: str, last: str) -> str:
     text = unicodedata.normalize("NFC", re.sub(r"\s+", " ", text or ""))
     first, last = unicodedata.normalize("NFC", first), unicodedata.normalize("NFC", last)
     i = text.find(first)
-    j = text.find(last, i + len(first) - len(last) if last in first else i)
+    j = text.rfind(last, i)
     if i < 0 or j < 0:
         sys.exit(f"{ref}: slice ({first!r} … {last!r}) not found in source text")
-    out = text[i : j + len(last)].replace('""', "").strip(' "“”')
+    out = text[i : j + len(last)]
+    if re.search(r"[\u0600-\u06FF]", out):
+        out = re.sub(r"\s+", " ", re.sub(r'[\u200f"{}]|‏\.‏', "", out))
+    out = out.replace('""', "").strip(' "“”')
     return out[0].upper() + out[1:]
 
 
@@ -216,8 +260,25 @@ def format_hadith(ref: str, d: dict, meaning: str, reflection: str) -> str:
     return "\n".join(parts).rstrip() + "\n"
 
 
+AR_DIGITS = str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩")
+
+
+def join_ayahs(ayahs: list[dict]) -> dict:
+    """One card for a passage of consecutive ayahs, each followed by its number."""
+    if len(ayahs) == 1:
+        return ayahs[0]
+    first, last = ayahs[0], ayahs[-1]
+    return {
+        **first,
+        "ref": f"{first['surah']}:{first['ayah']}-{last['ayah']}",
+        "text_ar": " ".join(f"{x['text_ar'].strip()} ﴿{str(x['ayah']).translate(AR_DIGITS)}﴾" for x in ayahs),
+        "text_ur": " ".join(f"({x['ayah']}) {x['text_ur'].strip()}" for x in ayahs),
+        "text_en": " ".join(f"({x['ayah']}) {x['text_en'].strip()}" for x in ayahs),
+    }
+
+
 def format_quran(d: dict, meaning: str, reflection: str) -> str:
-    s, a = d["surah"], d["ayah"]
+    s, a = d["surah"], d.get("ref", f"{d['surah']}:{d['ayah']}").split(":")[1]
     surah = d.get("surah_en") or ""
     parts = [f"Quran {s}:{a}", ""]
     if surah:
@@ -234,8 +295,10 @@ def format_quran(d: dict, meaning: str, reflection: str) -> str:
 
 def parse_ref_line(line: str, hx: HadithIndex, qx: QuranIndex):
     if line.startswith("Quran "):
-        s, a = map(int, line.split()[1].split(":"))
-        return "quran", qx.get(s, a)
+        s, rng = line.split()[1].split(":")
+        lo, _, hi = rng.partition("-")
+        ayahs = [qx.get(int(s), n) for n in range(int(lo), int(hi or lo) + 1)]
+        return "quran", join_ayahs(ayahs) if all(ayahs) else None
     for name, slug in sorted(COLL.items(), key=lambda x: -len(x[0])):
         if line.startswith(name + " "):
             return "hadith", hx.get(slug, line[len(name) + 1 :])

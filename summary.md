@@ -132,7 +132,7 @@ Working product name in code: **Heart Threads** (product docs also say Mood & Li
 5. Read — Arabic, English, meaning, reflection + Report  
 
 **Content today in the app:** curated offline catalog baked into  
-`app/src/content/catalog.json` (**8 moods · 37 subs · 179 passages**), built from `moods/**/*.txt` by `scripts/build_catalog.py`.
+`app/src/content/catalog.json` (**8 moods · 37 subs · 148 passages**), built from `moods/**/*.txt` by `scripts/build_catalog.py`.
 Every hadith carries its authenticity grade; only sahih/hasan hadith are shipped.  
 Full Quran/Hadith SQLite search DBs exist in the repo for later “Search”; v1 reading path does **not** open those DBs at runtime yet.
 

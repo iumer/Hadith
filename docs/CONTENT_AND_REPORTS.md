@@ -6,6 +6,15 @@
 - Each file is a sequence of passage cards separated by `────` rules.
 - Fields we parse: title/reference, Arabic, Urdu, English, Meaning, Reflection.
 
+### Selection rules
+
+- **Quran:** always whole ayahs. When one ayah only makes sense with its neighbours, use a
+  range in `file_refs.json` (e.g. `Quran 89:27-30`); it is shown as one card with ayah
+  markers. Skip ayahs whose context (rulings, battles) would confuse a reader in that mood.
+- **Hadith:** a complete saying. If the Prophet's ﷺ words answer a question or end a story,
+  include the question or story. Sahih/hasan only.
+- No passage twice inside the same mood.
+
 ### Translations (authentic sources only)
 
 | | Urdu | English |

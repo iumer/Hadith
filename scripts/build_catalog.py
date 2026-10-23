@@ -85,9 +85,13 @@ def parse_block(block: str) -> dict:
 def comparable(text: str, arabic: bool = False) -> str:
     """Form used to prove a shown text is a verbatim excerpt of its source."""
     t = unicodedata.normalize("NFC", text or "")
+    t = re.sub(r"﴿[٠-٩]+﴾|\(\d+\)", " ", t)
     if arabic:
         t = re.sub(r"[\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08FF\u0640\u200f]", "", t)
-    t = re.sub(r"[\"“”‘’'`.,:;!?()\[\]«»،۔\s-]+", " ", t)
+    t = re.sub(r"[\"“”‘’'`.,:;!?(){}\[\]«»،۔\u200f\s-]+", " ", t)
+    if arabic:
+        # Quran script spacing differs at ayah joins; compare the letters only
+        t = t.replace(" ", "")
     return t.strip().lower()
 
 
@@ -182,9 +186,14 @@ def main() -> None:
                         errors.append(f"{rel}: {item['title']} is graded '{g['grade'] or 'ungraded'}'")
                     item.update(g)
                 else:
-                    s, a = map(int, item["title"].split()[1].split(":"))
-                    row = quran.execute("select text_ar, text_ur, text_en from ayahs where surah=? and ayah=?", (s, a)).fetchone()
-                    source = {"arabic": row[0], "urdu": row[1], "english": row[2]}
+                    s, rng = item["title"].split()[1].split(":")
+                    lo, _, hi = rng.partition("-")
+                    rows = quran.execute(
+                        "select text_ar, text_ur, text_en from ayahs where surah=? and ayah between ? and ? order by ayah",
+                        (int(s), int(lo), int(hi or lo)),
+                    ).fetchall()
+                    # Passages are checked against the ayahs joined in order
+                    source = {k: " ".join(r[i] for r in rows) for i, k in enumerate(("arabic", "urdu", "english"))}
                 errors += [f"{rel}: {e}" for e in verify_source(item, source)]
                 items.append({"id": f"{mood_id}-{sub_id}-{i}", **{k: v for k, v in item.items() if v != ""}})
             sub_label = SUB_LABELS.get(sub_id, sub_id.replace("-", " ").title())
