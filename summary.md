@@ -93,7 +93,9 @@ We pin `react-native-screens@4.29.0` for Xcode 27 (`UIBarMinimization`). If nati
 Yes: for Android we give a **ready `.apk`**. Testers do **not** need a Mac or Expo Go.
 
 **Stable download link (same forever — share once with testers):**  
-https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk
+https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk  
+Also kept up to date (older link some testers have):  
+https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
 
 Release page: https://github.com/iumer/Hadith/releases/tag/android-preview
 

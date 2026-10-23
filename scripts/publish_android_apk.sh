@@ -2,8 +2,9 @@
 # Publish (or replace) the Android preview APK on a FIXED GitHub Release tag.
 # Download URL never changes — overwrite the asset in place on every build.
 #
-# Stable URL (share this forever):
+# Stable URLs (both receive every build):
 #   https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk
+#   https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
 #
 # Usage:
 #   ./scripts/publish_android_apk.sh [/path/to/app-release.apk]
@@ -14,7 +15,8 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 REPO="iumer/Hadith"
-TAG="android-preview"
+# Testers have both links, so every build replaces the APK on both releases.
+TAG="${TAG:-android-preview}"
 ASSET_NAME="HeartThreads-preview.apk"
 APK="${1:-}"
 STABLE_URL="https://github.com/${REPO}/releases/download/${TAG}/${ASSET_NAME}"
@@ -94,3 +96,8 @@ fi
 
 echo "OK — stable download URL (never changes; file is replaced in place):"
 echo "${STABLE_URL}"
+
+# Also refresh the older dated release that some testers were given.
+if [[ "$TAG" == "android-preview" ]]; then
+  TAG="android-preview-2026-10-22" "$0" "$APK"
+fi

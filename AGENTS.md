@@ -7,7 +7,9 @@
 
 ## Stable Android APK URL (do not create new links)
 
-https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk
+https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk  
+Also kept up to date (older link some testers have):  
+https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
 
 After `assembleRelease`, publish in place:
 
@@ -15,4 +17,4 @@ After `assembleRelease`, publish in place:
 ./scripts/publish_android_apk.sh app/android/app/build/outputs/apk/release/app-release.apk
 ```
 
-Keep sharing that same URL with testers.
+The script updates **both** release links on every build. Keep sharing the same URLs with testers.

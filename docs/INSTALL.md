@@ -18,7 +18,9 @@ Install **Expo Go** on the iPhone → same Wi‑Fi → scan the QR.
 ## Android (direct APK)
 
 **Stable download link (same forever — share this once):**  
-https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk
+https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk  
+Also kept up to date (older link some testers have):  
+https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
 
 Release page: https://github.com/iumer/Hadith/releases/tag/android-preview
 
