@@ -19,7 +19,7 @@ Last updated: 2026-10-23 (Asia/Karachi). Agent test surface for this round: Expo
 | I-006 | User both platforms | Swipe L/R feels stiff — cards don’t slide with finger | fixed-pending-device | Continuous `scroll` shared value follows finger |
 | I-007 | User both platforms | Pull-down cuts mid-expand → sudden next page | fixed-pending-device | Pull to max → 820ms reveal → then navigate |
 | I-008 | User both platforms | After Read→back→back, stuck on giant card, gestures dead | fixed-pending-device | Remount fan on focus + reset shared values |
-| I-009 | User request | Android APK for testers | fixed-pending-device | Sakinah 0.2.0 (versionCode 2) built on the Mac 2026-10-23 and published to the same stable URL; same signing cert as 0.1.0 so it installs as an update |
+| I-009 | User request | Android APK for testers | fixed-pending-device | Sakinah 0.2.1 (versionCode 3, with GitHub reports) built on the Mac 2026-10-23 and published to the same stable URL; same signing cert as 0.1.0 so it installs as an update |
 | I-010 | Agent web QA | CardFan Pan gestures ignore mouse on Expo web — blocked smoke | verified-agent | Web Prev/Next/Open; Playwright hard-refresh smoke **PASS** (steps 1–9); see `qa-web-retest-*.png` |
 | I-011 | Agent audit | 33 Quran cards showed English cut off at the first `"` (e.g. 39:53 showed only `Say,`) | fixed-pending-device | New `scripts/build_catalog.py`; 0 truncated cards. Sim: 2:156 full text |
 | I-012 | Agent audit | Hadith English showed the wrong sentence (Bukhari 1283/1303/2908, Muslim 923a/2307a, Tirmidhi 2517) or only a narrator line (Ibn Majah 3818, Nasa'i 5453) | fixed-pending-device | `EN_FIX` overrides in `expand_mood_files.py`. Sim: Bukhari 1283, Nasa'i 5453 |
@@ -39,7 +39,7 @@ Last updated: 2026-10-23 (Asia/Karachi). Agent test surface for this round: Expo
 | I-026 | User request | Swipe left/right on Read pages to change passage, keep iOS edge swipe-back | fixed-pending-device | Pan with 28pt edge exclusion (both edges on Android). Sim verified both |
 | I-027 | User request | Name asked again after relaunch | fixed-pending-device | App reads saved name before choosing first screen; Feeling has no back-to-name (long-press the greeting to change name) |
 | I-028 | User request | Catalog had fragments (e.g. Peaceful 89:29, 89:30 as 3-word cards); Quran must be complete ayat in context, hadith complete sayings | fixed-pending-device | Full recheck: ayah ranges (e.g. 89:27-30, 2:155-157, 26:61-62) shown as one card; hadith slices widened to include the question/story; off-context picks replaced (65:2 divorce, 8:46 battle, 3:154, 76:10, 33:35, 4:59, Bukhari 6472/24/2443); no repeats inside a mood. 148 passages, all source-verified |
-| I-029 | User request | Report button should write every report to one file on GitHub with name, device and IP | open | Code done (`src/reports.ts`), offline queue verified in sim; waiting for a write-only token in `app/.env.local` to test the GitHub write and rebuild the APK |
+| I-029 | User request | Report button should write every report to one file on GitHub with name, device and IP | fixed-pending-device | `src/reports.ts` → `iumer/sakinah-feedback/REPORTS.md`. Sim: offline report queued, then both delivered on next send (name, device, OS, app version, public + local IP). Token in `app/.env.local`, limited to that repo. Shipped in APK 0.2.1 |
 
 ## Suggestions (from user / agent)
 

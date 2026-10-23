@@ -85,6 +85,7 @@ function toMarkdown(r: Report, labels: Record<string, string>): string {
     '| | |',
     '|---|---|',
     ...rows.map(([k, v]) => `| ${k} | ${cell(v)} |`),
+    '',
     `<sub>id ${r.id}</sub>`,
     '',
   ].join('\n')

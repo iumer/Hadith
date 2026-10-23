@@ -2,7 +2,7 @@
   "expo": {
     "name": "Sakinah",
     "slug": "heart-threads",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -10,7 +10,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.heartthreads.app",
-      "buildNumber": "2"
+      "buildNumber": "3"
     },
     "android": {
       "package": "com.heartthreads.app",
@@ -21,7 +21,7 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "versionCode": 2
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"

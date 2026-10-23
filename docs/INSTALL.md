@@ -30,6 +30,13 @@ Every new Android build **replaces the file at that same URL** (`scripts/publish
 
 No Expo Go required for APK testers.
 
+## Reports token (once per Mac)
+
+The Report button writes to `REPORTS.md` in the private repo `iumer/sakinah-feedback`.
+Builds need `app/.env.local` (git-ignored, see `app/.env.example`) with a fine-grained GitHub
+token limited to that repo (Contents: Read and write). Without it, reports are only kept on
+the phone. After creating or changing it, restart `npx expo start`.
+
 ## After every update
 
 | Platform | What you do |
