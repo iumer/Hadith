@@ -19,7 +19,7 @@ Last updated: 2026-10-23 (Asia/Karachi). Agent test surface for this round: Expo
 | I-006 | User both platforms | Swipe L/R feels stiff — cards don’t slide with finger | fixed-pending-device | Continuous `scroll` shared value follows finger |
 | I-007 | User both platforms | Pull-down cuts mid-expand → sudden next page | fixed-pending-device | Pull to max → 820ms reveal → then navigate |
 | I-008 | User both platforms | After Read→back→back, stuck on giant card, gestures dead | fixed-pending-device | Remount fan on focus + reset shared values |
-| I-009 | User request | Android APK for testers | fixed-pending-device | `HeartThreads-preview.apk` artifact (~90MB); device install pending |
+| I-009 | User request | Android APK for testers | fixed-pending-device | Sakinah 0.2.0 (versionCode 2) built on the Mac 2026-10-23 and published to the same stable URL; same signing cert as 0.1.0 so it installs as an update |
 | I-010 | Agent web QA | CardFan Pan gestures ignore mouse on Expo web — blocked smoke | verified-agent | Web Prev/Next/Open; Playwright hard-refresh smoke **PASS** (steps 1–9); see `qa-web-retest-*.png` |
 | I-011 | Agent audit | 33 Quran cards showed English cut off at the first `"` (e.g. 39:53 showed only `Say,`) | fixed-pending-device | New `scripts/build_catalog.py`; 0 truncated cards. Sim: 2:156 full text |
 | I-012 | Agent audit | Hadith English showed the wrong sentence (Bukhari 1283/1303/2908, Muslim 923a/2307a, Tirmidhi 2517) or only a narrator line (Ibn Majah 3818, Nasa'i 5453) | fixed-pending-device | `EN_FIX` overrides in `expand_mood_files.py`. Sim: Bukhari 1283, Nasa'i 5453 |
