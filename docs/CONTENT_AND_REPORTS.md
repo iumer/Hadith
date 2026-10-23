@@ -90,8 +90,16 @@ Users may multi-select:
 
 Optional free-text note.
 
-Each report is stored in AsyncStorage (`hadith.reports.v1`) as
-`{id, createdAt, platform, appVersion, passageRef, passageId, moodId, subId, reasons, note?}`.
+Reports are appended to **one file**: `REPORTS.md` in the private repo
+[iumer/sakinah-feedback](https://github.com/iumer/sakinah-feedback). Each entry records the passage,
+mood › sub, reasons, note, the name the user entered, device (name · maker · model), OS,
+app version, public IP (via api.ipify.org) and local IP. The sheet tells users this is sent.
+
+- Code: `app/src/reports.ts`. If sending fails (offline, no token) the report is queued on the
+  phone (`hadith.reports.pending.v1`) and sent with the next report.
+- Token: a fine-grained GitHub token with **Contents: Read and write on iumer/sakinah-feedback only**,
+  in `app/.env.local` (git-ignored; see `app/.env.example`). It is embedded in builds, so it must
+  never have access to any other repo.
 
 Reports are used internally to fix catalog/copy; they are not public comments.
 

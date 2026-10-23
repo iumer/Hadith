@@ -11,8 +11,7 @@ import {
   TextInput,
   View,
 } from 'react-native'
-import AsyncStorage from '@react-native-async-storage/async-storage'
-import appJson from '../../app.json'
+import { sendReport } from '../reports'
 import type { Passage } from '../types'
 import { colors, fonts } from '../theme'
 
@@ -25,8 +24,6 @@ const REPORT_OPTIONS = [
   { id: 'reflection', label: 'The reflection feels off or misleading' },
   { id: 'other', label: 'Something else' },
 ] as const
-
-const STORAGE_KEY = 'hadith.reports.v1'
 
 type Props = {
   visible: boolean
@@ -41,6 +38,8 @@ export function ReportSheet({ visible, passage, moodId, subId, onClose }: Props)
   const [selected, setSelected] = useState<string[]>([])
   const [note, setNote] = useState('')
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [queued, setQueued] = useState(false)
 
   const toggle = (id: string) => {
     setSelected((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]))
@@ -50,6 +49,7 @@ export function ReportSheet({ visible, passage, moodId, subId, onClose }: Props)
     setSelected([])
     setNote('')
     setSent(false)
+    setQueued(false)
   }
 
   const close = () => {
@@ -58,29 +58,17 @@ export function ReportSheet({ visible, passage, moodId, subId, onClose }: Props)
   }
 
   const submit = async () => {
-    if (!selected.length) return
-    const entry = {
-      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-      createdAt: new Date().toISOString(),
-      platform: Platform.OS,
-      appVersion: appJson.expo.version,
-      passageRef: refTitle,
-      passageId: passage.id,
-      moodId,
-      subId,
-      reasons: selected,
-      note: note.trim() || undefined,
-    }
-    try {
-      const raw = await AsyncStorage.getItem(STORAGE_KEY)
-      const list = raw ? (JSON.parse(raw) as unknown[]) : []
-      list.push(entry)
-      await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(list))
-    } catch {
-      // keep UX flowing even if storage fails
-    }
+    if (!selected.length || sending) return
+    setSending(true)
+    const labels = Object.fromEntries(REPORT_OPTIONS.map((o) => [o.id, o.label]))
+    const delivered = await sendReport(
+      { passageRef: refTitle, passageId: passage.id, moodId, subId, reasons: selected, note: note.trim() || undefined },
+      labels,
+    )
+    setSending(false)
+    setQueued(!delivered)
     setSent(true)
-    setTimeout(close, 1100)
+    setTimeout(close, delivered ? 1100 : 2200)
   }
 
   return (
@@ -98,7 +86,11 @@ export function ReportSheet({ visible, passage, moodId, subId, onClose }: Props)
           {sent ? (
             <View style={styles.thanks}>
               <Text style={styles.title}>Thank you</Text>
-              <Text style={styles.lede}>Your report helps us improve these passages.</Text>
+              <Text style={styles.lede}>
+                {queued
+                  ? "Saved on your phone. It will be sent next time you're online."
+                  : 'Your report helps us improve these passages.'}
+              </Text>
             </View>
           ) : (
             <>
@@ -132,16 +124,19 @@ export function ReportSheet({ visible, passage, moodId, subId, onClose }: Props)
                 submitBehavior="blurAndSubmit"
                 returnKeyType="done"
               />
+              <Text style={styles.privacy}>
+                Sent with your report: the name you entered, your device model and IP address.
+              </Text>
               <View style={styles.actions}>
                 <Pressable onPress={close} style={styles.ghost}>
                   <Text style={styles.ghostText}>Cancel</Text>
                 </Pressable>
                 <Pressable
                   onPress={submit}
-                  disabled={!selected.length}
-                  style={[styles.primary, !selected.length && { opacity: 0.35 }]}
+                  disabled={!selected.length || sending}
+                  style={[styles.primary, (!selected.length || sending) && { opacity: 0.35 }]}
                 >
-                  <Text style={styles.primaryText}>Submit report</Text>
+                  <Text style={styles.primaryText}>{sending ? 'Sending…' : 'Submit report'}</Text>
                 </Pressable>
               </View>
             </>
@@ -222,6 +217,12 @@ const styles = StyleSheet.create({
     fontFamily: fonts.body,
     fontSize: 14,
     color: colors.ink,
+  },
+  privacy: {
+    fontFamily: fonts.body,
+    fontSize: 12,
+    lineHeight: 17,
+    color: colors.mist,
   },
   noteLabel: {
     fontFamily: fonts.bodyBold,
