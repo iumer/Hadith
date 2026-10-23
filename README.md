@@ -1,3 +1,28 @@
+# Heart Threads / Hadith & Quran
+
+## Start here (humans + AI agents)
+
+**Active app branch:** `cursor/app-interactive-mockup-db55`  
+**Full handoff (read first):** [`summary.md`](./summary.md)  
+**Install (iOS Expo Go + Android APK):** [`docs/INSTALL.md`](./docs/INSTALL.md)
+
+```bash
+git clone https://github.com/iumer/Hadith.git
+cd Hadith
+git checkout cursor/app-interactive-mockup-db55
+git pull
+```
+
+Then open **`summary.md`** — corpus → moods → mockup → Expo app → card fixes → current status.
+
+**Android APK (stable link, never changes):**  
+https://github.com/iumer/Hadith/releases/download/sakinah/Sakinah.apk  
+Older links (still updated with every build): https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk · https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
+
+Docs index: [`docs/README.md`](./docs/README.md) · living bugs: [`docs/ISSUE_LOG.md`](./docs/ISSUE_LOG.md)
+
+---
+
 # Hadith & Quran index and search
 
 An indexed, searchable corpus of the major hadith collections **and** the Quran (Madani

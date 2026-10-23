@@ -1,0 +1,153 @@
+import { useEffect } from 'react'
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
+import Animated, {
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withDelay,
+  withTiming,
+} from 'react-native-reanimated'
+import type { NativeStackScreenProps } from '@react-navigation/native-stack'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { Ambient } from '../components/Ambient'
+import { BackButton } from '../components/BackButton'
+import { WASH } from '../components/CardFan'
+import { getMood } from '../content'
+import type { RootStackParamList } from '../types'
+import { colors, fonts } from '../theme'
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Subs'>
+
+export function SubsScreen({ navigation, route }: Props) {
+  const insets = useSafeAreaInsets()
+  const mood = getMood(route.params.moodId)
+  // Starts as the expanded mood card, then clears to reveal the list
+  const veil = useSharedValue(1)
+
+  useEffect(() => {
+    veil.value = withDelay(140, withTiming(0, { duration: 520, easing: Easing.bezier(0.32, 0.72, 0, 1) }))
+  }, [veil])
+
+  const veilStyle = useAnimatedStyle(() => ({ opacity: veil.value }))
+  const contentStyle = useAnimatedStyle(() => ({
+    transform: [{ translateY: veil.value * 18 }],
+  }))
+
+  return (
+    <View style={[styles.root, { paddingTop: insets.top + 8 }]}>
+      <Ambient />
+      <Animated.View style={[styles.content, contentStyle]}>
+      <View style={styles.top}>
+        <BackButton onPress={() => navigation.goBack()} />
+        <Text style={styles.eyebrow}>How you feel</Text>
+      </View>
+      <Text style={styles.title}>{mood.label}</Text>
+      <Text style={styles.lede}>Choose what fits most closely.</Text>
+      <ScrollView contentContainerStyle={styles.list} showsVerticalScrollIndicator={false}>
+        {mood.subs.map((sub) => (
+          <Pressable
+            key={sub.id}
+            style={({ pressed }) => [styles.row, pressed && styles.pressed]}
+            onPress={() =>
+              navigation.navigate('Threads', {
+                name: route.params.name,
+                moodId: mood.id,
+                subId: sub.id,
+              })
+            }
+          >
+            <View style={[styles.dot, { backgroundColor: mood.color }]} />
+            <View style={styles.copy}>
+              <Text style={styles.rowTitle}>{sub.label}</Text>
+              <Text style={styles.rowMeta}>
+                {sub.items.length} {sub.items.length === 1 ? 'passage' : 'passages'}
+              </Text>
+            </View>
+            <Text style={styles.chev}>›</Text>
+          </Pressable>
+        ))}
+      </ScrollView>
+      </Animated.View>
+      <Animated.View
+        pointerEvents="none"
+        style={[StyleSheet.absoluteFill, { backgroundColor: mood.color }, veilStyle]}
+      >
+        <View style={[StyleSheet.absoluteFill, { backgroundColor: `rgba(255,255,255,${WASH})` }]} />
+      </Animated.View>
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  content: {
+    flex: 1,
+  },
+  root: {
+    flex: 1,
+    backgroundColor: colors.cream,
+    paddingHorizontal: 20,
+  },
+  top: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 8,
+  },
+  eyebrow: {
+    fontFamily: fonts.bodyExtra,
+    fontSize: 12,
+    letterSpacing: 1,
+    textTransform: 'uppercase',
+    color: colors.mist,
+  },
+  title: {
+    fontFamily: fonts.display,
+    fontSize: 30,
+    color: colors.ink,
+  },
+  lede: {
+    fontFamily: fonts.body,
+    fontSize: 15,
+    color: colors.mist,
+    marginTop: 4,
+    marginBottom: 14,
+  },
+  list: {
+    gap: 10,
+    paddingBottom: 28,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    padding: 14,
+    borderRadius: 18,
+    backgroundColor: 'rgba(255,255,255,0.78)',
+  },
+  pressed: {
+    opacity: 0.6,
+  },
+  dot: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+  },
+  copy: {
+    flex: 1,
+  },
+  rowTitle: {
+    fontFamily: fonts.bodyBold,
+    fontSize: 16,
+    color: colors.ink,
+  },
+  rowMeta: {
+    fontFamily: fonts.body,
+    fontSize: 13,
+    color: colors.mist,
+    marginTop: 2,
+  },
+  chev: {
+    fontSize: 22,
+    color: colors.mist,
+  },
+})

@@ -1,90 +1,74 @@
 {
  "angry/anger.txt": [
-  "Quran 3:134",
-  "Quran 42:37",
+  "Quran 3:133-134",
+  "Quran 42:36-37",
+  "Quran 41:34",
   "Bukhari 6114",
-  "Muslim 2609a",
   "Muslim 2610",
   "Tirmidhi 2020",
-  "Tirmidhi 3452",
   "Abu Dawud 4777",
-  "Abu Dawud 4782",
-  "Adab al-Mufrad 245"
+  "Abu Dawud 4782"
  ],
  "angry/feeling-wronged.txt": [
-  "Quran 4:148",
-  "Quran 4:149",
+  "Quran 4:148-149",
+  "Quran 14:42",
   "Quran 16:90",
-  "Bukhari 2443",
+  "Muslim 2582",
   "Bukhari 2447",
-  "Muslim 2578",
   "Tirmidhi 2014"
  ],
  "angry/irritation.txt": [
   "Quran 7:199",
   "Quran 25:63",
   "Quran 73:10",
-  "Adab al-Mufrad 245",
-  "Abu Dawud 4782"
+  "Muslim 2593"
  ],
  "angry/resentment.txt": [
   "Quran 24:22",
+  "Quran 42:40",
   "Quran 49:12",
   "Bukhari 6065",
-  "Muslim 2558b",
-  "Tirmidhi 1935"
+  "Ibn Majah 4216"
  ],
  "anxious/dread.txt": [
-  "Quran 21:103",
-  "Quran 76:10",
-  "Quran 3:175"
+  "Quran 64:11",
+  "Quran 6:17",
+  "Bukhari 4563"
  ],
  "anxious/fear.txt": [
-  "Quran 2:155",
-  "Quran 3:175",
-  "Quran 8:2",
-  "Quran 10:62",
-  "Quran 20:46",
-  "Tirmidhi 2516",
-  "Nawawi 40 19"
+  "Quran 3:173-175",
+  "Quran 20:45-46",
+  "Quran 41:30",
+  "Tirmidhi 2516"
  ],
  "anxious/insecurity.txt": [
-  "Quran 3:173",
+  "Quran 95:4",
   "Quran 9:51",
-  "Quran 65:3",
-  "Tirmidhi 2344",
-  "Tirmidhi 2516",
-  "Tirmidhi 2517",
-  "Nawawi 40 19"
+  "Muslim 2564c",
+  "Tirmidhi 2517"
  ],
  "anxious/panic.txt": [
   "Quran 9:40",
-  "Quran 20:46",
-  "Quran 20:68",
-  "Quran 26:62",
+  "Quran 20:66-68",
+  "Quran 26:61-62",
   "Bukhari 2908"
  ],
  "anxious/worry.txt": [
-  "Quran 3:154",
-  "Quran 65:3",
+  "Quran 13:28",
+  "Quran 2:286",
   "Bukhari 6369",
-  "Abu Dawud 1518",
-  "Nasa'i 5453"
+  "Ibn Majah 3882"
  ],
  "confident/assured.txt": [
-  "Quran 8:10",
-  "Quran 13:28",
-  "Quran 89:27",
-  "Bukhari 7405",
-  "Muslim 2675a"
+  "Quran 33:3",
+  "Quran 9:51",
+  "Bukhari 7405"
  ],
  "confident/brave.txt": [
   "Quran 2:249",
-  "Quran 3:173",
-  "Quran 8:45",
-  "Quran 8:46",
-  "Bukhari 2908",
-  "Muslim 2307a"
+  "Quran 3:173-174",
+  "Muslim 2664",
+  "Bukhari 2908"
  ],
  "confident/determined.txt": [
   "Quran 3:200",
@@ -94,165 +78,147 @@
   "Bukhari 6338"
  ],
  "confident/secure.txt": [
-  "Quran 3:154",
-  "Quran 8:11",
-  "Quran 9:26",
-  "Quran 48:4",
-  "Quran 65:3",
-  "Bukhari 6472"
+  "Quran 6:82",
+  "Quran 10:62-64",
+  "Tirmidhi 2346",
+  "Tirmidhi 2344"
  ],
  "confused/conflicted.txt": [
+  "Quran 3:159",
   "Quran 2:216",
-  "Quran 4:59",
-  "Quran 8:46"
+  "Tirmidhi 2518"
  ],
  "confused/confusion.txt": [
-  "Quran 1:6",
+  "Quran 1:5-7",
   "Quran 10:57",
   "Quran 17:82",
   "Tirmidhi 3489"
  ],
  "confused/doubt.txt": [
-  "Quran 2:2",
-  "Quran 49:15",
-  "Bukhari 52",
-  "Abu Dawud 3330"
+  "Quran 2:260",
+  "Muslim 132a",
+  "Bukhari 3276"
  ],
  "confused/lost.txt": [
-  "Quran 1:6",
-  "Quran 93:3",
-  "Quran 93:5",
-  "Tirmidhi 3489"
+  "Quran 93:6-8",
+  "Quran 29:69",
+  "Muslim 2577a"
  ],
  "happy/content.txt": [
-  "Quran 9:59",
-  "Quran 93:5",
+  "Quran 93:3-5",
   "Bukhari 6446",
-  "Muslim 1051",
-  "Muslim 1054"
+  "Muslim 1054",
+  "Muslim 2963a"
  ],
  "happy/excited.txt": [
-  "Quran 10:58",
-  "Quran 39:17",
-  "Quran 61:13"
+  "Quran 39:17-18",
+  "Quran 57:21",
+  "Abu Dawud 2774"
  ],
  "happy/grateful-blessed.txt": [
   "Quran 2:152",
   "Quran 14:7",
   "Quran 16:18",
-  "Ibn Majah 3818"
+  "Muslim 2734a"
  ],
  "happy/joyful.txt": [
-  "Quran 10:58",
-  "Quran 84:9",
+  "Quran 10:57-58",
+  "Quran 84:6-9",
   "Tirmidhi 766"
  ],
  "happy/peaceful.txt": [
   "Quran 13:28",
   "Quran 48:4",
-  "Quran 89:27",
-  "Quran 89:28",
-  "Quran 89:29",
-  "Quran 89:30"
+  "Quran 89:27-30"
  ],
  "overwhelmed/burned-out.txt": [
   "Quran 2:286",
-  "Quran 94:1",
-  "Quran 94:2",
-  "Quran 94:5",
-  "Quran 94:6",
-  "Bukhari 6369"
+  "Quran 94:1-4",
+  "Bukhari 39",
+  "Bukhari 6465"
  ],
  "overwhelmed/defeated.txt": [
-  "Quran 3:139",
+  "Quran 3:139-140",
   "Quran 3:146",
-  "Quran 47:7"
+  "Quran 47:7",
+  "Muslim 2664"
  ],
  "overwhelmed/drowning.txt": [
-  "Quran 2:286",
-  "Quran 65:2",
-  "Quran 65:3",
-  "Quran 94:5",
-  "Quran 94:6",
-  "Abu Dawud 1518"
+  "Quran 27:62",
+  "Quran 21:87-88",
+  "Quran 2:214",
+  "Tirmidhi 3524"
  ],
  "overwhelmed/helpless.txt": [
-  "Quran 2:286",
   "Quran 3:160",
   "Quran 4:28",
-  "Nawawi 40 19"
+  "Bukhari 6384",
+  "Tirmidhi 2516"
  ],
  "overwhelmed/hopeless.txt": [
   "Quran 12:87",
-  "Quran 15:56",
-  "Quran 39:53"
+  "Quran 15:54-56",
+  "Quran 39:53",
+  "Tirmidhi 3540"
  ],
  "overwhelmed/stuck.txt": [
-  "Quran 65:2",
-  "Quran 65:3",
-  "Quran 94:5",
-  "Quran 94:6",
-  "Abu Dawud 1518"
+  "Quran 94:5-8",
+  "Quran 18:10",
+  "Quran 29:69",
+  "Tirmidhi 3505"
  ],
  "sad/disappointment.txt": [
   "Quran 2:216",
-  "Quran 3:139",
-  "Quran 57:23",
+  "Quran 57:22-23",
   "Muslim 2999"
  ],
  "sad/emptiness.txt": [
   "Quran 13:28",
-  "Quran 39:22"
+  "Quran 39:22",
+  "Quran 16:97",
+  "Bukhari 6407"
  ],
  "sad/grief.txt": [
-  "Quran 2:155",
-  "Quran 2:156",
-  "Quran 2:157",
-  "Quran 3:139",
-  "Quran 12:84",
-  "Quran 12:86",
+  "Quran 2:155-157",
+  "Quran 12:84-86",
   "Bukhari 1283",
   "Bukhari 1303",
-  "Bukhari 5641",
-  "Muslim 923a"
+  "Muslim 923a",
+  "Muslim 918a"
  ],
  "sad/loneliness.txt": [
+  "Quran 2:186",
   "Quran 9:40",
-  "Quran 20:46",
   "Quran 57:4",
-  "Bukhari 7405",
-  "Muslim 2675a"
+  "Bukhari 7405"
  ],
  "sad/sorrow.txt": [
-  "Quran 12:86",
   "Quran 16:127",
-  "Quran 57:23",
-  "Bukhari 5641",
+  "Quran 28:7",
+  "Muslim 2573",
   "Bukhari 6369"
  ],
  "shame-guilt/guilt.txt": [
   "Quran 4:110",
-  "Quran 39:53",
   "Quran 66:8",
   "Bukhari 6306",
-  "Tirmidhi 2499",
-  "Ibn Majah 4251"
+  "Tirmidhi 2499"
  ],
  "shame-guilt/humiliation.txt": [
   "Quran 3:26",
   "Quran 49:11",
-  "Tirmidhi 2032"
+  "Muslim 2588"
  ],
  "shame-guilt/regret.txt": [
+  "Quran 3:135-136",
   "Quran 4:17",
   "Quran 39:53",
-  "Tirmidhi 2499",
   "Tirmidhi 3537",
-  "Ibn Majah 4251"
+  "Muslim 2749"
  ],
  "shame-guilt/shame.txt": [
-  "Quran 33:35",
-  "Quran 49:11",
-  "Bukhari 24"
+  "Quran 7:23",
+  "Quran 2:37",
+  "Bukhari 2441"
  ]
 }

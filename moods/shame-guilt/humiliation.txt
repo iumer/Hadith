@@ -6,6 +6,10 @@ Arabic:
 
 قُلِ ٱللَّهُمَّ مَٰلِكَ ٱلۡمُلۡكِ تُؤۡتِي ٱلۡمُلۡكَ مَن تَشَآءُ وَتَنزِعُ ٱلۡمُلۡكَ مِمَّن تَشَآءُ وَتُعِزُّ مَن تَشَآءُ وَتُذِلُّ مَن تَشَآءُۖ بِيَدِكَ ٱلۡخَيۡرُۖ إِنَّكَ عَلَىٰ كُلِّ شَيۡءࣲ قَدِيرࣱ‏
 
+Urdu Translation:
+
+آپ کہہ دیجئے اے اللہ! اے تمام جہان کے مالک! تو جسے چاہے بادشاہی دے اور جس سے چاہے سلطنت چھین لے اور تو جسے چاہے عزت دے اورجسے چاہے ذلت دے، تیرے ہی ہاتھ میں سب بھلائیاں ہیں، بے شک تو ہر چیز پر قادر ہے
+
 English Translation:
 
 “Say, "O Allah, Owner of Sovereignty, You give sovereignty to whom You will and You take sovereignty away from whom You will. You honor whom You will and You humble whom You will. In Your hand is [all] good. Indeed, You are over all things competent”
@@ -36,6 +40,10 @@ Arabic:
 
 يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ لَا يَسۡخَرۡ قَوۡمࣱ مِّن قَوۡمٍ عَسَىٰٓ أَن يَكُونُواْ خَيۡرࣰ ا مِّنۡهُمۡ وَلَا نِسَآءࣱ مِّن نِّسَآءٍ عَسَىٰٓ أَن يَكُنَّ خَيۡرࣰ ا مِّنۡهُنَّۖ وَلَا تَلۡمِزُوٓاْ أَنفُسَكُمۡ وَلَا تَنَابَزُواْ بِٱلۡأَلۡقَٰبِۖ بِئۡسَ ٱلِٱسۡمُ ٱلۡفُسُوقُ بَعۡدَ ٱلۡإِيمَٰنِۚ وَمَن لَّمۡ يَتُبۡ فَأُوْلَٰٓئِكَ هُمُ ٱلظَّٰلِمُونَ
 
+Urdu Translation:
+
+اے ایمان والو! مرد دوسرے مردوں کا مذاق نہ اڑائیں ممکن ہے کہ یہ ان سے بہتر ہو اور نہ عورتیں عورتوں کا مذاق اڑائیں ممکن ہے یہ ان سے بہتر ہوں، اور آپس میں ایک دوسرے کو عیب نہ لگاؤ اور نہ کسی کو برے لقب دو۔ ایمان کے بعد فسق برا نام ہے، اور جو توبہ نہ کریں وہی ﻇالم لوگ ہیں
+
 English Translation:
 
 “O you who have believed, let not a people ridicule [another] people; perhaps they may be better than them; nor let women ridicule [other] women; perhaps they may be better than them. And do not insult one another and do not call each other by [offensive] nicknames. Wretched is the name of disobedience after [one's] faith. And whoever does not repent - then it is those who are the wrongdoers”
@@ -58,34 +66,36 @@ Reference: Quran 49:11, Surah Al-Hujuraat.
 
 ────────────────────────────────────────
 
-Jami' at-Tirmidhi 2032
+Sahih Muslim 2588
 
-Book 27: Chapters on Righteousness And Maintaining Good Relations With Relatives (كتاب البر والصلة عن رسول الله صلى الله عليه وسلم)
+Book 45: The Book of Virtue, Enjoining Good Manners, and Joining of the Ties of Kinship (كتاب البر والصلة والآداب)
 
-Nafi' narrated that Ibn ‘Umar said (رضي الله عنه/عنهم):
+Abu Huraira reported Allah's Messenger (ﷺ) as saying (رضي الله عنه/عنهم):
 
 The Prophet Muhammad ﷺ said:
 
 Arabic:
 
-يَا مَعْشَرَ مَنْ قَدْ أَسْلَمَ بِلِسَانِهِ وَلَمْ يُفْضِ الإِيمَانُ إِلَى قَلْبِهِ لاَ تُؤْذُوا الْمُسْلِمِينَ وَلاَ تُعَيِّرُوهُمْ وَلاَ تَتَّبِعُوا عَوْرَاتِهِمْ فَإِنَّهُ مَنْ تَتَبَّعَ عَوْرَةَ أَخِيهِ الْمُسْلِمِ تَتَبَّعَ اللَّهُ عَوْرَتَهُ وَمَنْ تَتَبَّعَ اللَّهُ عَوْرَتَهُ يَفْضَحْهُ وَلَوْ فِي جَوْفِ رَحْلِهِ
+مَا نَقَصَتْ صَدَقَةٌ مِنْ مَالٍ وَمَا زَادَ اللَّهُ عَبْدًا بِعَفْوٍ إِلاَّ عِزًّا وَمَا تَوَاضَعَ أَحَدٌ لِلَّهِ إِلاَّ رَفَعَهُ اللَّهُ
+
+Urdu Translation:
+
+صدقے نے مال میں کبھی کوئی کمی نہیں کی اور معاف کرنے سے اللہ تعالیٰ بندے کو عزت ہی میں بڑھاتا ہے اور کوئی شخص ( صرف اور صرف ) اللہ کی خاطر تواضع ( انکسار ) اختیار نہیں کرتا مگر اللہ تعالیٰ اس کا مقام بلند کر دیتا ہے
 
 English Translation:
 
-“The Messenger of Allah (s.a.w) ascended the Minbar and called out with a raised voice: ’O you who accepted Islam with his tongue, while faith has not reached his heart! Do not harm the Muslims, nor revile them, nor spy on them to expose their secrets. For indeed whoever tries to expose his Muslims brother’s secrets, Allah exposes his secrets wide open, even if he were in the depth of his house.’” He (Nafl’) said: ‘ One day Ibn ‘Umar looked at the House- or – the Ka’bah and said: ‘What is it that is more honored than you, and whose honor is more sacred than yours! And the believer’s honor is more sacred to Allah than yours.’.”
+“Charity does not decrease wealth, no one forgives another except that Allah increases his honor, and no one humbles himself for the sake of Allah except that Allah raises his status.”
 
 Meaning ❤️
 
-The Prophet ﷺ warns those whose Islam is only on the tongue: do not harm Muslims, revile them, or spy to expose their secrets—for whoever seeks to expose a Muslim, Allah exposes him even from inside his house.
+Charity does not decrease wealth; Allah only increases in honour the one who forgives; and whoever humbles himself for Allah, Allah raises him.
 
-Protecting people’s dignity is part of real faith reaching the heart.
-
-Scandal-seeking invites exposure from Allah.
+People may try to lower you, but honour is given by Allah.
 
 Reflection
 
-Guard others’ secrets as carefully as you guard your own.
+Your honour is in Allah's hands, not theirs.
 
-Harm and exposure rebound on the one who hunts for them.
+Respond with dignity and pardon; He will raise you.
 
-Reference: Jami' at-Tirmidhi 2032, Book of Chapters on Righteousness And Maintaining Good Relations With Relatives.
+Reference: Sahih Muslim 2588, Book of The Book of Virtue, Enjoining Good Manners, and Joining of the Ties of Kinship.
