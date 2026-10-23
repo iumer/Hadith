@@ -16,9 +16,8 @@ git pull
 Then open **`summary.md`** — corpus → moods → mockup → Expo app → card fixes → current status.
 
 **Android APK (stable link, never changes):**  
-https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk  
-Also kept up to date (older link some testers have):  
-https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
+https://github.com/iumer/Hadith/releases/download/sakinah/Sakinah.apk  
+Older links (still updated with every build): https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk · https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
 
 Docs index: [`docs/README.md`](./docs/README.md) · living bugs: [`docs/ISSUE_LOG.md`](./docs/ISSUE_LOG.md)
 

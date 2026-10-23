@@ -5,11 +5,10 @@
 3. Follow **[`docs/AGENT_QA_PROTOCOL.md`](./docs/AGENT_QA_PROTOCOL.md)** and update **[`docs/ISSUE_LOG.md`](./docs/ISSUE_LOG.md)**.
 4. Install notes: **[`docs/INSTALL.md`](./docs/INSTALL.md)**.
 
-## Stable Android APK URL (do not create new links)
+## Android APK link (share this one; do not create new links)
 
-https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk  
-Also kept up to date (older link some testers have):  
-https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
+https://github.com/iumer/Hadith/releases/download/sakinah/Sakinah.apk  
+Older links (still updated with every build): https://github.com/iumer/Hadith/releases/download/android-preview/HeartThreads-preview.apk · https://github.com/iumer/Hadith/releases/download/android-preview-2026-10-22/HeartThreads-preview.apk
 
 After `assembleRelease`, publish in place:
 
